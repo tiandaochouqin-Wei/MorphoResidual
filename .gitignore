@@ -1,0 +1,68 @@
+# This repository is scoped to analysis/figure-generation code only.
+# Manuscript source, build artifacts, large derived data and internal notes
+# are intentionally kept out (they are not part of "the code").
+
+# LaTeX build artifacts
+*.aux
+*.out
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.log
+main.pdf
+main.tex
+main.tex.bak_*
+
+# manuscript-adjacent, not code
+SuppTable_*.tex
+SuppTable_*.csv
+references.bib
+review/
+submission/
+
+# one-off editorial scripts that patched manuscript text (not analysis code)
+apply_*_edits*.py
+apply_batch_numbers.py
+apply_figure_split.py
+apply_scanner_convention.py
+apply_t*_edits.py
+apply_t*_methods.py
+patch_figure_literals.py
+
+# third-party literature dumps (copyrighted, not ours to redistribute);
+# also catches the non-code drawio-viewer html under figures/
+*.xml
+*.html
+
+# data / large derived artifacts -- deposited separately (Zenodo at acceptance)
+figures/figdata/
+figures/*.svg
+figures/*.png
+figures/*.pdf
+figures/*.tiff
+figures/*.bak_*
+figures/*.csv
+server_export/embeddings/
+server_export/pathomics/
+server_export/pdac/
+server_export/pinned/
+server_export/prefix/
+server_export/prefix_sitepack.tar.gz
+server_export/results/
+server_export/scripts/pinned/
+server_export/scripts/*.tsv
+server_export/*.tsv
+server_export/*.txt
+server_export/*.json
+server_export/INVENTORY.txt
+server_export/MANIFEST.json
+*.tar.gz
+*.json
+c1_ucec_idc_tumor_series.csv
+ucec_batch_groups.csv
+luad_rppa_case_ids.txt
+
+__pycache__/
+*.pyc
+scratch_cptac2/
