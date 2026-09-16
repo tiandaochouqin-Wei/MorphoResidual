@@ -66,3 +66,11 @@ luad_rppa_case_ids.txt
 __pycache__/
 *.pyc
 scratch_cptac2/
+
+# third-party vendor binaries/installers, not our code
+ibm-aspera-connect-*.sh
+*.deb
+*.rpm
+*.dmg
+*.exe
+*.msi
