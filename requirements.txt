@@ -1,0 +1,21 @@
+# Third-party dependencies used across this repository, collected by scanning
+# every committed .py file's imports (2026-09-18). No versions are pinned here;
+# exact versions used for the reported analyses are listed in the manuscript's
+# Methods, "Software, versions, seeds and encoder weights".
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+matplotlib
+lifelines
+gseapy
+torch
+torchvision
+timm
+transformers
+Pillow
+scikit-image
+pydicom
+openslide-python
+requests
