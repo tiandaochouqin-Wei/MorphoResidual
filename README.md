@@ -44,85 +44,48 @@ and it is **not click-to-run outside the source HPC environment**. Concretely:
 
 ## Pipeline overview
 
-Stage names below are the actual script names; grouping (not every script) is
-shown for readability. Grey stages need restricted CPTAC/TCGA data and, for
-tile embedding, a GPU; the green stage is the one runnable from just this
-repository plus a small derived table.
+Node labels below are the actual script names; grouping (not every script) is
+shown for readability.
 
 ```mermaid
-flowchart TD
-    subgraph EXT["External data (not in this repo)"]
-        A1["PDC protein + GDC RNA-seq\n(five CPTAC cohorts)"]
-        A2["TCIA whole-slide images"]
-    end
+flowchart LR
+    A["Raw data\nPDC protein + GDC RNA-seq\n+ TCIA whole-slide images"]
+    B["Tile embedding — GPU\nextract_fm.py / extract_phikon.py"]
+    C["Acquisition metadata\nbuild_acquisition_meta.py\nbuild_slide_map*.py"]
+    D["Core residual estimation\nresidual_analysis.py family\n(per cohort)"]
+    E["Robustness suite\nresidual_analysis_sitepack.py\nbatch_leak_check.py"]
+    F["Cross-cohort replication\ntcga_*.py, cptac2_*.py,\nkirc_residual.py, c1_*.py"]
+    G["Downstream analyses\nclinical_link.py, composition_controls.py,\nenrichment_check.py, ..."]
+    H["Export bridge — HPC to local\nfig_data_export*.py"]
+    I["Figures & tables — local, no GPU\nfigures/*.py, make_supptable_*.py"]
 
-    subgraph EMB["Tile extraction & embedding — GPU"]
-        B1["extract_features.py / extract_fm.py / extract_phikon.py\n(UNI, Phikon foundation models)"]
-    end
+    A --> B --> D
+    A --> C
+    B --> C
+    C --> E
+    D --> E
+    D --> F
+    D --> G
+    E --> G
+    F --> G
+    G --> H
+    E --> H
+    H --> I
 
-    subgraph META["Acquisition metadata"]
-        C1["build_acquisition_meta.py\nbuild_slide_map*.py, build_aliquot_xwalk*.py"]
-    end
-
-    subgraph CORE["Core residual estimation — per cohort"]
-        D1["residual_analysis.py family\n(tumour-only, confound-adjusted, WSI-batch variants)"]
-    end
-
-    subgraph ROBUST["Acquisition-robustness suite"]
-        E1["residual_analysis_sitepack.py\nbatch_leak_check.py, randproj_control.py"]
-    end
-
-    subgraph REPL["Cross-cohort replication"]
-        F1["tcga_residual.py / tcga_replicate.py  (TCGA-RPPA: KIRC, LUAD, GBM, PDAC)"]
-        F2["cptac2_residual.py / cptac2_replicate.py  (CPTAC-2 TCGA-BRCA proteome)"]
-        F3["kirc_residual.py  (TCGA-KIRC, Phikon encoder)"]
-        F4["c1_pull_omics.py / c1_run_test.py  (CPTAC-3 confirmatory cohort)"]
-    end
-
-    subgraph DOWN["Downstream analyses"]
-        G1["clinical_link.py, composition_controls.py,\nenrichment_check.py, hyperparam_ablation.py,\nmediation_analysis.py, subtype_classify.py, ..."]
-    end
-
-    subgraph EXPORT["Export bridge — HPC to local"]
-        H1["fig_data_export.py / fig_data_export2.py\nwrite figures/figdata/*.csv"]
-    end
-
-    subgraph FIGS["Figure & table generation — local, no GPU"]
-        I1["figures/*.py  →  Fig_*.pdf"]
-        I2["make_supptable_*.py  →  SuppTable_*.tex"]
-    end
-
-    A2 --> B1
-    A1 --> D1
-    B1 --> D1
-    A1 --> C1
-    A2 --> C1
-    C1 --> E1
-    D1 --> E1
-    D1 --> F1
-    D1 --> F2
-    D1 --> F3
-    D1 --> F4
-    D1 --> G1
-    E1 --> G1
-    F1 --> G1
-    F2 --> G1
-    F3 --> G1
-    F4 --> G1
-    G1 --> H1
-    E1 --> H1
-    H1 --> I1
-    H1 --> I2
-
-    style FIGS fill:#d4f4dd,stroke:#2a9d4a
-    style EXT fill:#eeeeee,stroke:#888
-    style EMB fill:#eeeeee,stroke:#888
-    style META fill:#eeeeee,stroke:#888
-    style CORE fill:#eeeeee,stroke:#888
-    style ROBUST fill:#eeeeee,stroke:#888
-    style REPL fill:#eeeeee,stroke:#888
-    style DOWN fill:#eeeeee,stroke:#888
+    style I fill:#d4f4dd,stroke:#2a9d4a
+    style A fill:#eeeeee,stroke:#888
+    style B fill:#eeeeee,stroke:#888
+    style C fill:#eeeeee,stroke:#888
+    style D fill:#eeeeee,stroke:#888
+    style E fill:#eeeeee,stroke:#888
+    style F fill:#eeeeee,stroke:#888
+    style G fill:#eeeeee,stroke:#888
+    style H fill:#eeeeee,stroke:#888
 ```
+
+Grey stages need restricted CPTAC/TCGA data and, for tile embedding, a GPU;
+the green stage is the one runnable from just this repository plus a small
+derived table.
 
 `fig_data_export.py`/`fig_data_export2.py` are the literal bridge: run once
 on the source HPC, their output directory is copied to a local
