@@ -5,8 +5,8 @@ abundance beyond what is explained by a gene's own mRNA, evaluated across
 five CPTAC cancer cohorts (CCRCC, LUAD, UCEC, GBM, PDAC) with replication
 attempts in independent TCGA/CPTAC-3 cohorts.
 
-Manuscript: submitted to *Nature Communications*; a citation and DOI will be
-added here on publication.
+Manuscript: in preparation for submission to *Nature Communications*; a
+citation and DOI will be added here on publication.
 
 **Contents:** [Reproducibility status](#reproducibility-status-read-this-first) ·
 [Pipeline overview](#pipeline-overview) ·
