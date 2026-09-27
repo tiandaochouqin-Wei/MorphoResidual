@@ -17,7 +17,22 @@ main.tex.bak_*
 # manuscript-adjacent, not code
 SuppTable_*.tex
 SuppTable_*.csv
+SuppTable_*.bak*
+supplement.tex
+supplement.tex.bak*
+supplement.pdf
 references.bib
+references.bib.bak*
+REVIEW.md
+phaseB_fragments/
+*.bak_*
+*.bak
+figures/*.drawio
+figures/_superseded_*
+server_export/scripts/inode_audit.txt
+# stale duplicates of root scripts (the root copies are canonical)
+server_export/scripts/abmil_pooling.py
+server_export/scripts/export_package.py
 submission/
 # internal review notes stay private; the three recalculation scripts under
 # review/recalc/ are analysis code that live figures depend on, so they ship
