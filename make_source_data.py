@@ -27,6 +27,7 @@ import os
 import json
 import math
 import warnings
+import sys
 import numpy as np
 import pandas as pd
 from scipy import stats as st
@@ -38,6 +39,9 @@ from sklearn.manifold import TSNE
 warnings.filterwarnings("ignore")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# the one shared definition of the RPPA antibody rule (a helper module, not a figure script)
+sys.path.insert(0, os.path.join(HERE, "figures"))
+from rppa_filter import load_rppa  # noqa: E402
 FIG = os.path.join(HERE, "figures")
 DD = os.path.join(FIG, "figdata")
 PIN = os.path.join(HERE, "server_export", "pinned")
@@ -755,7 +759,7 @@ b4.add("Fig4c", "Fig. 4c - Spearman correlation of nuclear-morphometry features 
        {"feature": "H&E nuclear feature as labelled on the figure", "feature_key": "column name in the source file", "cohort": "CPTAC cohort",
         "spearman_rho": "cell value [unitless]", "p_value": "two-sided uncorrected P of the correlation [unitless]"})
 
-kirc = rd(f"{DD}/kirc_rppa_results.csv")
+kirc = load_rppa(f"{DD}/kirc_rppa_results.csv")   # 7 modification-antibody genes removed, FDR re-run over the rest
 ccr = rd(f"{DD}/merged_incr_ccrcc.csv")
 mm = ccr.merge(kirc, on="gene").dropna(subset=["incremental_r2_uni", "incremental_r2"])
 mm = mm[(mm.fdr_uni < 0.05) & (mm.incremental_r2_uni > 0)]
@@ -768,21 +772,21 @@ b4.add("Fig4d", "Fig. 4d - CPTAC-CCRCC morphology-predictable proteins also meas
        ["figures/figdata/merged_incr_ccrcc.csv", "figures/figdata/kirc_rppa_results.csv", "review/recalc/rppa_baserate_all.csv"], t,
        {"gene": "protein / gene symbol", "incr_r2_cptac_ccrcc_uni": "left end of the line: incremental R2 in CPTAC-CCRCC, UNI [unitless]",
         "fdr_cptac_ccrcc": "FDR in CPTAC-CCRCC [unitless]", "incr_r2_tcga_kirc_phikon": "right end of the line: incremental R2 in TCGA-KIRC (RPPA), Phikon [unitless]",
-        "fdr_tcga_kirc": "FDR in TCGA-KIRC [unitless]", "n_tcga_kirc": "TCGA-KIRC cases [count]",
+        "fdr_tcga_kirc": "FDR in TCGA-KIRC, Benjamini-Hochberg over the 353 proteins that remain after removing the seven modification-antibody genes [unitless]", "n_tcga_kirc": "TCGA-KIRC cases [count]",
         "significant_in_kirc": "FDR < 0.05 and incremental R2 > 0 in KIRC (blue line)"})
-b4.note("d", "proteins shown", int(len(mm)), "manuscript: 63")
+b4.note("d", "proteins shown", int(len(mm)), "manuscript: 62")
 b4.note("d", "replicated (FDR<0.05, incr > 0 in KIRC)", int(okk.sum()), "manuscript: 35")
 b4.note("d", "replicated share", 100 * float(okk.mean()), "% ; manuscript: 56%")
 b4.note("d", "median incremental R2, CPTAC-CCRCC (black marker, left)", float(mm.incremental_r2_uni.median()), "")
 b4.note("d", "median incremental R2, TCGA-KIRC (black marker, right)", float(mm.incremental_r2.median()), "")
 b4.note("d", "panel base rate among other tested RPPA proteins", 100 * float(kb.narrow_rate_base), "% ; manuscript: 47%")
-b4.note("d", "Fisher exact P (two-sided)", float(kb.narrow_p_two), "manuscript: 0.26")
-b4.note("d", "Fisher odds ratio", float(kb.narrow_OR), "manuscript: 1.43")
-check("Fig4d proteins shown", len(mm), 63)
+b4.note("d", "Fisher exact P (two-sided)", float(kb.narrow_p_two), "manuscript: 0.20")
+b4.note("d", "Fisher odds ratio", float(kb.narrow_OR), "manuscript: 1.46")
+check("Fig4d proteins shown", len(mm), 62)
 check("Fig4d replicated", int(okk.sum()), 35)
 check("Fig4d base rate % (rounded)", round(100 * float(kb.narrow_rate_base)), 47, 0.5)
-check("Fig4d Fisher P (2 dp)", round(float(kb.narrow_p_two), 2), 0.26, 1e-9)
-check("Fig4d Fisher OR (2 dp)", round(float(kb.narrow_OR), 2), 1.43, 1e-9)
+check("Fig4d Fisher P (2 dp)", round(float(kb.narrow_p_two), 2), 0.20, 1e-9)
+check("Fig4d Fisher OR (2 dp)", round(float(kb.narrow_OR), 2), 1.46, 1e-9)
 
 ab = rd(f"{DD}/abmil_ccrcc.csv")
 mp_ = ab[ab.method.str.startswith("mean")].iloc[0]
@@ -905,7 +909,7 @@ b5.add("Fig5c", "Fig. 5c - Cox hazard ratio of the morphology-only translation s
 check("Fig5c univariable HR (2 dp)", round(float(t5c.hazard_ratio_per_sd[0]), 2), 1.71, 1e-9)
 check("Fig5c univariable p (3 dp)", round(float(t5c.p_value[0]), 3), 0.007, 1e-9)
 check("Fig5c adjusted HR (2 dp)", round(float(t5c.hazard_ratio_per_sd[1]), 2), 1.33, 1e-9)
-check("Fig5c adjusted p vs the '0.270' printed in the Fig. 5 caption (3 dp)", round(float(t5c.p_value[1]), 3), 0.270, 1e-9)
+check("Fig5c adjusted p vs the '0.269' printed in the Fig. 5 caption (3 dp)", round(float(t5c.p_value[1]), 3), 0.269, 1e-9)
 b5.note("c", "adjusted p, unrounded", float(t5c.p_value[1]), "the figure prints 0.269 (3 dp)")
 b5.save("Fig5_annotations", ["computed from the sheets above"])
 

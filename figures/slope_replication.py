@@ -7,20 +7,21 @@ plus local figdata/merged_incr_ccrcc.csv."""
 import os, numpy as np, pandas as pd
 import matplotlib.pyplot as plt
 import mrstyle as S
+from rppa_filter import load_rppa
 
 DD = "figdata"
 kp = f"{DD}/kirc_rppa_results.csv"
 if not os.path.exists(kp):
     raise SystemExit(f"missing {kp} -- run kirc_residual.py on the server and WinSCP it back")
 
-kirc = pd.read_csv(kp)                                    # gene, incremental_r2, fdr, ...
+kirc = load_rppa(kp)                                    # gene, incremental_r2, fdr, ...
 ccrcc = pd.read_csv(f"{DD}/merged_incr_ccrcc.csv")        # gene, incremental_r2_uni, fdr_uni
 m = ccrcc.merge(kirc, on="gene", suffixes=("_ccrcc", "_kirc"))
 m = m.dropna(subset=["incremental_r2_uni", "incremental_r2"])
 m = m[(m["fdr_uni"] < 0.05) & (m["incremental_r2_uni"] > 0)]      # CPTAC-CCRCC significant proteins only
 rep = (m["fdr"] < 0.05) & (m["incremental_r2"] > 0)       # replicates in KIRC
 rate = 100 * rep.mean()
-# base rate: replication among ALL 360 tested RPPA proteins (the null a gene-specific claim must beat)
+# base rate: replication among ALL tested RPPA proteins (the null a gene-specific claim must beat)
 kirc_sig = (kirc["fdr"] < 0.05) & (kirc["incremental_r2"] > 0)
 base_rate = 100 * kirc_sig.mean()
 from scipy.stats import fisher_exact

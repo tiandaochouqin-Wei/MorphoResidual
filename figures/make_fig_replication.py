@@ -17,7 +17,7 @@ R^2, UNI encoder) is drawn as a line from its CPTAC-side incremental R^2 to its
 value in the RPPA cohort (Phikon encoder), coloured blue if it stays significant
 there and grey if it does not, with the bold line marking the two medians. Titles
 and the significant/base-rate/P numbers are read directly from
-review/recalc/rppa_baserate_all.csv (the narrow, corrected-denominator frame used
+review/recalc/rppa_baserate_all.csv (built by review/recalc/rppa_exclusion.py; the narrow, corrected-denominator frame used
 throughout the manuscript -- see SuppTable_replication.tex) rather than recomputed
 here, so the figure cannot silently drift from the reported statistics.
 
@@ -28,6 +28,7 @@ it is reported in the main text only and is not a panel here.
 import pandas as pd
 import matplotlib.pyplot as plt
 import mrstyle as S
+from rppa_filter import load_rppa
 
 ORG, INK, LGREY = S.ORG, S.INK, S.LGREY
 DD = "figdata"
@@ -53,7 +54,7 @@ gs = fig.add_gridspec(1, 4, wspace=0.55, left=0.075, right=0.99, top=0.72, botto
 
 for i, (key, org, tcga) in enumerate(COHORTS):
     ccr = pd.read_csv(f"{DD}/merged_incr_{'ccrcc' if key == 'kirc' else key}.csv")
-    ext = pd.read_csv(f"{DD}/{RPPA_FILE[key]}")
+    ext = load_rppa(f"{DD}/{RPPA_FILE[key]}")
     mm = ccr.merge(ext, on="gene").dropna(subset=["incremental_r2_uni", "incremental_r2"])
     mm = mm[(mm.fdr_uni < 0.05) & (mm.incremental_r2_uni > 0)]
     okk = (mm.fdr < 0.05) & (mm.incremental_r2 > 0)

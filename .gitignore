@@ -45,7 +45,7 @@ source_data/
 review/*
 !review/recalc/
 review/recalc/*
-!review/recalc/rppa_baserate_all.py
+!review/recalc/rppa_exclusion.py
 !review/recalc/recalc_survival.py
 !review/recalc/mtor_control.py
 

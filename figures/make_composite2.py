@@ -163,7 +163,9 @@ cb.ax.tick_params(labelsize=7)
 # ===== d : external replication slope (CPTAC-CCRCC -> TCGA-KIRC; RPPA platform, Phikon) =====
 kp = f"{DD}/kirc_rppa_results.csv"
 if os.path.exists(kp):
-    kirc = pd.read_csv(kp); ccr = pd.read_csv(f"{DD}/merged_incr_ccrcc.csv")
+    # RPPA panel under the stated antibody rule (7 modification-antibody genes removed, FDR re-run)
+    from rppa_filter import load_rppa
+    kirc = load_rppa(kp); ccr = pd.read_csv(f"{DD}/merged_incr_ccrcc.csv")
     mm = ccr.merge(kirc, on="gene").dropna(subset=["incremental_r2_uni", "incremental_r2"])
     mm = mm[(mm.fdr_uni < 0.05) & (mm.incremental_r2_uni > 0)]
     okk = (mm.fdr < 0.05) & (mm.incremental_r2 > 0)

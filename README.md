@@ -191,6 +191,8 @@ MorphoResidual/
 │   ├── make_fig_controls.py           → Fig_controls.pdf       (Fig. 2)
 │   ├── ...                            (11 more live figure scripts)
 │   ├── mrstyle.py                     shared plotting style, imported everywhere
+│   ├── rppa_filter.py                 the RPPA antibody rule (7 modification-antibody genes removed, FDR re-run);
+│   │                                  every figure/table that reads a TCGA RPPA panel loads it through here
 │   └── (~20 earlier drafts, not referenced by the current manuscript —
 │        see "Which script makes which published display item" below)
 │
@@ -207,7 +209,8 @@ MorphoResidual/
 │   └── make_supptable_*.py                               Supplementary Tables
 │
 ├── review/recalc/              local recalculations that figures read directly
-│   ├── rppa_baserate_all.py    RPPA replication base rates, Fisher/CMH (Fig. 4d, Supp. replication fig.)
+│   ├── rppa_exclusion.py       RPPA replication statistics (base rates, Fisher/CMH, KIRC detail) with the seven
+│   │                           modification-antibody genes removed, plus the as-originally-analysed sensitivity arm
 │   ├── recalc_survival.py      Cox/KM survival models (Fig. 5c, Supp. Fig. scores g)
 │   └── mtor_control.py         phospho-S6 ribosomal-site control (mTOR section)
 │   (figures/enrichment_c2_levels.py regenerates the enrichment-family survival table and Fig. 2d;
