@@ -120,7 +120,7 @@ handles = [Line2D([], [], marker=mk, ls="none", ms=ms, color=col, mec="white" if
 axa.legend(handles=handles, fontsize=FS_LEG, frameon=False, loc="lower left", ncol=2,
            bbox_to_anchor=(-0.02, 0.035), handletextpad=0.3, columnspacing=0.9, labelspacing=0.3,
            borderaxespad=0.0)
-axa.set_title("Not explained by\nmicroenvironment composition", loc="left", fontsize=FS_TITLE, fontweight="bold")
+axa.set_title("Single axes leave most;\njointly not in LUAD, GBM", loc="left", fontsize=FS_TITLE, fontweight="bold")
 
 # =====================================================================================
 # b, c : morphology-only out-of-fold score vs measured residual score (pooled over cohorts)

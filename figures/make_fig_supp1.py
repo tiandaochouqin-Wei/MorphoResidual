@@ -118,7 +118,7 @@ axb.set_xticks([0, 10, 20, 30]); axb.tick_params(axis="x", labelsize=7.0)
 axb.tick_params(axis="y", length=0)
 axb.spines["left"].set_visible(False); axb.spines["bottom"].set_bounds(0, 30)
 axb.set_xlabel("top enriched Reactome term\n(\u2212log10 adj. p, tested-background ORA)", fontsize=7)
-tb = axb.set_title("Leading enriched programme\nper organ", loc="left", fontsize=7.6, fontweight="bold")
+tb = axb.set_title("Leading enriched term\nper organ", loc="left", fontsize=7.6, fontweight="bold")
 fams = ["translation", "secretion", "splicing", "folding", "ecm"]
 hb_ = [Line2D([], [], marker="o", ls="none", ms=4.2, mfc=FAM[f], mec=INK, mew=0.4) for f in fams]
 # upper right: the only region of the panel with no row label (CCRCC 'splicing' ends at x ~ 37;
