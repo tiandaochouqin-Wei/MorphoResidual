@@ -75,7 +75,7 @@ axa.set_xlim(-0.55, 4.55); axa.set_ylim(-0.32, 1.0)
 for s_ in axa.spines.values():
     s_.set_visible(False)
 axa.set_xticks([]); axa.set_yticks([])
-axa.set_title("Organ-specific post-transcriptional programme", fontsize=7.6, fontweight="bold", loc="left")
+axa.set_title("Organ-specific enrichment of the residual", fontsize=7.6, fontweight="bold", loc="left")
 # Unicode rather than mathtext: matplotlib sets sub/superscripts at 0.7x the base
 # size, so a 7 pt "$\log_{10}$" ships 4.9 pt glyphs and fails the 5 pt print floor.
 axa.text(-0.5, Y_TERM - 0.27, "−log10 q:", ha="right", va="top", fontsize=7, color=GREY, clip_on=False)
