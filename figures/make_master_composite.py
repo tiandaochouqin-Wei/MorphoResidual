@@ -5,10 +5,10 @@ d incr-R2 distribution | e UNI-vs-Phikon robustness | f embedding t-SNE | g morp
 recovers the residual."""
 import numpy as np, pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 from scipy import stats as st
 from sklearn.manifold import TSNE
 import mrstyle as S
+import make_fig1_flagship as F1   # panel a is drawn natively (vector text), not pasted as a PNG
 
 ORG, INK, GREY, LGREY = S.ORG, S.INK, S.GREY, S.LGREY
 COH, ORGAN = S.COH, S.ORGAN
@@ -44,16 +44,23 @@ order = sorted(COH, key=lambda c: counts[c], reverse=True)
 r2rna = {c: pd.read_csv(p)["r2_rna"].values for c, p in RPATH.items()}
 pooled = np.concatenate([v[np.isfinite(v)] for v in r2rna.values()])
 
-fig = plt.figure(figsize=(7.2, 8.2))
-gs = fig.add_gridspec(4, 2, height_ratios=[0.66, 1.0, 1.0, 1.0], hspace=0.5, wspace=0.30,
-                      left=0.09, right=0.965, top=0.985, bottom=0.058)
+FIG_W, FIG_H = 7.2, 8.2
+L, R, TOP, BOT = 0.09, 0.965, 0.985, 0.058
+# Panel a is placed at its native scale (equal aspect, F1.UNIT_IN inches per data unit) so the
+# 7-8 pt schematic text keeps its authored size; rows b-g share the remaining height.
+assert abs((R - L) * FIG_W - F1.PANEL_W_IN) < 1e-6
+a_h = F1.PANEL_H_IN / FIG_H
+GAP_A = 0.50 / FIG_H                        # gap between panel a and the b/c titles
+fig = plt.figure(figsize=(FIG_W, FIG_H))
+axa = fig.add_axes([L, TOP - a_h, R - L, a_h])
+gs = fig.add_gridspec(3, 2, hspace=0.5, wspace=0.30,
+                      left=L, right=R, top=TOP - a_h - GAP_A, bottom=BOT)
 
 # ===== a : workflow =====
-axa = fig.add_subplot(gs[0, :]); axa.imshow(mpimg.imread("Fig1_flagship.png"), aspect="auto")
-axa.axis("off"); lab(axa, "a", x=-0.02, y=1.02)
+F1.draw_flagship(axa); lab(axa, "a", x=-0.02, y=1.02)
 
 # ===== b : motivation (mRNA explains little) =====
-axb = fig.add_subplot(gs[1, 0]); lab(axb, "b")
+axb = fig.add_subplot(gs[0, 0]); lab(axb, "b")
 axb.hist(np.clip(pooled, -0.1, 1.0), bins=52, range=(-0.1, 1.0), color="#9ecae1",
          edgecolor="white", linewidth=0.3)
 med = np.median(pooled); flow = 100 * np.mean(pooled < 0.25)
@@ -67,7 +74,7 @@ axb.set_ylabel("gene" + "–" + "cohort pairs", fontsize=7); axb.set_xlim(-0.1, 
 axb.set_title("mRNA explains little of the proteome", fontsize=7.6, fontweight="bold", loc="left")
 
 # ===== c : bubble scatter — effect size x breadth x count, per organ =====
-axc = fig.add_subplot(gs[1, 1]); lab(axc, "c")
+axc = fig.add_subplot(gs[0, 1]); lab(axc, "c")
 pct = {c: 100 * counts[c] / tested[c] for c in COH}
 SK = 0.28                                   # pt^2 per protein (bubble area ∝ count)
 for c in COH:
@@ -96,7 +103,7 @@ for kx, kn in [(0.121, 500), (0.134, 2500)]:
 axc.text(0.1255, 11.0, "significant proteins", ha="center", va="bottom", fontsize=7, color=GREY)
 
 # ===== d : incremental-R2 distribution =====
-axd = fig.add_subplot(gs[2, 0]); lab(axd, "d")
+axd = fig.add_subplot(gs[1, 0]); lab(axd, "d")
 data = [sig[c]["incremental_r2_uni"].values for c in order]
 vp = axd.violinplot(data, showextrema=False, widths=0.85)
 for b, c in zip(vp["bodies"], order):
@@ -109,7 +116,7 @@ axd.set_ylabel(r"incremental R² (significant)", fontsize=7)
 axd.set_ylim(0, np.percentile(np.concatenate(data), 99))
 
 # ===== e : UNI vs Phikon agreement =====
-axe = fig.add_subplot(gs[2, 1]); lab(axe, "e")
+axe = fig.add_subplot(gs[1, 1]); lab(axe, "e")
 allu = np.concatenate([incr[c]["incremental_r2_uni"].values for c in COH])
 allp = np.concatenate([incr[c]["incremental_r2_phi"].values for c in COH])
 m = np.isfinite(allu) & np.isfinite(allp); allu, allp = allu[m], allp[m]
@@ -121,7 +128,7 @@ axe.set_xlabel(r"incremental R² (UNI)", fontsize=7); axe.set_ylabel(r"increment
 axe.set_xlim(-0.05, 0.35); axe.set_ylim(-0.05, 0.35)
 
 # ===== f : embedding t-SNE =====
-axf = fig.add_subplot(gs[3, 0]); lab(axf, "f")
+axf = fig.add_subplot(gs[2, 0]); lab(axf, "f")
 emb = pd.read_csv(f"{DD}/emb_pca50.csv")
 Y = TSNE(n_components=2, random_state=0, init="pca", perplexity=30,
          learning_rate="auto").fit_transform(emb[[f"pc{i}" for i in range(1, 51)]].values)
@@ -133,7 +140,7 @@ axf.legend(fontsize=7, markerscale=2.0, loc="upper center", bbox_to_anchor=(0.5,
            handletextpad=0.2, borderpad=0.2, columnspacing=0.9, frameon=False)
 
 # ===== g : morphology recovers the residual =====
-axg = fig.add_subplot(gs[3, 1]); lab(axg, "g")
+axg = fig.add_subplot(gs[2, 1]); lab(axg, "g")
 xs, ys, cs = [], [], []
 for c in COH:
     s = pd.read_csv(f"{DD}/scores_{c.lower()}.csv", index_col=0)

@@ -34,31 +34,46 @@ def lab(ax, s, x=-0.18, y=1.05):
     ax.text(x, y, s, transform=ax.transAxes, fontsize=10, fontweight="bold", va="bottom", ha="right")
 
 
-fig = plt.figure(figsize=(7.2, 2.7))
+# B7: height 2.7 -> 3.2 in so panel b can carry a numbers-at-risk table under its
+# x-axis; panels a and c keep their widths and gain the extra height.
+FH = 3.2
+fig = plt.figure(figsize=(7.2, FH))
 gs = fig.add_gridspec(1, 3, width_ratios=[1.35, 1.0, 1.0], wspace=0.42,
-                      left=0.085, right=0.985, top=0.86, bottom=0.20)
+                      left=0.085, right=0.985, top=(FH - 0.38) / FH, bottom=0.60 / FH)
 
 # ===== a : residual score tracks grade =====
 # title carries pad=18 to clear the in-axes legend, so the panel letter must rise
 # above it or it reads as belonging to the panel below
-axd = fig.add_subplot(gs[0, 0]); lab(axd, "a", x=-0.14, y=1.19)
+axd = fig.add_subplot(gs[0, 0]); lab(axd, "a", x=-0.14, y=1.155)
 gc = ["CCRCC", "LUAD", "UCEC", "PDAC"]
 # filled = BH q<0.05 within the cohort's own clinical test family -- the primary
 # correction declared in Methods and used identically in Table 3 and Supp Fig 2f.
-# Read from figdata/clinical_family_all.csv (108-test enumeration), mode=H&E-only,
-# outcome=grade. Corrects a transcription error found 2026-09-17: n was previously
-# hand-typed as [103,103,97,137] for CCRCC/LUAD/UCEC/PDAC; the file gives
-# [103,102,100,135] (LUAD/UCEC/PDAC off by 1/3/2). rho, p and the q_cohort<0.05 flags
-# below were already correct.
+# rho, p and the BH q_cohort<0.05 flags are read from figdata/clinical_family_all.csv
+# (108-test enumeration), mode=H&E-only, outcome=grade. The CSV's "n" column is NOT the
+# grade n: it is the survival-evaluable n (LUAD 102, UCEC 100, PDAC 135). The grade n
+# is the number of analysed patients with a G1-G4 grade (GX / Unknown / missing are not
+# gradeable), counted below from the same clinical files and checked against the CSV's
+# rho. (An earlier revision of this script replaced the correct hand-typed
+# [103,103,97,137] with that survival n; the hand-typed values were right.)
 _cfa = pd.read_csv(f"{DD}/clinical_family_all.csv")
 _cfa = _cfa[(_cfa.outcome == "grade") & (_cfa["mode"] == "H&E-only")]
 def _fam(fam):
     r = _cfa[_cfa.family == fam].set_index("cohort").loc[gc]
-    return r["n"].values, r["stat"].values, r["p"].values, (r["q_cohort"].values < 0.05)
-ng_t, trho, tp, tsig = _fam("Transl.")
-ng_s, srho, sp, ssig = _fam("ER-secr.")
-assert (ng_t == ng_s).all(), "translation/ER-secretion n mismatch within a cohort"
-ng = ng_t
+    return r["stat"].values, r["p"].values, (r["q_cohort"].values < 0.05)
+trho, tp, tsig = _fam("Transl.")
+srho, sp, ssig = _fam("ER-secr.")
+from scipy.stats import spearmanr as _spr
+ng = []
+for _i, _c in enumerate(gc):
+    _sc = pd.read_csv(f"{DD}/scores_{_c.lower()}.csv", index_col=0)
+    _cl = pd.read_csv(f"{DD}/gdc_clinical_{_c.lower()}.csv").set_index("case").reindex(_sc.index)
+    _g = _cl["tumor_grade"].astype(str).map({"G1": 1, "G2": 2, "G3": 3, "G4": 4})
+    _ok = _g.notna()
+    ng.append(int(_ok.sum()))
+    assert abs(_spr(_sc.loc[_ok, "translation_morph"], _g[_ok])[0] - trho[_i]) < 1e-6, \
+        f"{_c}: rho on the counted graded set does not reproduce the enumeration's rho"
+ng = np.array(ng)
+assert list(ng) == [103, 103, 97, 137], f"graded n moved: {list(ng)}"
 # dot-and-interval: 95% CI from the Fisher z-transform, se = 1/sqrt(n-3)
 yrow = np.arange(4)[::-1]; JIT = 0.17
 for off, rho, sig, col, l in [(+JIT, trho, tsig, FAM["translation"], "translation"),
@@ -113,16 +128,48 @@ def logrank(t, e, g):
 
 
 pv = logrank(t, ev, g)
-for gi, col, l in [(1, ORG["CCRCC"], "high score"), (0, GREY, "low score")]:
+GROUPS = [(1, ORG["CCRCC"], "high score"), (0, GREY, "low score")]
+for gi, col, l in GROUPS:
     mm = g == gi; xs, ys = km(t[mm], ev[mm])
     axe.step(xs, ys, where="post", color=col, lw=1.4, label=f"{l} (n={mm.sum()})")
+    # censoring ticks: one vertical mark per censored patient, on the curve at the
+    # survival probability in force at that patient's censoring time
+    tc = np.sort(t[mm & (ev == 0)])
+    yc = ys[np.searchsorted(xs, tc, side="right") - 1]
+    axe.plot(tc, yc, ls="none", marker="|", ms=4.5, mew=0.8, color=col, zorder=3)
 axe.set_xlabel("overall survival (days)", fontsize=7); axe.set_ylabel("survival probability", fontsize=7)
 axe.set_ylim(0, 1.02); axe.text(0.04, 0.10, f"log-rank P = {pv:.3f}", transform=axe.transAxes, fontsize=7)
 # frameon=False put the legend samples directly on the KM curves, so the blue
 # high-score swatch was hidden under the grey low-score curve
-axe.legend(fontsize=7, loc="upper right", frameon=True, framealpha=0.92,
-           edgecolor="none", borderpad=0.3)
+# B7: with censoring ticks the upper-right corner is no longer clear (the low-score
+# curve runs along 0.8-0.98 there), so the legend sits in the empty band below the
+# curves, above the log-rank text
+axe.legend(fontsize=7, loc="lower left", bbox_to_anchor=(0.02, 0.19), frameon=True,
+           framealpha=0.92, edgecolor="none", borderpad=0.3)
 axe.set_title("Survival (CCRCC, descriptive)", fontsize=7.6, fontweight="bold", loc="left")
+
+# numbers at risk (n with time >= t) at evenly spaced times, computed from the same
+# t / ev / g arrays the curves use; observed follow-up runs to ~2006 days
+TT = np.arange(0, 2001, 500)
+axe.set_xticks(TT); axe.set_xlim(-60, float(t.max()) * 1.02)
+_p = axe.get_position()
+axe.set_position([_p.x0, 0.98 / FH, _p.width, _p.y1 - 0.98 / FH])
+axr = fig.add_axes([_p.x0, 0.06 / FH, _p.width, 0.46 / FH], sharex=axe)
+axr.set_ylim(-0.5, 2.5)
+for sp_ in axr.spines.values():
+    sp_.set_visible(False)
+axr.set_yticks([]); axr.tick_params(axis="x", length=0, labelbottom=False)
+axr.patch.set_visible(False)
+axr.text(-0.02, 2.0, "No. at risk", transform=axr.get_yaxis_transform(), fontsize=7,
+         fontweight="bold", ha="left", va="center")
+_atrisk = {}
+for row, (gi, col, l) in zip((1, 0), GROUPS):
+    axr.text(-0.04, row - 0.15, l.split()[0], transform=axr.get_yaxis_transform(),
+             fontsize=7, color=col, ha="right", va="center")
+    _atrisk[gi] = [int(((g == gi) & (t >= tt)).sum()) for tt in TT]
+    for tt, nn in zip(TT, _atrisk[gi]):
+        axr.text(tt, row - 0.15, str(nn), fontsize=7, color=col, ha="center", va="center")
+assert _atrisk[1][0] + _atrisk[0][0] == len(df)
 
 # ===== c : honest forest (uni vs grade/stage-adjusted) =====
 axf = fig.add_subplot(gs[0, 2]); lab(axf, "c", x=-0.28)
@@ -154,4 +201,4 @@ axf.set_xlabel("OS hazard ratio (per SD)", fontsize=7)
 axf.set_title("Not independent of grade", fontsize=7.6, fontweight="bold", loc="left")
 
 S.save_pub(fig, "Fig_clinical")
-print(f"wrote Fig_clinical | KM log-rank P={pv:.3f}, n={len(df)}")
+print(f"wrote Fig_clinical | KM log-rank P={pv:.3f}, n={len(df)}, at-risk high={_atrisk[1]} low={_atrisk[0]}, censor ticks={int((ev==0).sum())}")

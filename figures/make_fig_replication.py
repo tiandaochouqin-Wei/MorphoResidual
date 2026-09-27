@@ -69,20 +69,20 @@ for i, (key, org, tcga) in enumerate(COHORTS):
         ax.plot([0, 1], [mm.incremental_r2_uni.median(), mm.incremental_r2.median()],
                 "o-", color=INK, lw=1.6, ms=4, zorder=5)
     ax.set_xticks([0, 1])
-    ax.set_xticklabels(["CPTAC\n(MS·UNI)", f"{tcga}\n(RPPA·Phikon)"], fontsize=6.3)
+    ax.set_xticklabels(["CPTAC\n(MS·UNI)", f"{tcga}\n(RPPA·Phikon)"], fontsize=7)
     ax.set_xlim(-0.35, 1.35)
     if i == 0:
-        ax.set_ylabel("morphology incremental $R^2$", fontsize=7)
+        ax.set_ylabel("morphology incremental R²", fontsize=7)
     s = stats.loc[key]
     ax.set_title(f"{org}: {s.rate_num:.0%} of {int(s.cptac_sig_on_rppa)}\n"
                  f"vs. {s.narrow_rate_base:.0%} base, $P$={s.narrow_p_two:.2f}",
-                 fontsize=6.6, fontweight="bold", loc="left")
+                 fontsize=7, fontweight="bold", loc="left")
 
 fig.text(0.5, 0.965,
          "Gene-specific replication does not exceed base rate in any of four independent RPPA cohorts",
          ha="center", fontsize=8, fontweight="bold")
 fig.text(0.5, 0.015, "blue = FDR<0.05 & incr.>0 in the external cohort (colour = discovery organ)",
-         ha="center", fontsize=6.3, color=INK, style="italic")
+         ha="center", fontsize=7, color=INK, style="italic")
 
 S.save_pub(fig, "Fig_replication")
 print("wrote Fig_replication | per-panel N (CPTAC-sig ∩ RPPA-tested):",

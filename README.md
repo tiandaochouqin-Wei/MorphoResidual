@@ -210,7 +210,8 @@ MorphoResidual/
 │   ├── rppa_baserate_all.py    RPPA replication base rates, Fisher/CMH (Fig. 4d, Supp. replication fig.)
 │   ├── recalc_survival.py      Cox/KM survival models (Fig. 5c, Supp. Fig. scores g)
 │   └── mtor_control.py         phospho-S6 ribosomal-site control (mTOR section)
-│   (figures/enrichment_c2_levels.py regenerates Table 2 and Fig. 2d)
+│   (figures/enrichment_c2_levels.py regenerates the enrichment-family survival table and Fig. 2d;
+   make_source_data.py rebuilds the Source Data workbooks from the same input files)
 │
 ├── requirements.txt
 ├── LICENSE                     MIT (code only, not third-party model weights)
@@ -219,7 +220,7 @@ MorphoResidual/
 
 ## Which script makes which published display item
 
-The 13 figures actually embedded in the current manuscript, and the script
+The 14 figures actually embedded in the current manuscript (main text and Supplementary Information), and the script
 that produces each one:
 
 | Manuscript figure | Script | Output |
@@ -237,6 +238,7 @@ that produces each one:
 | Supp. Fig. (pan-organ core) | `figures/make_fig_pan_organ_core.py` | `Fig_pan_organ_core.pdf` |
 | Supp. Fig. (replication) | `figures/make_fig_replication.py` | `Fig_replication.pdf` |
 | Supp. Fig. (WSI spatial) | `figures/make_fig_wsi_spatial_supp.py` | `Fig_wsi_spatial_supp.pdf` |
+| Supp. Fig. (all 16 candidate H&E tiles) | `figures/make_fig_tiles_supp.py` | `Fig_tiles_supp.pdf` |
 
 Some supplementary tables are produced by a matching `make_supptable_*.py`
 script in the repository root (e.g. `make_supptable_nuisance.py` →

@@ -211,17 +211,23 @@ axf = fig.add_subplot(g3[0]); lab(axf, "f", 2, "L")
 GCOH = ["CCRCC", "LUAD", "UCEC", "PDAC"]
 # rho, n and BH q within each cohort's own clinical test family -- the primary
 # correction (figdata/clinical_family_all.csv, 108-test enumeration). Identical
-# source and rule as Fig 2d (make_composite2.py) and Table 3. Read live rather than
-# hand-typed: corrects the same n transcription error found 2026-09-17 in Fig_clinical
-# panel a (n was [103,103,97,137], file gives [103,102,100,135] for CCRCC/LUAD/UCEC/PDAC).
+# source and rule as Fig 2d (make_composite2.py) and Table 3. rho and q are read live;
+# n is NOT the CSV's "n" column (that is the survival-evaluable n: LUAD 102, UCEC 100,
+# PDAC 135) but the number of analysed patients with a G1-G4 grade, counted from the
+# clinical files exactly as in make_fig_clinical.py panel a (103/103/97/137).
 _cfa_f = pd.read_csv(f"{DD}/clinical_family_all.csv")
 _cfa_f = _cfa_f[(_cfa_f.outcome == "grade") & (_cfa_f["mode"] == "H&E-only")]
 def _famf(fam):
     r = _cfa_f[_cfa_f.family == fam].set_index("cohort").loc[GCOH]
-    return r["n"].values, r["stat"].values, r["q_cohort"].values
-n_tr, rho_tr_f, q_tr_f = _famf("Transl.")
-n_se, rho_se_f, q_se_f = _famf("ER-secr.")
-assert (n_tr == n_se).all(), "translation/ER-secretion n mismatch within a cohort"
+    return r["stat"].values, r["q_cohort"].values
+rho_tr_f, q_tr_f = _famf("Transl.")
+rho_se_f, q_se_f = _famf("ER-secr.")
+n_tr = []
+for _c in GCOH:
+    _sc = pd.read_csv(f"{DD}/scores_{_c.lower()}.csv", index_col=0)
+    _cl = pd.read_csv(f"{DD}/gdc_clinical_{_c.lower()}.csv").set_index("case").reindex(_sc.index)
+    n_tr.append(int(_cl["tumor_grade"].astype(str).isin(["G1", "G2", "G3", "G4"]).sum()))
+assert n_tr == [103, 103, 97, 137], f"graded n moved: {n_tr}"
 n_grade = dict(zip(GCOH, n_tr))
 grade = {
     "translation": {"rho": list(rho_tr_f), "q": list(q_tr_f)},
