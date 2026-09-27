@@ -128,7 +128,7 @@ axb.set_yticks(range(4)); axb.set_yticklabels(["+ stroma", "+ immune", "+ prolif
 for s_ in axb.spines.values():
     s_.set_visible(False)
 axb.tick_params(length=0)
-axb.set_title("Not explained by\nmicroenvironment composition", fontsize=7.6, fontweight="bold", loc="left")
+axb.set_title("Single composition axes leave most of it;\njointly they remove most in LUAD, GBM", fontsize=7.6, fontweight="bold", loc="left")
 axb.text(0.5, -0.20, "% of morphology increment retained after adding the score(s) to the mRNA baseline",
          transform=axb.transAxes, ha="center", fontsize=7, color=GREY)
 
@@ -167,13 +167,13 @@ if os.path.exists(kp):
     mm = ccr.merge(kirc, on="gene").dropna(subset=["incremental_r2_uni", "incremental_r2"])
     mm = mm[(mm.fdr_uni < 0.05) & (mm.incremental_r2_uni > 0)]
     okk = (mm.fdr < 0.05) & (mm.incremental_r2 > 0)
-    kirc_sig_all = (kirc.fdr < 0.05) & (kirc.incremental_r2 > 0)
-    base_rate = 100 * kirc_sig_all.mean()
-    non_m = kirc[~kirc["gene"].isin(mm["gene"])]
-    non_sig = int(((non_m.fdr < 0.05) & (non_m.incremental_r2 > 0)).sum())
-    from scipy.stats import fisher_exact
-    _, fisher_p = fisher_exact([[int(okk.sum()), len(mm) - int(okk.sum())],
-                                 [non_sig, len(non_m) - non_sig]])
+    # narrow, corrected-denominator frame (base rate excludes proteins CPTAC never
+    # tested), matching Fig_replication/make_fig_replication.py, SuppTable_replication.tex
+    # and the main text (\S\ref{sec:kircmeth}) -- read from the same recalculated source
+    # rather than the uncorrected all-RPPA-tested frame this panel used previously.
+    kirc_stats = pd.read_csv("../review/recalc/rppa_baserate_all.csv").set_index("cohort").loc["kirc"]
+    base_rate = 100 * kirc_stats.narrow_rate_base
+    fisher_p = kirc_stats.narrow_p_two
     axi = fig.add_subplot(gs[2, 0]); lab(axi, "d")
     for _, r in mm.iterrows():
         o = (r.fdr < 0.05) and (r.incremental_r2 > 0)

@@ -18,8 +18,15 @@ main.tex.bak_*
 SuppTable_*.tex
 SuppTable_*.csv
 references.bib
-review/
 submission/
+# internal review notes stay private; the three recalculation scripts under
+# review/recalc/ are analysis code that live figures depend on, so they ship
+review/*
+!review/recalc/
+review/recalc/*
+!review/recalc/rppa_baserate_all.py
+!review/recalc/recalc_survival.py
+!review/recalc/mtor_control.py
 
 # one-off editorial scripts that patched manuscript text (not analysis code)
 apply_*_edits*.py

@@ -192,8 +192,13 @@ axc.set_title("Signal survives batch", loc="left", fontsize=7.6, fontweight="bol
 # d : enrichment-family survival heatmap (make_figs.py Fig5 c)
 # =====================================================================================
 axd = fig.add_subplot(g2[1]); lab(axd, "d", x=-0.36)
-sigterms = _BL[["sigterms_baseline", "sigterms_batchcorr",
-                "sigterms_strictest"]].to_numpy(int)
+# Same source as Table 2 (tab:c2): tested-protein background, six families
+# (enrichment_c2_levels.py). batch_levels.csv's sigterms_* columns are the superseded
+# whole-genome Enrichr run and are not used.
+_C2 = _pd.read_csv("figdata/enrichment_c2_levels.csv")
+_C2 = _C2.groupby(["cohort", "level"])["signature_hit"].sum().unstack("level")
+sigterms = _C2.loc[[c.lower() for c in COH],
+                   ["baseline", "batch-corrected", "strictest"]].to_numpy(int)
 im = axd.imshow(sigterms, cmap="YlGnBu", vmin=0, vmax=15, aspect="auto")
 axd.set_xticks([0, 1, 2]); axd.set_xticklabels(["base", "batch", "strict"], fontsize=7.0)
 axd.set_yticks(range(5)); axd.set_yticklabels(COH, fontsize=7.0)

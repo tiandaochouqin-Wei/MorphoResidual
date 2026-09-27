@@ -30,6 +30,7 @@ import os
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patheffects as pe
 import mrstyle as S
 
 INK, GREY, LGREY = S.INK, S.GREY, S.LGREY
@@ -61,7 +62,27 @@ def paint(ax, coords, ts):
     im = ax.imshow(np.ma.masked_invalid(G), cmap="RdBu_r",
                    vmin=vc - vspan, vmax=vc + vspan, origin="upper")
     ax.axis("off")
-    return im
+    return im, step, G.shape
+
+
+# scale bar: each map's array cell is one tile, `step` raw (level-0) pixels wide, so
+# 1 data unit = step * MPP_UM micrometres. mpp = 0.4942 um/px (Methods, \S\ref{sec:robust});
+# `step` is measured from each slide's own coordinates rather than assumed, since it is the
+# tile stride used at extraction time, not necessarily 256 px.
+MPP_UM, SCALEBAR_UM = 0.4942, 2000                                                # 2 mm
+
+
+def add_scalebar(ax, step_px, grid_shape, margin_frac=0.05):
+    nrows, ncols = grid_shape
+    bar_units = SCALEBAR_UM / (step_px * MPP_UM)
+    margin = margin_frac * max(nrows, ncols)
+    x1, y = ncols - 1 - margin, nrows - 1 - margin
+    x0 = x1 - bar_units
+    ax.plot([x0, x1], [y, y], color="black", lw=2.2, solid_capstyle="butt", zorder=5,
+            path_effects=[pe.Stroke(linewidth=3.6, foreground="white"), pe.Normal()])
+    ax.text((x0 + x1) / 2.0, y - margin * 0.5, f"{SCALEBAR_UM / 1000:g} mm", fontsize=7.0,
+            color="black", ha="center", va="bottom", zorder=5,
+            path_effects=[pe.Stroke(linewidth=1.8, foreground="white"), pe.Normal()])
 
 
 fig = plt.figure(figsize=(7.2, 3.4))
@@ -69,12 +90,14 @@ gs = fig.add_gridspec(1, 3, width_ratios=[1.3, 1.0, 0.045], wspace=0.08,
                       left=0.03, right=0.90, top=0.88, bottom=0.04)
 
 axg = fig.add_subplot(gs[0]); lab(axg, "a", x=-0.02)
-img = paint(axg, dd["coords0"], dd["scores0"])
+img, step0, shape0 = paint(axg, dd["coords0"], dd["scores0"])
 axg.set_title("Spatial map: high-residual slide", fontsize=7.6, fontweight="bold", loc="left")
+add_scalebar(axg, step0, shape0)
 
 axh = fig.add_subplot(gs[1]); lab(axh, "b", x=-0.03)
-paint(axh, dd["coords1"], dd["scores1"])
+_, step1, shape1 = paint(axh, dd["coords1"], dd["scores1"])
 axh.set_title("low-residual slide", fontsize=7.6, fontweight="bold", loc="left")
+add_scalebar(axh, step1, shape1)
 
 cax = fig.add_subplot(gs[2])
 cb = fig.colorbar(img, cax=cax)

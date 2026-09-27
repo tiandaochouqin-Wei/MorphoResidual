@@ -31,6 +31,15 @@ sig = {c: d[(d.fdr_uni < 0.05) & (d.incremental_r2_uni > 0)] for c, d in incr.it
 counts = {c: len(sig[c]) for c in COH}
 tested = {c: int(incr[c]["incremental_r2_uni"].notna().sum()) for c in COH}
 medincr = {c: float(sig[c]["incremental_r2_uni"].median()) for c in COH}
+# Held-out re-estimate of the same significant sets (winner's-curse correction, Methods
+# "seed reliability"): the sets were selected on seed 0, so the selected-set medians above
+# are inflated; the pooled median over the nine CV seeds NOT used for selection (seeds 1-9)
+# is the unbiased effect size for the same genes (main text: 0.061/0.032/0.113/0.026/0.040).
+_seed = {c: pd.read_csv(f"{DD}/seed_reliability_{c.lower()}.csv") for c in COH}
+for c in COH:
+    assert set(_seed[c].loc[_seed[c]["pinned_significant"], "gene"]) == set(sig[c]["gene"]), c
+medheld = {c: float(np.median(_seed[c].loc[_seed[c]["pinned_significant"],
+                                          [f"incr_s{i}" for i in range(1, 10)]].values)) for c in COH}
 order = sorted(COH, key=lambda c: counts[c], reverse=True)
 r2rna = {c: pd.read_csv(p)["r2_rna"].values for c, p in RPATH.items()}
 pooled = np.concatenate([v[np.isfinite(v)] for v in r2rna.values()])
@@ -64,16 +73,20 @@ SK = 0.28                                   # pt^2 per protein (bubble area ∝ 
 for c in COH:
     axc.scatter(medincr[c], pct[c], s=counts[c] * SK, color=ORG[c], alpha=0.85,
                 edgecolors="white", linewidths=0.5, zorder=3)
+    # held-out median of the same genes: open diamond, joined to the selected-set bubble
+    axc.plot([medheld[c], medincr[c]], [pct[c]] * 2, color=GREY, lw=0.6, zorder=2)
+    axc.scatter(medheld[c], pct[c], s=16, marker="D", facecolors="white",
+                edgecolors=ORG[c], linewidths=0.9, zorder=4)
 # label offsets (points) chosen so LUAD/CCRCC (adjacent) and UCEC never collide
-off = {"LUAD": (-16, 0, "right", "center"), "CCRCC": (-4, -19, "left", "top"),
+off = {"LUAD": (-2, 16, "center", "bottom"), "CCRCC": (-4, -19, "left", "top"),
        "UCEC": (0, -19, "center", "top"), "PDAC": (0, -18, "left", "top"),
        "GBM": (11, 0, "left", "center")}
 for c in COH:
     dx, dy, ha, va = off[c]
     axc.annotate(f"{ORGAN[c]}  {counts[c]:,}", (medincr[c], pct[c]), xytext=(dx, dy),
                  textcoords="offset points", ha=ha, va=va, fontsize=7, color=INK, zorder=4)
-axc.set_xlim(0.04, 0.145); axc.set_ylim(0, 30)
-axc.set_xlabel(r"median incremental R² (significant set)", fontsize=7)
+axc.set_xlim(0.015, 0.145); axc.set_ylim(0, 30)
+axc.set_xlabel(r"median incremental R² (filled, selected; open, held-out)", fontsize=7)
 axc.set_ylabel("% of tested proteins significant" + chr(10) + "(FDR<0.05)", fontsize=7)
 axc.set_title("Breadth and effect size per organ", fontsize=7.6, fontweight="bold", loc="left")
 # bubble-size key (bottom right, empty region)
@@ -90,6 +103,7 @@ for b, c in zip(vp["bodies"], order):
     b.set_facecolor(ORG[c]); b.set_alpha(0.75); b.set_edgecolor("none")
 for i, c in enumerate(order):
     axd.plot([i + 1 - 0.28, i + 1 + 0.28], [medincr[c]] * 2, color=INK, lw=1.1, zorder=5)
+    axd.plot([i + 1 - 0.28, i + 1 + 0.28], [medheld[c]] * 2, color=INK, lw=1.0, ls=(0, (2, 1.5)), zorder=5)
 axd.set_xticks(range(1, 6)); axd.set_xticklabels([ORGAN[c] for c in order], fontsize=7)
 axd.set_ylabel(r"incremental R² (significant)", fontsize=7)
 axd.set_ylim(0, np.percentile(np.concatenate(data), 99))
@@ -134,3 +148,5 @@ axg.set_ylabel("morphology-only score\n(from H&E)", fontsize=7)
 
 S.save_pub(fig, "Fig_master")
 print(f"wrote Fig_master | median r2_rna={med:.3f}, %<0.25={flow:.0f}")
+print("selected-set medians:", {c: round(medincr[c], 3) for c in COH})
+print("held-out medians    :", {c: round(medheld[c], 3) for c in COH})

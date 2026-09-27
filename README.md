@@ -206,6 +206,12 @@ MorphoResidual/
 │   ├── fig_data_export.py, fig_data_export2.py           HPC → figdata bridge
 │   └── make_supptable_*.py                               Supplementary Tables
 │
+├── review/recalc/              local recalculations that figures read directly
+│   ├── rppa_baserate_all.py    RPPA replication base rates, Fisher/CMH (Fig. 4d, Supp. replication fig.)
+│   ├── recalc_survival.py      Cox/KM survival models (Fig. 5c, Supp. Fig. scores g)
+│   └── mtor_control.py         phospho-S6 ribosomal-site control (mTOR section)
+│   (figures/enrichment_c2_levels.py regenerates Table 2 and Fig. 2d)
+│
 ├── requirements.txt
 ├── LICENSE                     MIT (code only, not third-party model weights)
 └── README.md

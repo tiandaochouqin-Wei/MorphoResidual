@@ -15,6 +15,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from matplotlib.patches import Rectangle
+import matplotlib.patheffects as pe
 from matplotlib.transforms import blended_transform_factory
 from scipy import stats as st
 import mrstyle as S
@@ -379,6 +380,26 @@ for j, f in enumerate(lo[:4]):
 for i in range(2):
     for j in range(4):
         axes_t[i, j].axis("off")
+
+# scale bar, one tile per row (lower-right corner, in tile-pixel data coordinates): tiles are
+# 256 px at level 0, mpp = 0.4942 um/px on >=98% of slides (Methods, \S\ref{sec:robust}), so the
+# tile field of view is ~126 um and a 50 um bar is ~101 px.
+MPP_UM, TILE_PX, SCALEBAR_UM = 0.4942, 256, 50
+SCALEBAR_PX = SCALEBAR_UM / MPP_UM
+
+
+def add_scalebar(ax, margin=16):
+    x1 = y = TILE_PX - margin
+    x0 = x1 - SCALEBAR_PX
+    ax.plot([x0, x1], [y, y], color="white", lw=3.0, solid_capstyle="butt", zorder=5,
+            path_effects=[pe.Stroke(linewidth=4.4, foreground="black"), pe.Normal()])
+    ax.text((x0 + x1) / 2.0, y - 8, f"{SCALEBAR_UM} µm", fontsize=7.0, color="white",
+            ha="center", va="bottom", zorder=5,
+            path_effects=[pe.Stroke(linewidth=1.6, foreground="black"), pe.Normal()])
+
+
+add_scalebar(axes_t[0, 0])
+add_scalebar(axes_t[1, 0])
 axes_t[0, 0].text(-0.08, 0.5, "highest\nresidual", transform=axes_t[0, 0].transAxes, fontsize=7.0,
                   va="center", ha="right", fontweight="bold", color=S.ORG["CCRCC"])
 axes_t[1, 0].text(-0.08, 0.5, "lowest\nresidual", transform=axes_t[1, 0].transAxes, fontsize=7.0,
