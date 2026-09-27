@@ -405,7 +405,7 @@ axes_t[0, 0].text(-0.08, 0.5, "highest\nresidual", transform=axes_t[0, 0].transA
 axes_t[1, 0].text(-0.08, 0.5, "lowest\nresidual", transform=axes_t[1, 0].transAxes, fontsize=7.0,
                   va="center", ha="right", fontweight="bold", color=S.GREY)
 fig.text(0.535, 0.335, "f", fontsize=10, fontweight="bold", va="top", ha="left")
-fig.text(0.575, 0.335, "Representative H&E (CCRCC): highest vs lowest\ntranslation-residual patients",
+fig.text(0.575, 0.335, "H&E input (CCRCC): highest vs lowest\ntranslation-residual patients",
          fontsize=7.6, fontweight="bold", color=INK, ha="left", va="top", linespacing=1.15)
 
 S.save_pub(fig, "Fig_biology")
