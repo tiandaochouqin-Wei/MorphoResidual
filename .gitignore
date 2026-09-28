@@ -46,6 +46,7 @@ review/*
 !review/recalc/
 review/recalc/*
 !review/recalc/rppa_exclusion.py
+!review/recalc/sex_sensitivity.py
 !review/recalc/recalc_survival.py
 !review/recalc/mtor_control.py
 
