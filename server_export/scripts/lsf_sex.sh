@@ -21,6 +21,11 @@ fi
 export MORPHO_COHORT="${CANCER}"
 export MORPHO_SEX_TSV="${ZW}/scripts/sex_by_case.tsv"
 
+# morpho_env.sh sets MORPHO_OUT only if it is not already set, so a value inherited from
+# an interactive shell that sourced a DIFFERENT cohort earlier would silently redirect the
+# output. Clear it first; the data paths are set unconditionally and are not affected.
+unset MORPHO_OUT
+
 source "${ZW}/scripts/morpho_env.sh" "${CANCER}" || exit 1
 
 # after the source: MORPHO_OUT does not exist before it, and set -u would abort.
