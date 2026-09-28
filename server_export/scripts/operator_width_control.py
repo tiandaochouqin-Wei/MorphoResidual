@@ -87,7 +87,12 @@ def parse_spec(s):
     if s == "0":
         return (0, 0)
     cap, _, mg = s.partition(":")
-    return (int(cap), int(mg) if mg else MIN_GROUP_DEFAULT)
+    try:
+        return (int(cap), int(mg) if mg else MIN_GROUP_DEFAULT)
+    except ValueError:
+        sys.exit(f"[opw] bad design spec {s!r} in MORPHO_WIDTHS. Designs are CAP:MIN "
+                 f"(e.g. '12:3'), or '0' for no correction. A bare width like 'full' or "
+                 f"'20' without a colon is the old format and is no longer accepted.")
 
 
 def design(raw, counts, spec):

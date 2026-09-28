@@ -16,7 +16,8 @@ else
   export MORPHO_SIG_CSV="${ZW}/${CANCER}/results/residual_results_tumoronly.csv"
 fi
 export MORPHO_COHORT="${CANCER}"
-export MORPHO_WIDTHS="${MORPHO_WIDTHS:-0,12,20,full}"
+# designs are CAP:MIN, sitepack's two parameters -- NOT bare widths
+export MORPHO_WIDTHS="${MORPHO_WIDTHS:-0,12:3,99:3,99:2,99:1}"
 unset MORPHO_OUT
 export MORPHO_OPW_OUT="${ZW}/scripts/operator_width_${CANCER}.csv"
 
