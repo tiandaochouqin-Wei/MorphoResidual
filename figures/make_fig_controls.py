@@ -207,7 +207,7 @@ for i in range(5):
         vv = sigterms[i, j]
         axd.text(j, i, str(vv), ha="center", va="center",
                  color="white" if vv > 8 else "black", fontsize=7)
-axd.set_title("Biology survives", loc="left", fontsize=7.6, fontweight="bold")
+axd.set_title("Biology survives, unevenly", loc="left", fontsize=7.6, fontweight="bold")
 cb = fig.colorbar(im, ax=axd, fraction=0.05, pad=0.05)
 cb.set_ticks([0, 5, 10, 15])          # four integer ticks: legible at 7 pt, no decimal clutter
 cb.set_label("enriched terms\n(of top 15)", fontsize=7.0, labelpad=2)

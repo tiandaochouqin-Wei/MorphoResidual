@@ -3,7 +3,7 @@
 a  term-by-cohort Reactome enrichment dot matrix (plotting code copied from make_fig3_dotmatrix.py,
    data figdata/enrichment_tested_background_full.csv; legends moved below the matrix)
 b-e single-protein vignettes RPL35A / SSR3 (vignette_plot.py, figdata/vignette_data.csv)
-f  representative H&E tiles, highest vs lowest translation-residual patients
+f  H&E input tiles, highest vs lowest translation-residual patients
    (make_realdata_figs2.py Fig11_tiles_hilo, curated tile indices copied verbatim)
 No source script is imported (they all compute at module level); all numbers are recomputed from
 the saved figdata files with the same code."""
