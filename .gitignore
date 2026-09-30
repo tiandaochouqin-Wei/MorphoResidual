@@ -56,6 +56,10 @@ review/recalc/*
 !review/recalc/held_out_corrected_summary.py
 !review/recalc/recalc_survival.py
 !review/recalc/mtor_control.py
+# the signed C1-LUAD confirmatory-test rule ships as the D3 third-party-timestamp
+# record (OSF registration + this GitHub release); its sha256 sidecar ships with it
+!review/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md
+!review/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md.sha256
 
 # one-off editorial scripts that patched manuscript text (not analysis code)
 apply_*_edits*.py
