@@ -41,8 +41,10 @@
 # for the full command, including the two new pinned inputs it needs):
 #   /public/home/fjhui/miniconda3/bin/python -u posthoc_build_arms.py --cohort ucec [...]
 #
-# Example bsub invocations, one job per arm (R always exists; F/D01-D19/Q exist
-# only for cohort in {ucec, luad} -- see posthoc_build_arms.py):
+# Example bsub invocations, one job per arm. R always exists; whether F/D01-D19
+# and Q exist for a cohort is decided from that cohort's own data by
+# posthoc_build_arms.py (pre-specification sections M2 and Q, amendment 1), so
+# read the arm names out of its MANIFEST.tsv rather than assuming them:
 #   bsub -q smp -n 8 -R "span[hosts=1]" -o posthoc_ucec_R.out \
 #     lsf_posthoc_residual.sh ucec R
 #   bsub -q smp -n 8 -R "span[hosts=1]" -o posthoc_ucec_F.out \
@@ -97,7 +99,7 @@ ROWS=$(awk -F'\t' -v cohort="${COHORT}" -v arm="${ARM}" '
   NR==1 { for (i = 1; i <= NF; i++) col[$i] = i; next }
   $col["cohort"] == cohort && $col["arm"] == arm { print $col["field"] "\t" $col["file"] "\t" $col["sha256"] }
 ' "${MANIFEST}")
-[ -n "${ROWS}" ] || fatal "manifest ${MANIFEST} has no row for cohort=${COHORT} arm=${ARM} (arm not built for this cohort -- F/D*/Q only exist for ucec and luad)"
+[ -n "${ROWS}" ] || fatal "manifest ${MANIFEST} has no row for cohort=${COHORT} arm=${ARM} (arm not built for this cohort; which arms exist is decided from that cohort's data by posthoc_build_arms.py -- read its MANIFEST.tsv)"
 
 echo "=== job start: host=$(hostname) date=$(date) cohort=${COHORT} arm=${ARM} ==="
 

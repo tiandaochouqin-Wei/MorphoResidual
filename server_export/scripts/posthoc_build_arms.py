@@ -630,7 +630,10 @@ def main():
             print("  " + d)
         if write:
             disc_path = cohort_out / "DISCLOSURES.txt"
-            disc_path.write_text("\n".join(disclosures) + "\n", encoding="utf-8", newline="\n")
+            # open(), not Path.write_text(newline=...): that keyword is Python 3.10+
+            # and the cluster interpreter is 3.9.
+            with open(disc_path, "w", encoding="utf-8", newline="\n") as fh:
+                fh.write("\n".join(disclosures) + "\n")
             print(f"wrote {disc_path}")
 
     manifest_df = pd.DataFrame(rows)

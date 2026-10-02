@@ -186,9 +186,9 @@ unchanged. All 44 section 7.2 files were re-verified byte-identical at this free
 | `server_export/scripts/build_pdc_aliquot_status.py` | `fb612b84ac25e73f6d7ea8a3a661cc64ec77974dfcf3b471f5dd71c78ec4cd3f` |
 | `server_export/scripts/c1_luad_plex_reread.py` | `45a9317df29112f5efe7eb43f3300dcbde386800e71b0c3b43f27c163f707d2b` |
 | `server_export/scripts/lsf_c1_luad_plex_reread.sh` | `aaae7cd54de6725e7bb638426467a27aab8724cf94b5f65069b95da60684cd66` |
-| `server_export/scripts/posthoc_build_arms.py` | `660e1e2e939a1488e9a8c962d3546df6e29c5ad155419937598181dde6fac6bc` (amendment 1; released as `b9b464f4c7fd70dd2fa273c8dbbe5cd305d3712c078072cc4a291a4aa99a01cc`) |
+| `server_export/scripts/posthoc_build_arms.py` | `900ef19864ee38c6bbc6c01b5d25e5b9e981bab6f9e21f8b8a4148de98bc5dbe` (amendment 2; amendment 1 `660e1e2e...`; released as `b9b464f4...`) |
 | `server_export/scripts/posthoc_summarise_arms.py` | `335adf068364dce9b7544cbec53997a71e41e8443e1b6bacd32c027717a0eab5` |
-| `server_export/scripts/lsf_posthoc_residual.sh` | `d46fac9e0d78961a30a21058ee47135c601c5db2c6049e7ae5253b6a8dc05d97` |
+| `server_export/scripts/lsf_posthoc_residual.sh` | `9ab9dcc144be2e04ba107022e7a557e3554044fb149e542cee3f0fd0ea29f824` (amendment 2; released as `d46fac9e...`) |
 
 **Pinned inputs the scripts assert**
 
@@ -284,3 +284,32 @@ arm's construction and its readings are unchanged -- only the factual list the p
 was wrong, and the code reads it from the data rather than from the prose. How many of
 these cases survive into the final RNA x protein x WSI intersection is reported by each
 arm's own run; the counts above are of crosswalk rows.
+
+### Amendment 2 (2026-10-03): a Python-version defect in the disclosure writer, and a stale comment
+
+**State when this was written.** The plex and medium sitepack runs of section P and M1
+were running and none had reported. Of the arms, `posthoc_build_arms.py` had just been run
+for real for the first time: CCRCC, LUAD and UCEC wrote their arm files and manifests, and
+GBM and PDAC did not, for the reason below. No arm had been run, so no result of M2 or Q
+existed, and nothing below was chosen with any outcome in view.
+
+**2a. `posthoc_build_arms.py` wrote `DISCLOSURES.txt` with a keyword the cluster
+interpreter does not accept** (sha256 `660e1e2e...` -> `900ef19864ee38c6bbc6c01b5d25e5b9e981bab6f9e21f8b8a4148de98bc5dbe`).
+The section M3 disclosure introduced in amendment 1 was written with
+`Path.write_text(..., newline="\n")`. That keyword exists only from Python 3.10; the
+cluster runs 3.9, so the call raised `TypeError`. Only a cohort that produces a disclosure
+reaches that line, which is why the three cohorts with no disclosure completed and GBM and
+PDAC aborted -- before writing their manifests, so neither had one. The line is now an
+explicit `open(..., newline="\n")`, which behaves identically on 3.9. Nothing else changed;
+the disclosure text, the arm definitions, the seeds and the readings are untouched.
+
+All five cohorts are rebuilt with this version. The arm files are written from fixed
+seeds, so the three that already existed must come out byte-identical; their manifests
+record each file's sha256, which is how that is checked rather than assumed.
+
+**2b. A stale comment in `lsf_posthoc_residual.sh`** (sha256 `d46fac9e...` ->
+`9ab9dcc144be2e04ba107022e7a557e3554044fb149e542cee3f0fd0ea29f824`). Two comments, one in
+the header and one in a fatal message, still said that arms F, D01-D19 and Q exist only for
+UCEC and LUAD. Amendment 1 made that a per-cohort data condition, and the wrapper's own
+dispatch has always read the arm names from the manifest, so this was wrong documentation
+rather than wrong behaviour. No executable line changed.
