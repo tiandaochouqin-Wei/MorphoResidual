@@ -518,16 +518,33 @@ def main():
     scratch_out = Path(env["MORPHO_ROOT"]) / "results" / "posthoc" / "_build_arms_scratch"
     analysed_via_ra = compute_analysed_cases_via_ra(env, scripts_dir, scratch_out)
     print(f"  (b) residual_analysis.load_wsi_embeddings() rollup: {len(analysed_via_ra)} analysed case(s)")
-    if set(analysed_via_ra) != set(analysed_from_slides):
-        only_a = sorted(set(analysed_from_slides) - set(analysed_via_ra))
-        only_b = sorted(set(analysed_via_ra) - set(analysed_from_slides))
-        sys.exit(f"FATAL: the two independent 'analysed patients' computations disagree -- "
-                 f"(a)-only: {only_a[:10]} ({len(only_a)} total); (b)-only: {only_b[:10]} "
-                 f"({len(only_b)} total). This means SLIDE_RE or the sample_type filter in "
-                 f"this script no longer mirrors residual_analysis.load_wsi_embeddings(); "
-                 f"re-read that function before trusting any arm built from this run.")
-    analysed = analysed_from_slides
-    print(f"  cross-check OK: both computations agree on {len(analysed)} case(s)")
+    # (b) is the definition, because (b) IS the function every arm's run calls.
+    # The two disagree asymmetrically and the two directions mean different things:
+    #   (b)-only -- load_wsi_embeddings() analyses a case this script's scan missed.
+    #       That is a defect in SLIDE_RE or the sample_type filter here, and no arm
+    #       built from this run could be trusted, so it stays FATAL.
+    #   (a)-only -- this script's scan sees an embedding file for a case that
+    #       load_wsi_embeddings() then drops (it is unmatched against the pinned
+    #       slide map, or fails the sample_type filter). Such a case is simply not
+    #       analysed; keeping it would put non-analysed patients into the pool the
+    #       D arms draw k from, and into the denominators of k and the medium join.
+    #       So intersect down to (b) and report what was dropped.
+    only_a = sorted(set(analysed_from_slides) - set(analysed_via_ra))
+    only_b = sorted(set(analysed_via_ra) - set(analysed_from_slides))
+    if only_b:
+        sys.exit(f"FATAL: residual_analysis.load_wsi_embeddings() analyses {len(only_b)} "
+                 f"case(s) this script's filename scan did not find: {only_b[:10]}. "
+                 f"SLIDE_RE or the sample_type filter here no longer mirrors that "
+                 f"function; re-read it before trusting any arm built from this run.")
+    analysed = sorted(analysed_via_ra)
+    if only_a:
+        for c in only_a:
+            case_to_present.pop(c, None)
+        print(f"  note: {len(only_a)} case(s) have a Primary Tumor embedding file but are "
+              f"not analysed by load_wsi_embeddings() (unmatched against the pinned slide "
+              f"map, or filtered on sample_type), and are excluded here too: "
+              f"{only_a[:10]}{' ...' if len(only_a) > 10 else ''}")
+    print(f"  analysed patients taken from (b): {len(analysed)} case(s)")
 
     cohort_out = Path(out_root) / args.cohort
     write = not args.dry_run

@@ -186,7 +186,7 @@ unchanged. All 44 section 7.2 files were re-verified byte-identical at this free
 | `server_export/scripts/build_pdc_aliquot_status.py` | `fb612b84ac25e73f6d7ea8a3a661cc64ec77974dfcf3b471f5dd71c78ec4cd3f` |
 | `server_export/scripts/c1_luad_plex_reread.py` | `45a9317df29112f5efe7eb43f3300dcbde386800e71b0c3b43f27c163f707d2b` |
 | `server_export/scripts/lsf_c1_luad_plex_reread.sh` | `aaae7cd54de6725e7bb638426467a27aab8724cf94b5f65069b95da60684cd66` |
-| `server_export/scripts/posthoc_build_arms.py` | `b9b464f4c7fd70dd2fa273c8dbbe5cd305d3712c078072cc4a291a4aa99a01cc` |
+| `server_export/scripts/posthoc_build_arms.py` | `660e1e2e939a1488e9a8c962d3546df6e29c5ad155419937598181dde6fac6bc` (amendment 1; released as `b9b464f4c7fd70dd2fa273c8dbbe5cd305d3712c078072cc4a291a4aa99a01cc`) |
 | `server_export/scripts/posthoc_summarise_arms.py` | `335adf068364dce9b7544cbec53997a71e41e8443e1b6bacd32c027717a0eab5` |
 | `server_export/scripts/lsf_posthoc_residual.sh` | `d46fac9e0d78961a30a21058ee47135c601c5db2c6049e7ae5253b6a8dc05d97` |
 
@@ -219,3 +219,68 @@ each cohort's data meets the M2 and Q conditions, instead of for a hard-coded pa
 cohorts, with the M3 disclosure emitted where a condition fails; and the M2 arms are
 gated on the specified k >= 3 and on M0's 95% join rate, both of which the code had not
 enforced.
+
+## G. Amendments
+
+Section F requires any change after release to be a dated amendment. Each one below
+states what changed, why, and what had been run at the time.
+
+### Amendment 1 (2026-10-03): the arm builder's definition of the analysed population, and the Disqualified-aliquot findings of section Q
+
+**State when this was written.** The release
+`c1-luad-posthoc-prespec-2026-10-02` (2026-10-02 14:12:52 UTC) had gone out. Of the jobs
+this file specifies, the plex and medium sitepack runs were queued or running and none had
+reported; `posthoc_build_arms.py` had been run only with `--dry-run`, which writes no file
+and no manifest. No arm existed, no arm had been run, and no result of any kind was known.
+Nothing below was chosen with any outcome in view.
+
+**1a. `posthoc_build_arms.py` now takes the analysed population from
+`residual_analysis.load_wsi_embeddings()`** (sha256
+`b9b464f4c7fd70dd2fa273c8dbbe5cd305d3712c078072cc4a291a4aa99a01cc` ->
+`660e1e2e939a1488e9a8c962d3546df6e29c5ad155419937598181dde6fac6bc`).
+
+The script computes that population twice -- (a) by scanning the embedding directory and
+rolling slide IDs up to cases, and (b) by calling `residual_analysis.load_wsi_embeddings()`
+itself -- and it aborted on any disagreement. In the dry run it aborted on CCRCC: (a) found
+110 cases, (b) 103, the seven in (a) alone being C3L-00359, C3N-00313, C3N-00435,
+C3N-00492, C3N-00832, C3N-01175 and C3N-01180. They have a Primary Tumor slide with an
+embedding file, but `load_wsi_embeddings()` drops them (unmatched against the pinned slide
+map, or filtered on sample type). The other four cohorts agreed exactly (LUAD 107, UCEC
+100, GBM 100, PDAC 140).
+
+The two directions of disagreement do not mean the same thing, and the script now
+distinguishes them. A case in (b) but not (a) would mean this script's own filename match
+no longer mirrors that function, which would make every arm untrustworthy; that stays
+fatal. A case in (a) but not (b) is simply not analysed, and keeping it would put
+non-analysed patients into the pool the D arms draw their k from and into the denominators
+of k and of the medium join rate. The script now takes (b) as the definition, drops any
+(a)-only case, and prints which ones it dropped. Nothing else changed: the seeds, the arm
+definitions, the thresholds and the readings of sections M2 and Q are untouched, and the
+corrected population is the one the estimator was always going to use.
+
+**1b. Section Q's list of Disqualified aliquots was incomplete.** Section Q names five
+UCEC cases and a second aliquot of C3N-01825, and names no other cohort. It also says the
+list is "confirmed or corrected per cohort by `build_pdc_aliquot_status.py`". The
+correction, from `pinned/pdc_aliquot_status.tsv` joined to each cohort's analysed
+crosswalk:
+
+| Cohort | Disqualified aliquots in the analysed crosswalk | Cases |
+|---|---|---|
+| UCEC | 9 | C3L-00084, C3L-00157, C3L-00356, C3L-00938, C3L-01247, C3L-01253, C3L-01284, C3N-01001, C3N-01825 |
+| GBM | 1 | C3L-03747 (`CPT0217000004`) |
+| LUAD | 1 | C3N-00545 (`CPT0066890003`) |
+| CCRCC | 0 | -- |
+| PDAC | 0 | -- |
+
+Section Q named five of the nine UCEC cases; **C3L-00084, C3L-01284 and C3N-01001 were
+missed**, and so was GBM entirely. C3N-01825 is the one case with two analysed aliquot
+rows, so it keeps its qualified aliquot; the other eight UCEC cases and GBM's C3L-03747
+have exactly one analysed aliquot row each and lose it.
+
+This changes which cohorts get arm Q: by section Q's own condition ("in every cohort with
+at least one analysed Disqualified aliquot"), it is built for UCEC, GBM and LUAD, and not
+for CCRCC or PDAC, which get the section M3 disclosure instead. The condition itself, the
+arm's construction and its readings are unchanged -- only the factual list the prose gave
+was wrong, and the code reads it from the data rather than from the prose. How many of
+these cases survive into the final RNA x protein x WSI intersection is reported by each
+arm's own run; the counts above are of crosswalk rows.
