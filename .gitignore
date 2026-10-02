@@ -67,6 +67,15 @@ review/recalc/*
 !review/C1_LUAD_ADDENDA.md.sha256
 !review/c1_luad_logs/
 !review/c1_luad_logs/**
+# the dated pre-specification of the post hoc batch-axis analyses, published (with the
+# scripts and label files its section F freezes) before any of those jobs is submitted
+!review/POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md
+!review/POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md.sha256
+!review/BATCH_AXES_SCOPING_2026-10-02/
+review/BATCH_AXES_SCOPING_2026-10-02/*
+!review/BATCH_AXES_SCOPING_2026-10-02/pathdb/
+review/BATCH_AXES_SCOPING_2026-10-02/pathdb/*
+!review/BATCH_AXES_SCOPING_2026-10-02/pathdb/download_log.tsv
 
 # one-off editorial scripts that patched manuscript text (not analysis code)
 apply_*_edits*.py
@@ -97,7 +106,17 @@ server_export/pinned/
 server_export/prefix/
 server_export/prefix_sitepack.tar.gz
 server_export/results/
-server_export/scripts/pinned/
+server_export/scripts/pinned/*
+# except the label files section F of the post hoc pre-specification freezes by sha256:
+# without them the published scripts' own hash assertions cannot be checked
+!server_export/scripts/pinned/case_to_plex_ccrcc.tsv
+!server_export/scripts/pinned/case_to_plex_luad.tsv
+!server_export/scripts/pinned/case_to_plex_ucec.tsv
+!server_export/scripts/pinned/case_to_plex_gbm.tsv
+!server_export/scripts/pinned/case_to_plex_pdac.tsv
+!server_export/scripts/pinned/case_to_plex_luad_c1.tsv
+!server_export/scripts/pinned/slide_embedding_medium.tsv
+!server_export/scripts/pinned/pdc_aliquot_status.tsv
 server_export/scripts/*.tsv
 server_export/*.tsv
 server_export/*.txt

@@ -6,11 +6,20 @@ entries go in a separate dated file, `review/C1_LUAD_ADDENDA.md`, each entry has
 timestamped as in D3. These are the §5.6 unblinding time and any §5.9 addenda." The signed
 file itself is not edited.
 
-**Timestamp status:** entries 1-8 were written on 2026-10-02 and are released, with this
-file's sha256 sidecar, in the public GitHub release `c1-luad-addenda-2026-10-02`
-(the corresponding author authorised the push in writing on 2026-10-02). The release time
-recorded by GitHub is the third-party timestamp for these entries. Later entries go in a
-later release.
+**Timestamp status:** entries 1-8 were written on 2026-10-02 and released in the public
+GitHub release `c1-luad-addenda-2026-10-02` (2026-10-02 12:05:36 UTC; the corresponding
+author authorised the push in writing on 2026-10-02). The file released there is the one
+that hashes to sha256
+`88041cd01b0a2aab5056d0825c6c482d75c4c3019ed23c8717192a3e86af6dc2`, and the GitHub
+release time is the third-party timestamp for that version; Entry 4 fixed the handling of
+the reader check before that check was run, which is what that timestamp establishes.
+
+The present file is a later version and hashes differently; its sidecar carries the
+current hash, not the released one. It differs from the released version in three places,
+all of them additions made after the reader check: Entry 9, the sha256 table and
+closing paragraph added to Entry 1, and the one "Result" line of Entry 4, which is marked
+in place. Entries 9 and later carry the timestamp of the next release, not of
+`c1-luad-addenda-2026-10-02`.
 
 ---
 
@@ -37,8 +46,34 @@ Each of runs 3-8 was run exactly once. No run was repeated, and no parameter was
 after any unblinded output. Outputs are under `/public/home/fjhui/ZW/luad_c1/results/`
 (`c1_luad_primary_result_primary.json`, `..._gene_level_primary.csv`, `..._primary.npz`,
 `c1_luad_bootstrap_result_bootstrap.json`, `c1_luad_sensitivity_{s,s2}_result_sens_{s,s2}.json`,
-`c1_luad_pergene_result_pergene_{b1,b2}.json` and the per-gene CSVs). **To do:** copy them to
-`server_export/pinned/luad_c1/` and record their sha256 here.
+`c1_luad_pergene_result_pergene_{b1,b2}.json` and the per-gene CSVs). They were copied off the cluster on
+2026-10-02, after the reader check of Entry 9, and are held at
+`server_export/scripts/pinned/luad_c1/` in the working tree. They are **not** in this
+public repository: the set is 78 MB, almost all of it the permutation array
+`c1_luad_primary_primary.npz`, and large derived artefacts are deposited separately
+(Zenodo at acceptance) rather than committed here. Their sha256 are recorded now so the
+deposited files can be checked against this dated entry:
+
+| File | sha256 |
+|---|---|
+| `c1_luad_primary_result_primary.json` | `b8e89e146de6343d94abd68c9befc0ba5a1bc8038a99b0a1e6dd5c461e34ca75` |
+| `c1_luad_primary_gene_level_primary.csv` | `ae23a78219322570d5e3dab050db9495f6c83517273612ee75c786b67afde4f7` |
+| `c1_luad_primary_primary.npz` | `2034e71143c2e065675d3159832b1a7be17aa38c7feeaacfc82862c411ea2aab` |
+| `c1_luad_bootstrap_result_bootstrap.json` | `f02f11d36923473c9bfac2c9ac52e5133b701213eaf07d0c2ad791618ba69318` |
+| `c1_luad_sensitivity_s_result_sens_s.json` | `00d156413a7a5ec794dfe861e9b8532ddd3f9545dcc3c4f42c44813bc4d29bca` |
+| `c1_luad_sensitivity_s2_result_sens_s2.json` | `e22393ef65ddca60331818d3feb9527ea96d92efe55fc2289477dd69ecc44648` |
+| `c1_luad_pergene_result_pergene_b1.json` | `a53efb879225f3ada9f0f4d32825c20b3777c67f510ff9c9d3e88796ea971216` |
+| `c1_luad_pergene_result_pergene_b2.json` | `5f1f66f4af8d72e21c3f4c558ebddbc57dcfe7843bd0ea57f4c4518d4b68f8c7` |
+| `c1_luad_pergene_b1_pergene_b1.csv` | `d8dadcf76eb14e9c6d6ef445fd03aa14bf2491ae8c33428ec458834381203c5b` |
+| `c1_luad_pergene_b2_pergene_b2.csv` | `52631cab43472bc845f9f02c14d1d0206781b9e83d3a927d5ab91fb28c6c4492` |
+
+The two quantities of Entry 6 were read from these files, with no new permutation: the
+bootstrap SDs from the bootstrap JSON (0.024 at step 1, 0.033 at step 3), and the
+per-stratum selected/background positive fractions from the gene table (0.270 against
+0.139 complete, 0.129 against 0.038 incomplete). Reading the gene table reproduces three
+values the frozen run had already written to the JSON — the 85.8% negative-increment
+fraction, rho = 0.3978, and the 2,287/8,119 split — which is the check that the table was
+read on the same terms the frozen script used.
 
 ## Entry 2 (2026-10-02): §5.6 unblinding time
 
@@ -107,7 +142,9 @@ copy of discovery slide C3L-00001-21 (series
 This entry, the handling above and the wrapper are released publicly before the check is
 submitted.
 
-**Result:** (to be appended in a later entry).
+**Result** (this line alone was appended after the check, and is *not* part of the
+2026-10-02 12:05:36 UTC release, where it read "**Result:** (to be appended in a later
+entry)."; no other word of this entry is changed)**:** every arm EQUIVALENT; see Entry 9.
 
 ## Entry 5 (2026-10-02): §5.9 code corrections
 
@@ -158,6 +195,72 @@ release adds:
   (`60d3de7a...`, whose scope note is wrong; see Entry 7).
 The post-signature HPC logs (DICOM download, extraction, omics pull, test runs) are on the
 compute cluster and follow in a later release.
+
+## Entry 9 (2026-10-02): §1.4 reader QC result, and the staging artefacts the first attempt found
+
+Run as Entry 4 committed, after the public release `c1-luad-addenda-2026-10-02`
+(2026-10-02 12:05 UTC) fixed its handling. Both attempts used
+`lsf_qc_reader_c1_luad.sh` (`c211ffc9...`), which hash-asserts the frozen
+`qc_reader_equivalence.py` (`45aea4d8...`); its thresholds, slide list and the two
+readers were identical in both, and no code was changed between them.
+
+**Attempt 1 — job 75698522, 2026-10-02 21:02:02–21:02:50 CST, rc=1.**
+- Arm (ii), discovery C3L-00001-21 SVS vs its IDC copy: `VERDICT: EQUIVALENT`, 64/64
+  regions bit-identical, pooled mean |Δ| 0.0000, max 0.
+- Arm (i), C3L-00444-23, C3L-03717-21 and C3L-02513-23: **no verdict**. The script
+  raised `wsidicom.errors.WsiDicomUidDuplicateError` inside `WsiDicom.open()`, before
+  reading any region, so it never reached either of its two `VERDICT` statements
+  (dimension mismatch, exit 2; threshold failure, exit 1). The exit status of 1 was the
+  uncaught exception. §1.4's "a DIFFERENT result stops extraction" branch was therefore
+  not entered, and arm (i) supplied no evidence either way.
+
+**Cause.** `wsidicom` enumerates every file in the series directory. The confirmatory
+staging tree `/public/home/fjhui/ZW/c1_luad_slides_dicom/` held 483 files named
+`<uuid>.dcm<digits>` — partial objects left by the interrupted downloads that
+`download_c1_luad_dicom.py` documents (its docstring records that a single
+`download_from_selection()` over all 135 series "died twice in a row", which is why it
+loops one series at a time). Each carries the SOPInstanceUID of the complete file
+beside it, so `wsidicom` sees one identifier on two files and refuses.
+
+**These files were not inputs to the extraction, and this is checkable.**
+`extract_c1_dicom.resolve_series()` enumerates `series_dir.glob("*.dcm")` and the
+series discovery uses `rglob("*.dcm")`; both require the name to end in `.dcm`, which
+`<uuid>.dcm<digits>` does not. Independently, `resolve_series()` raises
+`"two base-size VOLUME instances (concatenation?)"` when the two largest VOLUME
+instances tie, so a duplicate that *did* match the glob would have stopped the run
+rather than been chosen silently. No series raised it; all 135 extracted.
+
+**What the 483 were.** 482 were strictly smaller than the complete file of the same
+name; none was an orphan (every one had its complete `.dcm` present). The one
+exception, in series C3N-02234, had exactly the same length (108,383,034 bytes) as
+`1238c702-1576-4ece-ae02-ee7696e32ef8.dcm` but different content from byte 81,117,779
+(74.8% in), and neither tail was zero-filled. Both parse and report the same
+SOPInstanceUID, 2,989 frames and 108,045,934 bytes of JPEG pixel data, but only the
+`.dcm` file decodes in full, to a (2989, 240, 240, 3) array; the suffixed copy yields
+340,416,000 values, about 1,970 frames, and fails. The file the extractor read is
+therefore the intact one, which the `*.dcm` glob had already guaranteed.
+
+**Handling.** The 483 were moved, with their directory structure, to
+`/public/home/fjhui/ZW/c1_luad_partial_downloads_2026-10-02/` (inventory in its
+`_moved_list.txt`; nothing deleted, the move is reversible). This is not a §1.4 "fix":
+no decoder, reader, threshold, slide list, scale policy, tiling, tissue filter or
+encoder was touched, and no file that is an input to the extraction, or to any reported
+analysis, was moved: the moved files entered nothing but `wsidicom`'s enumeration of the
+series directory, which is exactly what attempt 1 tripped on and what the move cleared.
+All 135 series were then re-resolved with `resolve_series()`: 135 of 135, 0 failures.
+
+**Attempt 2 — job 75699834, 2026-10-02 21:50:50–21:51:45 CST, rc=0,
+"every arm EQUIVALENT".** All four comparisons give `VERDICT: EQUIVALENT` with 64/64
+regions bit-identical, pooled mean |Δ| 0.0000, 99.9th percentile 0.0, max 0, and mean
+signed R/G/B difference +0.0000 on each channel. Arm (i): C3L-00444-23 (level-0
+87,647 × 45,770), C3L-03717-21 (105,576 × 69,865), C3L-02513-23 (17,140 × 23,098);
+both readers reported the same level-0 dimensions for each. Arm (ii): C3L-00001-21
+(25,895 × 23,643). PNG strips are under `/public/home/fjhui/ZW/luad_c1/reader_qc/`.
+
+**Reading.** §1.4's failure handling, and the Entry 4 pre-commitment released at
+12:05 UTC, are not triggered: no arm failed the frozen thresholds, so the §5 reading
+and the Abstract are unaffected and no clause form changes. The check remains not
+outcome-blind, which is disclosed wherever it is reported.
 
 ## Entry 6 (2026-10-02): reporting gaps in the frozen code, filled from saved outputs
 

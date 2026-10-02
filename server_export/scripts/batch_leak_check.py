@@ -23,6 +23,7 @@ Reading the output:
 Usage: batch_leak_check.py <cancer> [axis ...]
 Output: <cohort>/results/batch_leak_results.csv
 """
+import hashlib
 import os
 import re
 import sys
@@ -46,6 +47,40 @@ N_PERM = 2000
 MIN_GROUP = 3          # batches smaller than this are pooled into "_small"
 MIN_LEVELS = 2
 RNG = np.random.RandomState(0)
+
+# --- plex / embedding-medium axes (2026-10-02 post hoc patch) ------------------
+# Governed by review/POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md section P (plex)
+# and section M (medium). Inputs are built locally (their scoping/PathDB sources
+# do not exist on the HPC) by server_export/scripts/build_pinned_plex_maps.py
+# and build_pinned_slide_medium.py, then uploaded to pinned/ on the HPC. The
+# plex axis FATALs if any analysed case lacks a label (a silently
+# partial-coverage plex axis would be worse than no axis at all); the medium
+# axis is omitted, not fabricated, for a cohort with no pinned
+# slide_embedding_medium.tsv.
+PLEX_SHA256 = {
+    "ccrcc": "bbc400d33a5fea38380bc68226b2c21624ca7f31fbec07566264c2da2df401a6",
+    "luad": "014868ad61a5cfbe1cc112d603e5d2d669ddd82f03442e3f998cbd97170b616e",
+    "ucec": "e3f383d85f11a6e35a63676ffbdebbd7e7bbad71bed38a199a594772ae141f03",
+    "gbm": "e0aa9e78c7bf1edf8cc67fd7995037fc09327822e3163f882751beaf55589b3a",
+    "pdac": "c612c808a7a55134f8e393613c55eb56d9443a2c6863abb6b5c798a871710099",
+}
+MEDIUM_SHA256 = "36783b539e14f3bad73d59d9769f7dd2d01ea21d08f0cd4d79dbfde48d098ef1"
+
+
+def _sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        h.update(f.read())
+    return h.hexdigest()
+
+
+def _assert_sha256(path, expected, label):
+    got = _sha256(path)
+    if got != expected:
+        sys.exit(f"FATAL: sha256 mismatch for {label}: got={got} want={expected} "
+                  f"({path}). Refusing to label batches from an unverified "
+                  f"pinned input.")
+    return got
 
 
 def cohort_paths(cancer):
@@ -117,9 +152,17 @@ def load_wsi(cancer, paths):
     return ra.load_wsi_embeddings(), ra
 
 
-def case_batch_labels(cancer, paths, cases):
+def case_batch_labels(cancer, paths, cases, strict_plex=True):
     """Assign each case one label per acquisition axis, from the tumor slides
-    that actually entered its mean-pooled embedding."""
+    that actually entered its mean-pooled embedding.
+
+    strict_plex: abort if any case in `cases` has no plex label. True is correct
+    for the analysed population (residual_analysis_sitepack passes the RNA x
+    protein x WSI intersection, which is what the pinned maps were built from).
+    The diagnostic in main() passes the WSI-embedding index, a superset that
+    legitimately contains cases with no TMT aliquot and so no plex, and sets
+    this False so a scope mismatch reports itself instead of killing the run.
+    """
     meta = pd.read_csv(META, sep="\t", dtype=str).fillna("")
     meta = meta[meta["cohort"] == cancer]
     smap = pd.read_csv(paths["slide_map"], sep="\t", dtype=str)
@@ -144,17 +187,82 @@ def case_batch_labels(cancer, paths, cases):
     # accrual stream, available for every CPTAC case without any metadata
     axes["cohort_stream"] = ({c: c[:3] for c in cases}, {c: 1.0 for c in cases})
 
-    plex_path = f"{SCRIPTS}/case_to_plex.tsv"
+    # --- plex axis (PLEX_SHA256 above) ------------------------------------
+    # Pinned per-cohort map ONLY -- do NOT fall back to the legacy
+    # scripts/case_to_plex.tsv first (ccRCC-only; that ordering silently
+    # skipped the plex axis for the other four cohorts). FATAL if any
+    # analysed case in `cases` lacks a label.
+    plex_path = f"{PIN}/case_to_plex_{cancer}.tsv"
     if os.path.exists(plex_path):
-        try:
-            p = pd.read_csv(plex_path, sep="\t", dtype=str)
-            cc = p.columns[0]
-            pc = p.columns[1]
-            lab = dict(zip(p[cc], p[pc]))
-            if len(set(lab) & set(cases)) >= 10:
-                axes["plex"] = (lab, {c: 1.0 for c in lab})
-        except Exception as e:
-            print(f"  (plex map unreadable, skipped: {e})")
+        if cancer not in PLEX_SHA256:
+            sys.exit(f"FATAL: no pinned sha256 registered for plex cohort "
+                      f"{cancer!r}; add it to PLEX_SHA256 before using "
+                      f"{plex_path}.")
+        _assert_sha256(plex_path, PLEX_SHA256[cancer], f"case_to_plex_{cancer}")
+        p = pd.read_csv(plex_path, sep="\t", dtype=str)
+        lab = dict(zip(p["case_id"], p["plex"]))
+        missing = sorted(set(cases) - set(lab))
+        if missing and strict_plex:
+            sys.exit(f"FATAL: {len(missing)} analysed case(s) for {cancer} "
+                      f"have no plex label in {plex_path}: "
+                      f"{missing[:10]}{' ...' if len(missing) > 10 else ''}")
+        if missing:
+            print(f"  plex axis ({cancer}): {len(missing)} of {len(cases)} cases "
+                  f"given have no plex label and are left out of this axis "
+                  f"(expected here: the caller passed a WSI-only superset of the "
+                  f"analysed set): "
+                  f"{missing[:10]}{' ...' if len(missing) > 10 else ''}")
+        axes["plex"] = (lab, {c: 1.0 for c in lab})
+    else:
+        print(f"  (no pinned plex map for {cancer} at {plex_path}, axis omitted)")
+
+    # --- embedding-medium axis (MEDIUM_SHA256 above) ----------------------
+    # Per-case FFPE/OCT/mixed/unknown label, joined by slide_submitter_id to
+    # the SAME `used` Primary-Tumor-with-embedding slide set already computed
+    # above for scanner/operator/quarter/mpp. Omitted (not fabricated) if the
+    # pinned file is absent.
+    medium_path = f"{PIN}/slide_embedding_medium.tsv"
+    if os.path.exists(medium_path):
+        _assert_sha256(medium_path, MEDIUM_SHA256, "slide_embedding_medium")
+        med = pd.read_csv(medium_path, sep="\t", dtype=str).fillna("")
+        medium_of_slide = dict(zip(med["slide_submitter_id"], med["embedding_medium"]))
+
+        smap_used = smap[smap["slide_submitter_id"].isin(used)]
+        slide_to_case = dict(zip(smap_used["slide_submitter_id"],
+                                  smap_used["case_submitter_id"]))
+        case_used_slides = {}
+        for s in sorted(used):
+            c = slide_to_case.get(s)
+            if c is None:
+                continue
+            case_used_slides.setdefault(c, []).append(s)
+
+        lab = {}
+        n_slides_total = 0
+        n_slides_unjoined = 0
+        for c, slides in case_used_slides.items():
+            meds = []
+            for s in slides:
+                n_slides_total += 1
+                m = medium_of_slide.get(s, "")
+                if not m:
+                    n_slides_unjoined += 1
+                meds.append(m or None)
+            if any(m is None for m in meds):
+                lab[c] = "unknown"
+            else:
+                levels = set(meds)
+                lab[c] = levels.pop() if len(levels) == 1 else "mixed"
+
+        axes["medium"] = (lab, {c: 1.0 for c in lab})
+        level_counts = Counter(lab.values())
+        fail_rate = (n_slides_unjoined / n_slides_total) if n_slides_total else float("nan")
+        print(f"  medium axis ({cancer}): per-case level counts "
+              f"{dict(level_counts)}; slide join failure {n_slides_unjoined}/"
+              f"{n_slides_total} = {fail_rate:.3f}")
+    else:
+        print(f"  (no pinned medium map at {medium_path}, axis omitted)")
+
     return axes
 
 
@@ -202,7 +310,7 @@ def main():
     pcs = PCA(n_components=n_pcs, svd_solver="full").fit_transform(wsi.values)
     print(f"  WSI PCs: {pcs.shape}")
 
-    axes = case_batch_labels(cancer, paths, cases)
+    axes = case_batch_labels(cancer, paths, cases, strict_plex=False)
     rows = []
     for axis, (lab, purity) in axes.items():
         if want and axis not in want:
