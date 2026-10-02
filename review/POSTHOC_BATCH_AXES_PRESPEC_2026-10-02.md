@@ -289,17 +289,28 @@ arm's own run; the counts above are of crosswalk rows.
 
 **State when this was written.** The plex and medium sitepack runs of section P and M1
 were running and none had reported. Of the arms, `posthoc_build_arms.py` had just been run
-for real for the first time: CCRCC, LUAD and UCEC wrote their arm files and manifests, and
+for real for the first time: LUAD and UCEC wrote their arm files and manifests, and CCRCC,
 GBM and PDAC did not, for the reason below. No arm had been run, so no result of M2 or Q
 existed, and nothing below was chosen with any outcome in view.
+
+*(Corrected 2026-10-03, after the release `c1-luad-posthoc-amend2-2026-10-03`, where this
+sentence read "CCRCC, LUAD and UCEC wrote their arm files and manifests, and GBM and PDAC
+did not". That was wrong: CCRCC also failed. It is one of the three cohorts that emit a
+section M3 disclosure -- its arm Q is not built, none of its analysed aliquots being
+flagged Disqualified -- and so it too reached the defective line. The three that failed are
+exactly the three that produce a disclosure, which is the defect's signature and is now
+stated that way in 2a. No other word of this amendment is changed, and nothing about the
+defect, the fix or what had been run differs.)*
 
 **2a. `posthoc_build_arms.py` wrote `DISCLOSURES.txt` with a keyword the cluster
 interpreter does not accept** (sha256 `660e1e2e...` -> `900ef19864ee38c6bbc6c01b5d25e5b9e981bab6f9e21f8b8a4148de98bc5dbe`).
 The section M3 disclosure introduced in amendment 1 was written with
 `Path.write_text(..., newline="\n")`. That keyword exists only from Python 3.10; the
 cluster runs 3.9, so the call raised `TypeError`. Only a cohort that produces a disclosure
-reaches that line, which is why the three cohorts with no disclosure completed and GBM and
-PDAC aborted -- before writing their manifests, so neither had one. The line is now an
+reaches that line, so the cohorts that failed are exactly the cohorts with a disclosure:
+CCRCC (no Disqualified aliquot, so no arm Q), GBM (k = 0, so no medium arms) and PDAC (no
+Disqualified aliquot). Each aborted before writing its manifest, so none had one, while
+LUAD and UCEC, which emit no disclosure, completed. The line is now an
 explicit `open(..., newline="\n")`, which behaves identically on 3.9. Nothing else changed;
 the disclosure text, the arm definitions, the seeds and the readings are untouched.
 
