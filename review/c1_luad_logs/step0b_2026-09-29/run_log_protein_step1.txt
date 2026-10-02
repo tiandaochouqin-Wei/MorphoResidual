@@ -1,0 +1,43 @@
+﻿=== Step 0b branch=protein: pulling PDC000153 (DISCOVERY) quantDataMatrix (log2_ratio) -- PDC000489 is never touched by this script ===
+
+[log] 2026-09-28T23:21:54Z	https://pdc.cancer.gov/graphql	study(PDC000153)	200	10126a30092b...	D:\claude\pajinsen\MorphoResidual_paper\review\C1_LUAD_STEP0B_2026-09-29\raw\pdc000153_study.json
+[study] {'study_name': 'CPTAC LUAD Discovery Study - Proteome', 'pdc_study_id': 'PDC000153', 'disease_type': 'Lung Adenocarcinoma;Other', 'primary_site': 'Bronchus and lung;Not Reported', 'analytical_fraction': 'Proteome', 'experiment_type': 'TMT10', 'cases_count': 115, 'aliquots_count': 217}
+  matches Step-0 §1 exactly (cases_count=115, aliquots_count=217)
+
+[log] 2026-09-28T23:21:54Z	https://pdc.cancer.gov/graphql	biospecimenPerStudy(PDC000153)	200	adb72aefe3e5...	D:\claude\pajinsen\MorphoResidual_paper\review\C1_LUAD_STEP0B_2026-09-29\raw\pdc000153_biospecimen.json
+[biospecimen] 217 rows
+  sample_type tally: {'Primary Tumor': 111, 'Solid Tissue Normal': 102, 'Not Reported': 4}
+[xwalk-fresh] 115 tumour aliquots, 115 unique cases
+[xwalk-pinned] aliquot_to_case_tumor_luad.tsv: 111 rows, 111 unique cases
+[xwalk-compare] fresh=115 pinned=111 shared_aliquots=111 only_fresh=4 only_pinned=0 case_id_mismatches_among_shared=0
+  DISCREPANCY: only_fresh=['Internal Reference - Pooled Sample', 'Normal Only IR', 'Taiwanese IR', 'Tumor Only IR'] only_pinned=[] mismatched=[]
+
+[log] 2026-09-28T23:22:01Z	https://pdc.cancer.gov/graphql	quantDataMatrix(PDC000153,log2_ratio)	200	6864e888cbf3...	D:\claude\pajinsen\MorphoResidual_paper\review\C1_LUAD_STEP0B_2026-09-29\raw\pdc000153_quantdatamatrix_log2ratio.json
+[quantDataMatrix] 11029 gene rows x 223 columns (raw, before any case mapping)
+
+
+[pseudo-case-leak-check] fresh_xwalk has 4 entries not in the pinned 111-case crosswalk (CPTAC QC/pooled-reference pseudo-cases, e.g. case_submitter_id='Internal Reference - Pooled Sample'); 3 of those have an aliquot_submitter_id present as an actual quantDataMatrix column: {'Normal Only IR': ('Normal Only IR', 'Not Reported'), 'Taiwanese IR': ('Taiwanese IR', 'Not Reported'), 'Tumor Only IR': ('Tumor Only IR', 'Not Reported')}
+  WARNING: c1_pull_omics.py's build_aliquot_xwalk() filters only '"Normal" in sample_type', not these blank/'Not Reported' pseudo-case labels. If PDC000489 (confirmatory) has the same pattern (Step-0 §1 notes 11 QC/bridge/pooled pseudo-case labels there too), the eventual real C1-LUAD confirmatory protein pull would silently add pseudo-case rows (case_id = a pseudo-case string, not a real case_submitter_id) to protein_luad_c1.csv. This is very likely harmless downstream (c1_run_test.py intersects protein cases against the slide map and RNA manifest, neither of which contains these labels, so the rows would simply never match), but it is worth the corresponding author's attention before signature: c1_pull_omics.py is on the forbidden-edit list for this Step-0b run, so nothing has been changed here -- this diagnostic only confirms the behaviour on discovery data.
+[match] 112/223 matrix columns match a tumour aliquot in the crosswalk (111 tumour aliquots total)
+
+wrote D:\claude\pajinsen\MorphoResidual_paper\server_export\scripts\pinned\luad_discovery_protein_via_pdc.csv sha256=aef3270a117f6189678137e7527e9c945468ab42f6205596d8673bfac651f8ff
+wrote D:\claude\pajinsen\MorphoResidual_paper\server_export\scripts\pinned\luad_discovery_protein_via_pdc_aliquot_level.csv sha256=28209c6f1ebcb0dc7ea48a0dc3d70a2e42a1eff89310134e06989e9d9459f921
+
+pinned-crosswalk cases with NO matching quantDataMatrix column (dropped from the case-level matrix): ['C3N-00545']
+  NOTE: c1_pull_omics.pull_protein() never checks for or reports this per-case drop -- it only checks the aggregate 'matched < n_tumour_aliquots/2' floor, so a case like this would silently vanish from protein_ucec_c1.csv/protein_luad_c1.csv with no message. Worth a per-case coverage print in that script; not changed here (forbidden-edit list).
+cases with >1 tumour aliquot matched (averaged by groupby(mean), matching c1_pull_omics's own convention): ['C3N-02379', 'C3N-02587']
+
+=== REPORT: luad_discovery_protein_via_pdc (case-level) ===
+shape: 110 cases x 11029 genes
+gene count (raw quantDataMatrix rows, before any collapsing): 11029
+duplicate gene symbols in raw quantDataMatrix: 0 (examples: [])
+NaN fraction (case-level matrix): 87482/1213190 = 0.072109
+exact zeros (case-level matrix): 218/1213190
+non-numeric sentinel tokens encountered (raw values before coercion, aliquot-level, pre-groupby): none
+matched matrix columns -> cases: 112 columns, 110 unique cases
+aliquot-level matrix shape: 112 aliquots x 11029 genes (+case_id column)
+
+xwalk cross-check (fresh biospecimenPerStudy query vs pinned aliquot_to_case_tumor_luad.tsv): {'fresh_n': 115, 'pinned_n': 111, 'shared_n': 111, 'only_fresh': ['Internal Reference - Pooled Sample', 'Normal Only IR', 'Taiwanese IR', 'Tumor Only IR'], 'only_pinned': [], 'case_id_mismatches': []}
+
+case_csv_sha256=aef3270a117f6189678137e7527e9c945468ab42f6205596d8673bfac651f8ff
+aliquot_csv_sha256=28209c6f1ebcb0dc7ea48a0dc3d70a2e42a1eff89310134e06989e9d9459f921

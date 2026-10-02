@@ -1,0 +1,46 @@
+﻿=== SELF-TEST: synthetic stand-in for RA.load_protein_matrix() ===
+  [cdap] 1 duplicate-labelled gene column(s) found (e.g. ['AASDHPPT']); averaging duplicates for this comparison only -- the underlying loader is not changed.
+{
+  "n_pdc_cases": 110,
+  "n_cdap_cases": 108,
+  "n_shared_cases": 108,
+  "cases_only_pdc": [
+    "11LU013",
+    "11LU016"
+  ],
+  "cases_only_cdap": [],
+  "n_pdc_genes": 11029,
+  "n_cdap_genes": 11024,
+  "gene_jaccard": 0.9995466497415904,
+  "n_tested_genes": 50,
+  "n_tested_missing_from_pdc": 0,
+  "n_tested_missing_from_cdap": 5,
+  "pdc_duplicate_gene_labels": [],
+  "cdap_duplicate_gene_labels": [
+    "AASDHPPT"
+  ],
+  "cdap_duplicate_handling_note": "residual_analysis.load_protein_matrix() does NOT deduplicate gene-symbol rows from the CDAP TSV: sub.T.groupby(level=0).mean() groups by the ROW index (case), not by gene column, so a repeated gene symbol in the TSV survives as two identically-labelled columns in the returned DataFrame. c1_pull_omics.py's quantDataMatrix route instead builds a plain dict keyed by gene name, so a repeated gene symbol there silently keeps only the LAST row (dict overwrite). The two routes therefore handle duplicate gene symbols differently by construction, not just by data content -- this check averages duplicates on both sides before comparing (see above) so that difference does not masquerade as a data disagreement.",
+  "pdc_exact_zeros": 218,
+  "cdap_exact_zeros": 0,
+  "cdap_non_numeric_sentinel_cells": 0,
+  "nan_pattern": {
+    "n_cells": 1190592,
+    "both_nan": 85921,
+    "neither_nan": 1093452,
+    "nan_only_in_pdc": 0,
+    "nan_only_in_cdap": 11219,
+    "agreement_rate": 0.9905769566736548
+  },
+  "delta_over_shared_cells": {
+    "n_valid": 1093452,
+    "median_abs_delta": 0.03871724576334956,
+    "p999_abs_delta": 0.15672377146502542
+  },
+  "per_gene_pearson": {
+    "n_genes_with_r": 11018,
+    "median_r": 0.9884246874574172,
+    "p05_r": 0.955313902507702
+  }
+}
+  per-case median delta recovers the injected offset: corr=1.000
+SELF-TEST PASS

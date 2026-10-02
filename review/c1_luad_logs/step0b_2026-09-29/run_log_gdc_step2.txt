@@ -1,0 +1,47 @@
+﻿confirmatory: 113 cases (expected 113)
+discovery: 111 cases (expected 111)
+  fetched 60/224 cases
+  fetched 120/224 cases
+  fetched 180/224 cases
+  fetched 224/224 cases
+
+=== confirmatory (n=113) ===
+race categories:
+  white: 69
+  asian: 40
+  black or african american: 4
+white vs non-white: white=69, non-white=44
+C3L vs C3N (ID prefix): {'C3L': 41, 'C3N': 72}
+C3L/C3N x race cross-tab:
+  C3L / white: 38
+  C3L / black or african american: 3
+  C3N / asian: 40
+  C3N / white: 31
+  C3N / black or african american: 1
+
+=== discovery (n=111) ===
+race categories:
+  asian: 64
+  white: 40
+  Unknown: 5
+  american indian or alaska native: 1
+  black or african american: 1
+white vs non-white: white=40, non-white=71
+C3L vs C3N (ID prefix): {'other': 4, 'C3L': 34, 'C3N': 73}
+C3L/C3N x race cross-tab:
+  C3L / white: 30
+  C3L / Unknown: 3
+  C3L / american indian or alaska native: 1
+  C3N / asian: 60
+  C3N / white: 10
+  C3N / Unknown: 2
+  C3N / black or african american: 1
+  other / asian: 4
+
+wrote patient-level table (224 rows) -> D:\claude\pajinsen\MorphoResidual_paper\review\C1_LUAD_STEP0B_2026-09-29\demographics_luad.tsv
+
+--- Discovery vs covariates_by_case.tsv (race) agreement ---
+discovery cases: 111, present in covariates_by_case.tsv: 111, not present in covariates_by_case.tsv: 0
+agreement: 111/111 = 1.0000
+
+wrote summary -> D:\claude\pajinsen\MorphoResidual_paper\review\C1_LUAD_STEP0B_2026-09-29\step2_demographics_summary.json

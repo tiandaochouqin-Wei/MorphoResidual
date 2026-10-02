@@ -1,0 +1,4 @@
+﻿  fetched 60/113 cases
+  fetched 113/113 cases
+136 slide ids / 113 cases: 136 with a GDC slide entity, 0 unmatched; {'Primary Tumor': 136}
+wrote D:\claude\pajinsen\MorphoResidual_paper\review\C1_LUAD_STEP0B_2026-09-29\local_checks\c1_luad_gdc_slides_via_build_slide_map_c1.tsv

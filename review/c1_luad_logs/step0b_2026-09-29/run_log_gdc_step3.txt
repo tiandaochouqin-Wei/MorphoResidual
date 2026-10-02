@@ -1,0 +1,26 @@
+﻿discovery: 111 cases (expected 111)
+  fetched 60/111 cases
+  fetched 111/111 cases
+total sample-entity rows returned: 829
+cases with >=1 sample entity: 111/111
+
+--- Fill rates across 829 sample entities (111 discovery cases) ---
+  time_between_clamping_and_freezing:
+    per-sample: 167/829 = 0.2014
+    per-case (>=1 sample filled): 71/111 = 0.6396
+  time_between_excision_and_freezing:
+    per-sample: 244/829 = 0.2943
+    per-case (>=1 sample filled): 107/111 = 0.9640
+  days_to_collection:
+    per-sample: 0/829 = 0.0000
+    per-case (>=1 sample filled): 0/111 = 0.0000
+  preservation_method:
+    per-sample: 829/829 = 1.0000
+    per-case (>=1 sample filled): 111/111 = 1.0000
+  freezing_method:
+    per-sample: 809/829 = 0.9759
+    per-case (>=1 sample filled): 111/111 = 1.0000
+
+sample_type distribution across the 829 sample entities: {'Blood Derived Normal': 321, 'Primary Tumor': 331, 'Solid Tissue Normal': 177}
+
+wrote summary -> D:\claude\pajinsen\MorphoResidual_paper\review\C1_LUAD_STEP0B_2026-09-29\step3_preanalytic_fill_rates.json

@@ -1,0 +1,32 @@
+﻿confirmatory case list: 113 cases (expected 113)
+discovery case list (from slide_type_map_luad.tsv): 111 cases (expected 111)
+union: 224 cases (expected 224)
+
+=== PASS A: unmodified fetch_slide_entities(union) ===
+  fetched 60/224 cases
+  fetched 120/224 cases
+  fetched 180/224 cases
+  fetched 224/224 cases
+PASS A: 506 slide entities total across union
+PASS A confirmatory: Primary Tumor slides=136 (expected 136), Solid Tissue Normal slides=123 (expected 123), cases with >=1 PT slide=113/113 (expected 113/113)
+PASS A discovery: Primary Tumor slides=141 (expected 141), Solid Tissue Normal slides=106 (expected 106), cases with >=1 PT slide=111/111 (expected 111/111)
+
+=== PASS B: logged query with slide_id, union of 224 cases ===
+  PASS B fetched 60/224 cases
+  PASS B fetched 120/224 cases
+  PASS B fetched 180/224 cases
+  PASS B fetched 224/224 cases
+PASS B: 506 slide entities total across union
+PASS A vs PASS B (confirmatory slide ids): only-in-A=0, only-in-B=0, sample_type mismatches=0
+
+--- Per-case Primary Tumor slide count distribution ---
+confirmatory (113 cases): 0 PT slides=0, 1=93, 2=17, 3+=3
+discovery (111 cases): 0 PT slides=0, 1=81, 2=30, 3+=0
+
+wrote 136 confirmatory Primary Tumor slide ids -> D:\claude\pajinsen\MorphoResidual_paper\server_export\scripts\pinned\c1_primary_slide_ids_luad.txt
+wrote 259 confirmatory slide entity rows -> D:\claude\pajinsen\MorphoResidual_paper\server_export\scripts\pinned\c1_luad_gdc_slides.tsv
+
+--- Discovery cross-check vs slide_type_map_luad.tsv (ID-for-ID) ---
+ref rows=247, PASS B discovery rows=247, overlap=247, mismatches=0, only-in-ref=0, only-in-new=0
+
+wrote summary -> D:\claude\pajinsen\MorphoResidual_paper\review\C1_LUAD_STEP0B_2026-09-29\step1_slide_entities_summary.json

@@ -60,6 +60,13 @@ review/recalc/*
 # record (OSF registration + this GitHub release); its sha256 sidecar ships with it
 !review/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md
 !review/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md.sha256
+# its registration receipt, the post-signature addenda the rule (section 7.4) names, and
+# the logs its D3 paper wording says are in the repository (desensitised copies)
+!review/C1_LUAD_D3_RECEIPT_2026-10-01.md
+!review/C1_LUAD_ADDENDA.md
+!review/C1_LUAD_ADDENDA.md.sha256
+!review/c1_luad_logs/
+!review/c1_luad_logs/**
 
 # one-off editorial scripts that patched manuscript text (not analysis code)
 apply_*_edits*.py
