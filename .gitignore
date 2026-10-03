@@ -102,7 +102,18 @@ figures/*.csv
 server_export/embeddings/
 server_export/pathomics/
 server_export/pdac/
-server_export/pinned/
+server_export/pinned/*
+# the post hoc arm summaries and the L re-read's result + log ship (small, and the
+# addenda record their sha256); the per-gene CSVs and the .npz stay for the Zenodo deposit
+!server_export/pinned/posthoc/
+server_export/pinned/posthoc/*
+!server_export/pinned/posthoc/posthoc_summary_ccrcc.csv
+!server_export/pinned/posthoc/posthoc_summary_luad.csv
+!server_export/pinned/posthoc/posthoc_summary_ucec.csv
+!server_export/pinned/posthoc/posthoc_summary_gbm.csv
+!server_export/pinned/posthoc/posthoc_summary_pdac.csv
+!server_export/pinned/posthoc/c1_luad_plex_reread_result_plex.json
+!server_export/pinned/posthoc/c1_luad_plex_reread_plex.log
 server_export/prefix/
 server_export/prefix_sitepack.tar.gz
 server_export/results/
@@ -125,6 +136,8 @@ server_export/INVENTORY.txt
 server_export/MANIFEST.json
 *.tar.gz
 *.json
+# re-except after the global *.json rule: the L re-read's result ships (addenda Entry 10)
+!server_export/pinned/posthoc/c1_luad_plex_reread_result_plex.json
 c1_ucec_idc_tumor_series.csv
 ucec_batch_groups.csv
 luad_rppa_case_ids.txt

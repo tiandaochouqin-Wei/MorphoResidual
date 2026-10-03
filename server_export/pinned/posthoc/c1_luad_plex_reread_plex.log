@@ -1,0 +1,100 @@
+==============================================================================
+C1-LUAD PLEX-STRATIFIED RE-READ -- POST HOC (new attempt)
+  governed by review/POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md; does not change the registered section 5 reading
+  mode=ANALYSIS (B=1000) host=s002 lsf_job=75702342 start=2026-10-03T00:54:05Z python=3.9.23
+  P1/P2/P3 in this output = prespec section L analyses L1/L2/L3 (not section P, the discovery plex axis)
+==============================================================================
+pre-flight hashes:
+  hash OK: signed C1-LUAD rule = a68dfbec65e0... (/public/home/fjhui/ZW/scripts/pinned/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md)
+  hash OK: post hoc prespec = bbb945ab6ee7... (/public/home/fjhui/ZW/scripts/pinned/POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md)
+  hash OK: plex map = 491f7355b9ad... (/public/home/fjhui/ZW/scripts/pinned/case_to_plex_luad_c1.tsv)
+  hash OK: confirmatory protein = 65c0dacae5ff... (/public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv)
+  hash OK: confirmatory RNA manifest ($MORPHO_RNA_MANIFEST) = b3f58f5d2b5d... (/public/home/fjhui/ZW/luad_c1/manifest_rna_tumor_luad_c1.tsv)
+  hash OK: confirmatory slide map ($MORPHO_SLIDE_MAP) = d564b6bc5682... (/public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad_c1.tsv)
+  hash OK: case_ids = 3629b243a3aa... (/public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt)
+  hash OK: discovery_results = 63aec1992a77... (/public/home/fjhui/ZW/scripts/pinned/luad/residual_results_tumoronly.csv)
+  hash OK: discovery_sitepack = aeef7232682c... (/public/home/fjhui/ZW/results/luad__sitepack_operator.csv)
+  hash OK: discovery_slide_map = 3de16eb77f61... (/public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad.tsv)
+  hash OK: discovery_xwalk = 967cabf18cb6... (/public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_luad.tsv)
+  hash OK: discovery_rna_manifest = cacb28588145... (/public/home/fjhui/ZW/scripts/pinned/manifest_rna_tumor_luad.tsv)
+  hash OK: batch_labels = 0a840533a360... (/public/home/fjhui/ZW/scripts/pinned/c1_luad_batch_labels.tsv)
+  this script sha256 = 45a9317df29112f5efe7eb43f3300dcbde386800e71b0c3b43f27c163f707d2b
+  hash OK: frozen module c1_run_test_luad = 1d5ee05d57f8... (/public/home/fjhui/ZW/scripts/c1_run_test_luad.py)
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+=== resolved paths ===
+  MORPHO_ROOT         : /public/home/fjhui/ZW/luad_c1
+  MORPHO_RNA_MANIFEST : /public/home/fjhui/ZW/luad_c1/manifest_rna_tumor_luad_c1.tsv
+  MORPHO_SLIDE_MAP    : /public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad_c1.tsv
+  MORPHO_WSI_EMB_DIR  : /public/home/fjhui/ZW/luad_c1/WSI/emb
+  MORPHO_OUT          : /public/home/fjhui/ZW/luad_c1/results/posthoc
+  plex map            : /public/home/fjhui/ZW/scripts/pinned/case_to_plex_luad_c1.tsv
+  protein             : /public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv
+  perms / workers     : 1000 / 3  blind=False
+==============================================================================
+confirmatory protein (case-indexed, from c1_pull_omics_luad.py): 113 cases x 11418 genes  <- /public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv
+cases with all three modalities: 112
+  hash OK: case_ids = 3629b243a3aa... (/public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt)
+  hash OK: discovery_slide_map = 3de16eb77f61... (/public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad.tsv)
+  hash OK: discovery_xwalk = 967cabf18cb6... (/public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_luad.tsv)
+  discovery case union (slide map + xwalk + rna manifest): 111 cases
+  independence check: 0 overlap with discovery, 0 off the frozen list (112 cases checked)
+discovery H1 selection: 2310/10724 genes; usable universe (discovery-tested AND present in confirmatory RNA+protein): 10417 genes, of which 2287 H1-selected / 8130 H1-background
+discovery H2 (batch-corrected) selection: 726 genes; 721 present in the usable universe, 631 overlap with H1's discovery selection
+capacity: K = round(20 * 112 / 100) = 22 PCs, PCA fit on the confirmatory cohort's own embeddings (1024 dims)
+  gate n / K: 112 / 22 -> OK
+  hash OK: batch_labels = 0a840533a360... (/public/home/fjhui/ZW/scripts/pinned/c1_luad_batch_labels.tsv)
+operator labels: 109/112 cases labelled (3 unlabelled, held fixed in the within-operator null)
+plex labels: 113 rows in map; 113/113 frozen cases covered; analysed 112/112 labelled (0 unlabelled)
+  27 plex levels, sizes 3-5, 0 singleton strata; cases held fixed 0/112 = 0.0%
+  P2 design: 26 dummies (levels >= 3 cases, one dropped for full rank: 28CPTAC_C_LUAD_Proteome_BI_20181123), 0 levels left to the intercept
+  P3: 2/2 listed cases analysed ['C3N-02230', 'C3N-02240']; C3N-02230 -> 26CPTAC_C_LUAD_Proteome_BI_20181106, C3N-02240 -> 29CPTAC_C_LUAD_Proteome_BI_20181127
+
+=== STEP 1 REPRODUCTION (2,310 set, unrestricted null, primary seed) ===
+  [step1] 11 genes dropped (fewer than 30 confirmatory protein values, or no discovery comparator)
+  [step1] n_usable=10406 n_sel=2287 n_bg=8119  AUC=0.6440 (null 0.5244+/-0.0187) p=0.0010  |  rho=0.3978 p_rho=0.0010
+  gate n         : reproduced=112 expected=112 -> OK
+  gate K         : reproduced=22 expected=22 -> OK
+  gate n_usable  : reproduced=10406 expected=10406 -> OK
+  gate n_selected: reproduced=2287 expected=2287 -> OK
+  gate auc_obs   : reproduced=0.6439668501223573 expected=0.6439668501223573 -> OK
+  gate p1        : reproduced=0.000999000999000999 expected=0.000999000999000999 -> OK
+  reproduction gate PASSED
+
+=== P1 (prespec L1): 2,310 set, same PCs, within-plex null (post hoc) ===
+  [P1] 11 genes dropped (fewer than 30 confirmatory protein values, or no discovery comparator)
+  [P1] n_usable=10406 n_sel=2287 n_bg=8119  AUC=0.6440 (null 0.5458+/-0.0194) p=0.0010  |  rho=0.3978 p_rho=0.0010
+
+=== P2 (prespec L2): 726 set, PCs residualised on plex dummies, same within-plex draws ===
+  plex residualisation: 26 dummies (dropped for full rank: 28CPTAC_C_LUAD_Proteome_BI_20181123; left to intercept: []), PC variance retained 79.8% (n=112)
+  [P2] 11 genes dropped (fewer than 30 confirmatory protein values, or no discovery comparator)
+  [P2] n_usable=10406 n_sel=721 n_bg=9685  AUC=0.6515 (null 0.5191+/-0.0241) p=0.0010  |  rho=0.4367 p_rho=0.0010
+
+=== P3 (prespec L3): P1 without C3N-02230 and C3N-02240 (aliquot in two plexes) ===
+confirmatory protein (case-indexed, from c1_pull_omics_luad.py): 113 cases x 11418 genes  <- /public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv
+cases with all three modalities: 112
+  hash OK: case_ids = 3629b243a3aa... (/public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt)
+  hash OK: discovery_slide_map = 3de16eb77f61... (/public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad.tsv)
+  hash OK: discovery_xwalk = 967cabf18cb6... (/public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_luad.tsv)
+  discovery case union (slide map + xwalk + rna manifest): 111 cases
+  independence check: 0 overlap with discovery, 0 off the frozen list (112 cases checked)
+  sensitivity drop applied: 112 -> 110 cases (2 of 2 listed cases were present)
+discovery H1 selection: 2310/10724 genes; usable universe (discovery-tested AND present in confirmatory RNA+protein): 10417 genes, of which 2287 H1-selected / 8130 H1-background
+discovery H2 (batch-corrected) selection: 726 genes; 721 present in the usable universe, 631 overlap with H1's discovery selection
+capacity: K = round(20 * 110 / 100) = 22 PCs, PCA fit on the confirmatory cohort's own embeddings (1024 dims)
+  [P3] 13 genes dropped (fewer than 30 confirmatory protein values, or no discovery comparator)
+  [P3] n_usable=10404 n_sel=2287 n_bg=8117  AUC=0.6576 (null 0.5433+/-0.0203) p=0.0010  |  rho=0.4133 p_rho=0.0010
+
+==============================================================================
+POST HOC SUMMARY (does not change the registered C1-LUAD reading)
+==============================================================================
+step1 (reproduced): AUC=0.643967 null 0.5244+/-0.0187 p1=0.000999
+P1 (prespec L1): AUC=0.643967 null 0.5458+/-0.0194 z=5.06 p=0.000999 | rho=0.3978 null 0.2747+/-0.0312 z=3.95 p_rho=0.000999 | n_sel=2287 n_bg=8119
+P2 (prespec L2): AUC=0.651493 null 0.5191+/-0.0241 z=5.50 p=0.000999 | rho=0.4367 null 0.3552+/-0.0213 z=3.83 p_rho=0.000999 | n_sel=721 n_bg=9685
+P3 (prespec L3): AUC=0.657636 null 0.5433+/-0.0203 z=5.62 p=0.000999 | rho=0.4133 null 0.2696+/-0.0342 z=4.20 p_rho=0.000999 | n_sel=2287 n_bg=8117
+P1 cases held fixed: 0.0%; P2 dummies 26, PC variance retained 79.8%
+
+  -> /public/home/fjhui/ZW/luad_c1/results/posthoc/c1_luad_plex_reread_result_plex.json
+  -> /public/home/fjhui/ZW/luad_c1/results/posthoc/c1_luad_plex_reread_plex.npz
+  -> /public/home/fjhui/ZW/luad_c1/results/posthoc/c1_luad_plex_reread_plex.log
+  elapsed 385.4 min

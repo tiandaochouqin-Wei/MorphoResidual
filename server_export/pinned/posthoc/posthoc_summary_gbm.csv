@@ -1,0 +1,3 @@
+arm,genes_tested,n_sig,overlap_with_R_sig,jaccard_with_R_sig,median_incr_r2_on_R_sig,r_sig_genes_covered,sha256,path
+R,10785,702,702,1.0,0.0580420384816628,702,6a78da895f6bd527a6a673d33cde9ab570c0f461cc15f4e6a0e1d259712e479d,/public/home/fjhui/ZW/gbm/results/posthoc/R/residual_results_tumoronly.csv
+Q,10785,702,702,1.0,0.0580420384816628,702,6a78da895f6bd527a6a673d33cde9ab570c0f461cc15f4e6a0e1d259712e479d,/public/home/fjhui/ZW/gbm/results/posthoc/Q/residual_results_tumoronly.csv

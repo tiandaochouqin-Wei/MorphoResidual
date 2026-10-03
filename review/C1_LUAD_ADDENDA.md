@@ -262,6 +262,82 @@ both readers reported the same level-0 dimensions for each. Arm (ii): C3L-00001-
 and the Abstract are unaffected and no clause form changes. The check remains not
 outcome-blind, which is disclosed wherever it is reported.
 
+## Entry 10 (2026-10-03): execution of the post hoc batch-axis programme, and a reporting correction its own audit forced
+
+**What ran.** Everything `review/POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md` specifies, under
+the released text plus its two dated amendments and the amendment-2 correction, all
+timestamped before the corresponding jobs ran. Sections P and M1: seven sitepack jobs
+(plex in five cohorts at the 30-level cap; medium in CCRCC and UCEC), all rc=0, 2026-10-03
+00:45–00:55 CST. Sections M2 and Q: 88 arms through `lsf_posthoc_residual.sh` under a
+6-concurrent job-group limit, all rc=0 by 07:31 CST; the unmodified control arm R
+reproduced every published Sig. count exactly (2,191 / 2,310 / 2,566 / 702 / 1,572).
+Section L: job 75702342 on s002 (3 cores), 385.4 min, rc=0; the reproduction gate matched
+all six pinned values including p1 = 1/1,001, and P1/P2/P3 all returned p = 0.001
+(within-plex null 0.5458±0.0194 against AUC 0.6440; details in the manuscript). One
+earlier submission of the 21 CCRCC arms exited immediately with code 126 — the re-uploaded
+wrapper had lost its execute bit — and produced no output; it was resubmitted unchanged.
+Outputs: `results/posthoc/` under each cohort root and
+`/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_luad_plex_reread_result_plex.json`
+(+ .npz, .log); sha256 to be recorded here when the files are mirrored into the
+repository's pinned tree.
+
+**Mirrored (2026-10-04), at `server_export/pinned/posthoc/` in the repository.** The L
+result and log ship in the repository; the permutation array (.npz, 234 MB) is hashed
+here and held for the Zenodo deposit with the other large derived artefacts, as are the
+seven per-gene sitepack tables. The five arm summary tables ship alongside.
+
+| File | sha256 |
+|---|---|
+| `c1_luad_plex_reread_result_plex.json` | `903c183bd9aa4672472e395e1541b81f9f7080bf64c7eaa2a9b473c6d734aa31` |
+| `c1_luad_plex_reread_plex.log` | `b7ec0d2e022444e779cbbb2982410ecf9b140a270a484c4ae5ee4430bd96edbb` |
+| `c1_luad_plex_reread_plex.npz` (not in the repository) | `3128195d4cf1e3d96307fa9b228f64e4f1c1d2553d72b508b14733823f33f208` |
+| `posthoc_summary_ccrcc.csv` | `9560d6d73b3288581c5454990b7d5f1af53f53c7038e0e80fda39b26a9378f6f` |
+| `posthoc_summary_luad.csv` | `5f983e8fa6e9f0f8592c417ca19f085bdcb994fce492089c62e54cf1725c481d` |
+| `posthoc_summary_ucec.csv` | `323990565c78163a8384059d21d8d24a2b590144ada33c7c9f787707752a392c` |
+| `posthoc_summary_gbm.csv` | `6805f724298f94f30bea39b140b366a2a8540c54e749a896b47b47790d5411ce` |
+| `posthoc_summary_pdac.csv` | `e612922c0ba0bc63cdf4982b6eb3ad3c3de9e412d01150f04f917e0e052af412` |
+
+**Reporting correction (disclosed, not silent).** After the first summary of these
+results was drafted, an independent recomputation (three fresh reviewers over the raw
+tables and the specification text) verified every reported number and every reading
+assignment, and found that the draft reported only part of what the specification
+mandates per cohort, with the omissions skewed favourable: the batch-only vs
+noise-matched control (which in UCEC-medium shows the FFPE/OCT indicator alone
+recovering a median increment of +0.111 over the published significant genes, nearly the
+embedding's own +0.118); the Strictest counts (UCEC-medium = 0; CCRCC-medium a
+by-construction copy of the corrected count, its 13-patient level being below the
+15-case training-fold floor); the specified Jaccard overlaps (a one-sided percentage had
+been substituted — e.g. UCEC-plex "50.7% of the operator set kept" where the specified
+Jaccard is 0.046); M2's retained column (−0.43 and −0.06 in the two count-indeterminate
+cohorts); Q's "patients dropped" (0 in GBM, whose arm Q is therefore identical to R and
+its Jaccard of 1.000 an identity); the M3 disclosures owed to LUAD and PDAC
+(medium-axis largest level 93.3% and 93.4%, above the 90% bar) and GBM's dual criterion
+(one medium level, and k=0); and section L itself, which at that point had not been run
+at all. Every mandated quantity but one is now computed, L has run, and the manuscript
+carries the set (Table 1 caption, the Results paragraph in sec:c1res, Methods
+sec:batchmeth, Supplementary Note snote:ucec, Supplementary Methods sm:census,
+Supplementary Table tab:posthoc, and snote:c1luad for L). The one still outstanding is
+section P's top-15 family enrichment, which runs through `enrichment_check.py` — the
+same script, families and Enrichr libraries that produced the published per-axis table —
+after the published operator output it would overwrite is set aside; its result is
+appended below when it lands, whatever it shows, and the script's re-run of the
+uncorrected baseline doubles as a drift control against the published column.
+
+**Enrichment result (2026-10-03, appended as promised above).** Run on the login node
+against Enrichr/Reactome with the script's four signature families. At least one family
+sits in the top 15 of every corrected set on both axes: plex 8/13/7/8/4 of 15 terms
+in-family (CCRCC/LUAD/UCEC/GBM/PDAC), medium 5 (CCRCC) and 9 (UCEC); UCEC's empty
+strictest-medium set has nothing to enrich. The baseline re-run gave 7/12/11/6/3,
+matching the published family pattern (the published table's six-family vocabulary adds
+folding and ECM, so its counts sit one to three higher in CCRCC, GBM and PDAC). The
+published operator output `scripts/enrichment_survival.tsv` (sha256 `6d2291125ba2...`)
+was backed up before the runs and restored byte-identical afterwards; the new outputs
+are `enrichment_survival_plex.tsv` and `enrichment_survival_medium.tsv` beside it. One M0 quantity, Cramér's V
+between medium and operator, was computed locally over the pinned analysed-case lists
+with a 500-shuffle null (V = 0.81/0.90/0.92/0.90 in CCRCC/LUAD/UCEC/PDAC, p ≤ 0.004;
+GBM one level); those lists are exact for CCRCC and UCEC and two to three patients short
+of the arm population elsewhere, which is stated where the number is used.
+
 ## Entry 6 (2026-10-02): reporting gaps in the frozen code, filled from saved outputs
 
 The rule asks for two quantities that the frozen scripts do not print; they are computed
