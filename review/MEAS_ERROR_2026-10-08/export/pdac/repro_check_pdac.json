@@ -1,0 +1,10 @@
+{
+ "n_fit_genes": 9897,
+ "n_compared": 9897,
+ "n_fit_genes_missing_from_published": 0,
+ "max_abs_diff_n": 0.0,
+ "max_abs_diff_r2_rna": 0.0,
+ "max_abs_diff_r2_both": 0.0,
+ "max_abs_diff_incremental_r2": 0.0,
+ "verdict": "EXACT (<=1e-10)"
+}

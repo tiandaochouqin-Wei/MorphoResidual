@@ -1,0 +1,6 @@
+
+=== F5: H_post with per-gene MNAR protein truncation q (n chosen so ~100 fit patients remain), lam=0.7, R2=0.3, Delta=0.2 ===
+q seed n_sel | z_D z_N(sign) theta_pc | class | diag: z of sum corr(W-pred M, M) on selected set / all genes
+0.02    0    70 | +32.1 -1.82 -0.020 | R1   | -0.77 / -0.54
+0.02    1    78 | +35.9 -1.10 -0.014 | R1   | -0.36 / -0.06
+[F5b done in 37s]

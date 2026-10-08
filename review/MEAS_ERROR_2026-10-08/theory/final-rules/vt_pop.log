@@ -1,0 +1,57 @@
+=== closed-form checks (R2_rna=0.3 at lam, var P = 1) ===
+noise lam=0.5 | I1err=8.9e-16 I2=-0.547(-rho=-0.548) | Dp sim=0.0723 pred=0.0727 | Dm sim=0.0419 pred=0.0408 | Dm/Dp sim=0.580 text=0.533 mine=0.561 | theta sim=+1.008 pred=+1.000 | S=+0.214 S_drm=-0.176
+post  lam=0.5 | I1err=8.9e-16 I2=-0.550(-rho=-0.548) | Dp sim=0.0231 pred=0.0227 | Dm sim=0.0069 pred=0.0070 | Dm/Dp sim=0.299 text=0.300 mine=0.307 | theta sim=+0.008 pred=+0.000 | S=-0.098 S_drm=-0.100
+err   lam=0.5 | I1err=8.9e-16 I2=-0.548(-rho=-0.548) | Dp sim=0.0726 pred=0.0727 text=0.0585 | Dm sim=0.1949 pred=0.1951 | Dm/Dp sim=2.685 text=3.333 mine=2.683 | theta sim=-1.002 pred=-1.000 | S=-0.528 S_drm=-0.177
+noise lam=0.7 | I1err=8.9e-16 I2=-0.547(-rho=-0.548) | Dp sim=0.0212 pred=0.0207 | Dm sim=0.1064 pred=0.1071 | Dm/Dp sim=5.029 text=5.926 mine=5.172 | theta sim=+2.300 pred=+2.333 | S=+0.356 S_drm=-0.095
+post  lam=0.7 | I1err=8.9e-16 I2=-0.549(-rho=-0.548) | Dp sim=0.0438 pred=0.0442 | Dm sim=0.0135 pred=0.0139 | Dm/Dp sim=0.308 text=0.300 mine=0.314 | theta sim=+0.005 pred=+0.000 | S=-0.136 S_drm=-0.137
+err   lam=0.7 | I1err=8.9e-16 I2=-0.547(-rho=-0.548) | Dp sim=0.0213 pred=0.0207 text=0.0194 | Dm sim=0.0658 pred=0.0646 | Dm/Dp sim=3.094 text=3.333 mine=3.118 | theta sim=-0.994 pred=-1.000 | S=-0.306 S_drm=-0.095
+noise lam=0.9 | I1err=8.9e-16 I2=-0.547(-rho=-0.548) | Dp sim=0.0018 pred=0.0020 | Dm sim=0.1804 pred=0.1794 | Dm/Dp sim=97.786 text=120.000 mine=89.495 | theta sim=+9.348 pred=+9.000 | S=+0.473 S_drm=-0.028
+post  lam=0.9 | I1err=8.9e-16 I2=-0.548(-rho=-0.548) | Dp sim=0.0588 pred=0.0586 | Dm sim=0.0190 pred=0.0187 | Dm/Dp sim=0.323 text=0.300 mine=0.319 | theta sim=-0.002 pred=+0.000 | S=-0.160 S_drm=-0.159
+err   lam=0.9 | I1err=4.4e-16 I2=-0.549(-rho=-0.548) | Dp sim=0.0023 pred=0.0020 text=0.0020 | Dm sim=0.0069 pred=0.0066 | Dm/Dp sim=2.980 text=3.333 mine=3.311 | theta sim=-0.926 pred=-1.000 | S=-0.099 S_drm=-0.031
+
+=== mixes: theta = f_X lam/(1-lam) where f_X = X-share of D (not of Delta_p); sign test threshold ===
+lam=0.8 R2=0.2: S flips at f_X = 0.062; theta threshold rho2/(1-rho2) = 0.250
+  fX_in=0.02 fX_D=0.002 theta sim=+0.006 pred=+0.007 S=-0.1304 (pred sign -)  Dp=0.0715 S_drm=-0.134
+  fX_in=0.05 fX_D=0.004 theta sim=+0.018 pred=+0.018 S=-0.1221 (pred sign -)  Dp=0.0693 S_drm=-0.132
+  fX_in=0.10 fX_D=0.009 theta sim=+0.040 pred=+0.036 S=-0.1101 (pred sign -)  Dp=0.0680 S_drm=-0.131
+  fX_in=0.30 fX_D=0.029 theta sim=+0.109 pred=+0.116 S=-0.0662 (pred sign -)  Dp=0.0563 S_drm=-0.118
+  fX_in=0.50 fX_D=0.057 theta sim=+0.233 pred=+0.228 S=-0.0082 (pred sign -)  Dp=0.0425 S_drm=-0.104
+  fX_in=0.80 fX_D=0.165 theta sim=+0.653 pred=+0.659 S=+0.1144 (pred sign +)  Dp=0.0219 S_drm=-0.074
+lam=0.6 R2=0.3: S flips at f_X = 0.286; theta threshold rho2/(1-rho2) = 0.429
+  fX_in=0.02 fX_D=0.029 theta sim=+0.037 pred=+0.043 S=-0.1116 (pred sign -)  Dp=0.0350 S_drm=-0.122
+  fX_in=0.05 fX_D=0.070 theta sim=+0.098 pred=+0.105 S=-0.0954 (pred sign -)  Dp=0.0359 S_drm=-0.124
+  fX_in=0.10 fX_D=0.133 theta sim=+0.195 pred=+0.199 S=-0.0683 (pred sign -)  Dp=0.0364 S_drm=-0.125
+  fX_in=0.30 fX_D=0.339 theta sim=+0.501 pred=+0.508 S=+0.0214 (pred sign +)  Dp=0.0393 S_drm=-0.130
+  fX_in=0.50 fX_D=0.512 theta sim=+0.779 pred=+0.767 S=+0.1046 (pred sign +)  Dp=0.0414 S_drm=-0.133
+  fX_in=0.80 fX_D=0.778 theta sim=+1.159 pred=+1.166 S=+0.2107 (pred sign +)  Dp=0.0424 S_drm=-0.134
+
+=== aligned / anti-aligned a and c (same morphological axis) ===
+mix_aligned  fX=0.1 theta=+0.442 D=+0.0568 Dp=+0.0591 S=+0.004
+mix_aligned  fX=0.3 theta=+0.723 D=+0.0578 Dp=+0.0647 S=+0.110
+mix_aligned  fX=0.5 theta=+0.936 D=+0.0537 Dp=+0.0636 S=+0.180
+mix_anti     fX=0.1 theta=-0.677 D=+0.0231 Dp=+0.0239 S=-0.257
+mix_anti     fX=0.3 theta=-1.887 D=+0.0084 Dp=+0.0093 S=-0.325
+mix_anti     fX=0.5 theta=-4.968 D=+0.0020 Dp=+0.0023 S=-0.362
+
+=== alternatives ===
+A unshared component, W reads X2    : theta=-1.004 Dp=0.0111 S=-0.236 rho2=0.258
+A unshared component, W reads X1+X2 : theta=+5.412 Dp=0.0057 S=+0.503 rho2=0.261
+A unshared component, W reads X1    : theta=+1.646 Dp=0.0305 S=+0.331 rho2=0.261
+B nonlinear (lam=1, g=0.2): theta=+0.025 Dp=0.0282 S=-0.251  (reads 'H_post')
+B nonlinear (lam=0.8, g=0.2): theta=+1.319 (pure H_noise would be 4.0) Dp=0.0520
+B nonlinear (lam=1, g=0.4): theta=+0.000 Dp=0.0959 S=-0.376  (reads 'H_post')
+B nonlinear (lam=0.8, g=0.4): theta=+0.437 (pure H_noise would be 4.0) Dp=0.1163
+C purity [tumour-enriched, equal translation]: theta=+8.529 Dp=0.0011 S=+0.074 rho2=0.796
+C purity [stroma-enriched, equal translation]: theta=+8.254 Dp=0.0012 S=+0.071 rho2=0.797
+C purity [equal expr, stroma translates less]: theta=-0.006 Dp=0.0179 S=-0.158 rho2=0.578
+C purity [no composition effect (control)]: theta=-0.249 Dp=0.0000 S=-0.005 rho2=0.755
+D MNAR H_post, drop bottom  0% of P: theta=+0.006 corr(W1,M)=+0.002 Dp=0.0443 S=-0.136
+D MNAR H_post, drop bottom 10% of P: theta=-0.079 corr(W1,M)=-0.032 Dp=0.0381 S=-0.135
+D MNAR H_post, drop bottom 30% of P: theta=-0.150 corr(W1,M)=-0.064 Dp=0.0319 S=-0.140
+D MNAR H_post, drop bottom 50% of P: theta=-0.174 corr(W1,M)=-0.077 Dp=0.0262 S=-0.135
+D MNAR H_noise, drop bottom 30% of P: theta=+1.830 (pop 2.33) Dp=0.0144
+E heteroscedastic e read by W, H_post: theta=+0.001 (pred +0.000, lam_eff=0.700) Dp=0.1103
+E heteroscedastic e read by W, H_noise: theta=+2.314 (pred +2.333, lam_eff=0.700) Dp=0.0211
+F replicate averaging H_noise: theta=+3.514 pred lam_eff/(1-lam_eff)=+3.517 (single-library 2.33)
+G ICC bound [same portion]: theta=+3.789 -> lam_hat=0.791; ICC=0.526 lam_portion=0.789
+G ICC bound [different portion]: theta=+1.112 -> lam_hat=0.527; ICC=0.526 lam_portion=0.789

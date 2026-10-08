@@ -1,0 +1,313 @@
+{
+ "lineage": {
+  "ccrcc": {
+   "same_gene_set": true,
+   "n_sel_pinned": 2191,
+   "n_sel_merged_uni": 2191,
+   "same_selection": true
+  },
+  "luad": {
+   "same_gene_set": true,
+   "n_sel_pinned": 2310,
+   "n_sel_merged_uni": 2310,
+   "same_selection": true
+  },
+  "ucec": {
+   "same_gene_set": true,
+   "n_sel_pinned": 2566,
+   "n_sel_merged_uni": 2566,
+   "same_selection": true
+  },
+  "gbm": {
+   "same_gene_set": true,
+   "n_sel_pinned": 702,
+   "n_sel_merged_uni": 702,
+   "same_selection": true
+  },
+  "pdac": {
+   "same_gene_set": true,
+   "n_sel_pinned": 1572,
+   "n_sel_merged_uni": 1572,
+   "same_selection": true
+  }
+ },
+ "n_tested_per_cohort": {
+  "ccrcc": 9635,
+  "luad": 10724,
+  "ucec": 10512,
+  "gbm": 10785,
+  "pdac": 9897
+ },
+ "n_common": 8309,
+ "n_union_tested": 12898,
+ "n_selected_published_outside_common": {
+  "ccrcc": 181,
+  "luad": 182,
+  "ucec": 215,
+  "gbm": 99,
+  "pdac": 115
+ },
+ "n_selected_per_cohort": {
+  "pub": {
+   "ccrcc": 2191,
+   "luad": 2310,
+   "ucec": 2566,
+   "gbm": 702,
+   "pdac": 1572
+  },
+  "op": {
+   "ccrcc": 815,
+   "luad": 726,
+   "ucec": 201,
+   "gbm": 680,
+   "pdac": 682
+  },
+  "opb": {
+   "ccrcc": 1178,
+   "luad": 802,
+   "ucec": 253,
+   "gbm": 579,
+   "pdac": 342
+  },
+  "plex": {
+   "ccrcc": 684,
+   "luad": 1534,
+   "ucec": 2124,
+   "gbm": 225,
+   "pdac": 1124
+  },
+  "phi": {
+   "ccrcc": 2505,
+   "luad": 1673,
+   "ucec": 2508,
+   "gbm": 476,
+   "pdac": 1313
+  }
+ },
+ "overlap_vs_published_cross_organ": {
+  "op_k1_vs_pub_k1": {
+   "n_fam": 2314,
+   "n_pub": 5189,
+   "shared": 2091,
+   "jaccard": 0.3864
+  },
+  "op_k2_vs_pub_k2": {
+   "n_fam": 462,
+   "n_pub": 2403,
+   "shared": 395,
+   "jaccard": 0.1599
+  },
+  "op_k3_vs_pub_k3": {
+   "n_fam": 61,
+   "n_pub": 777,
+   "shared": 44,
+   "jaccard": 0.0554
+  },
+  "op_k4_vs_pub_k4": {
+   "n_fam": 7,
+   "n_pub": 170,
+   "shared": 5,
+   "jaccard": 0.0291
+  },
+  "opb_k1_vs_pub_k1": {
+   "n_fam": 2387,
+   "n_pub": 5189,
+   "shared": 2100,
+   "jaccard": 0.3835
+  },
+  "opb_k2_vs_pub_k2": {
+   "n_fam": 448,
+   "n_pub": 2403,
+   "shared": 361,
+   "jaccard": 0.145
+  },
+  "opb_k3_vs_pub_k3": {
+   "n_fam": 64,
+   "n_pub": 777,
+   "shared": 39,
+   "jaccard": 0.0486
+  },
+  "opb_k4_vs_pub_k4": {
+   "n_fam": 3,
+   "n_pub": 170,
+   "shared": 2,
+   "jaccard": 0.0117
+  },
+  "plex_k1_vs_pub_k1": {
+   "n_fam": 3873,
+   "n_pub": 5189,
+   "shared": 3498,
+   "jaccard": 0.6287
+  },
+  "plex_k2_vs_pub_k2": {
+   "n_fam": 1191,
+   "n_pub": 2403,
+   "shared": 983,
+   "jaccard": 0.3765
+  },
+  "plex_k3_vs_pub_k3": {
+   "n_fam": 223,
+   "n_pub": 777,
+   "shared": 158,
+   "jaccard": 0.1876
+  },
+  "plex_k4_vs_pub_k4": {
+   "n_fam": 22,
+   "n_pub": 170,
+   "shared": 14,
+   "jaccard": 0.0787
+  },
+  "phi_k1_vs_pub_k1": {
+   "n_fam": 4861,
+   "n_pub": 5189,
+   "shared": 4191,
+   "jaccard": 0.7153
+  },
+  "phi_k2_vs_pub_k2": {
+   "n_fam": 2119,
+   "n_pub": 2403,
+   "shared": 1556,
+   "jaccard": 0.5246
+  },
+  "phi_k3_vs_pub_k3": {
+   "n_fam": 647,
+   "n_pub": 777,
+   "shared": 376,
+   "jaccard": 0.3588
+  },
+  "phi_k4_vs_pub_k4": {
+   "n_fam": 97,
+   "n_pub": 170,
+   "shared": 48,
+   "jaccard": 0.2192
+  }
+ },
+ "sources": {
+  "pub:ccrcc": {
+   "path": "server_export/pinned/ccrcc/residual_results_tumoronly.csv",
+   "sha256": "7ce6dbb1290299731de08c33e0b95f0548237449360da18a6756ada0a8fac1b7",
+   "n_rows": 9635
+  },
+  "pub:luad": {
+   "path": "server_export/pinned/luad/residual_results_tumoronly.csv",
+   "sha256": "63aec1992a77e952b96c4e25e27372e2bee5c52294560c56ef2b229196e87be7",
+   "n_rows": 10724
+  },
+  "pub:ucec": {
+   "path": "server_export/pinned/ucec/residual_results_tumoronly.csv",
+   "sha256": "100d8f8581c78905c2a98caf4bb2713e376d9264c6f00276446a9893b987c4a6",
+   "n_rows": 10512
+  },
+  "pub:gbm": {
+   "path": "server_export/pinned/gbm/residual_results_tumoronly.csv",
+   "sha256": "829f961471282c406112ec1070d80548500fc0b85916e998625b9fa204ed103d",
+   "n_rows": 10785
+  },
+  "pub:pdac": {
+   "path": "server_export/pinned/pdac/residual_results_tumoronly.csv",
+   "sha256": "d83cfffdae5207d0622cc5c6f01a0d3fc150547edee114268452c180063b4e82",
+   "n_rows": 9897
+  },
+  "op:ccrcc": {
+   "path": "server_export/results/results__sitepack_operator.csv",
+   "sha256": "6765fadc23bd1e01bfe07954a5eeebd0565b71ae4847b3115c7e2bfc2c1b19b2",
+   "n_rows": 9635
+  },
+  "op:luad": {
+   "path": "server_export/results/luad__sitepack_operator.csv",
+   "sha256": "aeef7232682c24d209024ba73efea8033cb7486779831bda1a1ba3c8bda45d9f",
+   "n_rows": 10724
+  },
+  "op:ucec": {
+   "path": "server_export/results/ucec__sitepack_operator.csv",
+   "sha256": "805d747b9af63d5bb01ddc5f39a61940161d5163b356d92d7955ecc11c1d480f",
+   "n_rows": 10512
+  },
+  "op:gbm": {
+   "path": "server_export/results/gbm__sitepack_operator.csv",
+   "sha256": "2c759a2237ef1035aee0776922a4a04bc76aef4e5c1d45bc0b3185f3df1ec866",
+   "n_rows": 10785
+  },
+  "op:pdac": {
+   "path": "server_export/results/pdac__sitepack_operator.csv",
+   "sha256": "cfbe8210ade644bda480f00ca3cad123cd9c4ed21dc1ab9617a1b1c0b836d3a4",
+   "n_rows": 9897
+  },
+  "opb:ccrcc": {
+   "path": "server_export/results/results__sitepack_operator.csv",
+   "sha256": "6765fadc23bd1e01bfe07954a5eeebd0565b71ae4847b3115c7e2bfc2c1b19b2",
+   "n_rows": 9635
+  },
+  "opb:luad": {
+   "path": "server_export/results/luad__sitepack_operator.csv",
+   "sha256": "aeef7232682c24d209024ba73efea8033cb7486779831bda1a1ba3c8bda45d9f",
+   "n_rows": 10724
+  },
+  "opb:ucec": {
+   "path": "server_export/results/ucec__sitepack_operator.csv",
+   "sha256": "805d747b9af63d5bb01ddc5f39a61940161d5163b356d92d7955ecc11c1d480f",
+   "n_rows": 10512
+  },
+  "opb:gbm": {
+   "path": "server_export/results/gbm__sitepack_operator.csv",
+   "sha256": "2c759a2237ef1035aee0776922a4a04bc76aef4e5c1d45bc0b3185f3df1ec866",
+   "n_rows": 10785
+  },
+  "opb:pdac": {
+   "path": "server_export/results/pdac__sitepack_operator.csv",
+   "sha256": "cfbe8210ade644bda480f00ca3cad123cd9c4ed21dc1ab9617a1b1c0b836d3a4",
+   "n_rows": 9897
+  },
+  "plex:ccrcc": {
+   "path": "server_export/pinned/posthoc/ccrcc_plex.csv",
+   "sha256": "ef0657662748ec9bcae8fc697aa030e567793ebad0ace8669075a49e84040bf2",
+   "n_rows": 9635
+  },
+  "plex:luad": {
+   "path": "server_export/pinned/posthoc/luad_plex.csv",
+   "sha256": "20a1747e3865f03e9bd2d8167341a53072a66d00b169edb3b20c240f91cbb690",
+   "n_rows": 10724
+  },
+  "plex:ucec": {
+   "path": "server_export/pinned/posthoc/ucec_plex.csv",
+   "sha256": "85d108df8d6f7ebd87ec4e6912551838d2da2fce5e4ccc5d8f8c19bd1a18f83b",
+   "n_rows": 10512
+  },
+  "plex:gbm": {
+   "path": "server_export/pinned/posthoc/gbm_plex.csv",
+   "sha256": "87f09316dd986b5585835e23cb8cf5e67889e0c6555f7b4740294a1e1377c124",
+   "n_rows": 10785
+  },
+  "plex:pdac": {
+   "path": "server_export/pinned/posthoc/pdac_plex.csv",
+   "sha256": "0353fa1cb80b929369ed5f15050be6be94c2e26677c7f09522fc1418fa3cd5a3",
+   "n_rows": 9897
+  },
+  "phi:ccrcc": {
+   "path": "figures/figdata/merged_incr_ccrcc.csv",
+   "sha256": "7add6108a3346c83eb4d03629d56512464406323ec7ab7b52c0df5b789b93987",
+   "n_rows": 9635
+  },
+  "phi:luad": {
+   "path": "figures/figdata/merged_incr_luad.csv",
+   "sha256": "380e20249cc29fa090cf5f3b2538198690d35d51c6e70192aafb46349f25262c",
+   "n_rows": 10724
+  },
+  "phi:ucec": {
+   "path": "figures/figdata/merged_incr_ucec.csv",
+   "sha256": "2cf0eaa7317d7f8378ee37c59f789233ebf835789a6bfbb141034406833fa079",
+   "n_rows": 10512
+  },
+  "phi:gbm": {
+   "path": "figures/figdata/merged_incr_gbm.csv",
+   "sha256": "d550644329f689ffb68bd0f1b6191aca4dcba36003840298984681be07f34061",
+   "n_rows": 10785
+  },
+  "phi:pdac": {
+   "path": "figures/figdata/merged_incr_pdac.csv",
+   "sha256": "39a9ec0843c74548bf4886ce95c58c1ce2d8f3091b1a4d076d48437ddb10f1f3",
+   "n_rows": 9897
+  }
+ },
+ "brca_gene_file": null
+}

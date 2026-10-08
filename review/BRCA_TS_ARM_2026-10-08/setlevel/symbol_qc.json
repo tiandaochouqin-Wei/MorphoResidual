@@ -1,0 +1,112 @@
+{
+ "date_like": {
+  "n": 0,
+  "examples": []
+ },
+ "has_dot_suffix": {
+  "n": 0,
+  "examples": []
+ },
+ "has_space_or_semicolon": {
+  "n": 0,
+  "examples": []
+ },
+ "lowercase_start": {
+  "n": 0,
+  "examples": []
+ },
+ "orf_style_old_name": {
+  "n": 111,
+  "examples": [
+   "C10orf143",
+   "C10orf88",
+   "C11orf16",
+   "C11orf52",
+   "C11orf54",
+   "C11orf58",
+   "C11orf68",
+   "C11orf95",
+   "C11orf96",
+   "C11orf98",
+   "C12orf29",
+   "C12orf4",
+   "C12orf43",
+   "C12orf45",
+   "C12orf57"
+  ]
+ },
+ "lncrna_or_clone_style": {
+  "n": 246,
+  "examples": [
+   "ACAA1",
+   "ACAA2",
+   "ACACA",
+   "ACACB",
+   "ACAD10",
+   "ACAD11",
+   "ACAD8",
+   "ACAD9",
+   "ACADL",
+   "ACADM",
+   "ACADS",
+   "ACADSB",
+   "ACADVL",
+   "ACAN",
+   "ACAP1"
+  ]
+ },
+ "pdc_proxy_ucec_c1": {
+  "discovery_ucec_tested": 10512,
+  "in_c1_pdc_matrix_usable": 10146,
+  "frac": 0.9652,
+  "n_lost": 366,
+  "lost_examples": [
+   "AASDH",
+   "ABCA6",
+   "ABCA7",
+   "ABCG2",
+   "ABTB1",
+   "ACTL8",
+   "ACTRT2",
+   "ADAMTS3",
+   "ADAMTS4",
+   "ADCY9",
+   "ADGRB1",
+   "ADH1A",
+   "AKIRIN2",
+   "AKR1B15",
+   "AKR1C4",
+   "ALKBH7",
+   "ALOX15B",
+   "AMMECR1L",
+   "ANGPTL1",
+   "ANKRD2",
+   "ANKRD36",
+   "ANKRD6",
+   "AP3B2",
+   "ARF3",
+   "ARHGAP11A",
+   "ARHGAP22",
+   "ARHGAP28",
+   "ARMC7",
+   "ARMCX4",
+   "ARNTL2",
+   "ARX",
+   "ASGR2",
+   "ASXL1",
+   "ATF3",
+   "ATP10A",
+   "ATP5MF",
+   "AXL",
+   "BBC3",
+   "BCAN",
+   "BCDIN3D"
+  ],
+  "note": "lost = tested in discovery UCEC but absent from the usable (n>=30) PDC000439 matrix; mixes symbol drift with missing-protein/missing-RNA/low-n; an upper bound on symbol drift for a same-API PDC study"
+ },
+ "pdc_proxy_common_universe_in_c1": {
+  "n": 8263,
+  "of": 8309,
+  "frac": 0.9945
+ }
+}

@@ -1,0 +1,225 @@
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep0 independent]  G=60 B=150 n_sel=25  (3s)
+  nested incr: obs mean=-0.037  pop=0.150  offset=-0.187  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.245
+  null means: S_pp=-0.543  S_cross=+0.016  D=-0.0082  S_drm=+0.001  S_dd=-0.506  Nc=+0.0006
+  observed means: S_cross=-0.153 S_pp=-0.608 S_drm=-0.177 S_dd=-0.614  incr_m=-0.174
+  N: per-gene two-sided rejection at 5%: all genes=0.133  selected=0.160
+  N: set-level z (all genes)=+0.53   (selected)=-2.10
+  Nc: per-gene two-sided rejection at 5%: all genes=0.100  selected=0.080
+  Nc: set-level z (all genes)=+0.72   (selected)=-1.75
+  theta_pop=+0.000  theta_set(all)=+0.014  theta_set(selected)=-0.050  lamhat(all)=+0.014 lamhat(sel)=-0.053
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep0 family]  G=60 B=150 n_sel=25  (3s)
+  nested incr: obs mean=-0.031  pop=0.150  offset=-0.181  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.265
+  null means: S_pp=-0.490  S_cross=+0.015  D=-0.0109  S_drm=-0.000  S_dd=-0.461  Nc=-0.0001
+  observed means: S_cross=-0.211 S_pp=-0.645 S_drm=-0.154 S_dd=-0.713  incr_m=-0.123
+  N: per-gene two-sided rejection at 5%: all genes=0.133  selected=0.160
+  N: set-level z (all genes)=-2.62   (selected)=-2.85
+  Nc: per-gene two-sided rejection at 5%: all genes=0.117  selected=0.120
+  Nc: set-level z (all genes)=-2.17   (selected)=-2.42
+  theta_pop=+0.000  theta_set(all)=-0.152  theta_set(selected)=-0.138  lamhat(all)=-0.180 lamhat(sel)=-0.160
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep1 independent]  G=60 B=150 n_sel=21  (3s)
+  nested incr: obs mean=-0.042  pop=0.150  offset=-0.192  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.247
+  null means: S_pp=-0.535  S_cross=+0.011  D=-0.0065  S_drm=-0.001  S_dd=-0.498  Nc=-0.0009
+  observed means: S_cross=-0.138 S_pp=-0.581 S_drm=-0.175 S_dd=-0.590  incr_m=-0.182
+  N: per-gene two-sided rejection at 5%: all genes=0.133  selected=0.143
+  N: set-level z (all genes)=+2.21   (selected)=+0.39
+  Nc: per-gene two-sided rejection at 5%: all genes=0.050  selected=0.095
+  Nc: set-level z (all genes)=+2.02   (selected)=+0.38
+  theta_pop=+0.000  theta_set(all)=+0.050  theta_set(selected)=+0.008  lamhat(all)=+0.048 lamhat(sel)=+0.008
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep1 family]  G=60 B=150 n_sel=23  (3s)
+  nested incr: obs mean=-0.031  pop=0.150  offset=-0.181  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.240
+  null means: S_pp=-0.548  S_cross=+0.012  D=-0.0066  S_drm=-0.004  S_dd=-0.515  Nc=-0.0006
+  observed means: S_cross=-0.139 S_pp=-0.621 S_drm=-0.163 S_dd=-0.642  incr_m=-0.173
+  N: per-gene two-sided rejection at 5%: all genes=0.133  selected=0.087
+  N: set-level z (all genes)=+0.92   (selected)=+0.87
+  Nc: per-gene two-sided rejection at 5%: all genes=0.050  selected=0.000
+  Nc: set-level z (all genes)=+0.84   (selected)=+0.77
+  theta_pop=+0.000  theta_set(all)=+0.059  theta_set(selected)=+0.045  lamhat(all)=+0.055 lamhat(sel)=+0.043
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep2 independent]  G=60 B=150 n_sel=28  (3s)
+  nested incr: obs mean=-0.029  pop=0.150  offset=-0.179  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.238
+  null means: S_pp=-0.559  S_cross=+0.015  D=-0.0064  S_drm=+0.000  S_dd=-0.521  Nc=+0.0008
+  observed means: S_cross=-0.162 S_pp=-0.614 S_drm=-0.182 S_dd=-0.638  incr_m=-0.147
+  N: per-gene two-sided rejection at 5%: all genes=0.100  selected=0.107
+  N: set-level z (all genes)=+0.24   (selected)=+0.82
+  Nc: per-gene two-sided rejection at 5%: all genes=0.000  selected=0.000
+  Nc: set-level z (all genes)=+0.21   (selected)=+0.77
+  theta_pop=+0.000  theta_set(all)=+0.008  theta_set(selected)=+0.025  lamhat(all)=+0.008 lamhat(sel)=+0.025
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep2 family]  G=60 B=150 n_sel=0  (3s)
+  nested incr: obs mean=-0.117  pop=0.150  offset=-0.267  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.239
+  null means: S_pp=-0.562  S_cross=+0.011  D=-0.0063  S_drm=-0.000  S_dd=-0.524  Nc=-0.0011
+  observed means: S_cross=-0.139 S_pp=-0.582 S_drm=-0.148 S_dd=-0.595  incr_m=-0.154
+  N: per-gene two-sided rejection at 5%: all genes=0.050  selected=nan
+  N: set-level z (all genes)=-1.00   (selected)=+nan
+  Nc: per-gene two-sided rejection at 5%: all genes=0.050  selected=nan
+  Nc: set-level z (all genes)=-0.83   (selected)=+nan
+  theta_pop=+0.000  theta_set(all)=-0.108  theta_set(selected)=+nan  lamhat(all)=-0.122 lamhat(sel)=+nan
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep3 independent]  G=60 B=150 n_sel=19  (3s)
+  nested incr: obs mean=-0.060  pop=0.150  offset=-0.210  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.243
+  null means: S_pp=-0.543  S_cross=+0.017  D=-0.0080  S_drm=+0.000  S_dd=-0.506  Nc=+0.0014
+  observed means: S_cross=-0.130 S_pp=-0.613 S_drm=-0.140 S_dd=-0.634  incr_m=-0.182
+  N: per-gene two-sided rejection at 5%: all genes=0.050  selected=0.053
+  N: set-level z (all genes)=+0.52   (selected)=+2.12
+  Nc: per-gene two-sided rejection at 5%: all genes=0.050  selected=0.053
+  Nc: set-level z (all genes)=+0.47   (selected)=+1.80
+  theta_pop=+0.000  theta_set(all)=+0.021  theta_set(selected)=+0.055  lamhat(all)=+0.020 lamhat(sel)=+0.052
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep3 family]  G=60 B=150 n_sel=15  (3s)
+  nested incr: obs mean=-0.041  pop=0.150  offset=-0.191  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.250
+  null means: S_pp=-0.523  S_cross=+0.013  D=-0.0089  S_drm=-0.005  S_dd=-0.487  Nc=-0.0016
+  observed means: S_cross=-0.148 S_pp=-0.568 S_drm=-0.181 S_dd=-0.578  incr_m=-0.166
+  N: per-gene two-sided rejection at 5%: all genes=0.017  selected=0.000
+  N: set-level z (all genes)=+0.23   (selected)=-0.33
+  Nc: per-gene two-sided rejection at 5%: all genes=0.000  selected=0.000
+  Nc: set-level z (all genes)=+0.24   (selected)=-0.18
+  theta_pop=+0.000  theta_set(all)=+0.008  theta_set(selected)=-0.026  lamhat(all)=+0.008 lamhat(sel)=-0.027
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep4 independent]  G=60 B=150 n_sel=24  (3s)
+  nested incr: obs mean=-0.016  pop=0.150  offset=-0.166  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.248
+  null means: S_pp=-0.535  S_cross=+0.010  D=-0.0069  S_drm=-0.001  S_dd=-0.500  Nc=-0.0016
+  observed means: S_cross=-0.170 S_pp=-0.633 S_drm=-0.171 S_dd=-0.653  incr_m=-0.161
+  N: per-gene two-sided rejection at 5%: all genes=0.150  selected=0.125
+  N: set-level z (all genes)=-0.06   (selected)=-0.79
+  Nc: per-gene two-sided rejection at 5%: all genes=0.050  selected=0.083
+  Nc: set-level z (all genes)=+0.12   (selected)=-0.62
+  theta_pop=+0.000  theta_set(all)=-0.006  theta_set(selected)=-0.019  lamhat(all)=-0.006 lamhat(sel)=-0.019
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep4 family]  G=60 B=150 n_sel=19  (3s)
+  nested incr: obs mean=-0.034  pop=0.150  offset=-0.184  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.248
+  null means: S_pp=-0.534  S_cross=+0.008  D=-0.0101  S_drm=-0.002  S_dd=-0.497  Nc=-0.0056
+  observed means: S_cross=-0.128 S_pp=-0.594 S_drm=-0.155 S_dd=-0.617  incr_m=-0.225
+  N: per-gene two-sided rejection at 5%: all genes=0.017  selected=0.000
+  N: set-level z (all genes)=+0.73   (selected)=+1.18
+  Nc: per-gene two-sided rejection at 5%: all genes=0.017  selected=0.000
+  Nc: set-level z (all genes)=+0.69   (selected)=+1.04
+  theta_pop=+0.000  theta_set(all)=+0.044  theta_set(selected)=+0.057  lamhat(all)=+0.042 lamhat(sel)=+0.054
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep5 independent]  G=60 B=150 n_sel=22  (3s)
+  nested incr: obs mean=-0.028  pop=0.150  offset=-0.178  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.246
+  null means: S_pp=-0.542  S_cross=+0.015  D=-0.0076  S_drm=+0.000  S_dd=-0.506  Nc=+0.0008
+  observed means: S_cross=-0.153 S_pp=-0.618 S_drm=-0.173 S_dd=-0.634  incr_m=-0.182
+  N: per-gene two-sided rejection at 5%: all genes=0.033  selected=0.000
+  N: set-level z (all genes)=+1.05   (selected)=-0.13
+  Nc: per-gene two-sided rejection at 5%: all genes=0.017  selected=0.000
+  Nc: set-level z (all genes)=+1.00   (selected)=+0.12
+  theta_pop=+0.000  theta_set(all)=+0.028  theta_set(selected)=-0.004  lamhat(all)=+0.027 lamhat(sel)=-0.004
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep5 family]  G=60 B=150 n_sel=24  (3s)
+  nested incr: obs mean=-0.027  pop=0.150  offset=-0.177  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.253
+  null means: S_pp=-0.517  S_cross=+0.018  D=-0.0082  S_drm=+0.004  S_dd=-0.481  Nc=+0.0027
+  observed means: S_cross=-0.154 S_pp=-0.552 S_drm=-0.188 S_dd=-0.568  incr_m=-0.257
+  N: per-gene two-sided rejection at 5%: all genes=0.117  selected=0.167
+  N: set-level z (all genes)=+0.08   (selected)=-0.12
+  Nc: per-gene two-sided rejection at 5%: all genes=0.067  selected=0.083
+  Nc: set-level z (all genes)=+0.17   (selected)=+0.02
+  theta_pop=+0.000  theta_set(all)=+0.014  theta_set(selected)=+0.001  lamhat(all)=+0.014 lamhat(sel)=+0.001
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep6 independent]  G=60 B=150 n_sel=22  (3s)
+  nested incr: obs mean=-0.020  pop=0.150  offset=-0.170  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.238
+  null means: S_pp=-0.560  S_cross=+0.011  D=-0.0055  S_drm=-0.001  S_dd=-0.524  Nc=-0.0002
+  observed means: S_cross=-0.170 S_pp=-0.613 S_drm=-0.190 S_dd=-0.630  incr_m=-0.145
+  N: per-gene two-sided rejection at 5%: all genes=0.133  selected=0.045
+  N: set-level z (all genes)=+0.14   (selected)=+0.09
+  Nc: per-gene two-sided rejection at 5%: all genes=0.050  selected=0.000
+  Nc: set-level z (all genes)=+0.37   (selected)=+0.18
+  theta_pop=+0.000  theta_set(all)=+0.003  theta_set(selected)=+0.001  lamhat(all)=+0.003 lamhat(sel)=+0.001
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep6 family]  G=60 B=150 n_sel=23  (3s)
+  nested incr: obs mean=-0.044  pop=0.150  offset=-0.194  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.226
+  null means: S_pp=-0.586  S_cross=+0.017  D=-0.0090  S_drm=-0.000  S_dd=-0.550  Nc=-0.0008
+  observed means: S_cross=-0.123 S_pp=-0.610 S_drm=-0.148 S_dd=-0.629  incr_m=-0.231
+  N: per-gene two-sided rejection at 5%: all genes=0.000  selected=0.000
+  N: set-level z (all genes)=+0.64   (selected)=-0.17
+  Nc: per-gene two-sided rejection at 5%: all genes=0.000  selected=0.000
+  Nc: set-level z (all genes)=+0.65   (selected)=-0.12
+  theta_pop=+0.000  theta_set(all)=+0.048  theta_set(selected)=-0.010  lamhat(all)=+0.045 lamhat(sel)=-0.010
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep7 independent]  G=60 B=150 n_sel=25  (3s)
+  nested incr: obs mean=-0.030  pop=0.150  offset=-0.180  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.242
+  null means: S_pp=-0.550  S_cross=+0.015  D=-0.0072  S_drm=-0.001  S_dd=-0.514  Nc=+0.0008
+  observed means: S_cross=-0.161 S_pp=-0.615 S_drm=-0.177 S_dd=-0.631  incr_m=-0.162
+  N: per-gene two-sided rejection at 5%: all genes=0.083  selected=0.120
+  N: set-level z (all genes)=+0.35   (selected)=+0.93
+  Nc: per-gene two-sided rejection at 5%: all genes=0.017  selected=0.000
+  Nc: set-level z (all genes)=+0.20   (selected)=+0.79
+  theta_pop=+0.000  theta_set(all)=+0.011  theta_set(selected)=+0.023  lamhat(all)=+0.011 lamhat(sel)=+0.022
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep7 family]  G=60 B=150 n_sel=36  (3s)
+  nested incr: obs mean=+0.022  pop=0.150  offset=-0.128  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.259
+  null means: S_pp=-0.507  S_cross=+0.010  D=-0.0054  S_drm=-0.004  S_dd=-0.475  Nc=-0.0001
+  observed means: S_cross=-0.128 S_pp=-0.556 S_drm=-0.194 S_dd=-0.544  incr_m=-0.163
+  N: per-gene two-sided rejection at 5%: all genes=0.100  selected=0.111
+  N: set-level z (all genes)=+2.33   (selected)=+2.46
+  Nc: per-gene two-sided rejection at 5%: all genes=0.033  selected=0.056
+  Nc: set-level z (all genes)=+1.92   (selected)=+2.01
+  theta_pop=+0.000  theta_set(all)=+0.111  theta_set(selected)=+0.106  lamhat(all)=+0.100 lamhat(sel)=+0.096
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep8 independent]  G=60 B=150 n_sel=27  (3s)
+  nested incr: obs mean=-0.026  pop=0.150  offset=-0.176  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.240
+  null means: S_pp=-0.552  S_cross=+0.014  D=-0.0071  S_drm=-0.000  S_dd=-0.516  Nc=+0.0005
+  observed means: S_cross=-0.148 S_pp=-0.599 S_drm=-0.175 S_dd=-0.602  incr_m=-0.160
+  N: per-gene two-sided rejection at 5%: all genes=0.133  selected=0.185
+  N: set-level z (all genes)=+0.98   (selected)=+0.94
+  Nc: per-gene two-sided rejection at 5%: all genes=0.067  selected=0.074
+  Nc: set-level z (all genes)=+1.04   (selected)=+0.93
+  theta_pop=+0.000  theta_set(all)=+0.025  theta_set(selected)=+0.024  lamhat(all)=+0.025 lamhat(sel)=+0.023
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep8 family]  G=60 B=150 n_sel=28  (3s)
+  nested incr: obs mean=-0.008  pop=0.150  offset=-0.158  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.256
+  null means: S_pp=-0.510  S_cross=+0.009  D=-0.0096  S_drm=-0.002  S_dd=-0.475  Nc=-0.0036
+  observed means: S_cross=-0.158 S_pp=-0.580 S_drm=-0.179 S_dd=-0.580  incr_m=-0.140
+  N: per-gene two-sided rejection at 5%: all genes=0.117  selected=0.179
+  N: set-level z (all genes)=+0.87   (selected)=+1.31
+  Nc: per-gene two-sided rejection at 5%: all genes=0.067  selected=0.107
+  Nc: set-level z (all genes)=+0.80   (selected)=+1.15
+  theta_pop=+0.000  theta_set(all)=+0.039  theta_set(selected)=+0.056  lamhat(all)=+0.038 lamhat(sel)=+0.053
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep9 independent]  G=60 B=150 n_sel=21  (3s)
+  nested incr: obs mean=-0.045  pop=0.150  offset=-0.195  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.246
+  null means: S_pp=-0.538  S_cross=+0.012  D=-0.0061  S_drm=-0.001  S_dd=-0.502  Nc=+0.0001
+  observed means: S_cross=-0.166 S_pp=-0.606 S_drm=-0.168 S_dd=-0.628  incr_m=-0.158
+  N: per-gene two-sided rejection at 5%: all genes=0.100  selected=0.143
+  N: set-level z (all genes)=-1.58   (selected)=-0.13
+  Nc: per-gene two-sided rejection at 5%: all genes=0.017  selected=0.000
+  Nc: set-level z (all genes)=-1.04   (selected)=+0.03
+  theta_pop=+0.000  theta_set(all)=-0.040  theta_set(selected)=-0.006  lamhat(all)=-0.041 lamhat(sel)=-0.006
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep9 family]  G=60 B=150 n_sel=0  (3s)
+  nested incr: obs mean=-0.128  pop=0.150  offset=-0.278  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.271
+  null means: S_pp=-0.475  S_cross=+0.016  D=-0.0102  S_drm=+0.004  S_dd=-0.441  Nc=+0.0011
+  observed means: S_cross=-0.160 S_pp=-0.547 S_drm=-0.098 S_dd=-0.577  incr_m=-0.125
+  N: per-gene two-sided rejection at 5%: all genes=0.133  selected=nan
+  N: set-level z (all genes)=-3.09   (selected)=+nan
+  Nc: per-gene two-sided rejection at 5%: all genes=0.117  selected=nan
+  Nc: set-level z (all genes)=-2.83   (selected)=+nan
+  theta_pop=+0.000  theta_set(all)=-0.313  theta_set(selected)=+nan  lamhat(all)=-0.456 lamhat(sel)=+nan
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep10 independent]  G=60 B=150 n_sel=28  (3s)
+  nested incr: obs mean=-0.023  pop=0.150  offset=-0.173  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.244
+  null means: S_pp=-0.548  S_cross=+0.015  D=-0.0073  S_drm=-0.000  S_dd=-0.511  Nc=+0.0005
+  observed means: S_cross=-0.154 S_pp=-0.595 S_drm=-0.168 S_dd=-0.605  incr_m=-0.161
+  N: per-gene two-sided rejection at 5%: all genes=0.017  selected=0.036
+  N: set-level z (all genes)=+0.74   (selected)=+0.83
+  Nc: per-gene two-sided rejection at 5%: all genes=0.017  selected=0.036
+  Nc: set-level z (all genes)=+0.51   (selected)=+0.66
+  theta_pop=+0.000  theta_set(all)=+0.022  theta_set(selected)=+0.025  lamhat(all)=+0.022 lamhat(sel)=+0.024
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep10 family]  G=60 B=150 n_sel=30  (3s)
+  nested incr: obs mean=+0.006  pop=0.150  offset=-0.144  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.227
+  null means: S_pp=-0.573  S_cross=+0.011  D=-0.0047  S_drm=-0.004  S_dd=-0.535  Nc=+0.0000
+  observed means: S_cross=-0.152 S_pp=-0.625 S_drm=-0.181 S_dd=-0.620  incr_m=-0.128
+  N: per-gene two-sided rejection at 5%: all genes=0.083  selected=0.100
+  N: set-level z (all genes)=+1.33   (selected)=+0.67
+  Nc: per-gene two-sided rejection at 5%: all genes=0.033  selected=0.033
+  Nc: set-level z (all genes)=+1.23   (selected)=+0.61
+  theta_pop=+0.000  theta_set(all)=+0.089  theta_set(selected)=+0.034  lamhat(all)=+0.082 lamhat(sel)=+0.032
+
+[post lam=0.8 R2=0.3 Dp=0.15 rep11 independent]  G=60 B=150 n_sel=18  (3s)
+  nested incr: obs mean=-0.054  pop=0.150  offset=-0.204  pred K/(ntr-K-1)(1-R2full)=-0.186  null mean=-0.241
+  null means: S_pp=-0.557  S_cross=+0.012  D=-0.0066  S_drm=+0.001  S_dd=-0.520  Nc=-0.0003
+  observed means: S_cross=-0.166 S_pp=-0.619 S_drm=-0.172 S_dd=-0.645  incr_m=-0.176

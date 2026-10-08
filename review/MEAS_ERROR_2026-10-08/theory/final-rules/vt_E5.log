@@ -1,0 +1,7 @@
+
+=== E5: H_post with MNAR protein (per-gene: drop patients whose P is in the bottom q), n=130 so ~100 remain at q=0.25 ===
+q seed n_sel | z_N(Nc) theta_set theta_pc | z_N on all genes
+0.10    0    94 | -3.26 -0.052 -0.050 | -5.85
+0.10    1    92 | -4.61 -0.060 -0.059 | -7.40
+0.25    0    76 | -6.89 -0.097 -0.093 | -9.62
+0.25    1    77 | -6.23 -0.092 -0.089 | -11.29

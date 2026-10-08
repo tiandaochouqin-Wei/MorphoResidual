@@ -1,0 +1,22 @@
+{
+ "ucec_c1": {
+  "pdc_study_id": "PDC000439",
+  "n_runs": 16,
+  "experiment_type": [
+   "TMT11"
+  ],
+  "runs_with_channel_filled": {
+   "tmt_126": 16,
+   "tmt_127n": 16,
+   "tmt_127c": 16,
+   "tmt_128n": 16,
+   "tmt_128c": 16,
+   "tmt_129n": 16,
+   "tmt_129c": 16,
+   "tmt_130n": 16,
+   "tmt_130c": 16,
+   "tmt_131": 16,
+   "tmt_131c": 16
+  }
+ }
+}

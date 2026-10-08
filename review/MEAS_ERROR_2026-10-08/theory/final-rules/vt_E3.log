@@ -1,0 +1,7 @@
+
+=== E3: H_post large set: n=100, K=20, G=3000 all signal, R2=0.3, lam=0.6, delta=0.2; normal-tail BH selection ===
+seed n_sel | z_N insample (sel, all) | z_N infold (sel, all) | theta_pc insample infold | per-gene mean excess Nc (sel) insample infold
+   0  1940 | +3.40 +2.35 | +4.39 +3.35 | +0.0095 +0.0117 | +0.00458 +0.00545  [33s]
+   1  1811 | +0.95 +1.11 | +1.76 +1.94 | +0.0006 +0.0035 | +0.00125 +0.00232  [34s]
+   2  1908 | +1.46 +1.82 | +2.19 +2.61 | +0.0018 +0.0048 | +0.00170 +0.00284  [33s]
+   3  1908 | +2.43 +3.56 | +2.83 +3.99 | +0.0045 +0.0073 | +0.00275 +0.00386  [33s]

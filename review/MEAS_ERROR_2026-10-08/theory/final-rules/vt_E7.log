@@ -1,0 +1,11 @@
+H_post, G=3000, lam=0.6, R2=0.3, delta=0.2, normal-tail BH selection; z on selected set
+  seed 0: n_sel=1855  z[rho*corr]=+0.43  z[sign*corr]=-1.59  theta_pc=-0.0014
+  seed 1: n_sel=1904  z[rho*corr]=+2.13  z[sign*corr]=+0.33  theta_pc=+0.0049
+  seed 2: n_sel=1825  z[rho*corr]=+1.80  z[sign*corr]=+0.03  theta_pc=+0.0040
+power check, G=200, n=100: H_noise lam=0.5 delta=0.1 and mix fX=0.1 lam=0.6 delta=0.2 (R2=0.3)
+  noise seed 0: n_sel=29 z[rho*corr]=+17.5 z[sign*corr]=+17.5 theta_set=+0.67 (pop +1.00)
+  noise seed 1: n_sel=28 z[rho*corr]=+14.3 z[sign*corr]=+14.3 theta_set=+0.51 (pop +1.00)
+  mix   seed 0: n_sel=137 z[rho*corr]=+14.8 z[sign*corr]=+14.5 theta_set=+0.17 (pop +0.15)
+  mix   seed 1: n_sel=138 z[rho*corr]=+12.4 z[sign*corr]=+11.9 theta_set=+0.13 (pop +0.15)
+  err   seed 0: n_sel=76 z[rho*corr]=-25.8 z[sign*corr]=-26.0 theta_set=-0.77 (pop -1.00)
+  err   seed 1: n_sel=70 z[rho*corr]=-24.8 z[sign*corr]=-25.2 theta_set=-0.75 (pop -1.00)

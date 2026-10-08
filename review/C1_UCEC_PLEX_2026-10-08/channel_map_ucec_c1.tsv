@@ -1,0 +1,177 @@
+plex	plex_idx	experiment_number	channel	aliquot_submitter_id	aliquot_run_metadata_id	case_submitter_id	sample_type	aliquot_status	role
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	126	Ref	825ec9d0-4461-4738-b6f0-109c8d119974	Ref	Not Reported		pseudo-case (Not Reported)
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	127n	CPT0091990003	d95eff1f-163f-41e6-b66f-46d95680dfb7	C3L-01840	Primary Tumor	Qualified	patient:Primary Tumor
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	127c	CPT0134500003	519fc97d-e4d1-4933-8dff-d497d6d811b6	C3N-02062	Primary Tumor	Qualified	patient:Primary Tumor
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	128n	CPT0113330003	8b777f71-4ef4-4b96-88de-0edc37defc6c	C3L-02357	Primary Tumor	Qualified	patient:Primary Tumor
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	128c	CPT0159110003	f5a081ec-8804-4d9c-ac76-791ef6f80ab6	C3N-02437	Primary Tumor	Qualified	patient:Primary Tumor
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	129n	CPT0182020004	8102ada7-ae69-42e1-8680-aa6fcf5388af	C3N-02632	Primary Tumor	Qualified	patient:Primary Tumor
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	129c	CPT0288750003	5cb1021a-24a6-4135-be1b-dc42882ba6c2	C3L-05848	Primary Tumor	Qualified	patient:Primary Tumor
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	130n	NX021	365d2895-6b46-427a-b08e-50df1fd7c368	NX021	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	130c	CPT0088140003	95758dcc-797d-4643-9ef7-ee451eb15800	C3N-01342	Primary Tumor	Qualified	patient:Primary Tumor
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	131	NX024	6e173b40-02a3-4390-b00c-90de8ad46320	NX024	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+01CPTAC_C_UCEC_Proteome_PNNL_20191223	01	9	131c	CPT0111950003	1114ad5c-a083-4320-a560-194b29a4bb6d	C3L-02412	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	126	Ref	400fa8b6-16e3-44e9-a4b1-1707c6af5fa1	Ref	Not Reported		pseudo-case (Not Reported)
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	127n	CPT0128370003	aab04f86-320a-4235-a03c-56654b402580	C3L-02555	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	127c	CPT0117370004	8f823430-aaf1-47ef-bd60-624198cdf2b8	C3N-01875	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	128n	CPT0188190004	773c4645-be2b-49ad-a4b0-48877dce106d	C3L-02741	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	128c	CPT0226810003	a0d41022-6f0b-40aa-bdc7-9ad8e7f1d35a	C3N-01766	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	129n	CPT0096010003	7274b5af-5ed2-484b-b632-3eed60ffe568	C3N-01526	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	129c	CPT0134310008	778d7863-9ae1-4a9f-9344-d8cc38ddf2e3	C3N-02061	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	130n	NX032	76d766bf-a505-478b-99c9-a2a08a06b7ab	NX032	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	130c	CPT0095100003	317ab8a2-d106-4877-9ea9-76fdc17d4fc2	C3N-01007	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	131	CPT0211120004	fc98369a-0e24-4208-bae1-20e00bbe7f95	C3N-01079	Primary Tumor	Qualified	patient:Primary Tumor
+02CPTAC_C_UCEC_Proteome_PNNL_20191223	02	5	131c	CPT0128960003	00cb04ff-3f9b-40a3-89a4-8226d4efe169	C3N-02244	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	126	Ref	124c60e2-5664-463e-990d-70ee141532b5	Ref	Not Reported		pseudo-case (Not Reported)
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	127n	CPT0171090008	f5cc3313-60ac-4d02-a44a-e2e1a8097e1d	C3L-02399	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	127c	CPT0095130004	e3155b87-702a-4ade-a157-e910657a192b	C3N-01008	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	128n	CPT0133600003	3a479e67-7748-43fb-bfe1-9aa560725085	C3N-02028	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	128c	CPT0181670008	0c10d327-3104-4ea4-a47a-23ae3e082981	C3N-02271	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	129n	CPT0114340003	362abef4-289a-4199-8407-793211c2a51e	C3L-02119	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	129c	NX035	b3ee8ddc-fdee-4747-afc9-cae2205fe939	NX035	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	130n	CPT0174890008	4ec602c2-b2d7-48fa-8bef-fee00a1c530d	C3L-02802	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	130c	CPT0098920003	afa18a9a-cc7a-446d-907a-58680858961f	C3N-01847	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	131	CPT0265300003	0b2b1c98-e61b-4276-8817-f266e5d9655d	C3N-02247	Primary Tumor	Qualified	patient:Primary Tumor
+03CPTAC_C_UCEC_Proteome_PNNL_20191223	03	10	131c	NX027	147a78cc-86bf-4f5b-b79a-1d40de62dc38	NX027	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	126	Ref	b44306ae-b168-4afa-a4b5-e435a183e2af	Ref	Not Reported		pseudo-case (Not Reported)
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	127n	CPT0091910003	3abbafe3-16b6-4ed0-8eda-29de464b7bca	C3L-01633	Primary Tumor	Qualified	patient:Primary Tumor
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	127c	CPT0133770008	c7da3837-b675-4e4e-b948-c1751684c76f	C3N-02030	Primary Tumor	Qualified	patient:Primary Tumor
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	128n	CPT0108750003	35df863b-0a95-4088-9535-d3b52476d5bb	C3L-01967	Primary Tumor	Qualified	patient:Primary Tumor
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	128c	CPT0188610003	8a852cd0-1967-4a1b-83b1-618e5a437cb0	C3L-03467	Primary Tumor	Qualified	patient:Primary Tumor
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	129n	NX034	fe632f56-d867-4a79-a270-26d1209ea26d	NX034	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	129c	CPT0095880003	77049174-7578-4787-8527-3a34250a691c	C3N-01525	Primary Tumor	Qualified	patient:Primary Tumor
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	130n	CPT0115470003	17b2270f-4473-48ed-a6dd-fb4c814b1210	C3N-02012	Primary Tumor	Qualified	patient:Primary Tumor
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	130c	CPT0116940003	eaa0ba46-3145-4b38-9473-5e78de85f95d	C3N-01765	Primary Tumor	Qualified	patient:Primary Tumor
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	131	CPT0095280003	12d8be5b-e95c-4406-91ca-0054e9b2fc71	C3N-01341	Primary Tumor	Qualified	patient:Primary Tumor
+04CPTAC_C_UCEC_Proteome_PNNL_20191223	04	16	131c	CPT0275270003	aba2df35-7106-417d-82f4-94da9863a348	C3L-05571	Primary Tumor	Disqualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	126	Ref	4c9aca14-2d2b-4a9f-bd9a-add73e3c0ae3	Ref	Not Reported		pseudo-case (Not Reported)
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	127n	CPT0086490003	46613501-0e32-4714-bc51-782ecc31b73c	C3L-01664	Primary Tumor	Qualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	127c	CPT0127980003	fc253cf7-e774-433e-9588-b84d0733a7ea	C3L-02384	Primary Tumor	Qualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	128n	CPT0247970003	cb89caf9-a9ad-4196-9661-c8da7d7daff1	C3N-03767	Primary Tumor	Qualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	128c	CPT0182380004	88a772e0-b1ca-4a1c-bd09-0e6045dda1dd	C3N-02274	Primary Tumor	Qualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	129n	CPT0247940003	fd71f2da-1aa1-4795-b95d-606fce098594	C3N-03005	Primary Tumor	Qualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	129c	CPT0117560003	67c08f52-639f-41d0-ad2f-9f8eb3145d53	C3N-01878	Primary Tumor	Qualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	130n	NX030	ebc5b248-bfe9-4b96-b011-272b5f7a6b75	NX030	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	130c	CPT0126000003	9431bcae-e302-4163-b800-a8335f0b15f4	C3L-02468	Primary Tumor	Qualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	131	CPT0100100003	0a1586af-653b-44b3-9dec-18a25991fc6f	C3L-01739	Primary Tumor	Qualified	patient:Primary Tumor
+05CPTAC_C_UCEC_Proteome_PNNL_20200223	05	6	131c	CPT0186560008	5d2f650d-148b-4af0-b2d9-a75274cf893d	C3L-01668	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	126	Ref	cd7d6d65-2f26-4efb-9c72-b0b9fdbcb7e0	Ref	Not Reported		pseudo-case (Not Reported)
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	127n	CPT0104690003	5cf52abd-4577-4122-bc21-60405e721955	C3L-02216	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	127c	CPT0127700003	bd0d7aa4-fe40-4df9-a100-52bffed82bdc	C3L-01749	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	128n	CPT0188370003	57c2b436-0a03-42db-9309-039954e6939e	C3L-02744	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	128c	CPT0092690003	11bca293-62f6-4385-9f01-02bd5f667e6e	C3L-01913	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	129n	CPT0188480004	affbd9df-787d-4399-8642-726be8ff6d20	C3L-02747	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	129c	NX020	4b0e91a2-4043-4825-a948-7fe8dc16252e	NX020	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	130n	CPT0188270004	777444a7-4165-4d8a-9ea4-fd0cd0e8d6ff	C3L-02746	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	130c	CPT0188100004	9935ac7b-4e7c-45cb-8719-124f19709f1a	C3N-02979	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	131	CPT0238260003	694292b9-7a1e-4e04-95ab-65c419096d9c	C3L-02990	Primary Tumor	Qualified	patient:Primary Tumor
+06CPTAC_C_UCEC_Proteome_PNNL_20200223	06	13	131c	NX038	e7ee1589-90a9-4878-8d85-1893aa480526	NX038	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	126	Ref	645b2d08-9f09-4e68-9174-4126f2dc6f0b	Ref	Not Reported		pseudo-case (Not Reported)
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	127n	CPT0133400008	83101e61-c440-49d1-9ff7-ee3b9890ca24	C3N-02027	Primary Tumor	Qualified	patient:Primary Tumor
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	127c	CPT0089600003	cebb879e-ff5b-49a3-a30f-78358e51b941	C3N-00732	Primary Tumor	Qualified	patient:Primary Tumor
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	128n	NX031	4277bf8a-39ae-49b2-8e1a-5036ade02cbd	NX031	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	128c	CPT0181320003	18c74318-4075-47ba-b22d-26c84e4dd886	C3N-01764	Primary Tumor	Qualified	patient:Primary Tumor
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	129n	NX036	6683f49d-51ed-48b9-b001-8d6abb7bf09f	NX036	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	129c	CPT0188030003	789cfe1d-e409-4498-acd4-5ab4fb41bfcd	C3N-02976	Primary Tumor	Qualified	patient:Primary Tumor
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	130n	CPT0247910003	bfdf9fdd-b937-466c-90e1-5d1fea6df332	C3N-03415	Primary Tumor	Qualified	patient:Primary Tumor
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	130c	CPT0129520003	7c574eb4-5427-4fcb-aaa1-f45c22f21633	C3N-00755	Primary Tumor	Qualified	patient:Primary Tumor
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	131	CPT0137140008	6ffc04e4-db08-4120-bf6a-f534a7cad1b6	C3N-02372	Primary Tumor	Qualified	patient:Primary Tumor
+07CPTAC_C_UCEC_Proteome_PNNL_20200223	07	7	131c	CPT0115000004	382fb932-65fb-4ea2-8a0c-8ed950d648e1	C3N-00520	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	126	Ref	89e9e6f8-7318-4fd9-9d35-42ac19f2d468	Ref	Not Reported		pseudo-case (Not Reported)
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	127n	CPT0117510003	0ae613be-12f5-45ec-8fbd-9115be7caf6c	C3N-01877	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	127c	CPT0226860003	d4abc6a5-5a8b-44cf-ad2a-bb97f3eb9dd9	C3N-01879	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	128n	CPT0158520008	7d4a375d-c7d5-49a8-a198-32b1da0d75c6	C3N-02947	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	128c	CPT0113850003	d4854da8-86ab-47a9-b88a-106e5c53c140	C3L-02347	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	129n	NX026	261dae28-2664-40f5-a62d-42036442df3b	NX026	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	129c	CPT0196790004	fbe548ed-877f-434d-8b44-4db2693da1ce	C3L-02894	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	130n	CPT0116340004	52496015-a5bb-4fc7-b425-602207057859	C3N-01344	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	130c	CPT0172460008	c8c77957-c6cf-4ce5-94bb-e09c04675d20	C3L-01672	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	131	CPT0095230003	2e1e3838-19ab-41a8-bd39-c3b7762855cd	C3N-01172	Primary Tumor	Qualified	patient:Primary Tumor
+08CPTAC_C_UCEC_Proteome_PNNL_20200223	08	11	131c	CPT0197250003	0665ab7c-2cf8-4c86-997c-fe4be31f2afd	C3L-02125	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	126	Ref	782eb36c-3841-4256-ada9-f19ba29ed626	Ref	Not Reported		pseudo-case (Not Reported)
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	127n	CPT0098270003	ce5bf920-2065-4a2c-9c1c-197cb5d64763	C3N-01843	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	127c	CPT0112910003	518963c3-a598-4a62-9d86-d39e72c0861b	C3L-02354	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	128n	CPT0116710003	8cea3b91-2e25-4884-8b75-2285b04cccc4	C3N-01761	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	128c	CPT0111810003	aac314c1-6a67-4bd6-a43e-a029ac7f53d3	C3L-02409	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	129n	CPT0113430004	591f03d7-f623-4a05-8db3-85bd475b5f1f	C3L-01064	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	129c	CPT0181750004	b3d40d5c-73d0-47c0-b627-38ac569378e9	C3N-02296	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	130n	CPT0114100003	a2950d98-cbac-45b4-87f6-ef36c7636adf	C3L-02121	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	130c	CPT0188710003	7fed9638-2bd1-4ace-9aed-398ca6be4cb8	C3L-03589	Primary Tumor	Qualified	patient:Primary Tumor
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	131	NX025	c0c0e780-b901-4dc2-8594-c015b397dcdb	NX025	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+09CPTAC_C_UCEC_Proteome_PNNL_20200522	09	4	131c	CPT0111720003	e22fb76d-aa26-4e0c-b755-b17a1bb14916	C3L-02408	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	126	Ref	4e9ea6c7-66e4-40ab-9e84-4a84db9394a5	Ref	Not Reported		pseudo-case (Not Reported)
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	127n	CPT0203250008	567e74cc-cdfc-413c-8f30-9ef644d12f1a	C3L-02392	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	127c	CPT0113060003	6a0d7e99-6ebe-4aa8-9cce-163387c6eaef	C3L-02545	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	128n	CPT0186720008	73789ea0-36fc-4dfe-a61c-0840321cb673	C3L-02449	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	128c	CPT0095190003	324966d8-9dfb-4143-a21c-28d3b6ee0389	C3N-01171	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	129n	NX022	548bb10b-ca4e-472a-a8e7-dc89754a9535	NX022	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	129c	CPT0111880003	8ef5562f-b07d-4845-b7a2-236d5058af6a	C3L-02411	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	130n	CPT0129080003	ac45fda0-a095-4dae-b506-bcff0f24ffb0	C3N-02249	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	130c	CPT0097440003	2e0d3e0e-4eff-4d26-8686-21dbe5944cf2	C3N-01529	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	131	CPT0288830003	94bec1ef-e406-44c3-8587-d75da8d8ea19	C3L-05849	Primary Tumor	Qualified	patient:Primary Tumor
+10CPTAC_C_UCEC_Proteome_PNNL_20200522	10	15	131c	CPT0181540008	7a7cf518-b08c-43a4-a89e-60142c85efc5	C3N-02298	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	126	Ref	4b47036a-d3df-4435-a755-b0801b88f386	Ref	Not Reported		pseudo-case (Not Reported)
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	127n	CPT0100010003	580df06d-2ddd-4657-b3db-989429675c94	C3L-01833	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	127c	NX023	f46d2d16-c24a-4b98-81af-7c4c25a5eca6	NX023	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	128n	CPT0181960004	b28836f6-b928-41c2-a177-bd1ea6fb68ae	C3N-02631	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	128c	CPT0091720003	77689d98-c578-4d4e-8f0b-a3b51bd60fa4	C3L-01631	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	129n	CPT0203040008	3804cc7e-9ef1-4f11-8382-6a12faed3ecf	C3L-02389	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	129c	CPT0186900008	5a42559a-fc50-4985-8c2b-5336b7b78397	C3L-02800	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	130n	CPT0116250004	698d236c-1681-4ce6-bb9e-567a4fcc5c5c	C3N-00872	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	130c	CPT0182340004	20a53eeb-3c98-4a4e-9b71-91f807b354b4	C3N-02678	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	131	CPT0248000003	b9ee1b0a-d24b-4536-bca6-aa23586811d4	C3N-02994	Primary Tumor	Qualified	patient:Primary Tumor
+11CPTAC_C_UCEC_Proteome_PNNL_20200522	11	2	131c	CPT0181610003	5a9fd541-d704-47f5-aa16-af758c5e736b	C3N-02302	Primary Tumor	Qualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	126	Ref	ee12a01e-87ec-409d-866e-3faaed8bf23b	Ref	Not Reported		pseudo-case (Not Reported)
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	127n	CPT0203150008	f01fa5f4-6f5d-4240-a2d9-d8ad3d1747b4	C3L-02403	Primary Tumor	Qualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	127c	CPT0113910003	3a7a2fcb-9ce1-4491-a9ea-cc4692e0d426	C3L-02602	Primary Tumor	Qualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	128n	CPT0097300003	9056e1d8-4655-43d2-bfd4-c5c396e31e67	C3N-01830	Primary Tumor	Qualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	128c	CPT0136280003	9c927934-ad78-4118-a4ea-ec394be89bb0	C3N-02337	Primary Tumor	Qualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	129n	CPT0087260003	84943168-6bab-47e1-8b01-b3a5c5ded2f0	C3L-01599	Primary Tumor	Qualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	129c	CPT0244470003	5ca40b7f-c607-44d9-966c-7e9a66e7c47e	C3N-02978	Primary Tumor	Disqualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	130n	CPT0128610003	ecbcd6bf-666b-419d-8142-3acc017b1550	C3L-02557	Primary Tumor	Qualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	130c	NX028	862be495-760b-4a80-ac0f-289b93c1da36	NX028	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	131	CPT0187960004	101f515c-9ef8-4329-ac70-9f4af2998a2f	C3N-02598	Primary Tumor	Qualified	patient:Primary Tumor
+12CPTAC_C_UCEC_Proteome_PNNL_20200522	12	1	131c	CPT0099050003	61b7a5ad-e495-46d7-8c19-eee7ea11314a	C3N-01848	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	126	Ref	1343affc-f00c-4195-9cdd-e590000e1c50	Ref	Not Reported		pseudo-case (Not Reported)
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	127n	CPT0182070004	3ac8722b-5d63-45db-9674-8a59b3805a82	C3N-02635	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	127c	CPT0091780003	e6c227de-3ff5-4915-94a1-60ade3c0a00e	C3L-01639	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	128n	NX019	eb6afc84-cc7a-4674-b2c6-467e932c5b62	NX019	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	128c	CPT0247880003	bdb8241f-6263-43bb-87e2-015a4e912482	C3N-03417	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	129n	CPT0092860003	4fc0e7ad-5179-448f-a355-0ca819932168	C3L-01864	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	129c	CPT0099910003	f058070c-9d93-4afb-b135-935230a6607c	C3L-01732	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	130n	CPT0093170003	a48e1f1a-f46c-4917-bafd-a97a68ac6960	C3L-01277	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	130c	CPT0117010004	2f8bbc5b-174b-4d7a-b13e-a2d17224e97d	C3N-01871	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	131	CPT0186010004	5f22029b-6e5e-4fa2-a306-8eda844f4dd4	C3N-02789	Primary Tumor	Qualified	patient:Primary Tumor
+13CPTAC_C_UCEC_Proteome_PNNL_20200706	13	3	131c	CPT0225010003	7113363d-4ce1-44a8-beea-41ce18f5137e	C3L-03264	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	126	Ref	bc47c2a7-a2bd-4f33-9466-8202f3bf2d71	Ref	Not Reported		pseudo-case (Not Reported)
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	127n	CPT0182150003	c8fc903a-7cd5-44e7-950c-ea97434e9c26	C3N-02636	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	127c	CPT0129640003	c0d2eb02-906f-427c-82e0-f9b76779d40f	C3N-00753	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	128n	CPT0128770003	8f59ed75-4a85-4f73-8a6f-0c49378d940d	C3N-02253	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	128c	CPT0172200008	94f7adaa-2fd1-4aae-9d86-decc72fe1a8d	C3L-00898	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	129n	CPT0161590008	5ef48ae4-25b1-4ab2-8562-103d543b692b	C3L-02953	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	129c	NX029	ee102598-9085-4052-bf7c-4ae0bdf69286	NX029	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	130n	CPT0182290003	7e20a115-a380-4c2e-8924-c1691c2a74ed	C3N-02639	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	130c	CPT0190700008	eed4d3f0-aa9a-4520-8d24-b8d529cb8118	C3L-02382	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	131	CPT0244510003	05273809-7440-4b87-a976-f576b4b37127	C3N-01880	Primary Tumor	Qualified	patient:Primary Tumor
+14CPTAC_C_UCEC_Proteome_PNNL_20200706	14	12	131c	CPT0115530003	83d66987-62ae-4737-ad05-5c0e4e5cbe68	C3N-02436	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	126	Ref	d3e209e1-8169-4c68-a5b8-2873d12a802a	Ref	Not Reported		pseudo-case (Not Reported)
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	127n	CPT0234080003	d10e90bb-8ee5-4fc9-9d75-ef636f4b78b3	C3L-03143	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	127c	NX033	6fe4fb63-711c-4282-a367-176bc07dfd56	NX033	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	128n	CPT0117440003	709ad7c3-b674-4826-a540-ac6d62ed4150	C3N-01876	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	128c	CPT0116140004	49ce870e-72d6-473c-ac48-2452f3f9c8e0	C3N-00860	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	129n	CPT0104820003	a54c1464-23bb-4978-a6e7-fc7cc25f327e	C3N-00155	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	129c	CPT0112780003	cbe70703-06c1-4515-8ac2-7ccb34a2ab86	C3L-02353	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	130n	CPT0181810004	f0f83a62-01a1-4b28-88a5-d640dcfc1545	C3N-02595	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	130c	CPT0086090003	79c751e9-efdc-44f5-b1f4-b2e79eb1d073	C3L-00943	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	131	CPT0159220008	aa006e7c-1b45-4875-a02a-8c83f8601b1d	C3N-02972	Primary Tumor	Qualified	patient:Primary Tumor
+15CPTAC_C_UCEC_Proteome_PNNL_20200706	15	14	131c	CPT0182210004	dc6bafe5-444f-45ee-a89a-02e703b74651	C3N-02637	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	126	Ref	2ad6cb97-fde4-4956-b4ce-3efba049c2a1	Ref	Not Reported		pseudo-case (Not Reported)
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	127n	CPT0117230003	999d5c61-1ceb-4470-9163-b742d2b8ad16	C3N-01873	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	127c	CPT0265110003	8b6f1e83-fb36-42a9-8817-940872f2bd64	C3N-00750	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	128n	CPT0092460003	6ca34e1c-7821-4b22-84f7-3d729a8e36a0	C3L-00086	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	128c	CPT0127610003	e836eba1-f839-49f1-a708-1a103de8afcb	C3L-01729	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	129n	CPT0083580003	61b2680b-5242-4641-ac7c-7bdd9dea9f69	C3L-01355	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	129c	CPT0117300003	6948c6af-bba4-40f8-8dd8-626d670abc0c	C3N-01874	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	130n	CPT0116010004	208e8096-4000-497a-b75f-e0e35160cbf7	C3N-00859	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	130c	NX037	aa3d2739-2c24-44ad-a474-07cf95808423	NX037	Solid Tissue Normal	Qualified	pseudo-case (Solid Tissue Normal)
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	131	CPT0275270003.1	8c336fb9-d744-4ce4-9ce7-430cfed89c2a	C3L-05571	Primary Tumor	Qualified	patient:Primary Tumor
+16CPTAC_C_UCEC_Proteome_PNNL_20200706	16	8	131c	CPT0244470003.1	4d94b722-69b6-4474-aea7-ae89bbc46ed4	C3N-02978	Primary Tumor	Qualified	patient:Primary Tumor

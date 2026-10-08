@@ -1,0 +1,62 @@
+{
+ "query_date": "2026-10-08 05:03:11",
+ "n_pdc_tumour": 105,
+ "n_pdc_all": 109,
+ "pdc_sample_types": {
+  "Primary Tumor": 105,
+  "Not Reported": 1,
+  "Normal Adjacent Tissue": 3
+ },
+ "n_dx_cases_gdc": 1062,
+ "n_rna_cases_gdc": 1095,
+ "n_trimodal": 102,
+ "ts_files_all": 232,
+ "ts_gb_all": 63.400475482,
+ "ts_files_tumour": 191,
+ "ts_gb_tumour": 59.945663433,
+ "ts_sample_codes": {
+  "01A": 183,
+  "11A": 41,
+  "06A": 2,
+  "01B": 6
+ },
+ "ts_slide_labels": {
+  "TSA#A": 72,
+  "BSA#A": 56,
+  "BSB#B": 13,
+  "TSF#F": 1,
+  "TSC#C": 12,
+  "BS#2": 5,
+  "TSB#B": 23,
+  "MSA#A": 3,
+  "MSB#B": 3,
+  "TSE#E": 2,
+  "BSC#C": 7,
+  "BS#1": 12,
+  "TSD#D": 5,
+  "MSC#C": 1,
+  "TS#1": 13,
+  "MS#2": 1,
+  "TS#2": 2,
+  "TS#3": 1
+ },
+ "ts_cases_any": 102,
+ "ts_cases_tumour": 102,
+ "ts_cases_no_tumour": [],
+ "ts_tumour_per_case": {
+  "2": 89,
+  "1": 13
+ },
+ "dx_files": 107,
+ "dx_gb": 117.184197422,
+ "dx_per_case": {
+  "1": 97,
+  "2": 5
+ },
+ "ts_access": {
+  "open": 232
+ },
+ "ts_ext": {
+  ".svs": 232
+ }
+}

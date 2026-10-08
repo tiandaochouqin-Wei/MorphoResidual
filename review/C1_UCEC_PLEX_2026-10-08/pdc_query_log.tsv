@@ -1,0 +1,4 @@
+utc_time	endpoint	tag	query_summary	http_status	n_errors	first_error	response_bytes	response_sha256	saved_path
+2026-10-07T21:02:11Z	https://pdc.cancer.gov/graphql	r2_sed_full_PDC000439	studyExperimentalDesign(PDC000439) [ucec_c1] run fields + tmt_126..tmt_131c { aliquot_id aliquot_submitter_id aliquot_run_metadata_id }	200	0		37522	f3ce9964ad0aecb8ad1b0c009d4c4fbe2d000fff671823e096533ae82c64042e	raw/r2_sed_full_PDC000439.json
+2026-10-07T21:02:12Z	https://pdc.cancer.gov/graphql	r3_biospecimen_PDC000439	biospecimenPerStudy(PDC000439) [ucec_c1] aliquot/case/sample_type/status	200	0		29523	e24266a84f56c1a2b54a2f222676e96df1d76755ea29fe749245e94c35e5e887	raw/r3_biospecimen_PDC000439.json
+2026-10-07T21:02:29Z	https://pdc.cancer.gov/graphql	r5_pcsa_arm_PDC000439	paginatedCasesSamplesAliquots(PDC000439) [ucec_c1] aliquot_run_metadata id/label/experiment_number	200	0		106723	765e3155070a465ee40f2c79f5b45c124a76cb03fce2912e411a8c77aca935e3	raw/r5_pcsa_arm_PDC000439.json

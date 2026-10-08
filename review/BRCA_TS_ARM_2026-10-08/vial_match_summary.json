@@ -1,0 +1,27 @@
+{
+ "ms_vial_has_TS": 100,
+ "ms_vial_has_TS_and_BS": 74,
+ "n_ts_prim_ge1": 102,
+ "ms_aliquots_gt1": 0,
+ "ms_vial_codes": {
+  "01A": 101,
+  "01B": 1
+ },
+ "rna_vial_codes": {
+  "01A": 97,
+  "01B": 3,
+  "01A,06A": 2
+ },
+ "dx_vial_codes": {
+  "01Z": 102
+ },
+ "ts_primary_vial_codes": {
+  "01A": 99,
+  "01B": 3
+ },
+ "cases_with_06_ts": [
+  "TCGA-BH-A18V",
+  "TCGA-E2-A15A"
+ ],
+ "cases_with_11_ts": 16
+}

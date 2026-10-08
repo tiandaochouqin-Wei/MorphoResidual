@@ -1,0 +1,41 @@
+set_id	family	definition	n_selected	n_universe	frac_selected	n_selected_in_pdc_proxy	file	n_selected_in_brca	n_universe_in_brca	frac_selected_in_brca
+pub_k1	pub	published discovery (UNI): significant in union of 5 cohorts' sets	5189	8309	0.6245	5177	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_k1.tsv	PENDING	PENDING	PENDING
+pub_k2	pub	published discovery (UNI): significant in >= 2 of 5 cohorts	2403	8309	0.2892	2398	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_k2.tsv	PENDING	PENDING	PENDING
+pub_k3	pub	published discovery (UNI): significant in >= 3 of 5 cohorts	777	8309	0.0935	775	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_k3.tsv	PENDING	PENDING	PENDING
+pub_k4	pub	published discovery (UNI): significant in >= 4 of 5 cohorts [= the paper's 170-gene core]	170	8309	0.0205	169	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_k4.tsv	PENDING	PENDING	PENDING
+pub_k5	pub	published discovery (UNI): significant in all five	10	8309	0.0012	9	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_k5.tsv	PENDING	PENDING	PENDING
+op_k1	op	operator batch-corrected: significant in union of 5 cohorts' sets	2314	8309	0.2785	2310	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_k1.tsv	PENDING	PENDING	PENDING
+op_k2	op	operator batch-corrected: significant in >= 2 of 5 cohorts	462	8309	0.0556	461	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_k2.tsv	PENDING	PENDING	PENDING
+op_k3	op	operator batch-corrected: significant in >= 3 of 5 cohorts	61	8309	0.0073	61	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_k3.tsv	PENDING	PENDING	PENDING
+op_k4	op	operator batch-corrected: significant in >= 4 of 5 cohorts	7	8309	0.0008	7	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_k4.tsv	PENDING	PENDING	PENDING
+op_k5	op	operator batch-corrected: significant in all five	1	8309	0.0001	1	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_k5.tsv	PENDING	PENDING	PENDING
+opb_k1	opb	operator strictest (fdr_both): significant in union of 5 cohorts' sets	2387	8309	0.2873	2378	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/opb_k1.tsv	PENDING	PENDING	PENDING
+opb_k2	opb	operator strictest (fdr_both): significant in >= 2 of 5 cohorts	448	8309	0.0539	446	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/opb_k2.tsv	PENDING	PENDING	PENDING
+opb_k3	opb	operator strictest (fdr_both): significant in >= 3 of 5 cohorts	64	8309	0.0077	64	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/opb_k3.tsv	PENDING	PENDING	PENDING
+opb_k4	opb	operator strictest (fdr_both): significant in >= 4 of 5 cohorts	3	8309	0.0004	3	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/opb_k4.tsv	PENDING	PENDING	PENDING
+opb_k5	opb	operator strictest (fdr_both): significant in all five	0	8309	0.0	0	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/opb_k5.tsv	PENDING	PENDING	PENDING
+plex_k1	plex	TMT-plex batch-corrected: significant in union of 5 cohorts' sets	3873	8309	0.4661	3867	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_k1.tsv	PENDING	PENDING	PENDING
+plex_k2	plex	TMT-plex batch-corrected: significant in >= 2 of 5 cohorts	1191	8309	0.1433	1189	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_k2.tsv	PENDING	PENDING	PENDING
+plex_k3	plex	TMT-plex batch-corrected: significant in >= 3 of 5 cohorts	223	8309	0.0268	223	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_k3.tsv	PENDING	PENDING	PENDING
+plex_k4	plex	TMT-plex batch-corrected: significant in >= 4 of 5 cohorts	22	8309	0.0026	22	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_k4.tsv	PENDING	PENDING	PENDING
+plex_k5	plex	TMT-plex batch-corrected: significant in all five	2	8309	0.0002	2	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_k5.tsv	PENDING	PENDING	PENDING
+phi_k1	phi	published discovery, Phikon encoder: significant in union of 5 cohorts' sets	4861	8309	0.585	4845	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/phi_k1.tsv	PENDING	PENDING	PENDING
+phi_k2	phi	published discovery, Phikon encoder: significant in >= 2 of 5 cohorts	2119	8309	0.255	2115	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/phi_k2.tsv	PENDING	PENDING	PENDING
+phi_k3	phi	published discovery, Phikon encoder: significant in >= 3 of 5 cohorts	647	8309	0.0779	646	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/phi_k3.tsv	PENDING	PENDING	PENDING
+phi_k4	phi	published discovery, Phikon encoder: significant in >= 4 of 5 cohorts	97	8309	0.0117	96	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/phi_k4.tsv	PENDING	PENDING	PENDING
+phi_k5	phi	published discovery, Phikon encoder: significant in all five	10	8309	0.0012	10	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/phi_k5.tsv	PENDING	PENDING	PENDING
+pub_ccrcc	pub	published discovery (UNI): CCRCC only (universe = genes tested in CCRCC)	2191	9635	0.2274	2085	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_ccrcc.tsv	PENDING	PENDING	PENDING
+pub_luad	pub	published discovery (UNI): LUAD only (universe = genes tested in LUAD)	2310	10724	0.2154	2223	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_luad.tsv	PENDING	PENDING	PENDING
+pub_ucec	pub	published discovery (UNI): UCEC only (universe = genes tested in UCEC)	2566	10512	0.2441	2536	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_ucec.tsv	PENDING	PENDING	PENDING
+pub_gbm	pub	published discovery (UNI): GBM only (universe = genes tested in GBM)	702	10785	0.0651	640	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_gbm.tsv	PENDING	PENDING	PENDING
+pub_pdac	pub	published discovery (UNI): PDAC only (universe = genes tested in PDAC)	1572	9897	0.1588	1521	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/pub_pdac.tsv	PENDING	PENDING	PENDING
+op_ccrcc	op	operator batch-corrected: CCRCC only (universe = genes tested in CCRCC)	815	9635	0.0846	779	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_ccrcc.tsv	PENDING	PENDING	PENDING
+op_luad	op	operator batch-corrected: LUAD only (universe = genes tested in LUAD)	726	10724	0.0677	702	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_luad.tsv	PENDING	PENDING	PENDING
+op_ucec	op	operator batch-corrected: UCEC only (universe = genes tested in UCEC)	201	10512	0.0191	198	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_ucec.tsv	PENDING	PENDING	PENDING
+op_gbm	op	operator batch-corrected: GBM only (universe = genes tested in GBM)	680	10785	0.0631	641	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_gbm.tsv	PENDING	PENDING	PENDING
+op_pdac	op	operator batch-corrected: PDAC only (universe = genes tested in PDAC)	682	9897	0.0689	664	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/op_pdac.tsv	PENDING	PENDING	PENDING
+plex_ccrcc	plex	TMT-plex batch-corrected: CCRCC only (universe = genes tested in CCRCC)	684	9635	0.071	666	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_ccrcc.tsv	PENDING	PENDING	PENDING
+plex_luad	plex	TMT-plex batch-corrected: LUAD only (universe = genes tested in LUAD)	1534	10724	0.143	1489	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_luad.tsv	PENDING	PENDING	PENDING
+plex_ucec	plex	TMT-plex batch-corrected: UCEC only (universe = genes tested in UCEC)	2124	10512	0.2021	2112	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_ucec.tsv	PENDING	PENDING	PENDING
+plex_gbm	plex	TMT-plex batch-corrected: GBM only (universe = genes tested in GBM)	225	10785	0.0209	209	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_gbm.tsv	PENDING	PENDING	PENDING
+plex_pdac	plex	TMT-plex batch-corrected: PDAC only (universe = genes tested in PDAC)	1124	9897	0.1136	1097	review/BRCA_TS_ARM_2026-10-08/setlevel/candidate_sets/plex_pdac.tsv	PENDING	PENDING	PENDING

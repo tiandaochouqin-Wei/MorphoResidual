@@ -1,0 +1,31 @@
+
+=== F3: final rules on synthetic sets (sign-weighted z_N, z>=2 everywhere, kappa by n_sel/G_tested, lam_lo = true lam) ===
+hyp lam delta fX | seed n_sel strength | z_D z_N(sign) theta_pc theta_pop | class
+
+-- mixtures: G=2000, 20% signal genes, n=100, Delta=0.2, R2=0.3, normal-tail BH (strength ~ 0.1) --
+post  0.6 fX=0.50 | 0 n_sel= 183 (false 3) strength=0.091 | +44.4 +1.28 +0.015 +0.00 | R1
+post  0.6 fX=0.50 | 1 n_sel= 211 (false 6) strength=0.105 | +39.3 +0.41 +0.007 +0.00 | R1
+post  0.6 fX=0.50 | 2 n_sel= 197 (false 3) strength=0.099 | +41.7 +0.83 +0.011 +0.00 | R1
+post  0.8 fX=0.50 | 0 n_sel= 208 (false 5) strength=0.104 | +43.1 +0.98 +0.012 +0.00 | R1
+post  0.8 fX=0.50 | 1 n_sel= 202 (false 6) strength=0.101 | +38.7 +0.85 +0.011 +0.00 | R1
+post  0.8 fX=0.50 | 2 n_sel= 191 (false 3) strength=0.096 | +45.2 +0.71 +0.010 +0.00 | R1
+noise 0.5 fX=0.50 | 0 n_sel= 229 (false 6) strength=0.115 | +34.3 +35.21 +0.746 +1.00 | R2
+noise 0.5 fX=0.50 | 1 n_sel= 201 (false 3) strength=0.101 | +30.3 +36.91 +0.806 +1.00 | R2
+noise 0.5 fX=0.50 | 2 n_sel= 182 (false 3) strength=0.091 | +36.6 +39.14 +0.736 +1.00 | R2
+mix   0.6 fX=0.10 | 0 n_sel= 235 (false 6) strength=0.117 | +39.3 +12.32 +0.121 +0.15 | R3
+mix   0.6 fX=0.10 | 1 n_sel= 237 (false 10) strength=0.118 | +44.0 +12.82 +0.139 +0.15 | R3
+mix   0.6 fX=0.10 | 2 n_sel= 237 (false 5) strength=0.118 | +40.6 +14.80 +0.141 +0.15 | R3
+mix   0.6 fX=0.30 | 0 n_sel= 323 (false 5) strength=0.162 | +41.9 +33.24 +0.413 +0.45 | R3
+mix   0.6 fX=0.30 | 1 n_sel= 326 (false 3) strength=0.163 | +47.5 +33.02 +0.419 +0.45 | R3
+mix   0.6 fX=0.30 | 2 n_sel= 336 (false 3) strength=0.168 | +39.0 +33.63 +0.416 +0.45 | R3
+err   0.5 fX=0.50 | 0 n_sel= 382 (false 11) strength=0.191 | +38.2 -39.73 -0.917 -1.00 | R4
+err   0.5 fX=0.50 | 1 n_sel= 367 (false 10) strength=0.183 | +35.3 -40.13 -0.934 -1.00 | R4
+err   0.5 fX=0.50 | 2 n_sel= 373 (false 8) strength=0.186 | +41.5 -41.82 -0.943 -1.00 | R4
+
+-- tally --
+MIXCOHORT-post     n= 6  {'R1': 6}
+MIXCOHORT-noise    n= 3  {'R2': 3}
+MIXCOHORT-mix0.1   n= 3  {'R3': 3}
+MIXCOHORT-mix0.3   n= 3  {'R3': 3}
+MIXCOHORT-err      n= 3  {'R4': 3}
+[F3b done in 194s]

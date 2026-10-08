@@ -1,0 +1,15 @@
+
+=== E4: H_noise winner's curse vs selection intensity (n=100, K=20, R2=0.3, lam=0.5 -> theta_pop=1) ===
+(a) G=2000 all-signal genes at delta=0.1, ranked by published increment; theta_set (raw) of the top fraction
+  seed 0: top100%=1.10 top50%=0.74 top20%=0.61 top10%=0.51 top5%=0.46 top2%=0.42 top1%=0.41 top0.5%=0.36
+  seed 1: top100%=1.12 top50%=0.75 top20%=0.62 top10%=0.56 top5%=0.52 top2%=0.44 top1%=0.42 top0.5%=0.40
+  seed 2: top100%=1.11 top50%=0.74 top20%=0.60 top10%=0.55 top5%=0.53 top2%=0.50 top1%=0.49 top0.5%=0.50
+(b) mixture G=2000 with 20% signal genes; BH(normal-tail p) selection; theta_set,sel/theta_pop vs delta
+  delta=0.08 seed=0: n_sel=0 < 5
+  delta=0.08 seed=1: n_sel=0 < 5
+  delta=0.1 seed=0: n_sel=3 < 5
+  delta=0.1 seed=1: n_sel=2 < 5
+  delta=0.15 seed=0: n_sel=91 (false 3), signal selected 22.0%, theta_set/theta_pop=0.63
+  delta=0.15 seed=1: n_sel=96 (false 3), signal selected 23.2%, theta_set/theta_pop=0.64
+  delta=0.2 seed=0: n_sel=232 (false 7), signal selected 56.2%, theta_set/theta_pop=0.78
+  delta=0.2 seed=1: n_sel=227 (false 8), signal selected 54.8%, theta_set/theta_pop=0.79

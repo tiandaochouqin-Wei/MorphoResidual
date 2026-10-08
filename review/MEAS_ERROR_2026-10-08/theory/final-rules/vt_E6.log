@@ -1,0 +1,4 @@
+seed 0: z[rho*corr]=+1.41  z[sign*corr]=-1.00  z[corr]=-1.00  z[(rho-mean rho)*corr]=+16.36 | mean excess corr by rho tertile: lo -0.04079 mid +0.00148 hi +0.03381 | rho mean 0.547 sd 0.070
+seed 1: z[rho*corr]=+3.32  z[sign*corr]=+0.60  z[corr]=+0.60  z[(rho-mean rho)*corr]=+17.89 | mean excess corr by rho tertile: lo -0.03776 mid -0.00100 hi +0.04188 | rho mean 0.542 sd 0.072
+seed 2: z[rho*corr]=+1.64  z[sign*corr]=-0.59  z[corr]=-0.59  z[(rho-mean rho)*corr]=+16.32 | mean excess corr by rho tertile: lo -0.03230 mid -0.00643 hi +0.03546 | rho mean 0.544 sd 0.071
+seed 3: z[rho*corr]=+0.42  z[sign*corr]=-2.06  z[corr]=-2.06  z[(rho-mean rho)*corr]=+17.92 | mean excess corr by rho tertile: lo -0.03852 mid -0.00450 hi +0.03235 | rho mean 0.541 sd 0.072

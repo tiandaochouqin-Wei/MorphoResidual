@@ -1,0 +1,11 @@
+null seed0 insample: mean corr(rp_hat,M) obs=-0.00025 null=-0.00052 diff=+0.00027 | mean cov obs=-0.00017 null=-0.00025 | sd(rp_hat) obs=0 | z_all=+0.04
+null seed0 infold  : mean corr(rp_hat,M) obs=+0.00004 null=-0.00021 diff=+0.00025 | mean cov obs=+0.00002 null=-0.00007 | sd(rp_hat) obs=0 | z_all=+0.05
+null seed1 insample: mean corr(rp_hat,M) obs=-0.00174 null=+0.00048 diff=-0.00222 | mean cov obs=-0.00083 null=+0.00022 | sd(rp_hat) obs=0 | z_all=-0.98
+null seed1 infold  : mean corr(rp_hat,M) obs=-0.00188 null=-0.00016 diff=-0.00172 | mean cov obs=-0.00087 null=-0.00006 | sd(rp_hat) obs=0 | z_all=-0.58
+post seed0 insample: mean corr(rp_hat,M) obs=-0.00049 null=-0.00043 diff=-0.00006 | mean cov obs=-0.00131 null=-0.00021 | sd(rp_hat) obs=0 | z_all=+2.48
+post seed0 infold  : mean corr(rp_hat,M) obs=+0.00134 null=-0.00030 diff=+0.00164 | mean cov obs=-0.00018 null=-0.00009 | sd(rp_hat) obs=0 | z_all=+3.09
+post seed1 insample: mean corr(rp_hat,M) obs=+0.00029 null=+0.00050 diff=-0.00021 | mean cov obs=-0.00088 null=+0.00024 | sd(rp_hat) obs=0 | z_all=+2.37
+post seed1 infold  : mean corr(rp_hat,M) obs=+0.00175 null=-0.00014 diff=+0.00189 | mean cov obs=+0.00006 null=-0.00004 | sd(rp_hat) obs=0 | z_all=+3.64
+H_post obs: mean corr(HP,M)=-0.01379  mean corr(HM,M)=-0.02224  mean corr(rp_hat,M)=-0.00181  mean sd(HP)=0.688 sd(HM)=0.590 sd(rp_hat)=0.604
+perm null : mean corr(HP,M)=-0.01345  mean corr(HM,M)=-0.02331  mean corr(rp_hat,M)=-0.00104  mean sd(HP)=0.575 sd(HM)=0.577 sd(rp_hat)=0.479
+H_post obs: mean cov(HP,M)=-0.00718 cov(HM,M)=-0.00949 ; perm: cov(HP,M)=-0.00550 cov(HM,M)=-0.00924

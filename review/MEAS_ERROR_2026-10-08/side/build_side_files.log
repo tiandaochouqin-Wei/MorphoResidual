@@ -1,0 +1,45 @@
+build_side_files.py (F2 of POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md, section 10)
+run time (UTC): 2026-10-08T00:43:29Z
+python 3.13.13 pandas 2.3.3 numpy 2.3.5
+reads: GMT, keyword map, covariate tables, aliquot map, 'patients' array of each inputs file; reads no morphology, protein or RNA values
+families imported from figures/enrichment_c2_levels.py: ['translation', 'secretion', 'splicing', 'ptm', 'folding', 'ecm']
+
+[families] GMT terms read: 1816; terms matching no family: 1652
+[families] wrote D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\side\families_reactome2022.tsv
+  sha256 8f4f69ea0cb33003b52cf4e0dfe607f10abc821e83a2ffa4d931b9adc0b0dac5  rows 6303
+  family        terms_matched  genes
+  translation              39   1908
+  secretion                61   2065
+  splicing                  9    250
+  ptm                      30   1535
+  folding                  15    233
+  ecm                      15    312
+  union of the six families: 3867 distinct genes
+[purity ccrcc] sheet has 2 TumorPurity rows (RNASeq-based first, Global-Proteomics-based second); first used; proteomics-block row ignored (its mean 0.727 vs RNASeq-block 0.7718)
+
+[purity ccrcc] source: 103 tumour aliquots mapped to 103 cases, mean per case
+[purity ccrcc] wrote D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\side\purity_ccrcc.tsv
+  sha256 d51cb79ec59f2faec6b97d84f2fa7039f52b038ee7109574edd303ddeae69890  rows 103  (cases with a finite value in the source)
+  coverage: 103 of 103 inputs patients have a value; 0 lack one
+  purity range 0.067 .. 0.93, mean 0.6412; file cases not in inputs: 0
+
+[purity luad] source: 110 rows; duplicate cases dropped (first kept): 0
+[purity luad] wrote D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\side\purity_luad.tsv
+  sha256 6cf57901974b0671ae1a246d9becf171d5a32de8163a92de930cee5f8cdfcce5  rows 109  (cases with a finite value in the source)
+  coverage: 103 of 105 inputs patients have a value; 2 lack one (C3L-01890, C3N-00545)
+  purity range 0.2232 .. 0.8906, mean 0.6222; file cases not in inputs: 6
+
+[purity ucec] source: 104 tumour rows of 153; duplicate cases dropped (first kept): 0
+[purity ucec] wrote D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\side\purity_ucec.tsv
+  sha256 a7d146000ad6cce388183ae04f40ba788ea02a338287b53757f2114a004ddfc4  rows 97  (cases with a finite value in the source)
+  coverage: 96 of 100 inputs patients have a value; 4 lack one (C3L-01925, C3N-00388, C3N-01346, C3N-01349)
+  purity range -7.99e-18 .. 0.8482, mean 0.4819; file cases not in inputs: 1
+
+[purity pdac] source: 140 rows; duplicate cases dropped (first kept): 0
+[purity pdac] wrote D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\side\purity_pdac.tsv
+  sha256 11ad6aec9c836ebae55366b82f93c093b3cfb79f5d7d24ec9d599be4dd197651  rows 100  (cases with a finite value in the source)
+  coverage: 97 of 137 inputs patients have a value; 40 lack one (C3L-01051, C3L-01124, C3L-02610, C3L-02897, C3L-02899, C3L-03394, C3L-03639, C3L-04027, C3L-04473, C3N-00709, C3N-01380, C3N-01502, C3N-01719, C3N-02010, C3N-02573, C3N-02579, C3N-02585, C3N-02589, C3N-02768, C3N-02940, C3N-02971, C3N-02998, C3N-03000, C3N-03039, C3N-03069, C3N-03190, C3N-03211, C3N-03426, C3N-03428, C3N-03430, C3N-03439, C3N-03665, C3N-03780, C3N-03839, C3N-03840, C3N-03853, C3N-03884, C3N-04119, C3N-04282, C3N-04283)
+  purity range 0.008394 .. 0.6003, mean 0.2236; file cases not in inputs: 3
+
+GBM: no purity estimate (only xCell stroma/immune); no purity file is built (section 6 item 2).
+done.

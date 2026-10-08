@@ -1,0 +1,52 @@
+D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\theory\verify\finite_sample.py:113: RuntimeWarning: invalid value encountered in sqrt
+  u = np.sqrt(su2) * (t * (W @ wc) + np.sqrt(1 - t2) * zeta)
+
+[noise lam=0.6 R2=0.3 Dp=0.1 ]  G=300 B=100 n_sel=0  (8s)
+  nested incr: obs mean=-0.103  pop=0.100  offset=-0.203  pred K/(ntr-K-1)(1-R2full)=-0.203  null mean=-0.244
+  null means: S_pp=-0.541  S_cross=+0.013  D=-0.0068  S_drm=-0.001  S_dd=-0.505  Nc=+0.0002
+  observed means: S_cross=+0.199 S_pp=-0.267 S_drm=-0.106 S_dd=+0.138  incr_m=-0.010
+  N: per-gene two-sided rejection at 5%: all genes=0.820  selected=nan
+  N: set-level z (all genes)=+35.08   (selected)=+nan
+  Nc: per-gene two-sided rejection at 5%: all genes=0.807  selected=nan
+  Nc: set-level z (all genes)=+33.64   (selected)=+nan
+  theta_pop=+1.500  theta_set(all)=+1.839  theta_set(selected)=+nan  lamhat(all)=+0.648 lamhat(sel)=+nan
+
+[post lam=0.6 R2=0.3 Dp=0.1 ]  G=300 B=100 n_sel=0  (9s)
+  nested incr: obs mean=-0.113  pop=0.100  offset=-0.213  pred K/(ntr-K-1)(1-R2full)=-0.203  null mean=-0.244
+  null means: S_pp=-0.547  S_cross=+0.011  D=-0.0062  S_drm=-0.001  S_dd=-0.511  Nc=-0.0005
+  observed means: S_cross=-0.097 S_pp=-0.588 S_drm=-0.108 S_dd=-0.590  incr_m=-0.196
+  N: per-gene two-sided rejection at 5%: all genes=0.037  selected=nan
+  N: set-level z (all genes)=+0.88   (selected)=+nan
+  Nc: per-gene two-sided rejection at 5%: all genes=0.023  selected=nan
+  Nc: set-level z (all genes)=+0.94   (selected)=+nan
+  theta_pop=+0.000  theta_set(all)=+0.013  theta_set(selected)=+nan  lamhat(all)=+0.013 lamhat(sel)=+nan
+
+[err lam=0.6 R2=0.3 Dp=0.1 ]  G=300 B=100 n_sel=49  (9s)
+  nested incr: obs mean=-0.097  pop=0.100  offset=-0.197  pred K/(ntr-K-1)(1-R2full)=-0.203  null mean=-0.240
+  null means: S_pp=-0.547  S_cross=+0.011  D=-0.0060  S_drm=-0.001  S_dd=-0.511  Nc=-0.0003
+  observed means: S_cross=-0.296 S_pp=-0.648 S_drm=-0.121 S_dd=-0.675  incr_m=+0.113
+  N: per-gene two-sided rejection at 5%: all genes=0.723  selected=0.959
+  N: set-level z (all genes)=-38.04   (selected)=-26.88
+  Nc: per-gene two-sided rejection at 5%: all genes=0.660  selected=0.898
+  Nc: set-level z (all genes)=-34.61   (selected)=-23.15
+  theta_pop=-1.000  theta_set(all)=-1.089  theta_set(selected)=-0.699  lamhat(all)=+12.252 lamhat(sel)=-2.322
+
+[noise lam=0.5 R2=0.3 Dp=0.2 ]  G=300 B=100 n_sel=185  (9s)
+  nested incr: obs mean=+0.028  pop=0.200  offset=-0.172  pred K/(ntr-K-1)(1-R2full)=-0.169  null mean=-0.241
+  null means: S_pp=-0.555  S_cross=+0.013  D=-0.0061  S_drm=+0.000  S_dd=-0.518  Nc=+0.0005
+  observed means: S_cross=+0.207 S_pp=-0.243 S_drm=-0.206 S_dd=+0.204  incr_m=-0.077
+  N: per-gene two-sided rejection at 5%: all genes=0.973  selected=0.989
+  N: set-level z (all genes)=+49.48   (selected)=+46.80
+  Nc: per-gene two-sided rejection at 5%: all genes=0.980  selected=0.989
+  Nc: set-level z (all genes)=+43.82   (selected)=+40.47
+  theta_pop=+1.000  theta_set(all)=+1.157  theta_set(selected)=+0.940  lamhat(all)=+0.536 lamhat(sel)=+0.484
+
+[post lam=0.5 R2=0.3 Dp=0.2 ]  G=300 B=100 n_sel=0  (9s)
+  nested incr: obs mean=+nan  pop=0.200  offset=+nan  pred K/(ntr-K-1)(1-R2full)=-0.169  null mean=+nan
+  null means: S_pp=+nan  S_cross=+nan  D=+nan  S_drm=+nan  S_dd=+nan  Nc=+nan
+  observed means: S_cross=+nan S_pp=+nan S_drm=+nan S_dd=+nan  incr_m=+nan
+  N: per-gene two-sided rejection at 5%: all genes=1.000  selected=nan
+  N: set-level z (all genes)=+nan   (selected)=+nan
+  Nc: per-gene two-sided rejection at 5%: all genes=1.000  selected=nan
+  Nc: set-level z (all genes)=+nan   (selected)=+nan
+  theta_pop=+0.000  theta_set(all)=+nan  theta_set(selected)=+nan  lamhat(all)=+nan lamhat(sel)=+nan

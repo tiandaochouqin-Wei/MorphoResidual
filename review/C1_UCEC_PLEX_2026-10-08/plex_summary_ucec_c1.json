@@ -1,0 +1,128 @@
+{
+ "pdc_study_id": "PDC000439",
+ "n_runs": 16,
+ "experiment_type": [
+  "TMT11"
+ ],
+ "n_channel_rows": 176,
+ "n_patient_channels": 140,
+ "non_patient_channels_by_channel": {
+  "126": {
+   "Ref": 16
+  },
+  "127c": {
+   "NX023": 1,
+   "NX033": 1
+  },
+  "128n": {
+   "NX031": 1,
+   "NX019": 1
+  },
+  "129c": {
+   "NX035": 1,
+   "NX020": 1,
+   "NX029": 1
+  },
+  "129n": {
+   "NX034": 1,
+   "NX036": 1,
+   "NX026": 1,
+   "NX022": 1
+  },
+  "130c": {
+   "NX028": 1,
+   "NX037": 1
+  },
+  "130n": {
+   "NX021": 1,
+   "NX032": 1,
+   "NX030": 1
+  },
+  "131": {
+   "NX024": 1,
+   "NX025": 1
+  },
+  "131c": {
+   "NX027": 1,
+   "NX038": 1
+  }
+ },
+ "analysed_cases": 138,
+ "labelled": 138,
+ "unlabelled": [],
+ "status_counts": {
+  "single": 136,
+  "multi_plex": 2
+ },
+ "n_plexes": 16,
+ "cases_per_plex": {
+  "01CPTAC_C_UCEC_Proteome_PNNL_20191223": 8,
+  "02CPTAC_C_UCEC_Proteome_PNNL_20191223": 9,
+  "03CPTAC_C_UCEC_Proteome_PNNL_20191223": 8,
+  "04CPTAC_C_UCEC_Proteome_PNNL_20191223": 8,
+  "05CPTAC_C_UCEC_Proteome_PNNL_20200223": 9,
+  "06CPTAC_C_UCEC_Proteome_PNNL_20200223": 8,
+  "07CPTAC_C_UCEC_Proteome_PNNL_20200223": 8,
+  "08CPTAC_C_UCEC_Proteome_PNNL_20200223": 9,
+  "09CPTAC_C_UCEC_Proteome_PNNL_20200522": 9,
+  "10CPTAC_C_UCEC_Proteome_PNNL_20200522": 9,
+  "11CPTAC_C_UCEC_Proteome_PNNL_20200522": 9,
+  "12CPTAC_C_UCEC_Proteome_PNNL_20200522": 8,
+  "13CPTAC_C_UCEC_Proteome_PNNL_20200706": 9,
+  "14CPTAC_C_UCEC_Proteome_PNNL_20200706": 9,
+  "15CPTAC_C_UCEC_Proteome_PNNL_20200706": 9,
+  "16CPTAC_C_UCEC_Proteome_PNNL_20200706": 9
+ },
+ "sizes_sorted": [
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8
+ ],
+ "n_strata_ge3": 16,
+ "n_singleton_strata": 0,
+ "singleton_strata": [],
+ "cases_held_fixed": 0,
+ "frac_cases_fixed": 0.0,
+ "cases_in_strata_ge3": 138,
+ "plex_dummies_if_residualised": 15,
+ "dummy_dropped_for_full_rank": "07CPTAC_C_UCEC_Proteome_PNNL_20200223",
+ "levels_left_to_intercept": [],
+ "cases_with_multiple_tumor_aliquots": [
+  "C3L-05571",
+  "C3N-02978"
+ ],
+ "cases_with_disqualified_aliquot": [
+  "C3L-05571",
+  "C3N-02978"
+ ],
+ "cases_multi_plex": [
+  "C3L-05571",
+  "C3N-02978"
+ ],
+ "cases_ambiguous": [],
+ "cases_differing_from_original_build_rule": [
+  "C3L-05571",
+  "C3N-02978"
+ ],
+ "route2_agree": 138,
+ "route2_disagree": [],
+ "route2_channel_matches": 176,
+ "route2_channel_mismatch": {},
+ "design_channels_total": 176,
+ "design_channels_found_in_route2": 176,
+ "pull_rule_differs": [],
+ "patient_aliquots_in_more_than_one_run": {}
+}

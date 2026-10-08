@@ -1,0 +1,61 @@
+SUPERSEDED (2026-10-07 UTC, before freezing): every OPEN item below is decided in review/POSTHOC_BRCA_TS_PRESPEC_2026-10-08.md,
+which is the frozen document (sidecar review/POSTHOC_BRCA_TS_PRESPEC_2026-10-08.md.sha256). Where this checklist and the .md differ,
+the .md governs (e.g. O1: primary_ts_only / ms_vial / top-vs-bottom splits are NOT done; O7: no stratification or restriction by
+magnification; O14: the disclosure is the .md's 'Prior exposure' list, not 'none'). Kept unchanged below as the decision record.
+
+FREEZE CHECKLIST -- BRCA Tissue-Slide arm (PROPOSAL ONLY; every line marked OPEN is a decision for the user, none was made here)
+Written 2026-10-08, before any TS embedding exists and before any TS result has been seen.
+Procedure suggestion (mirrors review/C1_UCEC_FROZEN_RULE_2026-09-15.md and the OSF practice used for C1-LUAD): write the
+decisions into a dated file, sha256 it, record the hash (and the e-mail/OSF timestamp) BEFORE step 6/7 of RUNBOOK.sh.
+
+FIXED BY CONSTRUCTION (inherit from the published DX arm, do not re-open)
+  F1  cohort / omics        : PDC000173 iTRAQ4 protein_brca.csv, STAR-Counts RNA (rna_case_file.tsv) -- reused, not re-pulled
+  F2  case set              : the 102 cases of rna_case_file.tsv (= inventory_dx_cases.tsv, re-derived 2026-10-08 = 102)
+  F3  encoder / tiling      : owkin/phikon CLS 768-d, 256 px, level 0, dense (--stride 0), HSV filter sat>15 & >35 % tissue
+  F4  estimator             : cptac2_residual.py:25 (5-fold, ridge 1, 1000 perms), 20 PCs full-SVD fitted on the common cases,
+                              BH-FDR over all tested proteins, significant = FDR<0.05 & incremental R2>0, min n = 30
+  F5  slide filter          : sample code 01x only (drops 06A metastatic x2 files, 11A normal x41 files)
+
+OPEN (user decides; defaults proposed)
+  O1  slide-selection rule  : proposed default = primary_all (all 189 TS/BS/MS slides with code 01x, 102/102 cases).
+                              Alternatives: primary_ts_only (95 files, 95/102 cases), ms_vial (185 files, 100/102 cases),
+                              TS-only vs BS-only descriptive split. Choose ONE as primary; the others = pre-declared sensitivities.
+  O2  pooling               : proposed primary = slide-mean then unweighted mean over slides (identical to published DX arm,
+                              cptac2_residual.py:77-80);  sensitivity = --pool tile (CPTAC-3 discovery convention).
+                              State that the discovery cohorts used tile-weighted pooling and the DX arm did not.
+  O3  primary read-out      : proposed = the DX-arm statistics, unchanged: n_cases, tested, significant (FDR<0.05 & incr>0),
+                              pct_sig, median_incr_sig, negative_frac_all. Add or not: a set-level test with the CPTAC
+                              selection set (report_analysis #3 idea) -- if added it must be specified (k>=2 or union) NOW.
+  O4  what counts as positive / null / ambiguous for the TS arm (e.g. significant>0? negative_frac_all vs 99.1 %? ) -- write
+                              the thresholds and the sentence you will print for each outcome BEFORE opening results.
+  O5  DX reproduction gate  : proposed = re-run DX through the patched code on the same node; require identical tested /
+                              significant / negative_frac_all (to the printed precision) to the published arm, else report.
+  O6  both arms reported    : REMAINING_WORK C3 asks for a dated "both arms are reported" note -- the DX result is already public
+                              in the draft, so the note can only bind the TS arm: commit to reporting it whatever the outcome.
+  O7  magnification         : unknown until step 5 (ts_slide_qc.py). Decide now whether a 20x/40x mixture triggers stratification
+                              or majority-magnification restriction (REMAINING_WORK F4 wording), and record that it applies to TS only.
+  O8  sample-size honesty   : n = 102 equals the DX arm; a TS null cannot distinguish "no signal" from the capacity collapse
+                              seen in the LUAD confirmatory (85.8 % negative increments although set-level AUC 0.644). Decide whether
+                              to pair the protein-level counts with a set-level test (O3).
+
+V2 ADDENDUM 2026-10-08 -- SET-LEVEL READ-OUT (resolves the "if added it must be specified NOW" clause of O3 / the question of O8; still PROPOSAL ONLY)
+  Tooling is in place (patched cptac2_residual.py saves the genes x 1001 increment matrix per arm; local_brca_setlevel.py; candidate
+  sets in setlevel/). The pre-specification must fix, before RUNBOOK step 6, every OPEN item below; the .md that fixes them is
+  hashed together with the script and the set files by make_setlevel_sidecar.py, and local_brca_setlevel.py refuses to run without it.
+  F6  matrices               : B = 1000, seeds RandomState(0..999), 20 PCs, every gene on the same permutations (inherits F4).
+  F7  statistic              : AUC (selected set vs the rest of the discovery-tested universe), Spearman rho vs the discovery score,
+                               one-sided empirical p = (#null >= obs + 1)/1001, code identical to c1_run_test.assemble.
+  O9  selection set (PRIMARY): proposed = pub_k3 (published UNI discovery, FDR<0.05 & increment>0 in >= 3 of the 5 cohorts; 777 of the
+                               8,309 genes tested in all five; pinned tables). Rationale in the hand-off report; alternatives are
+                               listed in setlevel/candidate_sets_inventory.tsv. ONE primary only.
+  O10 secondary sets         : proposed = pub_k4 (the 170-gene core), pub_k2, op_k2 (operator batch-corrected), phi_k3 (Phikon-selected);
+                               Holm over these four within an arm. Everything else in the inventory is descriptive and is not run.
+  O11 which arm is primary   : proposed = TS slide-mean ("ts"). DX re-run ("dx") and TS tile-pooled ("ts_tile") are reported beside it.
+  O12 reading rule           : write now what p_AUC (primary) < 0.05 / 0.05-0.15 / >= 0.15 will be called, as in the C1 frozen rules, and
+                               the sentence that is printed for each; state that the protein-level counts (0 of 10,031) are reported first.
+  O13 symbol mapping         : proposed = exact HGNC-symbol match only, no alias remapping; coverage of the primary set in the BRCA matrix
+                               is reported and must be >= 50 % or the script stops (MIN_COVERAGE). If the user prefers a crosswalk of
+                               renamed symbols it must be built from public metadata and frozen BEFORE step 6 (hgnc_drift_precheck.py
+                               gives the exposure: 2.5 % of the common universe was renamed since 2016, 3.7 % since 2014).
+  O14 disclosure             : the 170-gene core and the UCEC/LUAD set-level readings are already public; the BRCA matrices have not been
+                               opened. State in the .md that no BRCA morphology-protein statistic existed when the sets were chosen.
