@@ -1,0 +1,23 @@
+{
+ "repro": {
+  "n_compared": 9897,
+  "n_missing_from_published": 0,
+  "max_abs_diff": {
+   "n": 0.0,
+   "r2_rna": 8.881784197001252e-16,
+   "r2_both": 4.884981308350689e-15,
+   "incremental_r2": 4.884981308350689e-15
+  },
+  "worst": 4.884981308350689e-15,
+  "ok": true,
+  "verdict": "REPRODUCES the published per-gene results (<=1e-10)"
+ },
+ "pvals": {
+  "n_genes": 20,
+  "n_perm": 1000,
+  "max_abs_diff_pval": 0.0,
+  "n_mismatch": 0
+ },
+ "pca_max_abs_diff_abs_scores": 0.0002713203430175781,
+ "icc": null
+}

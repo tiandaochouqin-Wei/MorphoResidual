@@ -1,0 +1,164 @@
+# desensitised copy of review/MEAS_ERROR_2026-10-08/run_logs/RUN_pdac.log (sha256 c144ed6b3be52e4d7f1c3d755d0eb59d013d98583de017d5d7f666ac098ca702): the Windows user name in 3 file path(s) is replaced by <user>; nothing else is changed
+=== pdac start (local_theta_a1.py, Amendment 1) 2026-10-09T21:12:10Z host=KIRC-CZC5497R6K
+=== cmd: python local_theta_a1.py --inputs export/pdac/inputs_pdac.npz --B 200 --seed 20261007 --boot 200 --boot-seed 20261008 --sets-file side/families_reactome2022.tsv --save-null --workers 8 --strata operator_scanner,none,plex --primary-arm operator_scanner --variants spline,rnapc,purity --purity-file side/purity_pdac.tsv --lambda-lo-transfer 0.1651 --lambda-lo-transfer-tertiles 0.1408,0.1736,0.1857
+05:12:12 sidecar verified
+05:12:15 [repro] REPRODUCES the published per-gene results (<=1e-10)  {'n': 0.0, 'r2_rna': 8.881784197001252e-16, 'r2_both': 4.884981308350689e-15, 'incremental_r2': 4.884981308350689e-15}
+05:12:15 [observed] reference path + batched assertion ...
+05:12:22 [observed] 9876/9897 genes with finite statistics; batched==reference to 1.3e-15; complete (n_fit = n): 7041
+05:12:22 [sets] all:7041, pinned_sig:1454, ecm:202, pinned_sig&ecm:84, folding:167, pinned_sig&folding:45, ptm:810, pinned_sig&ptm:189, secretion:1341, pinned_sig&secretion:369, splicing:227, pinned_sig&splicing:51, translation:1144, pinned_sig&translation:248 | strata reported: 73
+05:12:22 [sets] pinned_sig: complete n=1454  s=0.206  mnar_exposed=False
+05:12:22 [sets] pinned_sig&ecm: complete n=84  s=0.416  mnar_exposed=False
+05:12:22 [sets] pinned_sig&folding: complete n=45  s=0.269  mnar_exposed=False
+05:12:22 [sets] pinned_sig&ptm: complete n=189  s=0.233  mnar_exposed=False
+05:12:22 [sets] pinned_sig&secretion: complete n=369  s=0.275  mnar_exposed=False
+05:12:22 [sets] pinned_sig&splicing: complete n=51  s=0.225  mnar_exposed=False
+05:12:22 [sets] pinned_sig&translation: complete n=248  s=0.217  mnar_exposed=False
+05:12:22 [bootstrap] 200 patient resamples over 9876 genes ...
+05:12:39     1000/9876 genes  17s
+05:12:46     2000/9876 genes  24s
+05:12:53     3000/9876 genes  31s
+05:13:00     4000/9876 genes  38s
+05:13:07     5000/9876 genes  45s
+05:13:14     6000/9876 genes  52s
+05:13:21     7000/9876 genes  59s
+05:13:28     8000/9876 genes  66s
+05:13:35     9000/9876 genes  73s
+05:13:51     1000/9897 genes  10s
+05:13:51     2000/9897 genes  10s
+05:13:51     3000/9897 genes  10s
+05:13:51     4000/9897 genes  10s
+05:13:51     5000/9897 genes  10s
+05:13:51     6000/9897 genes  10s
+05:13:52     7000/9897 genes  10s
+05:13:52     8000/9897 genes  10s
+05:13:52     9000/9897 genes  10s
+05:13:52 [arm operator_scanner] building 200 permutations ...
+05:13:52 [arm operator_scanner] running null ({'n_levels': 54, 'n_fixed_singletons': 30, 'frac_permutable': 0.781021897810219, 'level_sizes': [9, 8, 8, 7, 7, 7, 7, 5, 5, 5, 4, 4]})
+05:14:17     1000/9897 genes  25s
+05:14:32     2000/9897 genes  40s
+05:14:47     3000/9897 genes  55s
+05:15:02     4000/9897 genes  70s
+05:15:17     5000/9897 genes  86s
+05:15:33     6000/9897 genes  101s
+05:15:49     7000/9897 genes  117s
+05:16:05     8000/9897 genes  133s
+05:16:21     9000/9897 genes  149s
+05:16:35 [arm none] building 200 permutations ...
+05:16:35 [arm none] running null ({'frac_permutable': 1.0, 'n_levels': 1})
+05:17:00     1000/9897 genes  25s
+05:17:15     2000/9897 genes  40s
+05:17:31     3000/9897 genes  55s
+05:17:46     4000/9897 genes  71s
+05:18:02     5000/9897 genes  87s
+05:18:18     6000/9897 genes  102s
+05:18:33     7000/9897 genes  118s
+05:18:50     8000/9897 genes  134s
+05:19:05     9000/9897 genes  150s
+05:19:17 [arm plex] building 200 permutations ...
+05:19:17 [arm plex] running null ({'n_levels': 24, 'n_fixed_singletons': 0, 'frac_permutable': 1.0, 'level_sizes': [8, 7, 7, 7, 7, 7, 6, 6, 6, 6, 6, 6]})
+05:19:42     1000/9897 genes  24s
+05:19:56     2000/9897 genes  39s
+05:20:10     3000/9897 genes  53s
+05:20:25     4000/9897 genes  68s
+05:20:40     5000/9897 genes  82s
+05:20:55     6000/9897 genes  97s
+05:21:10     7000/9897 genes  112s
+05:21:25     8000/9897 genes  127s
+05:21:40     9000/9897 genes  143s
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+05:22:00 [phi_op] D (and nested increment Delta_p) ...
+05:22:19     1000/1565 genes  19s
+05:22:43     1000/1565 genes  19s
+05:22:48     500/1565 genes  0s
+05:22:49     1000/1565 genes  0s
+05:22:49     1500/1565 genes  1s
+05:22:49 [variant spline] observed + 200 draws of the operator_scanner arm over 9876 genes ...
+05:22:59     1000/9876 genes  9s
+05:22:59     2000/9876 genes  10s
+05:22:59     3000/9876 genes  10s
+05:22:59     4000/9876 genes  10s
+05:22:59     5000/9876 genes  10s
+05:22:59     6000/9876 genes  10s
+05:22:59     7000/9876 genes  10s
+05:22:59     8000/9876 genes  10s
+05:22:59     9000/9876 genes  10s
+05:23:16     1000/9876 genes  17s
+05:23:23     2000/9876 genes  24s
+05:23:30     3000/9876 genes  31s
+05:23:37     4000/9876 genes  38s
+05:23:44     5000/9876 genes  45s
+05:23:52     6000/9876 genes  53s
+05:23:59     7000/9876 genes  60s
+05:24:07     8000/9876 genes  68s
+05:24:14     9000/9876 genes  75s
+05:24:30     1000/9876 genes  9s
+05:24:30     2000/9876 genes  9s
+05:24:30     3000/9876 genes  9s
+05:24:30     4000/9876 genes  9s
+05:24:30     5000/9876 genes  10s
+05:24:30     6000/9876 genes  10s
+05:24:30     7000/9876 genes  10s
+05:24:30     8000/9876 genes  10s
+05:24:30     9000/9876 genes  10s
+05:24:31 [variant rnapc] observed + 200 draws of the operator_scanner arm over 9876 genes ...
+05:24:40     1000/9876 genes  9s
+05:24:40     2000/9876 genes  9s
+05:24:40     3000/9876 genes  9s
+05:24:40     4000/9876 genes  9s
+05:24:40     5000/9876 genes  10s
+05:24:40     6000/9876 genes  10s
+05:24:40     7000/9876 genes  10s
+05:24:40     8000/9876 genes  10s
+05:24:40     9000/9876 genes  10s
+05:24:57     1000/9876 genes  17s
+05:25:04     2000/9876 genes  24s
+05:25:11     3000/9876 genes  31s
+05:25:18     4000/9876 genes  38s
+05:25:25     5000/9876 genes  45s
+05:25:33     6000/9876 genes  52s
+05:25:40     7000/9876 genes  60s
+05:25:48     8000/9876 genes  67s
+05:25:55     9000/9876 genes  74s
+05:26:02 [variant purity] purity available for 97/137 patients
+05:26:02 [variant purity] observed + 200 draws of the operator_scanner arm over 9876 genes ...
+05:26:11     1000/9876 genes  9s
+05:26:11     2000/9876 genes  9s
+05:26:11     3000/9876 genes  9s
+05:26:11     4000/9876 genes  9s
+05:26:11     5000/9876 genes  9s
+05:26:11     6000/9876 genes  9s
+05:26:11     7000/9876 genes  9s
+05:26:11     8000/9876 genes  9s
+05:26:11     9000/9876 genes  10s
+05:26:25     1000/9876 genes  14s
+05:26:30     2000/9876 genes  19s
+05:26:35     3000/9876 genes  24s
+05:26:40     4000/9876 genes  28s
+05:26:44     5000/9876 genes  33s
+05:26:49     6000/9876 genes  38s
+05:26:54     7000/9876 genes  43s
+05:26:59     8000/9876 genes  48s
+05:27:04     9000/9876 genes  53s
+05:27:09 [reading numbers; primary arm = operator_scanner; numbers only, no verdict]
+                   set  n_genes  mnar_exposed     s  kappa  lambda_lo lambda_lo_source  lambda_hi  z_D_minus_gate    D_z  Nc_z  Nc_z_unres  theta_pc  theta_pc_ci_lo  theta_pc_ci_hi  theta_noise_min  margin_theta_pc_minus_tnm  margin_ci_hi_minus_tnm  r1_band_limit  margin_abs_theta_pc_minus_band  phi_op_D  Wm_z
+                   all     7041         False   NaN  1.000      0.165      transferred      0.994           5.110  8.110 3.198       3.046     0.104           0.029           0.319            0.198                     -0.094                   0.121          0.050                           0.054     0.381 4.852
+            pinned_sig     1454         False 0.206  0.550      0.165      transferred      0.995           8.392 11.392 5.403       4.637     0.092           0.053           0.186            0.109                     -0.017                   0.078          0.050                           0.042     0.342 5.660
+                   ecm      202         False   NaN  1.000      0.165      transferred      0.998           7.825 10.825 3.590       3.266     0.170           0.026           0.424            0.198                     -0.028                   0.226          0.050                           0.120     0.329 6.799
+        pinned_sig&ecm       84         False 0.416  0.550      0.165      transferred      0.998           8.844 11.844 4.076       3.184     0.125           0.028           0.259            0.109                      0.016                   0.150          0.100                           0.025     0.301 6.191
+               folding      167         False   NaN  1.000      0.165      transferred      0.996           3.901  6.901 2.300       1.215     0.059          -0.002           0.259            0.198                     -0.138                   0.061          0.050                           0.009     0.363 4.460
+    pinned_sig&folding       45         False 0.269  0.550      0.165      transferred      0.998           5.877  8.877 4.198       2.420     0.065           0.021           0.197            0.109                     -0.044                   0.088          0.100                          -0.035     0.335 4.320
+                   ptm      810         False   NaN  1.000      0.165      transferred      0.995           4.539  7.539 2.624       2.797     0.077          -0.006           0.291            0.198                     -0.120                   0.093          0.050                           0.027     0.374 4.519
+        pinned_sig&ptm      189         False 0.233  0.550      0.165      transferred      0.996           6.227  9.227 3.592       3.481     0.063           0.027           0.157            0.109                     -0.045                   0.048          0.050                           0.013     0.349 5.226
+             secretion     1341         False   NaN  1.000      0.165      transferred      0.996           5.080  8.080 2.934       2.578     0.072           0.011           0.254            0.198                     -0.126                   0.056          0.050                           0.022     0.362 4.731
+  pinned_sig&secretion      369         False 0.275  0.550      0.165      transferred      0.997           6.700  9.700 4.198       3.737     0.066           0.035           0.150            0.109                     -0.043                   0.041          0.050                           0.016     0.350 4.841
+              splicing      227         False   NaN  1.000      0.165      transferred      0.993           2.555  5.555 0.829       2.104     0.035          -0.167           0.422            0.198                     -0.162                   0.224          0.050                          -0.015     0.395 2.997
+   pinned_sig&splicing       51         False 0.225  0.550      0.165      transferred      0.995           5.011  8.011 1.549       1.968     0.027          -0.042           0.120            0.109                     -0.082                   0.011          0.100                          -0.073     0.340 2.927
+           translation     1144         False   NaN  1.000      0.165      transferred      0.994           4.426  7.426 2.669       3.324     0.074           0.006           0.281            0.198                     -0.124                   0.083          0.050                           0.024     0.370 4.150
+pinned_sig&translation      248         False 0.217  0.550      0.165      transferred      0.996           6.955  9.955 3.636       3.645     0.058           0.028           0.135            0.109                     -0.051                   0.027          0.050                           0.008     0.340 4.697
+05:27:09 [done] wrote D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\export\pdac\local_theta
+=== pdac end 2026-10-09T21:27:09Z exit=0

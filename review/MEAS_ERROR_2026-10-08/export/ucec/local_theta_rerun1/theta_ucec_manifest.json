@@ -1,0 +1,111 @@
+{
+ "mode": "real",
+ "cohort": "ucec",
+ "started": "2026-10-10 04:33:51",
+ "args": {
+  "inputs": [
+   "export/ucec/inputs_ucec.npz"
+  ],
+  "out": "export/ucec/local_theta_rerun1",
+  "repro_only": false,
+  "repro_pvals": 0,
+  "check_pca": false,
+  "check_icc": false,
+  "synthetic": false,
+  "strata": "operator,none,plex",
+  "primary_arm": "operator",
+  "B": 200,
+  "seed": 20261007,
+  "boot": 200,
+  "boot_seed": 20261008,
+  "secondary": false,
+  "sets_file": "side/families_reactome2022.tsv",
+  "variants": "spline,rnapc,purity",
+  "purity_file": "side/purity_ucec.tsv",
+  "no_diag": false,
+  "phi_delta": true,
+  "confirmatory": false,
+  "lambda_lo_transfer": null,
+  "lambda_lo_transfer_tertiles": null,
+  "save_null": true,
+  "max_genes": 0,
+  "workers": 8
+ },
+ "primary_arm": "operator",
+ "arms": [
+  "operator",
+  "none",
+  "plex"
+ ],
+ "sha256_inputs": {
+  "export/ucec/inputs_ucec.npz": "e28b86fadd41ec86363577fffad1db1f2f8a5162e732c7acb0e4133c0982044e"
+ },
+ "sha256_script": "a288c6fc577b51de00b1222e1209a72a1dadeb5fc4c27775d75378bd67fc8c9f",
+ "sha256_kernel": "6c95cd119d28e811e09967946e9f191c69f07f54f653991917e817ef99ec2734",
+ "sha256_side": {
+  "D:\\claude\\pajinsen\\MorphoResidual_paper\\review\\MEAS_ERROR_2026-10-08\\side\\families_reactome2022.tsv": "8f4f69ea0cb33003b52cf4e0dfe607f10abc821e83a2ffa4d931b9adc0b0dac5",
+  "D:\\claude\\pajinsen\\MorphoResidual_paper\\review\\MEAS_ERROR_2026-10-08\\side\\purity_ucec.tsv": "a7d146000ad6cce388183ae04f40ba788ea02a338287b53757f2114a004ddfc4"
+ },
+ "n": 100,
+ "G": 10512,
+ "repro_published": {
+  "n_compared": 10512,
+  "n_missing_from_published": 0,
+  "max_abs_diff": {
+   "n": 0.0,
+   "r2_rna": 4.440892098500626e-16,
+   "r2_both": 9.769962616701378e-15,
+   "incremental_r2": 9.769962616701378e-15
+  },
+  "worst": 9.769962616701378e-15,
+  "ok": true,
+  "verdict": "REPRODUCES the published per-gene results (<=1e-10)"
+ },
+ "batched_vs_reference_max_abs_diff": 1.3877787807814457e-15,
+ "nested_increment_obs_vs_published": 3.1086244689504383e-15,
+ "arms_info": {
+  "operator": {
+   "n_levels": 28,
+   "n_fixed_singletons": 7,
+   "frac_permutable": 0.9299999999999999,
+   "level_sizes": [
+    10,
+    10,
+    8,
+    8,
+    7,
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "none": {
+   "frac_permutable": 1.0,
+   "n_levels": 1
+  },
+  "plex": {
+   "n_levels": 16,
+   "n_fixed_singletons": 0,
+   "frac_permutable": 1.0,
+   "level_sizes": [
+    8,
+    8,
+    7,
+    7,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+   ]
+  }
+ },
+ "finished": "2026-10-10 04:46:25"
+}

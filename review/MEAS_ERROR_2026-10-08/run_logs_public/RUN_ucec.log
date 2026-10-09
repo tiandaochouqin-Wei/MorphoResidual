@@ -1,0 +1,186 @@
+# desensitised copy of review/MEAS_ERROR_2026-10-08/run_logs/RUN_ucec.log (sha256 6c5ba96134338b2e81acf08b65d0129c33fc113911bd61af02040395c6646b31): the Windows user name in 8 file path(s) is replaced by <user>; nothing else is changed
+=== ucec start 2026-10-08T01:53:40Z host=KIRC-CZC5497R6K
+=== cmd: python local_theta.py --inputs export/ucec/inputs_ucec.npz --B 200 --seed 20261007 --boot 200 --boot-seed 20261008 --sets-file side/families_reactome2022.tsv --save-null --workers 8 --strata operator,none,plex --primary-arm operator --variants spline,rnapc,purity --purity-file side/purity_ucec.tsv
+09:53:42 sidecar verified
+09:53:50 [repro] REPRODUCES the published per-gene results (<=1e-10)  {'n': 0.0, 'r2_rna': 4.440892098500626e-16, 'r2_both': 9.769962616701378e-15, 'incremental_r2': 9.769962616701378e-15}
+09:53:50 [observed] reference path + batched assertion ...
+09:54:08 [observed] 10491/10512 genes with finite statistics; batched==reference to 1.4e-15; complete (n_fit = n): 8543
+09:54:08 [sets] all:8543, pinned_sig:2418, ecm:199, pinned_sig&ecm:49, folding:178, pinned_sig&folding:82, ptm:951, pinned_sig&ptm:329, secretion:1440, pinned_sig&secretion:527, splicing:232, pinned_sig&splicing:113, translation:1301, pinned_sig&translation:406 | strata reported: 70
+09:54:08 [sets] pinned_sig: complete n=2418  s=0.283  mnar_exposed=False
+09:54:08 [sets] pinned_sig&ecm: complete n=49  s=0.246  mnar_exposed=False
+09:54:08 [sets] pinned_sig&folding: complete n=82  s=0.461  mnar_exposed=False
+09:54:08 [sets] pinned_sig&ptm: complete n=329  s=0.346  mnar_exposed=False
+09:54:08 [sets] pinned_sig&secretion: complete n=527  s=0.365  mnar_exposed=False
+09:54:08 [sets] pinned_sig&splicing: complete n=113  s=0.487  mnar_exposed=False
+09:54:08 [sets] pinned_sig&translation: complete n=406  s=0.312  mnar_exposed=False
+09:54:08 [bootstrap] 200 patient resamples over 10491 genes ...
+09:54:24     1000/10491 genes  16s
+09:54:31     2000/10491 genes  23s
+09:54:38     3000/10491 genes  30s
+09:54:46     4000/10491 genes  38s
+09:54:53     5000/10491 genes  45s
+09:55:00     6000/10491 genes  52s
+09:55:08     7000/10491 genes  59s
+09:55:15     8000/10491 genes  67s
+09:55:22     9000/10491 genes  74s
+09:55:30     10000/10491 genes  81s
+09:55:41     1000/10512 genes  8s
+09:55:42     2000/10512 genes  9s
+09:55:42     3000/10512 genes  9s
+09:55:42     4000/10512 genes  9s
+09:55:42     5000/10512 genes  9s
+09:55:42     6000/10512 genes  9s
+09:55:42     7000/10512 genes  9s
+09:55:42     8000/10512 genes  10s
+09:55:43     9000/10512 genes  10s
+09:55:43     10000/10512 genes  10s
+09:55:43 [arm operator] building 200 permutations ...
+09:55:43 [arm operator] WARNING: 1/100 patients unlabelled -> '_missing' stratum (sitepack convention)
+09:55:43 [arm operator] running null ({'n_levels': 28, 'n_fixed_singletons': 7, 'frac_permutable': 0.9299999999999999, 'level_sizes': [10, 10, 8, 8, 7, 5, 5, 4, 4, 4, 4, 4]})
+09:56:07     1000/10512 genes  24s
+09:56:22     2000/10512 genes  39s
+09:56:38     3000/10512 genes  55s
+09:56:54     4000/10512 genes  71s
+09:57:09     5000/10512 genes  86s
+09:57:25     6000/10512 genes  102s
+09:57:41     7000/10512 genes  118s
+09:57:56     8000/10512 genes  133s
+09:58:12     9000/10512 genes  149s
+09:58:27     10000/10512 genes  164s
+09:58:35 [arm none] building 200 permutations ...
+09:58:35 [arm none] running null ({'frac_permutable': 1.0, 'n_levels': 1})
+09:58:59     1000/10512 genes  24s
+09:59:14     2000/10512 genes  40s
+09:59:30     3000/10512 genes  55s
+09:59:45     4000/10512 genes  71s
+10:00:01     5000/10512 genes  86s
+10:00:16     6000/10512 genes  102s
+10:00:32     7000/10512 genes  117s
+10:00:48     8000/10512 genes  133s
+10:01:03     9000/10512 genes  149s
+10:01:19     10000/10512 genes  164s
+10:01:26 [arm plex] building 200 permutations ...
+10:01:26 [arm plex] running null ({'n_levels': 16, 'n_fixed_singletons': 0, 'frac_permutable': 1.0, 'level_sizes': [8, 8, 7, 7, 6, 6, 6, 6, 6, 6, 6, 6]})
+10:01:50     1000/10512 genes  24s
+10:02:06     2000/10512 genes  39s
+10:02:21     3000/10512 genes  55s
+10:02:37     4000/10512 genes  70s
+10:02:52     5000/10512 genes  86s
+10:03:08     6000/10512 genes  102s
+10:03:23     7000/10512 genes  117s
+10:03:39     8000/10512 genes  133s
+10:03:55     9000/10512 genes  148s
+10:04:10     10000/10512 genes  164s
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+10:04:31 [phi_op] D (and nested increment Delta_p) ...
+10:04:49     1000/2560 genes  18s
+10:04:58     2000/2560 genes  27s
+10:05:21     1000/2560 genes  17s
+10:05:30     2000/2560 genes  26s
+10:05:35     500/2560 genes  1s
+10:05:36     1000/2560 genes  1s
+10:05:36     1500/2560 genes  2s
+10:05:37     2000/2560 genes  3s
+10:05:38     2500/2560 genes  3s
+10:05:38 [variant spline] observed + 200 draws of the operator arm over 10491 genes ...
+10:05:46     1000/10491 genes  8s
+10:05:47     2000/10491 genes  9s
+10:05:47     3000/10491 genes  9s
+10:05:47     4000/10491 genes  9s
+10:05:47     5000/10491 genes  9s
+10:05:47     6000/10491 genes  9s
+10:05:47     7000/10491 genes  9s
+10:05:47     8000/10491 genes  9s
+10:05:47     9000/10491 genes  9s
+10:05:47     10000/10491 genes  9s
+10:06:04     1000/10491 genes  16s
+10:06:11     2000/10491 genes  24s
+10:06:19     3000/10491 genes  32s
+10:06:27     4000/10491 genes  39s
+10:06:35     5000/10491 genes  47s
+10:06:43     6000/10491 genes  55s
+10:06:50     7000/10491 genes  63s
+10:06:58     8000/10491 genes  71s
+10:07:06     9000/10491 genes  78s
+10:07:14     10000/10491 genes  86s
+10:07:26     1000/10491 genes  8s
+10:07:26     2000/10491 genes  9s
+10:07:26     3000/10491 genes  9s
+10:07:26     4000/10491 genes  9s
+10:07:26     5000/10491 genes  9s
+10:07:26     6000/10491 genes  9s
+10:07:27     7000/10491 genes  9s
+10:07:27     8000/10491 genes  9s
+10:07:27     9000/10491 genes  9s
+10:07:27     10000/10491 genes  10s
+10:07:27 [variant rnapc] observed + 200 draws of the operator arm over 10491 genes ...
+10:07:36     1000/10491 genes  8s
+10:07:36     2000/10491 genes  9s
+10:07:36     3000/10491 genes  9s
+10:07:36     4000/10491 genes  9s
+10:07:36     5000/10491 genes  9s
+10:07:36     6000/10491 genes  9s
+10:07:36     7000/10491 genes  9s
+10:07:36     8000/10491 genes  9s
+10:07:37     9000/10491 genes  9s
+10:07:37     10000/10491 genes  9s
+10:07:53     1000/10491 genes  16s
+10:08:01     2000/10491 genes  24s
+10:08:09     3000/10491 genes  32s
+10:08:16     4000/10491 genes  40s
+10:08:24     5000/10491 genes  47s
+10:08:32     6000/10491 genes  55s
+10:08:40     7000/10491 genes  63s
+10:08:48     8000/10491 genes  71s
+10:08:56     9000/10491 genes  79s
+10:09:03     10000/10491 genes  87s
+10:09:08 [variant purity] purity available for 96/100 patients
+10:09:08 [variant purity] observed + 200 draws of the operator arm over 10491 genes ...
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\<user>\miniconda3\Lib\multiprocessing\pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\<user>\miniconda3\Lib\multiprocessing\pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\local_theta.py", line 365, in _job
+    fid = tk.fold_ids_for(nv)
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\theta_kernel.py", line 54, in fold_ids_for
+    for k, (_, te) in enumerate(folds_for(nv)):
+                                ~~~~~~~~~^^^^
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\theta_kernel.py", line 47, in folds_for
+    f = [(tr, te) for tr, te in kf.split(np.arange(nv))]
+                                ~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\<user>\miniconda3\Lib\site-packages\sklearn\model_selection\_split.py", line 404, in split
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=0.
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\local_theta.py", line 1136, in <module>
+    main()
+    ~~~~^^
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\local_theta.py", line 1125, in main
+    sets_df = analyse(args, mode, out_dir)
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\local_theta.py", line 978, in analyse
+    vo = run_draws(dd, dd["pcs"][None], None, ["N", "Nc", "D"], False, args.workers, kind=kk, genes=genes_var, rnapcs=rn)
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\MEAS_ERROR_2026-10-08\local_theta.py", line 435, in run_draws
+    for i, (gi, out) in enumerate(pool.imap_unordered(_job, gl, chunksize=8), 1):
+                        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\<user>\miniconda3\Lib\multiprocessing\pool.py", line 451, in <genexpr>
+    return (item for chunk in result for item in chunk)
+                              ^^^^^^
+  File "C:\Users\<user>\miniconda3\Lib\multiprocessing\pool.py", line 873, in next
+    raise value
+ValueError: Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=0.
+=== ucec end 2026-10-08T02:09:17Z exit=1

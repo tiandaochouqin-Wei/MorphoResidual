@@ -1,0 +1,181 @@
+# desensitised copy of review/MEAS_ERROR_2026-10-08/run_logs/RUN_ucec_rerun1.log (sha256 5e82e72bb3c0655e96bb37728271c54993f47ddc3bae1352fe1d32a8f74aa7d3): the Windows user name in 3 file path(s) is replaced by <user>; nothing else is changed
+=== ucec rerun1 (Amendment 1) start 2026-10-09T20:33:49Z host=KIRC-CZC5497R6K
+=== cmd: python local_theta_a1.py --inputs export/ucec/inputs_ucec.npz --B 200 --seed 20261007 --boot 200 --boot-seed 20261008 --sets-file side/families_reactome2022.tsv --save-null --workers 8 --strata operator,none,plex --primary-arm operator --variants spline,rnapc,purity --purity-file side/purity_ucec.tsv --out export/ucec/local_theta_rerun1
+04:33:51 sidecar verified
+04:33:54 [repro] REPRODUCES the published per-gene results (<=1e-10)  {'n': 0.0, 'r2_rna': 4.440892098500626e-16, 'r2_both': 9.769962616701378e-15, 'incremental_r2': 9.769962616701378e-15}
+04:33:54 [observed] reference path + batched assertion ...
+04:34:01 [observed] 10491/10512 genes with finite statistics; batched==reference to 1.4e-15; complete (n_fit = n): 8543
+04:34:01 [sets] all:8543, pinned_sig:2418, ecm:199, pinned_sig&ecm:49, folding:178, pinned_sig&folding:82, ptm:951, pinned_sig&ptm:329, secretion:1440, pinned_sig&secretion:527, splicing:232, pinned_sig&splicing:113, translation:1301, pinned_sig&translation:406 | strata reported: 70
+04:34:01 [sets] pinned_sig: complete n=2418  s=0.283  mnar_exposed=False
+04:34:01 [sets] pinned_sig&ecm: complete n=49  s=0.246  mnar_exposed=False
+04:34:01 [sets] pinned_sig&folding: complete n=82  s=0.461  mnar_exposed=False
+04:34:01 [sets] pinned_sig&ptm: complete n=329  s=0.346  mnar_exposed=False
+04:34:01 [sets] pinned_sig&secretion: complete n=527  s=0.365  mnar_exposed=False
+04:34:01 [sets] pinned_sig&splicing: complete n=113  s=0.487  mnar_exposed=False
+04:34:01 [sets] pinned_sig&translation: complete n=406  s=0.312  mnar_exposed=False
+04:34:01 [bootstrap] 200 patient resamples over 10491 genes ...
+04:34:16     1000/10491 genes  15s
+04:34:21     2000/10491 genes  20s
+04:34:26     3000/10491 genes  25s
+04:34:31     4000/10491 genes  31s
+04:34:37     5000/10491 genes  36s
+04:34:42     6000/10491 genes  41s
+04:34:47     7000/10491 genes  46s
+04:34:52     8000/10491 genes  51s
+04:34:56     9000/10491 genes  56s
+04:35:02     10000/10491 genes  61s
+04:35:13     1000/10512 genes  10s
+04:35:14     2000/10512 genes  10s
+04:35:14     3000/10512 genes  10s
+04:35:14     4000/10512 genes  10s
+04:35:14     5000/10512 genes  10s
+04:35:14     6000/10512 genes  10s
+04:35:14     7000/10512 genes  10s
+04:35:14     8000/10512 genes  10s
+04:35:14     9000/10512 genes  10s
+04:35:14     10000/10512 genes  10s
+04:35:14 [arm operator] building 200 permutations ...
+04:35:14 [arm operator] WARNING: 1/100 patients unlabelled -> '_missing' stratum (sitepack convention)
+04:35:14 [arm operator] running null ({'n_levels': 28, 'n_fixed_singletons': 7, 'frac_permutable': 0.9299999999999999, 'level_sizes': [10, 10, 8, 8, 7, 5, 5, 4, 4, 4, 4, 4]})
+04:35:35     1000/10512 genes  21s
+04:35:46     2000/10512 genes  32s
+04:35:57     3000/10512 genes  43s
+04:36:08     4000/10512 genes  54s
+04:36:19     5000/10512 genes  65s
+04:36:30     6000/10512 genes  76s
+04:36:41     7000/10512 genes  87s
+04:36:52     8000/10512 genes  98s
+04:37:03     9000/10512 genes  109s
+04:37:14     10000/10512 genes  120s
+04:37:19 [arm none] building 200 permutations ...
+04:37:19 [arm none] running null ({'frac_permutable': 1.0, 'n_levels': 1})
+04:37:40     1000/10512 genes  20s
+04:37:50     2000/10512 genes  31s
+04:38:01     3000/10512 genes  41s
+04:38:11     4000/10512 genes  52s
+04:38:22     5000/10512 genes  62s
+04:38:33     6000/10512 genes  73s
+04:38:43     7000/10512 genes  84s
+04:38:54     8000/10512 genes  95s
+04:39:04     9000/10512 genes  105s
+04:39:15     10000/10512 genes  116s
+04:39:20 [arm plex] building 200 permutations ...
+04:39:20 [arm plex] running null ({'n_levels': 16, 'n_fixed_singletons': 0, 'frac_permutable': 1.0, 'level_sizes': [8, 8, 7, 7, 6, 6, 6, 6, 6, 6, 6, 6]})
+04:39:40     1000/10512 genes  20s
+04:39:51     2000/10512 genes  31s
+04:40:02     3000/10512 genes  41s
+04:40:12     4000/10512 genes  52s
+04:40:23     5000/10512 genes  63s
+04:40:34     6000/10512 genes  73s
+04:40:44     7000/10512 genes  84s
+04:40:55     8000/10512 genes  95s
+04:41:06     9000/10512 genes  105s
+04:41:16     10000/10512 genes  116s
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+C:\Users\<user>\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1617: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+04:41:29 [phi_op] D (and nested increment Delta_p) ...
+04:41:44     1000/2560 genes  15s
+04:41:50     2000/2560 genes  22s
+04:42:09     1000/2560 genes  16s
+04:42:16     2000/2560 genes  22s
+04:42:19     500/2560 genes  0s
+04:42:19     1000/2560 genes  0s
+04:42:20     1500/2560 genes  1s
+04:42:20     2000/2560 genes  1s
+04:42:20     2500/2560 genes  1s
+04:42:20 [variant spline] observed + 200 draws of the operator arm over 10491 genes ...
+04:42:29     1000/10491 genes  9s
+04:42:30     2000/10491 genes  9s
+04:42:30     3000/10491 genes  9s
+04:42:30     4000/10491 genes  9s
+04:42:30     5000/10491 genes  10s
+04:42:30     6000/10491 genes  10s
+04:42:30     7000/10491 genes  10s
+04:42:30     8000/10491 genes  10s
+04:42:30     9000/10491 genes  10s
+04:42:30     10000/10491 genes  10s
+04:42:45     1000/10491 genes  15s
+04:42:50     2000/10491 genes  20s
+04:42:55     3000/10491 genes  25s
+04:43:01     4000/10491 genes  31s
+04:43:06     5000/10491 genes  36s
+04:43:12     6000/10491 genes  41s
+04:43:17     7000/10491 genes  47s
+04:43:22     8000/10491 genes  52s
+04:43:28     9000/10491 genes  58s
+04:43:33     10000/10491 genes  63s
+04:43:45     1000/10491 genes  9s
+04:43:45     2000/10491 genes  9s
+04:43:45     3000/10491 genes  10s
+04:43:45     4000/10491 genes  10s
+04:43:45     5000/10491 genes  10s
+04:43:46     6000/10491 genes  10s
+04:43:46     7000/10491 genes  10s
+04:43:46     8000/10491 genes  10s
+04:43:46     9000/10491 genes  10s
+04:43:46     10000/10491 genes  10s
+04:43:46 [variant rnapc] observed + 200 draws of the operator arm over 10491 genes ...
+04:43:56     1000/10491 genes  10s
+04:43:56     2000/10491 genes  10s
+04:43:56     3000/10491 genes  10s
+04:43:56     4000/10491 genes  10s
+04:43:56     5000/10491 genes  10s
+04:43:56     6000/10491 genes  10s
+04:43:56     7000/10491 genes  10s
+04:43:56     8000/10491 genes  10s
+04:43:56     9000/10491 genes  10s
+04:43:56     10000/10491 genes  10s
+04:44:12     1000/10491 genes  15s
+04:44:17     2000/10491 genes  21s
+04:44:23     3000/10491 genes  26s
+04:44:29     4000/10491 genes  32s
+04:44:34     5000/10491 genes  38s
+04:44:40     6000/10491 genes  44s
+04:44:46     7000/10491 genes  50s
+04:44:52     8000/10491 genes  55s
+04:44:58     9000/10491 genes  61s
+04:45:04     10000/10491 genes  68s
+04:45:07 [variant purity] purity available for 96/100 patients
+04:45:07 [variant purity] observed + 200 draws of the operator arm over 10491 genes ...
+04:45:17     1000/10491 genes  10s
+04:45:17     2000/10491 genes  10s
+04:45:17     3000/10491 genes  10s
+04:45:17     4000/10491 genes  10s
+04:45:17     5000/10491 genes  10s
+04:45:17     6000/10491 genes  10s
+04:45:17     7000/10491 genes  10s
+04:45:17     8000/10491 genes  10s
+04:45:17     9000/10491 genes  10s
+04:45:17     10000/10491 genes  10s
+04:45:33     1000/10491 genes  16s
+04:45:39     2000/10491 genes  22s
+04:45:44     3000/10491 genes  27s
+04:45:50     4000/10491 genes  32s
+04:45:55     5000/10491 genes  37s
+04:46:00     6000/10491 genes  43s
+04:46:05     7000/10491 genes  48s
+04:46:11     8000/10491 genes  53s
+04:46:16     9000/10491 genes  59s
+04:46:21     10000/10491 genes  64s
+04:46:25 [reading numbers; primary arm = operator; numbers only, no verdict]
+                   set  n_genes  mnar_exposed     s  kappa  lambda_lo lambda_lo_source  lambda_hi  z_D_minus_gate   D_z  Nc_z  Nc_z_unres  theta_pc  theta_pc_ci_lo  theta_pc_ci_hi  theta_noise_min  margin_theta_pc_minus_tnm  margin_ci_hi_minus_tnm  r1_band_limit  margin_abs_theta_pc_minus_band  phi_op_D  Wm_z
+                   all     8543         False   NaN  1.000      0.202              icc      0.996           5.074 8.074 3.849       2.385     0.130           0.006           0.322            0.253                     -0.123                   0.069          0.050                           0.080     0.424 6.512
+            pinned_sig     2418         False 0.283  0.550      0.165              icc      0.997           6.122 9.122 4.140       1.701     0.078           0.034           0.192            0.109                     -0.031                   0.083          0.050                           0.028     0.483 6.360
+                   ecm      199         False   NaN  1.000      0.423              icc      0.998           2.547 5.547 3.670       2.823     0.330           0.057           1.036            0.732                     -0.402                   0.305          0.050                           0.280     0.467 6.676
+        pinned_sig&ecm       49         False 0.246  0.550      0.366              icc      0.998           2.920 5.920 3.138      -0.152     0.152          -0.041           0.720            0.317                     -0.165                   0.403          0.100                           0.052     0.579 7.344
+               folding      178         False   NaN  1.000      0.001              icc      0.997           4.243 7.243 1.778       2.238     0.073          -0.022           0.258            0.001                      0.072                   0.257          0.050                           0.023     0.455 6.826
+    pinned_sig&folding       82         False 0.461  0.550      0.019              icc      0.998           4.169 7.169 1.172       2.676     0.045          -0.035           0.178            0.011                      0.034                   0.167          0.100                          -0.055     0.505 6.694
+                   ptm      951         False   NaN  1.000      0.169              icc      0.996           5.004 8.004 3.154       2.478     0.096          -0.000           0.233            0.204                     -0.108                   0.029          0.050                           0.046     0.440 5.804
+        pinned_sig&ptm      329         False 0.346  0.550      0.118              icc      0.997           5.194 8.194 3.299       2.466     0.065           0.032           0.153            0.074                     -0.008                   0.079          0.050                           0.015     0.482 5.689
+             secretion     1440         False   NaN  1.000      0.163              icc      0.997           4.252 7.252 3.008       3.017     0.099          -0.014           0.271            0.195                     -0.096                   0.076          0.050                           0.049     0.455 7.220
+  pinned_sig&secretion      527         False 0.365  0.550      0.137              icc      0.997           4.797 7.797 1.814       2.263     0.049          -0.008           0.155            0.087                     -0.038                   0.068          0.050                          -0.001     0.501 6.612
+              splicing      232         False   NaN  1.000      0.001              icc      0.996           4.762 7.762 1.729       2.373     0.080          -0.039           0.214            0.001                      0.079                   0.213          0.050                           0.030     0.365 4.501
+   pinned_sig&splicing      113         False 0.487  0.550      0.001              icc      0.996           5.757 8.757 1.435       2.210     0.055          -0.012           0.147            0.001                      0.055                   0.146          0.050                           0.005     0.399 4.546
+           translation     1301         False   NaN  1.000      0.066              icc      0.996           4.944 7.944 2.838       2.580     0.088           0.003           0.226            0.070                      0.018                   0.156          0.050                           0.038     0.411 5.673
+pinned_sig&translation      406         False 0.312  0.550      0.050              icc      0.997           5.688 8.688 2.808       2.661     0.059           0.026           0.133            0.029                      0.030                   0.104          0.050                           0.009     0.464 5.491
+04:46:25 [done] wrote export/ucec/local_theta_rerun1
+=== ucec rerun1 end 2026-10-09T20:46:25Z exit=0

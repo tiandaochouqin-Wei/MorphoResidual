@@ -1,0 +1,111 @@
+{
+ "mode": "real",
+ "cohort": "luad",
+ "started": "2026-10-10 04:47:10",
+ "args": {
+  "inputs": [
+   "export/luad/inputs_luad.npz"
+  ],
+  "out": null,
+  "repro_only": false,
+  "repro_pvals": 0,
+  "check_pca": false,
+  "check_icc": false,
+  "synthetic": false,
+  "strata": "operator,none,plex",
+  "primary_arm": "operator",
+  "B": 200,
+  "seed": 20261007,
+  "boot": 200,
+  "boot_seed": 20261008,
+  "secondary": false,
+  "sets_file": "side/families_reactome2022.tsv",
+  "variants": "spline,rnapc,purity",
+  "purity_file": "side/purity_luad.tsv",
+  "no_diag": false,
+  "phi_delta": true,
+  "confirmatory": false,
+  "lambda_lo_transfer": 0.1651,
+  "lambda_lo_transfer_tertiles": "0.1408,0.1736,0.1857",
+  "save_null": true,
+  "max_genes": 0,
+  "workers": 8
+ },
+ "primary_arm": "operator",
+ "arms": [
+  "operator",
+  "none",
+  "plex"
+ ],
+ "sha256_inputs": {
+  "export/luad/inputs_luad.npz": "b64cdf3b31717a32e0d42c42f3f1dde74786d5598008f0d214297a71adaba095"
+ },
+ "sha256_script": "a288c6fc577b51de00b1222e1209a72a1dadeb5fc4c27775d75378bd67fc8c9f",
+ "sha256_kernel": "6c95cd119d28e811e09967946e9f191c69f07f54f653991917e817ef99ec2734",
+ "sha256_side": {
+  "D:\\claude\\pajinsen\\MorphoResidual_paper\\review\\MEAS_ERROR_2026-10-08\\side\\families_reactome2022.tsv": "8f4f69ea0cb33003b52cf4e0dfe607f10abc821e83a2ffa4d931b9adc0b0dac5",
+  "D:\\claude\\pajinsen\\MorphoResidual_paper\\review\\MEAS_ERROR_2026-10-08\\side\\purity_luad.tsv": "6cf57901974b0671ae1a246d9becf171d5a32de8163a92de930cee5f8cdfcce5"
+ },
+ "n": 105,
+ "G": 10724,
+ "repro_published": {
+  "n_compared": 10724,
+  "n_missing_from_published": 0,
+  "max_abs_diff": {
+   "n": 0.0,
+   "r2_rna": 4.440892098500626e-16,
+   "r2_both": 2.1316282072803006e-14,
+   "incremental_r2": 2.1316282072803006e-14
+  },
+  "worst": 2.1316282072803006e-14,
+  "ok": true,
+  "verdict": "REPRODUCES the published per-gene results (<=1e-10)"
+ },
+ "batched_vs_reference_max_abs_diff": 1.1379786002407855e-15,
+ "nested_increment_obs_vs_published": 1.6653345369377348e-15,
+ "arms_info": {
+  "operator": {
+   "n_levels": 34,
+   "n_fixed_singletons": 14,
+   "frac_permutable": 0.8666666666666667,
+   "level_sizes": [
+    14,
+    12,
+    10,
+    9,
+    5,
+    5,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  "none": {
+   "frac_permutable": 1.0,
+   "n_levels": 1
+  },
+  "plex": {
+   "n_levels": 25,
+   "n_fixed_singletons": 0,
+   "frac_permutable": 1.0,
+   "level_sizes": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  }
+ },
+ "finished": "2026-10-10 05:00:52"
+}

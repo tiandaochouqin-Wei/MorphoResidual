@@ -1,0 +1,8 @@
+# lambda_lo transfer for LUAD, GBM and PDAC (POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md section 5; Amendment 1 run order step 3)
+# written 2026-10-09T20:46:59Z; column median_icc (does not depend on the arm); value = minimum of the available cohorts, four decimals, clipped to [0.001, 0.99]; both cohorts contributed
+# source CCRCC: export/ccrcc/local_theta/theta_ccrcc_reading.csv sha256 cd225094f01373c50b7450f9d0cecfc35ec48dd52bb95e450919e394cb57a56d
+# source UCEC:  export/ucec/local_theta_rerun1/theta_ucec_reading.csv sha256 1c1e53f02891892cd3c4d2e3cc8e904d536ffdc2ba87eca026944e33deb1e47e
+lambda_T 0.1651  # pinned_sig: CCRCC 0.6930, UCEC 0.1651 (median_icc 0.693031 / 0.165057); minimum = UCEC
+tertile1 0.1408  # pinned_sig|depthT1: CCRCC 0.6762, UCEC 0.1408 (0.676194 / 0.140786)
+tertile2 0.1736  # pinned_sig|depthT2: CCRCC 0.6964, UCEC 0.1736 (0.696399 / 0.173556)
+tertile3 0.1857  # pinned_sig|depthT3: CCRCC 0.7014, UCEC 0.1857 (0.701393 / 0.185678)
