@@ -1,0 +1,92 @@
+Thu Oct  8 13:06:36 UTC 2026
+mn02.hpc.hzau
+a08ade7a73c79466d05d6691797aa9f0bf7db35325c5a02fd0e247afa3091acb  brca_tested_genes.py
+0db267479eb465c7cf016537b0b18b55b458f7e380968c56553278b1d19a68c5  cptac2_replicate.py
+ed6e3f1caa90b07d377a2a6c01b4257938c2befbaba2e98a9cfd2d7beffe4048  cptac2_residual.py
+0361f660a9a750d9c0b83f0050cd75f4a661e23368a1a00d7f7eac37da0ca893  cptac2_residual_v1.py
+a858ac1950d96c4f11ee08b23edea1867f80e0bff5134a63c6a53539bd359014  extract_phikon.py
+588a839c760b829aaaf7ce6af3d3673a2a80427e7996bdd3c4093bfdb70176c8  frozen_manifest_brca_ts_slides.txt
+c75deefa3d298312041794608347583565a41f014bbaaebc198e06ef6c50fb62  lsf_cptac2_ts_extract.sh
+680b5b3ee5e3632387373d37bbc0f4bf078816eb82085efd0cf8a87ab08f0638  lsf_cptac2_ts_residual.sh
+abad85757a51dba1490de7a75182312e9aaacbfab882ea21c348890e1d7a3694  POSTHOC_BRCA_TS_PRESPEC_2026-10-08.md.sha256
+d4b16b302d97009f0b73d1e843e5c6aa198d5546455d04f1bbe3cf179a86211d  step5b_checks.sh
+124f72ba78ee9dccea77dc98d28a878562105ac67306762b4f2047145044d0f9  ts_slide_qc.py
+cptac2_replicate.py: OK
+cptac2_residual.py: OK
+extract_phikon.py: OK
+ts_slide_qc.py: OK
+brca_tested_genes.py: OK
+lsf_cptac2_ts_extract.sh: OK
+lsf_cptac2_ts_residual.sh: OK
+frozen_manifest_brca_ts_slides.txt: OK
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts
+drwxr-xr-x 2 fjhui SXJin   16384 2026-09-11 14:24:00.648445000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon
+drwxr-xr-x 2 fjhui SXJin   16384 2026-09-14 08:18:05.650959000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense
+drwxr-xr-x 2 fjhui SXJin   32768 2026-10-08 13:21:19.054419000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts
+-rw-r--r-- 1 fjhui SXJin 1098587 2026-09-14 14:35:18.242135000 +0800 /public/home/fjhui/ZW/cptac2_brca/results/brca_protein_results.csv
+Thu Oct  8 13:07:00 UTC 2026
+mn02.hpc.hzau
+a08ade7a73c79466d05d6691797aa9f0bf7db35325c5a02fd0e247afa3091acb  brca_tested_genes.py
+0db267479eb465c7cf016537b0b18b55b458f7e380968c56553278b1d19a68c5  cptac2_replicate.py
+ed6e3f1caa90b07d377a2a6c01b4257938c2befbaba2e98a9cfd2d7beffe4048  cptac2_residual.py
+0361f660a9a750d9c0b83f0050cd75f4a661e23368a1a00d7f7eac37da0ca893  cptac2_residual_v1.py
+a858ac1950d96c4f11ee08b23edea1867f80e0bff5134a63c6a53539bd359014  extract_phikon.py
+588a839c760b829aaaf7ce6af3d3673a2a80427e7996bdd3c4093bfdb70176c8  frozen_manifest_brca_ts_slides.txt
+c75deefa3d298312041794608347583565a41f014bbaaebc198e06ef6c50fb62  lsf_cptac2_ts_extract.sh
+680b5b3ee5e3632387373d37bbc0f4bf078816eb82085efd0cf8a87ab08f0638  lsf_cptac2_ts_residual.sh
+abad85757a51dba1490de7a75182312e9aaacbfab882ea21c348890e1d7a3694  POSTHOC_BRCA_TS_PRESPEC_2026-10-08.md.sha256
+d4b16b302d97009f0b73d1e843e5c6aa198d5546455d04f1bbe3cf179a86211d  step5b_checks.sh
+124f72ba78ee9dccea77dc98d28a878562105ac67306762b4f2047145044d0f9  ts_slide_qc.py
+cptac2_replicate.py: OK
+cptac2_residual.py: OK
+extract_phikon.py: OK
+ts_slide_qc.py: OK
+brca_tested_genes.py: OK
+lsf_cptac2_ts_extract.sh: OK
+lsf_cptac2_ts_residual.sh: OK
+frozen_manifest_brca_ts_slides.txt: OK
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts
+drwxr-xr-x 2 fjhui SXJin   16384 2026-09-11 14:24:00.648445000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon
+drwxr-xr-x 2 fjhui SXJin   16384 2026-09-14 08:18:05.650959000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense
+drwxr-xr-x 2 fjhui SXJin   32768 2026-10-08 13:21:19.054419000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts
+-rw-r--r-- 1 fjhui SXJin 1098587 2026-09-14 14:35:18.242135000 +0800 /public/home/fjhui/ZW/cptac2_brca/results/brca_protein_results.csv
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon TCGA-A2-A0CM-01Z-00-DX1.AC49 n_tiles 8041 x-step 512
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon TCGA-A2-A0D0-01Z-00-DX1.4FF6 n_tiles 10925 x-step 512
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon TCGA-A2-A0EQ-01Z-00-DX1.5FCD n_tiles 10974 x-step 512
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon TCGA-A2-A0EV-01Z-00-DX1.EA8C n_tiles 17938 x-step 512
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon TCGA-A2-A0EX-01Z-00-DX1.F4C2 n_tiles 9253 x-step 512
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense TCGA-A2-A0CM-01Z-00-DX1.AC49 n_tiles 32146 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense TCGA-A2-A0D0-01Z-00-DX1.4FF6 n_tiles 43815 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense TCGA-A2-A0EQ-01Z-00-DX1.5FCD n_tiles 44021 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense TCGA-A2-A0EV-01Z-00-DX1.EA8C n_tiles 71637 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense TCGA-A2-A0EX-01Z-00-DX1.F4C2 n_tiles 37066 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts TCGA-A2-A0CM-01A-03-BSC.c240 n_tiles 8484 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts TCGA-A2-A0CM-01A-03-TSC.7f2c n_tiles 7481 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts TCGA-A2-A0D0-01A-01-BSA.de36 n_tiles 9156 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts TCGA-A2-A0D0-01A-01-TSA.2310 n_tiles 8831 x-step 256
+/public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts TCGA-A2-A0EQ-01A-01-BSA.fa7a n_tiles 15779 x-step 256
+-rw-r--r-- 1 fjhui SXJin  1378 2026-09-11 06:23:01.682541719 +0800 /public/home/fjhui/ZW/cptac2_brca/rna.log
+-rw-r--r-- 1 fjhui SXJin  1301 2026-09-11 10:54:56.965486543 +0800 /public/home/fjhui/ZW/cptac2_brca/sl.log
+-rw-r--r-- 1 fjhui SXJin  2239 2026-10-08 09:04:53.906273702 +0800 /public/home/fjhui/ZW/cptac2_brca/sl_ts.log
+-rw-r--r-- 1 fjhui SXJin 23236 2026-10-08 13:13:26.641375748 +0800 /public/home/fjhui/ZW/cptac2_brca/ts_ext0.log
+-rw-r--r-- 1 fjhui SXJin 23152 2026-10-08 13:21:20.186827991 +0800 /public/home/fjhui/ZW/cptac2_brca/ts_ext1.log
+-rw-r--r-- 1 fjhui SXJin  2910 2026-10-08 09:22:43.794875806 +0800 /public/home/fjhui/ZW/cptac2_brca/ts_smoke.log
+6:  protein_<short>.csv   rna_case_file.tsv   rna/   emb_phikon/*.pt (or MORPHO_WSI_EMB_DIR)
+7:Run:  python -u cptac2_residual.py --project TCGA-BRCA
+54:    EMB = os.environ.get("MORPHO_WSI_EMB_DIR", f"{ROOT}/emb_phikon")
+121: sha256sum /public/home/fjhui/ZW/scripts/cptac2_replicate.py /public/home/fjhui/ZW/scripts/cptac2_residual.py /public/home/fjhui/ZW/scripts/cptac2_enrichment.py
+130:cd /public/home/fjhui/ZW/scripts && bsub -q smp2 -o cptac2_brca_residual.out "python cptac2_residual.py --project TCGA-BRCA"
+132:cd /public/home/fjhui/ZW/scripts && bsub -q smp -o cptac2_brca_residual.out "python cptac2_residual.py --project TCGA-BRCA"
+135:echo "MORPHO_WSI_EMB_DIR=$MORPHO_WSI_EMB_DIR"
+159:cd /public/home/fjhui/ZW/scripts && bsub -q interactive -gpu "num=1" -o brca_phikon.out "python extract_phikon.py --raw-dir /public/home/fjhui/ZW/cptac2_brca/slides --out-dir /public/home/fjhui/ZW/cptac2_brca/emb_phikon --stride 512"
+180:cd /public/home/fjhui/ZW/scripts && bsub -q interactive -gpu "num=1" -o brca_phikon_dense.out "python extract_phikon.py --raw-dir /public/home/fjhui/ZW/cptac2_brca/slides --out-dir /public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense --stride 0"
+184:cd /public/home/fjhui/ZW/scripts && bsub -q smp -o cptac2_brca_residual_dense.out "MORPHO_WSI_EMB_DIR=/public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense python cptac2_residual.py --project TCGA-BRCA"
+1e12432f4a3aedf7b5091cb57c66e224c0ac2e3c85054dd3f8787ff77f2a8fda  -
+4c616526b6e03a3dbd8ab6f40f85d524af562b118dfb4341594249a7b0ef273c  -
+HOST=s003 (host of the published dense DX job; Amendment 1)
+2026-10-09T09:52:15Z HOST CHANGE before the dx job ran: jobs 75740151/75740153/75740154 never started on s003 (PEND ~15 h; every smp host 191/192 slots used or closed) and were killed while pending, no output; queues test and parallel are closed to this account; new HOST=c04n01 via queue high
+2026-10-09T09:56:13Z c04n01 cannot run jobs for this account (LSF: Unable to determine user account for execution); jobs 75742024/75742025/75742026 killed while pending, no output; that choice is void and the pinned host stays s003, the host of the published dense DX job. Resubmitted with one slot each (no -n), as the published job was submitted, because no smp host has 8 free slots; the wrapper fixes the thread count, so the computation does not depend on -n

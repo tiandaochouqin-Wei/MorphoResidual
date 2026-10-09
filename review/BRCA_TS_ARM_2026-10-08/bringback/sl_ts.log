@@ -1,0 +1,22 @@
+nohup: ignoring input
+189 files -> /public/home/fjhui/ZW/cptac2_brca/slides_ts (4 workers)
+[10/189] done=10 skip=0 fail=0 3.4GB 8min  done: TCGA-BH-A0DG-01A-02-MSB.46920fd1-be28-491c-87cd-01ae77283a76.svs
+[20/189] done=20 skip=0 fail=0 6.4GB 15min  done: TCGA-AO-A0JE-01A-01-BSA.8f04fdde-1427-45f9-bcd9-4449d501c109.svs
+[30/189] done=30 skip=0 fail=0 9.9GB 22min  done: TCGA-BH-A0E1-01A-01-TSA.01da1142-7d58-419d-998b-acd3be403d31.svs
+[40/189] done=40 skip=0 fail=0 12.8GB 28min  done: TCGA-BH-A0C7-01B-01-BSA.eff3406d-2af0-435f-8aa9-fd77dbba35dd.svs
+[50/189] done=50 skip=0 fail=0 15.3GB 33min  done: TCGA-D8-A142-01A-01-TS1.c9a5ce5f-59a8-4e02-8168-269ec044dbd9.svs
+[60/189] done=60 skip=0 fail=0 18.5GB 40min  done: TCGA-BH-A0C7-01B-01-TSA.deec957f-1264-4169-945e-24d4bd1988cd.svs
+[70/189] done=70 skip=0 fail=0 21.2GB 46min  done: TCGA-AN-A0FK-01A-01-BSA.532b125c-98bb-44d7-a041-fb2506b70e26.svs
+[80/189] done=80 skip=0 fail=0 23.8GB 51min  done: TCGA-BH-A0HK-01A-01-BSA.9503c4b2-4f84-4b5e-80a1-2e29605606b2.svs
+[90/189] done=90 skip=0 fail=0 26.0GB 56min  done: TCGA-A2-A0YM-01A-01-BSA.26fc4cb8-24ef-494a-9334-db3a9099199f.svs
+[100/189] done=100 skip=0 fail=0 29.8GB 65min  done: TCGA-A2-A0YI-01A-03-BSC.29006cd1-80d6-4b68-a760-ba91a34b9942.svs
+[110/189] done=110 skip=0 fail=0 33.6GB 72min  done: TCGA-A2-A0EQ-01A-01-BSA.fa7a323e-2939-4941-a56f-3b7352b16050.svs
+[120/189] done=120 skip=0 fail=0 36.7GB 78min  done: TCGA-A7-A0CE-01A-01-TS1.3025a9c8-a7e4-4048-bcf0-a28720c0f96b.svs
+[130/189] done=130 skip=0 fail=0 40.5GB 85min  done: TCGA-BH-A0C0-01A-02-TSB.b5d6fdae-cc88-4ded-a599-f778187bdc37.svs
+[140/189] done=140 skip=0 fail=0 43.7GB 94min  done: TCGA-AR-A1AV-01A-02-TSB.8aac8e77-5af5-4958-86e8-5883c88630fb.svs
+[150/189] done=150 skip=0 fail=0 47.5GB 101min  done: TCGA-A8-A08Z-01A-01-BS1.1fb87e93-fd85-4c69-a7e0-a8e3d889851a.svs
+[160/189] done=160 skip=0 fail=0 50.1GB 106min  done: TCGA-BH-A0E0-01A-01-BSA.b224536e-7d49-421d-a3bb-815fc01556a9.svs
+[170/189] done=170 skip=0 fail=0 52.9GB 113min  done: TCGA-AR-A0TT-01A-03-BSC.06e9fb5e-1c6e-4778-9c52-d026628f39c7.svs
+[180/189] done=180 skip=0 fail=0 56.6GB 121min  done: TCGA-AR-A0TR-01A-01-BSA.f1455ed0-393b-495c-9618-bbe3088baf4d.svs
+
+ALL DONE. done=189 skip=0 fail=0 59.3 GB

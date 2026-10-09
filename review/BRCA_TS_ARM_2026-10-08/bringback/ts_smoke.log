@@ -1,0 +1,55 @@
+Sender: LSF System <lsfadmin@gpu02>
+Subject: Job 75737707: <bash /public/home/fjhui/ZW/scripts_ts_arm/lsf_cptac2_ts_extract.sh 0/1 --limit 3> in cluster <hzauhpc> Done
+
+Job <bash /public/home/fjhui/ZW/scripts_ts_arm/lsf_cptac2_ts_extract.sh 0/1 --limit 3> was submitted from host <mn02> by user <fjhui> in cluster <hzauhpc> at Thu Oct  8 09:14:45 2026
+Job was executed on host(s) <gpu02>, in queue <interactive>, as user <fjhui> in cluster <hzauhpc> at Thu Oct  8 09:14:45 2026
+</public/home/fjhui> was used as the home directory.
+</public/home/fjhui/ZW/cptac2_brca/slides_ts> was used as the working directory.
+Started at Thu Oct  8 09:14:45 2026
+Terminated at Thu Oct  8 09:22:43 2026
+Results reported at Thu Oct  8 09:22:43 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /public/home/fjhui/ZW/scripts_ts_arm/lsf_cptac2_ts_extract.sh 0/1 --limit 3
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   399.25 sec.
+    Max Memory :                                 625 MB
+    Average Memory :                             538.35 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                10
+    Run time :                                   478 sec.
+    Turnaround time :                            478 sec.
+
+The output (if any) follows:
+
+=== job start: host=gpu02 date=Thu Oct  8 09:14:45 CST 2026 shard=0/1 args=--limit 3 ===
+GPU 0: NVIDIA L20 (UUID: GPU-0de280e4-0c4c-247e-ae0a-01f5358536b7)
+device=cuda
+manifest /public/home/fjhui/ZW/cptac2_brca/manifest_brca_ts_slides.txt: 189 listed, 189 present, 0 present-but-unlisted (ignored), 0 listed-but-missing
+found 3 slides under /public/home/fjhui/ZW/cptac2_brca/slides_ts (limit 3) shard 0/1
+[1/3] embedding TCGA-A2-A0CM-01A-03-BSC.c240a44d-0583-496e-bdef-5cdb5e0ee167 ...
+  saved 8484 tiles x 768d -> /public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts/TCGA-A2-A0CM-01A-03-BSC.c240a44d-0583-496e-bdef-5cdb5e0ee167.pt
+[2/3] embedding TCGA-A2-A0CM-01A-03-TSC.7f2cc1ed-793e-4717-92fd-da1aa4424aed ...
+  saved 7481 tiles x 768d -> /public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts/TCGA-A2-A0CM-01A-03-TSC.7f2cc1ed-793e-4717-92fd-da1aa4424aed.pt
+[3/3] embedding TCGA-A2-A0D0-01A-01-BSA.de3699b8-cd5b-4bac-af17-b63d447c55e7 ...
+  saved 9156 tiles x 768d -> /public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts/TCGA-A2-A0D0-01A-01-BSA.de3699b8-cd5b-4bac-af17-b63d447c55e7.pt
+
+done. ok=3 fail=0 out_dir=/public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts
+=== job end rc=0 date=Thu Oct  8 09:22:43 CST 2026 ===
+
+
+PS:
+
+Read file </public/home/fjhui/ZW/cptac2_brca/ts_smoke.err> for stderr output of this job.
+

@@ -1,0 +1,24 @@
+# invocation 1, start 2026-10-09T18:54:20Z, cwd /d/claude/pajinsen/MorphoResidual_paper/review/BRCA_TS_ARM_2026-10-08
+sidecar verified: 39 files
+DX reproduction gate: exact (max|delta| 8.88e-16; summary identical: True; published files ok: True [])
+arm ts: 102 cases (main); missing vs dx: []
+arm ts_tile: 102 cases (main); missing vs dx: []
+arm dx: 102 cases (main); missing vs dx: []
+    arm    role    set arm_status dx_gate  n_selected  n_background  coverage_selected  auc_obs  auc_null_mean  auc_null_sd    p_auc  p_auc_holm_secondary  rho_obs    p_rho
+     ts PRIMARY pub_k3       main                 766          7307             0.9858 0.473303       0.497968     0.027468 0.819181                   NaN 0.087731 0.741259
+     ts      S1 pub_k4       main                 167          7906             0.9824 0.458572       0.491616     0.039045 0.789211                   1.0 0.087731 0.741259
+     ts      S2 pub_k2       main                2357          5716             0.9809 0.500193       0.504687     0.019523 0.592408                   1.0 0.087731 0.741259
+     ts      S3  op_k2       main                 458          7615             0.9913 0.519900       0.508853     0.027524 0.343656                   1.0 0.141512 0.720280
+     ts      S4 phi_k3       main                 638          7435             0.9861 0.490010       0.499638     0.029682 0.624376                   1.0 0.099899 0.651349
+     dx PRIMARY pub_k3       main   exact         766          7307             0.9858 0.517188       0.497989     0.026957 0.233766                   NaN 0.137520 0.268731
+     dx      S1 pub_k4       main   exact         167          7906             0.9824 0.515683       0.491423     0.038698 0.266733                   1.0 0.137520 0.268731
+     dx      S2 pub_k2       main   exact        2357          5716             0.9809 0.517769       0.504904     0.019181 0.250749                   1.0 0.137520 0.268731
+     dx      S3  op_k2       main   exact         458          7615             0.9913 0.490738       0.510824     0.027418 0.755245                   1.0 0.154500 0.610390
+     dx      S4 phi_k3       main   exact         638          7435             0.9861 0.503214       0.500349     0.029002 0.445554                   1.0 0.137215 0.299700
+ts_tile PRIMARY pub_k3       main                 766          7307             0.9858 0.478134       0.498340     0.027504 0.763237                   NaN 0.098541 0.643357
+ts_tile      S1 pub_k4       main                 167          7906             0.9824 0.468262       0.491968     0.039040 0.715285                   1.0 0.098541 0.643357
+ts_tile      S2 pub_k2       main                2357          5716             0.9809 0.505032       0.504926     0.019534 0.499500                   1.0 0.098541 0.643357
+ts_tile      S3  op_k2       main                 458          7615             0.9913 0.526881       0.508697     0.027555 0.261738                   1.0 0.153314 0.588412
+ts_tile      S4 phi_k3       main                 638          7435             0.9861 0.498860       0.499951     0.029608 0.529471                   1.0 0.114983 0.507493
+wrote D:\claude\pajinsen\MorphoResidual_paper\review\BRCA_TS_ARM_2026-10-08\setlevel\results
+# exit status 0, end 2026-10-09T18:54:34Z

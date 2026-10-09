@@ -1,0 +1,52 @@
+Thu Oct  8 15:48:31 UTC 2026
+mn02.hpc.hzau
+## M4 lines
+14:cptac2_replicate.py: OK
+15:cptac2_residual.py: OK
+16:extract_phikon.py: OK
+17:ts_slide_qc.py: OK
+18:brca_tested_genes.py: OK
+19:lsf_cptac2_ts_extract.sh: OK
+20:lsf_cptac2_ts_residual.sh: OK
+21:frozen_manifest_brca_ts_slides.txt: OK
+42:cptac2_replicate.py: OK
+43:cptac2_residual.py: OK
+44:extract_phikon.py: OK
+45:ts_slide_qc.py: OK
+46:brca_tested_genes.py: OK
+47:lsf_cptac2_ts_extract.sh: OK
+48:lsf_cptac2_ts_residual.sh: OK
+49:frozen_manifest_brca_ts_slides.txt: OK
+## files
+-rw-r--r-- 1 fjhui SXJin 1.1M 2026-09-14 14:35:18.242135000 +0800 /public/home/fjhui/ZW/cptac2_brca/results/brca_protein_results.csv
+-rw-r--r-- 1 fjhui SXJin 1.1M 2026-09-14 10:13:46.803221000 +0800 /public/home/fjhui/ZW/cptac2_brca/results/brca_protein_results_sparse.csv
+-rw-r--r-- 1 fjhui SXJin  123 2026-09-14 14:35:18.295738000 +0800 /public/home/fjhui/ZW/cptac2_brca/results/summary_brca.csv
+-rw-r--r-- 1 fjhui SXJin  123 2026-09-14 10:13:46.808603000 +0800 /public/home/fjhui/ZW/cptac2_brca/results/summary_brca_sparse.csv
+-rw-r--r-- 1 fjhui SXJin 3.1K 2026-09-14 14:35:27.624103000 +0800 /public/home/fjhui/ZW/scripts/cptac2_brca_residual_dense.out
+-rw-r--r-- 1 fjhui SXJin 4.6K 2026-09-11 23:44:51.515202463 +0800 /public/home/fjhui/ZW/scripts/cptac2_brca_residual.out
+-rw-r--r-- 1 fjhui SXJin 6.1K 2026-09-11 05:56:19.629526860 +0800 /public/home/fjhui/ZW/scripts/cptac2_residual.py
+drwxr-xr-x 2 fjhui SXJin 16K 2026-09-11 14:24:00.648445000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon/
+drwxr-xr-x 2 fjhui SXJin 16K 2026-09-14 08:18:05.650959000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon_dense/
+drwxr-xr-x 2 fjhui SXJin 32K 2026-10-08 13:21:19.054419000 +0800 /public/home/fjhui/ZW/cptac2_brca/emb_phikon_ts/
+## LSF reports
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual.out:8:Started at Fri Sep 11 06:32:29 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual.out:9:Terminated at Fri Sep 11 06:33:42 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual.out:10:Results reported at Fri Sep 11 06:33:42 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual.out:19:Exited with exit code 1.
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual.out:44:Started at Fri Sep 11 20:23:42 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual.out:45:Terminated at Fri Sep 11 23:44:51 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual.out:46:Results reported at Fri Sep 11 23:44:51 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual.out:55:Successfully completed.
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual_dense.out:8:Started at Mon Sep 14 10:13:09 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual_dense.out:9:Terminated at Mon Sep 14 14:35:27 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual_dense.out:10:Results reported at Mon Sep 14 14:35:27 2026
+/public/home/fjhui/ZW/scripts/cptac2_brca_residual_dense.out:19:Successfully completed.
+## summaries
+project,n_cases,tested,significant,pct_sig,median_incr_sig,negative_frac_all
+TCGA-BRCA,102,10031,0,0.0,,0.9911275047353205
+project,n_cases,tested,significant,pct_sig,median_incr_sig,negative_frac_all
+TCGA-BRCA,102,10031,0,0.0,,0.9912271956933506
+## pt counts
+107
+107
+SAME_STEMS

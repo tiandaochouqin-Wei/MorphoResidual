@@ -1,0 +1,2 @@
+model name	: Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz
+1.26.4 1.6.1 2.3.1+cu121
