@@ -43,7 +43,7 @@ A("\\begin{table}[p]")
 A("\\centering")
 A("\\captionsetup{font={scriptsize,stretch=1.0}}")
 A("\\caption{\\textbf{Post hoc re-reads of the UCEC confirmatory test with alternative discovery "
-  "selection sets.} Specified on 8 October 2026 in a dated file released publicly before the single run "
+  "selection sets.} Specified on 7 October 2026 (UTC) in a dated file released publicly before the single run "
   "(Supplementary Note~\\ref{snote:c1posthoc}); post hoc, and reported whatever the result. Each row "
   "re-reads the published confirmatory increments ($138$ patients) with a different discovery selection "
   "set, against every other usable confirmatory gene tested in that discovery analysis. "

@@ -1,0 +1,88 @@
+Sender: LSF System <lsfadmin@s006>
+Subject: Job 75737663: <bash lsf_c1_ucec_plex_reread.sh --perms 5 --tag smoke3> in cluster <hzauhpc> Done
+
+Job <bash lsf_c1_ucec_plex_reread.sh --perms 5 --tag smoke3> was submitted from host <mn02> by user <fjhui> in cluster <hzauhpc> at Thu Oct  8 07:19:41 2026
+Job was executed on host(s) <8*s006>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Thu Oct  8 07:19:42 2026
+</public/home/fjhui> was used as the home directory.
+</public/home/fjhui/ZW/scripts> was used as the working directory.
+Started at Thu Oct  8 07:19:42 2026
+Terminated at Thu Oct  8 07:21:49 2026
+Results reported at Thu Oct  8 07:21:49 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash lsf_c1_ucec_plex_reread.sh --perms 5 --tag smoke3
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   258.85 sec.
+    Max Memory :                                 1802 MB
+    Average Memory :                             1157.45 MB
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               8198.00 MB
+    Max Swap :                                   -
+    Max Processes :                              12
+    Max Threads :                                17
+    Run time :                                   131 sec.
+    Turnaround time :                            128 sec.
+
+The output (if any) follows:
+
+environment OK: MORPHO_ROOT and MORPHO_OUT both confirmed under the ucec_c1 tree.
+=== job start: host=s006 date=Thu Oct  8 07:19:42 CST 2026 cores=1 workers=8 args=--perms 5 --tag smoke3 ===
+==============================================================================
+C1-UCEC PLEX-STRATIFIED RE-READ -- POST HOC (new attempt)
+  governed by review/POSTHOC_UCEC_C1_PLEX_PRESPEC_2026-10-08.md; does not change the published C1-UCEC reading or the D4 re-read
+  mode=SMOKE (B=5) host=s006 lsf_job=75737663 start=2026-10-07T23:19:44Z python=3.9.23
+==============================================================================
+pre-flight hashes:
+  hash OK: plex map = 4fe057a9ac57... (/public/home/fjhui/ZW/scripts/pinned/case_to_plex_ucec_c1.tsv)
+  hash OK: case ids = d777fc88c1dd... (/public/home/fjhui/ZW/scripts/pinned/c1_case_ids_ucec.txt)
+  hash OK: discovery results = 100d8f8581c7... (/public/home/fjhui/ZW/scripts/pinned/ucec/residual_results_tumoronly.csv)
+  hash OK: published c1_ucec_result.json = 53fcb8613846... (/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_result.json)
+  recorded (not asserted; the reproduction gate is their integrity check): protein bef91d54f508..., rna manifest 2ab8c9fffcb7..., slide map a44ffd6e6aeb...
+  this script sha256 = 339c2fd6995e18854b102c27e628eb26a6ef1710ab2f830d232628e85208cf51
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+=== resolved paths ===
+  MORPHO_ROOT         : /public/home/fjhui/ZW/ucec_c1
+  MORPHO_RNA_MANIFEST : /public/home/fjhui/ZW/ucec_c1/manifest_rna_tumor_ucec_c1.tsv
+  MORPHO_SLIDE_MAP    : /public/home/fjhui/ZW/scripts/pinned/slide_type_map_ucec_c1.tsv
+  MORPHO_WSI_EMB_DIR  : /public/home/fjhui/ZW/ucec_c1/WSI/emb
+  MORPHO_OUT          : /public/home/fjhui/ZW/ucec_c1/results/posthoc
+  plex map            : /public/home/fjhui/ZW/scripts/pinned/case_to_plex_ucec_c1.tsv
+  protein             : /public/home/fjhui/ZW/ucec_c1/protein_ucec_c1.csv
+  discovery results   : /public/home/fjhui/ZW/scripts/pinned/ucec/residual_results_tumoronly.csv
+  validate against    : /public/home/fjhui/ZW/ucec_c1/results/c1_ucec_result.json
+  perms / workers     : 5 / 8  blind=False
+==============================================================================
+RNA matrix (tumor-only): 138 patients x 59427 genes
+WSI slides: 169 tumor kept, 0 normal dropped, 0 unmatched dropped
+WSI matrix (tumor-only, mean-pooled): 138 patients x 1024 dims
+protein (PDC000439 quantDataMatrix, case-indexed): 138 cases x 10934 genes  <- /public/home/fjhui/ZW/ucec_c1/protein_ucec_c1.csv
+cases with all three modalities: 138
+case-set independence vs discovery: 0 overlapping cases (checked against 100 discovery cases)
+discovery selection set: 2566/10512 genes (24.4%) <- /public/home/fjhui/ZW/scripts/pinned/ucec/residual_results_tumoronly.csv
+usable universe (discovery-tested AND present in confirmatory RNA+protein): 10153 genes, of which 2536 selected / 7617 background
+capacity: K = round(20 * 138 / 100) = 28 PCs, PCA fit on the confirmatory cohort's own embeddings (1024 dims)
+  gate n / K / genes tested: 138 / 28 / 10153 -> OK; analysed cases == frozen 138-case file
+plex labels: 138 rows in map; analysed 138/138 labelled (0 unlabelled)
+  16 plex levels, sizes 8-9, 16 strata >= 3 cases, 0 singleton strata; cases held fixed 0/138 = 0.0%
+  P2 design: 15 dummies (levels >= 3 cases; one dropped for full rank: 07CPTAC_C_UCEC_Proteome_PNNL_20200223), 0 levels left to the intercept
+  P3: 2/2 listed cases analysed ['C3L-05571', 'C3N-02978']; C3L-05571 -> 16CPTAC_C_UCEC_Proteome_PNNL_20200706, C3N-02978 -> 16CPTAC_C_UCEC_Proteome_PNNL_20200706
+
+=== STEP 1 REPRODUCTION (published 2,566 set, unrestricted null, published seed) ===
+[step1] per-gene pass: 10153 genes x (1 observed + 5 permutations) on 8 workers ...
+[step1] done in 0.4 min: n_usable=10146 n_selected=2536 n_background=7610 AUC_obs=0.597443
+SMOKE VALIDATED: auc_obs and counts match the published result (abs tol 1e-09). B=5: smallest attainable p is 0.1667; the null statistics are not compared.
+  D4 cross-check: gene order identical; observed column max |diff| = 4.93e-14; shared columns (6) max |diff| = 6.84e-14
+
+SMOKE: B=5. The step-1 reproduction was checked on this host; no within-plex null is computed and nothing is written.
+elapsed 2.0 min
+=== job end: host=s006 rc=0 date=Thu Oct  8 07:21:49 CST 2026 ===

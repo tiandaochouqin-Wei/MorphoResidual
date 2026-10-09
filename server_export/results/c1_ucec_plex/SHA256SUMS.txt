@@ -1,0 +1,11 @@
+# sha256 of the outputs of the single --perms 1000 run governed by review/POSTHOC_UCEC_C1_PLEX_PRESPEC_2026-10-08.md and of every blind/smoke LSF log (paths relative to MorphoResidual_paper/)
+# written 2026-10-09T10:22:15Z; the .npz (291 MB) is withheld under the release rule of the pre-specification (derived data, deposited at acceptance)
+6ca71dc2f9855b8345da98ae7e5b2c3a41db4af307a7817337eea12650b5283e *server_export/results/c1_ucec_plex/ucec_c1/results/posthoc/c1_ucec_plex_reread_result.json
+b9be11de3ad2ef332c787cfa02843694b544b3180313ff7f87abd1b24f8476c3 *server_export/results/c1_ucec_plex/ucec_c1/results/posthoc/c1_ucec_plex_reread.log
+b30244b084998ef79ae80f04530fc1abf65945f51b8e5f3b34b50225bbdc7e69 *server_export/results/c1_ucec_plex/ucec_c1/results/posthoc/c1_ucec_plex_reread.npz
+91b7cc726a4aeb1fe888aab39490c9f8235c94481bc8ac02147aec80bcad3ed9 *server_export/results/c1_ucec_plex/scripts/c1_ucec_plex_blind.out
+133fe57b7c2c3e1709b9942fc9f562a33b5fb2025c45c18f6f904432a3049192 *server_export/results/c1_ucec_plex/scripts/c1_ucec_plex_smoke.out
+b2ee1c799a03b03509ed5d5d243b7362d30a4b9d38c290ec01faf6adc24bdba3 *server_export/results/c1_ucec_plex/scripts/c1_ucec_plex_blind2.out
+4f107d230dbf0804221201b2bb146460240ec8eb9ba850469e2177c284b5055d *server_export/results/c1_ucec_plex/scripts/c1_ucec_plex_smoke2.out
+a85259da89f30ea51d378837a9e46e775063dc013e3a2a81be9868ef2201a8b6 *server_export/results/c1_ucec_plex/scripts/c1_ucec_plex_smoke3.out
+fb664ab17545697cf1013d09b2c86ccfb92cbbf496639e50691a78b0388d9f15 *server_export/results/c1_ucec_plex/scripts/c1_ucec_plex_reread.out

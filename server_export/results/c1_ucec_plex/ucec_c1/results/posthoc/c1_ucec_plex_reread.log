@@ -1,0 +1,72 @@
+==============================================================================
+C1-UCEC PLEX-STRATIFIED RE-READ -- POST HOC (new attempt)
+  governed by review/POSTHOC_UCEC_C1_PLEX_PRESPEC_2026-10-08.md; does not change the published C1-UCEC reading or the D4 re-read
+  mode=ANALYSIS (B=1000) host=s006 lsf_job=75740140 start=2026-10-08T17:00:57Z python=3.9.23
+==============================================================================
+pre-flight hashes:
+  hash OK: plex map = 4fe057a9ac57... (/public/home/fjhui/ZW/scripts/pinned/case_to_plex_ucec_c1.tsv)
+  hash OK: case ids = d777fc88c1dd... (/public/home/fjhui/ZW/scripts/pinned/c1_case_ids_ucec.txt)
+  hash OK: discovery results = 100d8f8581c7... (/public/home/fjhui/ZW/scripts/pinned/ucec/residual_results_tumoronly.csv)
+  hash OK: published c1_ucec_result.json = 53fcb8613846... (/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_result.json)
+  recorded (not asserted; the reproduction gate is their integrity check): protein bef91d54f508..., rna manifest 2ab8c9fffcb7..., slide map a44ffd6e6aeb...
+  this script sha256 = 339c2fd6995e18854b102c27e628eb26a6ef1710ab2f830d232628e85208cf51
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+=== resolved paths ===
+  MORPHO_ROOT         : /public/home/fjhui/ZW/ucec_c1
+  MORPHO_RNA_MANIFEST : /public/home/fjhui/ZW/ucec_c1/manifest_rna_tumor_ucec_c1.tsv
+  MORPHO_SLIDE_MAP    : /public/home/fjhui/ZW/scripts/pinned/slide_type_map_ucec_c1.tsv
+  MORPHO_WSI_EMB_DIR  : /public/home/fjhui/ZW/ucec_c1/WSI/emb
+  MORPHO_OUT          : /public/home/fjhui/ZW/ucec_c1/results/posthoc
+  plex map            : /public/home/fjhui/ZW/scripts/pinned/case_to_plex_ucec_c1.tsv
+  protein             : /public/home/fjhui/ZW/ucec_c1/protein_ucec_c1.csv
+  discovery results   : /public/home/fjhui/ZW/scripts/pinned/ucec/residual_results_tumoronly.csv
+  validate against    : /public/home/fjhui/ZW/ucec_c1/results/c1_ucec_result.json
+  perms / workers     : 1000 / 8  blind=False
+==============================================================================
+protein (PDC000439 quantDataMatrix, case-indexed): 138 cases x 10934 genes  <- /public/home/fjhui/ZW/ucec_c1/protein_ucec_c1.csv
+cases with all three modalities: 138
+case-set independence vs discovery: 0 overlapping cases (checked against 100 discovery cases)
+discovery selection set: 2566/10512 genes (24.4%) <- /public/home/fjhui/ZW/scripts/pinned/ucec/residual_results_tumoronly.csv
+usable universe (discovery-tested AND present in confirmatory RNA+protein): 10153 genes, of which 2536 selected / 7617 background
+capacity: K = round(20 * 138 / 100) = 28 PCs, PCA fit on the confirmatory cohort's own embeddings (1024 dims)
+  gate n / K / genes tested: 138 / 28 / 10153 -> OK; analysed cases == frozen 138-case file
+plex labels: 138 rows in map; analysed 138/138 labelled (0 unlabelled)
+  16 plex levels, sizes 8-9, 16 strata >= 3 cases, 0 singleton strata; cases held fixed 0/138 = 0.0%
+  P2 design: 15 dummies (levels >= 3 cases; one dropped for full rank: 07CPTAC_C_UCEC_Proteome_PNNL_20200223), 0 levels left to the intercept
+  P3: 2/2 listed cases analysed ['C3L-05571', 'C3N-02978']; C3L-05571 -> 16CPTAC_C_UCEC_Proteome_PNNL_20200706, C3N-02978 -> 16CPTAC_C_UCEC_Proteome_PNNL_20200706
+
+=== STEP 1 REPRODUCTION (published 2,566 set, unrestricted null, published seed) ===
+[step1] per-gene pass: 10153 genes x (1 observed + 1000 permutations) on 8 workers ...
+[step1] done in 55.1 min: n_usable=10146 n_selected=2536 n_background=7610 AUC_obs=0.597443
+VALIDATED: all 15 statistics and code/discovery hashes match /public/home/fjhui/ZW/ucec_c1/results/c1_ucec_result.json (abs tol 1e-09 for floats, exact for counts and hashes; file sha256-pinned to 53fcb8613846...).
+  D4 cross-check: gene order identical; observed column max |diff| = 4.93e-14; shared columns (1001) max |diff| = 1.62e-13
+
+=== P1: published set, same PCs, within-plex null (post hoc) ===
+[P1] per-gene pass: 10153 genes x (1 observed + 1000 permutations) on 8 workers ...
+[P1] done in 55.2 min: n_usable=10146 n_selected=2536 n_background=7610 AUC_obs=0.597443
+
+=== P2 (descriptive): published set, PCs residualised on plex dummies, same within-plex draws ===
+  plex residualisation: 15 dummies (dropped for full rank: 07CPTAC_C_UCEC_Proteome_PNNL_20200223; left to intercept: []), PC variance retained 90.6% (n=138)
+[P2] per-gene pass: 10153 genes x (1 observed + 1000 permutations) on 8 workers ...
+[P2] done in 54.7 min: n_usable=10146 n_selected=2536 n_background=7610 AUC_obs=0.608323
+
+=== P3 (sensitivity): P1 without ['C3L-05571', 'C3N-02978'] (two aliquots, two plexes) ===
+  n = 136, K = 27, plex sizes 7-9, cases held fixed 0
+[P3] per-gene pass: 10153 genes x (1 observed + 1000 permutations) on 8 workers ...
+[P3] done in 54.1 min: n_usable=10146 n_selected=2536 n_background=7610 AUC_obs=0.592978
+
+==============================================================================
+POST HOC SUMMARY (does not change the published C1-UCEC reading)
+==============================================================================
+step1 (reproduced): AUC=0.597443 null 0.4982+/-0.0363 p=0.003996
+P1: AUC=0.597443 null 0.5028+/-0.0361 z=2.62 p=0.003996 (3/1000) | rho=0.2936 null 0.1680+/-0.0531 z=2.37 p_rho=0.006993 | n_sel=2536 n_bg=7610
+P2: AUC=0.608323 null 0.5445+/-0.0333 z=1.92 p=0.025974 (25/1000) | rho=0.3299 null 0.2534+/-0.0476 z=1.61 p_rho=0.054945 | n_sel=2536 n_bg=7610
+P3: AUC=0.592978 null 0.5065+/-0.0361 z=2.39 p=0.009990 (9/1000) | rho=0.2858 null 0.1702+/-0.0529 z=2.18 p_rho=0.014985 | n_sel=2536 n_bg=7610
+P1 null SD ratio vs unrestricted: 0.994; null mean shift +0.0046; P2 dummies 15, PC variance retained 90.6%
+
+  -> /public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_ucec_plex_reread_result.json
+  -> /public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_ucec_plex_reread.npz
+  -> /public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_ucec_plex_reread.log
+  elapsed 220.9 min

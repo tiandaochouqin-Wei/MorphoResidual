@@ -1,0 +1,36 @@
+Sender: LSF System <lsfadmin@s002>
+Subject: Job 75737659: <lsf_c1_ucec_plex_reread.sh --perms 5 --blind> in cluster <hzauhpc> Exited
+
+Job <lsf_c1_ucec_plex_reread.sh --perms 5 --blind> was submitted from host <mn02> by user <fjhui> in cluster <hzauhpc> at Thu Oct  8 07:10:38 2026
+Job was executed on host(s) <8*s002>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Thu Oct  8 07:10:38 2026
+</public/home/fjhui> was used as the home directory.
+</public/home/fjhui/ZW/scripts> was used as the working directory.
+Started at Thu Oct  8 07:10:38 2026
+Terminated at Thu Oct  8 07:10:39 2026
+Results reported at Thu Oct  8 07:10:39 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+lsf_c1_ucec_plex_reread.sh --perms 5 --blind
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.02 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   0 sec.
+    Turnaround time :                            1 sec.
+
+The output (if any) follows:
+
+/public/home/fjhui/.lsbatch/1791414638.75737659: line 8: lsf_c1_ucec_plex_reread.sh: command not found
