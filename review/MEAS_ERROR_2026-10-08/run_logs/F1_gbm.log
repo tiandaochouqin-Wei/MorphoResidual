@@ -1,0 +1,6 @@
+=== gbm start 2026-10-08T01:35:04Z host=KIRC-CZC5497R6K
+09:35:13 [repro-only] {'n_compared': 10785, 'n_missing_from_published': 0, 'max_abs_diff': {'n': 0.0, 'r2_rna': 4.440892098500626e-16, 'r2_both': 1.3322676295501878e-14, 'incremental_r2': 1.3322676295501878e-14}, 'worst': 1.3322676295501878e-14, 'ok': True, 'verdict': 'REPRODUCES the published per-gene results (<=1e-10)'}
+09:35:26 [repro-only] p-values: {'n_genes': 20, 'n_perm': 1000, 'max_abs_diff_pval': 0.0, 'n_mismatch': 0}
+09:35:26 [repro-only] PCA re-derived from wsi_pooled: max ||score|| diff 1.66e-04 (informational)
+09:35:26 [repro-only] ICC re-derived from replicate_files: None
+=== gbm end 2026-10-08T01:35:26Z exit=0

@@ -1,0 +1,89 @@
+test_a1_guard.py  2026-10-09T19:24:09Z  host=KIRC-CZC5497R6K
+python 3.13.13  numpy 2.3.5  pandas 2.3.3  sklearn 1.9.0
+sha256 2d10449a1d30b95cbebb6a73e13aee3ea88d77c6b8d739523f9c4b71dcae7632  local_theta.py
+sha256 a288c6fc577b51de00b1222e1209a72a1dadeb5fc4c27775d75378bd67fc8c9f  local_theta_a1.py
+sha256 6c95cd119d28e811e09967946e9f191c69f07f54f653991917e817ef99ec2734  theta_kernel.py
+sha256 694d6f74dae18e8fe101fba5240ad552c7fd419c9d9600f37ee981aeac690f82  test_local_theta.py
+sha256 c37c09731adda9bb0db05041385b5fa25371e66b7694307b8cc273f6ac8a5c9c  test_a1_guard.py
+scratch: D:\claude\pajinsen\_scratch_meas_a1
+PASS frozen local_theta.py is the frozen file (2d10449a...)
+
+--- T0 the amendment's code diff ---
+PASS T0a header block inserted at the top of the docstring (one insert, 10 lines, before line 3)
+PASS T0b the only code changes are SIDECAR and the two guard lines  [[('replace', [b'SIDECAR = os.path.join(PAPER, "review", "POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md.sha256")'], [b'SIDECAR = os.path.join(PAPER, "review", "POSTHOC_MEAS_ERROR_AMENDMENT1_2026-10-10.md.sha256")']), ('insert', [], [b'    if nv == 0:', b'        return gi, None'])]]
+PASS T0c the guard sits immediately after 'nv = int(v.sum())' in _job
+PASS T0d no CR byte in local_theta_a1.py (LF, as local_theta.py)
+PASS T0e a1 keeps PRESPEC_REL and names the amendment sidecar
+PASS synthetic inputs flagged is_synthetic=True
+   inputs: n=120, G=60; partial purity for 40/120 patients; genes with < 30 purity-matched patients: 15 (30..44); matched counts [29, 40]
+
+--- T1 partial purity: frozen crashes, a1 completes ---
+   run frozen_partial_purity: local_theta.py --variants purity purity=purity_partial.tsv workers=2 -> exit 1 (21s)
+PASS T1a frozen --variants purity crashes with the KFold n_samples=0 error  [ValueError: Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=0.]
+PASS T1a' ... raised from _job at tk.fold_ids_for(nv)
+PASS T1a'' ... and wrote no reading file
+   run frozen_partial_all3: local_theta.py --variants spline,rnapc,purity purity=purity_partial.tsv workers=2 -> exit 1 (33s)
+PASS T1b frozen --variants spline,rnapc,purity (production shape) crashes the same way  [ValueError: Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=0.]
+PASS T1b' ... after writing the null files only (the UCEC pattern)  [['theta_syn_null_none.npz', 'theta_syn_null_operator.npz', 'theta_syn_null_plex.npz']]
+   run a1_partial_purity: local_theta_a1.py --variants purity purity=purity_partial.tsv workers=2 -> exit 0 (23s)
+PASS T1c a1 --variants purity completes (exit 0, reading + variants written)
+   run a1_partial_all3_w2: local_theta_a1.py --variants spline,rnapc,purity purity=purity_partial.tsv workers=2 -> exit 0 (36s)
+PASS T1d a1 --variants spline,rnapc,purity completes (workers 2)
+   run a1_partial_all3_w1: local_theta_a1.py --variants spline,rnapc,purity purity=purity_partial.tsv workers=1 -> exit 0 (3s)
+PASS T1e a1 workers 1 completes
+PASS T1f a1 workers 2 == workers 1 on every output  [theta_syn_boot.npz:=; theta_syn_hetero.csv:=; theta_syn_manifest.json:=; theta_syn_null_none.npz:=; theta_syn_null_operator.npz:=; theta_syn_null_plex.npz:=; theta_syn_pergene.csv:=; theta_syn_reading.csv:=; theta_syn_sets.csv:=; theta_syn_variants.csv:=]
+PASS T1g gene level: frozen run_draws(var:linear) on the purity-residualised data raises the KFold error  [Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=0.]
+PASS T1h gene level: a1 gives no statistic exactly for the genes with < 30 matched patients, finite for all others  [no statistic for 15 genes; < 30 matched: 15]
+PASS T1i purity_residualised leaves either 0 or >= 30 fit patients per gene (so nv in 1..29 never occurs)  [[0, 40]]
+
+--- T2 complete purity: frozen == a1 ---
+   run frozen_complete_all3: local_theta.py --variants spline,rnapc,purity purity=purity_complete.tsv workers=1 -> exit 0 (3s)
+   run a1_complete_all3: local_theta_a1.py --variants spline,rnapc,purity purity=purity_complete.tsv workers=1 -> exit 0 (3s)
+PASS T2a both complete
+      theta_syn_boot.npz: identical (arrays)
+      theta_syn_hetero.csv: identical (bytes)
+      theta_syn_manifest.json: identical (json minus started/finished/sha256_script/args.out)
+      theta_syn_null_none.npz: identical (arrays)
+      theta_syn_null_operator.npz: identical (arrays)
+      theta_syn_null_plex.npz: identical (arrays)
+      theta_syn_pergene.csv: identical (bytes)
+      theta_syn_reading.csv: identical (bytes)
+      theta_syn_sets.csv: identical (bytes)
+      theta_syn_variants.csv: identical (bytes)
+PASS T2b every output file identical  [10 files]
+PASS T2c the purity variant ran on every set (complete purity: no gene dropped)
+
+--- T3 partial purity: a1 (spline,rnapc,purity) vs frozen (spline,rnapc) ---
+   run frozen_partial_spline_rnapc: local_theta.py --variants spline,rnapc purity=purity_partial.tsv workers=1 -> exit 0 (3s)
+PASS T3a frozen --variants spline,rnapc completes
+      theta_syn_boot.npz: identical (arrays)
+      theta_syn_hetero.csv: identical (bytes)
+      theta_syn_manifest.json: identical (json minus started/finished/sha256_script/args.out/args.variants)
+      theta_syn_null_none.npz: identical (arrays)
+      theta_syn_null_operator.npz: identical (arrays)
+      theta_syn_null_plex.npz: identical (arrays)
+      theta_syn_pergene.csv: identical (bytes)
+      theta_syn_sets.csv: identical (bytes)
+PASS T3b every output other than reading/variants identical  [8 files]
+PASS T3c reading.csv identical after dropping the purity_* columns  [dropped ['purity_theta_pc', 'purity_theta_raw', 'purity_N_z', 'purity_Nc_z', 'purity_D_z', 'purity_lambda_hat', 'purity_n_genes']]
+PASS T3d variants.csv identical after dropping the purity rows  [extra empty cols []]
+      purity rows (set: n_genes a1 / set genes with >= 30 matched / set size): all: 30/30/30, all|miss5-20: 15/15/30, all|miss<=5: 30/30/30, famA: 30/30/30, famA|miss<=5: 30/30/30, famB: 10/10/10, famB|miss5-20: 15/15/30, famC: 10/10/10, famC|miss5-20: -/-/15
+PASS T3e a1 purity rows = exactly the sets with >= 5 genes having >= 30 matched patients, n_genes = that count  [got {'all': 30, 'all|miss5-20': 15, 'all|miss<=5': 30, 'famA': 30, 'famA|miss<=5': 30, 'famB': 10, 'famB|miss5-20': 15, 'famC': 10} expected {'all': 30, 'all|miss5-20': 15, 'all|miss<=5': 30, 'famA': 30, 'famA|miss<=5': 30, 'famB': 10, 'famB|miss5-20': 15, 'famC': 10}]
+PASS T3f the test exercises the guard: some set loses genes and some purity row is dropped
+
+--- T4 a1 gate ---
+PASS T4a a1 on a non-synthetic-flagged file refuses (no amendment sidecar yet) and names the amendment sidecar  [REFUSED: sidecar D:\claude\pajinsen\MorphoResidual_paper\review\POSTHOC_MEAS_ERROR_AMENDMENT1_2026-10-10.md.sha256 not found -- the pre-specification is not frozen.]
+PASS T4b the amendment sidecar does not exist yet (nothing frozen)
+
+--- T5 test_local_theta.py --quick against local_theta_a1.py (scratch copy) vs frozen suite on local_theta.py ---
+   patched copy test_local_theta_on_a1.py sha256 49a4fdfc8ddff00b7516c9b56b3ccff8689135691d29bb81849818251a88a513 (4 substitutions)
+   suite on a1: exit 0 (56s)
+   frozen suite on frozen local_theta.py: exit 1 (56s)
+   frozen suite: FAIL G1j production SIDECAR constant absent (nothing frozen)  [D:\claude\pajinsen\MorphoResidual_paper\review\POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md.sha256]
+   a1 suite: 79 checks, 0 FAIL; last line: ALL CHECKS PASSED
+   frozen suite: 79 checks, 1 FAIL; last line: FAILED: G1j production SIDECAR constant absent (nothing frozen)
+PASS T5a test_local_theta.py --quick on local_theta_a1.py: ALL CHECKS PASSED
+PASS T5b the frozen suite on the frozen script fails only G1j (the original sidecar now exists)
+PASS T5c every other check line and every printed number identical between the two suite runs (G1 details and timing lines excluded)  [162 lines compared]
+
+ALL A1 CHECKS PASSED

@@ -1,0 +1,6 @@
+=== ucec start 2026-10-08T01:34:39Z host=KIRC-CZC5497R6K
+09:34:48 [repro-only] {'n_compared': 10512, 'n_missing_from_published': 0, 'max_abs_diff': {'n': 0.0, 'r2_rna': 4.440892098500626e-16, 'r2_both': 9.769962616701378e-15, 'incremental_r2': 9.769962616701378e-15}, 'worst': 9.769962616701378e-15, 'ok': True, 'verdict': 'REPRODUCES the published per-gene results (<=1e-10)'}
+09:35:00 [repro-only] p-values: {'n_genes': 20, 'n_perm': 1000, 'max_abs_diff_pval': 0.0, 'n_mismatch': 0}
+09:35:00 [repro-only] PCA re-derived from wsi_pooled: max ||score|| diff 1.31e-04 (informational)
+09:35:04 [repro-only] ICC re-derived from replicate_files: {'n_cases': 67, 'mean_files': 2.0, 'max_abs_diff_icc': 0.0}
+=== ucec end 2026-10-08T01:35:04Z exit=0
