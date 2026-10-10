@@ -347,3 +347,51 @@ afterwards from saved outputs, with no new permutation, and labelled as such:
   Source: `c1_luad_primary_gene_level_primary.csv`.
 - §5.4: bootstrap SD is in the bootstrap JSON but was not printed; read from
   `c1_luad_bootstrap_result_bootstrap.json`.
+
+## Entry 11 (2026-10-10, after every result): the Abstract under the journal's actual format (deviation)
+
+**What the rule assumed.** §5.7 states "The NC abstract limit is 200 words" and makes the
+§5.2 clauses the Abstract's LUAD wording, verbatim; item 6 asks the UCEC sentence to name
+its set the same way.
+
+**What the journal requires.** The Nature Communications formatting instructions (revised
+7 May 2021; nature.com/documents/ncomms-formatting-instructions.pdf, read 2026-10-10)
+set the abstract at "150 words or fewer" and say "Do not include references, acronyms or
+abbreviations". The realised branch ([A]+[B1]+[D], 47 words as typeset in main.tex) and
+the UCEC sentence (20 words) are written with abbreviations, and together with the other
+items §5.7 item 0 protects (the discovery counts, the transcriptome-baseline retention and
+its caveat, the external protein-array and whole-proteome nulls) and the measurement-error
+qualifier added under POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md §8.4, they cannot stay
+verbatim in an abstract of that format.
+
+**Deviation.** The Abstract is rewritten to the journal's length and abbreviation rules
+(149 words, no acronyms or abbreviations; P is used as the statistic's symbol). It does not
+meet the instruction that the final sentence begin "Here, we show" and summarise the
+results in the present tense: "Here, we show" opens the second of five sentences, and the
+pre-specified results follow it in the past tense of the fixed clauses, because they cannot
+be put into one closing sentence. Every content item §5.7 assigns to the Abstract is kept:
+- UCEC and LUAD in the same sentence, each with organ, n (138; 112), the set it names
+  (the uncorrected 2,566- and 2,310-gene discovery sets), AUC (0.597; 0.644), the
+  bootstrap interval (0.48-0.65; 0.55-0.65) and the one-sided p (0.004; 0.001);
+- clause [B], form 1: the lung result also under the operator-stratified null (p = 0.001);
+- clause [D], pass form: the batch-corrected (operator) set (726), AUC 0.654, p = 0.001;
+- the discovery counts (815, 726, 201, 680, 682), the transcriptome-baseline retention
+  (a median 40%) with its caveat, and the external protein-array and whole-proteome nulls.
+
+What changes is wording only: "area under curve" spells out AUC; "95% bootstrap interval"
+stands for "95% patient-bootstrap interval"; "operator-stratified null" for
+"acquisition-batch (operator)-stratified null"; "Later, within CPTAC" is kept as "later
+same-consortium"; "outranked background" replaces "outranked background ..., a set-level
+replication", so "replicat*" no longer appears in the Abstract for either C1 cohort (§5.7
+item 2 restricts the word, it does not require it; it remains only in the unchanged
+external-cohort sentence). The measurement-error qualifier is kept in substance, as that
+file's Abstract policy allows for a shortened Abstract, with the four cohorts named by
+exclusion ("outside kidney cancer"). The guarded BRCA phrase ("a whole-proteome cohort
+none") and the C1-UCEC within-plex policy (no qualifier, P1 p = 0.004) are unchanged.
+
+**Where the fixed wording now stands.** The §5.2 clauses stay verbatim in Results
+(sec:c1res). The UCEC sentence, which until now appeared only in the Abstract, is added
+verbatim to the end of the UCEC Results paragraph, introduced by "By the reading fixed in
+advance,". Every other fixed sentence stays verbatim in Results and Methods. No reading
+changes. The Abstract was rewritten after every result was known; it reports every
+pre-specified reading, favourable or not, and adds no other result.
