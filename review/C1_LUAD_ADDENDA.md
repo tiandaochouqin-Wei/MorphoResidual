@@ -395,3 +395,324 @@ verbatim to the end of the UCEC Results paragraph, introduced by "By the reading
 advance,". Every other fixed sentence stays verbatim in Results and Methods. No reading
 changes. The Abstract was rewritten after every result was known; it reports every
 pre-specified reading, favourable or not, and adds no other result.
+
+## Entry 12 (2026-11-20, after every result): the Abstract after a concurrent same-topic study and the manuscript's repositioning (deviation)
+
+**What no longer holds.** The Entry 11 Abstract opens by saying that whether morphology
+reports protein beyond each gene's transcript "is unknown". A concurrent study addresses
+that question: Shah, Sharma et al., "Histology Reveals Proteomic Variation Beyond the
+Transcriptome", a NeurIPS 2026 workshop poster (https://neurips.cc/virtual/2026/172063,
+read 2026-11-20; references.bib key `shah2026histology`). Its abstract reports, for 715
+tumours in eight CPTAC cohorts, that histology predicts the protein variation left after
+removing the variation explained by each protein's own transcript (r = 0.233;
+within-cohort permutation baseline 0.032), and that adding morphology to a
+transcriptome-wide ridge model raised the correlation with protein from 0.384 to 0.466,
+the opposite direction to the clause this entry adds to the Abstract; the Discussion sets
+the two side by side. Only that abstract has been read, and nothing beyond it is asserted;
+the Introduction and the Discussion cite it. The Entry 11 Abstract's second sentence says
+that the embeddings "do so", which reads as per-gene prediction. The manuscript now states
+its claim as a set-level signal (title on 10 October: "H&E morphology predicts protein
+abundance beyond the gene's own mRNA in five human cancers"; now: "Histology signals which
+proteins depart from their own transcript in five human cancers"), and Results report
+ordering, not per-gene prediction, in new patients (93.2% of genes with a negative
+confirmatory increment in the uterine cohort; out-of-fold accuracy lowered for 85.8% of
+genes in the lung cohort; sec:c1ucecres); a descriptive per-gene rediscovery in the lung
+cohort is in Supplementary Note snote:c1luad.
+
+**Deviation.** The Abstract is rewritten a second time, at the Entry 11 length: 141 words
+as whitespace-separated tokens after removing TeX markup, 143 with number ranges split,
+149 as typeset ("P = x" is three words; a word broken at a line end counts once), and 151
+if number ranges are also split. It has no acronyms or abbreviations. P is the statistic's
+symbol, capitalised as in Entry 11; the rest of the manuscript and its figures print p, as
+the fixed clauses do. "Here, we show" now opens the first of five sentences, and the
+confirmatory results still follow it in the past tense of the fixed clauses, so the
+deviation Entry 11 recorded from the instruction that the final sentence begin "Here, we
+show" stands in this changed form. The new Abstract's TeX source, which has sha256
+6a1bfede2f9a56dd811cf46b345ecd2989f7ffb5697b1578e574fa8fec298ddc, and the Entry 11
+Abstract it replaces are reproduced at the end of this entry, because main.tex,
+supplement.tex and references.bib, and the labels cited in this entry, belong to the
+manuscript, which is not in this repository. What changes:
+- The opening sentence (16 words) is deleted. Its first clause offered histology as a
+  stand-in for proteomics, which the Discussion now says is not shown. Nothing replaces
+  it; the Abstract makes no statement about other work.
+- The second sentence (33 words) becomes two (35). The first is the sentence that opens
+  the Introduction's last paragraph, verbatim: "Here, we show that histology carries a
+  set-level signal of which proteins depart from their own transcript." It drops the
+  instrument and the scope of Entry 11's sentence ("foundation-model histology embeddings
+  do so in five cancers from one consortium"): its subject is the title's, "histology",
+  and the scope now opens the next sentence, so the thesis as written is wider than Entry
+  11's. Its set-level framing was adopted after the per-gene confirmatory results were
+  known; the rules fix the set-level reading of the two confirmatory tests, not the
+  paper's headline claim. It names no set. §5.7 item 6 says "Every claim names the set".
+  We read the item as applying to statements of the confirmatory results, which in this
+  Abstract name their sets (the confirmatory sentence names the uncorrected discovery
+  sets). Read as covering every statement of a result, item 6 is departed from by, among
+  others, the title, this thesis sentence, the same sentence in the Introduction, the
+  Discussion's first sentence, the Abstract's unchanged external-cohort sentence, and the
+  Abstract's third sentence, whose no-net-accuracy, retention and measurement-error
+  clauses concern each cohort's uncorrected significant set (Methods sec:txomemeth;
+  POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md §4) although they follow the batch-corrected
+  counts, as the retention clause and its caveat did in Entry 11. The counts form a
+  separate sentence so that the thesis is not read as describing the batch-corrected sets.
+  The second is "In five cancers from one consortium, 815, 726, 201, 680 and 682 proteins
+  are significant after acquisition-batch correction"; "remain" becomes "are" because
+  these are "separately selected, not filtered, sets" (sec:c1res). The enrichment list is
+  deleted: it gave splicing, translation and secretion to every batch-corrected set, which
+  Supplementary Table c2 does not show.
+- The retention sentence (31 words with its caveat) becomes 45: "At these cohort sizes,
+  morphology adds no net accuracy over transcriptome-wide baselines in four cohorts, but
+  retains a median 40% of its noise-adjusted advantage". "Noise-adjusted" is the quantity
+  Results report: morphology's advantage net of a same-size Gaussian-noise block fitted
+  under both baselines (Methods sec:txomemeth), not an adjustment for transcript
+  measurement noise, which the caveat that follows addresses. The added clause is an
+  unfavourable discovery-side result that Results state as "At these cohort sizes
+  morphology adds no net out-of-fold value over a transcriptome-wide model in four of five
+  cohorts" (sec:txome). The Abstract adds a comma, uses "accuracy" (the Introduction's
+  word) for "value", omits "out-of-fold" and "of five" for length (the five cancers are
+  stated one sentence earlier), and says "transcriptome-wide baselines" because each
+  cohort has its own (own mRNA plus 20 RNA components; Supplementary Note snote:extres).
+  Counting four cohorts lets a reader infer that one of the five has a positive median
+  increment over its transcriptome-wide baseline (UCEC, +0.075; Supplementary Note
+  snote:extres), a favourable discovery-side result that the Abstract does not state; as
+  with the measurement-error exclusion in the next item, the inference is recorded here,
+  not prevented.
+- The measurement-error caveat is unchanged. As in Entry 11 it names LUAD, UCEC, GBM and
+  PDAC by exclusion ("outside kidney cancer"); it does not state the CCRCC reading (R3), a
+  favourable post hoc result, though a reader may infer that reading from the exclusion.
+- The confirmatory and external-cohort sentences are character-identical to Entry 11's.
+
+The word account is net, per sentence: 16 deleted, 2 + 14 added. In gross terms the thesis
+sentence and the no-net-accuracy clause are new text, paid for by the opening sentence,
+"foundation-model histology embeddings do so" and the enrichment list. §5.7 item 0
+reserved room for the longest branch and barred refilling unused room after the LUAD
+result; Entry 11 replaced that Abstract, and this rewrite keeps Entry 11's length. We read
+the bar on refilling as applying to the room item 0 reserved for the §5.2 branch; read as
+barring any result clause added after the LUAD result, it is departed from by the added
+no-net-accuracy clause and by the thesis sentence, which states a result (item 6 above) in
+the paper's favour. Item 0 also says "No result clause is cut". The enrichment list is a
+result clause, so its deletion departs from that sentence; it is deleted because, placed
+after the batch-corrected counts, it states for every batch-corrected set what
+Supplementary Table c2 does not show. It is not among the clauses item 0 lists as
+protected, and Results keep the family-level statement (sec:c1res).
+
+**What is kept.** Every content item §5.7 assigns to the Abstract, and every item Entry 11
+kept:
+- UCEC and LUAD in one sentence, each with organ, n (138; 112), the named set (the
+  uncorrected 2,566- and 2,310-gene discovery sets), AUC (0.597; 0.644), bootstrap
+  interval (0.48-0.65; 0.55-0.65) and one-sided p (0.004; 0.001);
+- clause [B], form 1 (operator-stratified null, p = 0.001); clause [D], pass form (726,
+  AUC 0.654, p = 0.001); clause [C] absent (p_compl = 0.001); none of the descriptive
+  items of §3, per-gene results included. We read item 3's "No other descriptive item
+  enters the Abstract", with §5.3, as referring to those items; read as covering every
+  result that is not a §5 reading, it is departed from by the added no-net-accuracy clause
+  and by the thesis sentence;
+- the discovery counts (815, 726, 201, 680, 682), not a range;
+- the retention (a median 40%) with its caveat, and the measurement-error qualifier in the
+  Entry 11 short form;
+- the external nulls, ending "a whole-proteome cohort none." without "at the gene level"
+  (smallest set-level p in the BRCA supplement table 0.234);
+- "replicat*" only in the external-cohort sentence, which follows the confirmatory one (a
+  use for external cohorts that item 2, read literally, does not allow; see below).
+
+No reading changes, and no result is computed. Besides restating the headline claim (the
+thesis sentence above, which is wider than Entry 11's and in the paper's favour), the
+Abstract gains one result clause, unfavourable, that Results already report, and loses one
+result clause, the enrichment list. No favourable post hoc result enters: the within-plex
+(P1 p = 0.004), BRCA frozen-section and alternative-selection-set (case (A), n_below = 0)
+policies and clause [C] add nothing. The three post hoc pre-specifications of file date
+2026-10-08 on the UCEC within-plex re-read, the BRCA frozen-section arm and the
+measurement-error checks share an Abstract policy (for example
+POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md §8.4) that also says: "The only permitted
+Abstract edits are qualifiers, fixed in advance, that stop an existing sentence from
+overstating in the light of a post hoc result ... Nothing else. If the Abstract is later
+shortened, a qualifier added under this policy is kept in substance." We read it as
+limiting the Abstract edits that those three analyses may cause: of the qualifiers it
+lists, only the measurement-error one was triggered, and it is kept in Entry 11's short
+form. Read as barring any later Abstract edit, it is departed from by Entry 11 and by this
+rewrite. The same holds for the alternative-selection-set pre-specification of the same
+date (POSTHOC_UCEC_C1_SETS_PRESPEC_2026-10-08.md §4: "Abstract: unchanged, except in case
+(C) ...", "No abstract change in any case"), which we read as limiting the Abstract edits
+that analysis may cause.
+
+**Where the fixed wording now stands.** On 20 November 2026 the manuscript was also
+revised for the journal after an internal review: title, Introduction, Results,
+Discussion, Supplementary Notes, figure legends, a new main Fig. 6 that replaces the
+clinical figure (moved to the Supplementary Information), figures redrawn with p for P,
+and a shorter Methods whose implementation details moved to new Supplementary Methods
+sections and a provenance table. Below, "guarded" wording is wording whose current form a
+conditional rule selects, and "content-rule" wording is wording whose content, not words,
+a rule fixes. Every sentence that the rules fix verbatim is unchanged. The comparisons of
+manuscript text in this entry are between main.tex and supplement.tex as on 10 October
+2026 (sha256 25fc3f75cffdf407d66e47d607184edebd184c537fadbc8b9b1a1ce612f567dc and
+ad8122ccc0cd5ef32cfa09e42235cf916221b9f14a9df3a4acc0db6b5f8acbb8) and as on 20 November
+2026 before the Abstract is replaced (sha256
+4b9700a227dc08de46530c91a7420420b36a107f036b32566c99d255f4fdc349 and
+704de98c61d2f1dd90c1af8836c452de60b7700c8e8d3e8ec660c33e32c1fc1b); the tables these files
+input and the figure files are not pinned here. Where they stand:
+- The §5.2 clauses are in Results in sec:c1ucecres ("Set level ordering recurs in two
+  later CPTAC waves"). Entry 11 gave the wrong label ("sec:c1res", the batch-correction
+  subsection); the clauses were and are in sec:c1ucecres. The UCEC sentence Entry 11 added
+  still ends its paragraph, directly after the §5.4 sentence, as on 10 October.
+- The measurement-error wording of POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md is in its
+  fixed form: the §8.1 paragraph, in its fixed order, ends sec:txome; the §8.3 text ends
+  Limitations (v); the §8.4 clause is in the Discussion's first paragraph.
+- The alternative-selection-set sentence of POSTHOC_UCEC_C1_SETS_PRESPEC_2026-10-08.md §4
+  follows the D4 sentences in a separate paragraph, with the other-sets and within-plex
+  sentences, as on 10 October, although §4 places it "in the C1-UCEC paragraph (after the
+  D4 sentences)"; that paragraph now opens with a sentence saying that the 22 discovery
+  patients whose slide is a single OCT section were all accrued in Ukraine and nearly
+  coincide with one scanning operator, the stratum the fixed sentence names.
+- Among the other changes beside fixed sentences, none of which changes a fixed word:
+  figure pointers were added or changed; the sentence before the §5.4 sentence now names
+  the set ("the 2,536 of the 2,566 discovery-selected genes that are testable there") and
+  points to Fig. 6a, and the sentence before the §8.3 text points to Fig. 6d; the
+  content-rule sentences on the two D4 analyses are now followed by one saying that "their
+  follow-ups (further completeness strata and a paired null) were fixed after the base
+  results but before being computed, and the operator-residualised variant only in the
+  hashed script"; the Introduction's thesis sentence now precedes the guarded sentence on
+  acquisition-batch and plex control; and a new Discussion paragraph on the concurrent
+  study follows the guarded sentence that ends the first Discussion paragraph. Fixed
+  sentences that cite Supplementary items by label print new numbers, because the clinical
+  figure and table moved.
+
+Sentences that the rules govern by content were reworded, added or removed within those
+rules, and no pre-specified reading changes. Changes that correct statements reading more
+favourably than the results include: the Methods no longer say that the embedding-medium
+table was joined "with no join failures" (up to 2.8% of slides failed, under the 5% bar of
+POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md §M0); the Introduction no longer calls
+acquisition-batch control "decisive"; the Fig. 1 legend title no longer calls the residual
+"large, reproducible"; the Introduction listed the processing plex among the
+acquisition-batch controls the signal survived, although GBM falls below the pre-specified
+plex bar (reading 2 of POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md §P: 225 against 680,
+median increment 0.19 of its uncorrected value), and now says so; a Results summary that
+said the residual "passes acquisition-batch control in all five cohorts" now restricts
+that pass to the operator axis and states the plex and medium results separately, and the
+Discussion no longer says the signal holds "robustly to acquisition batch"; the main and
+the extended Supplementary Limitations no longer call the corrected increment "a lower
+bound" or the batch-corrected counts "conservative"; the words "barely seen" ("barely
+sees" in the Supplementary Note) for the TMT plex are deleted, the eta-squared values
+beside them remaining; the Introduction's and the Discussion's "accessible surrogate for
+protein-regulatory tissue state" is withdrawn; Results no longer call the recurrence
+across the five discovery cohorts "within-CPTAC replication", and confirmatory uses of
+"replication" outside the fixed clauses now say "set-level", apart from the disclaimers
+"not a per-gene replication" in Results and Supplementary Note snote:extres, and mentions
+of the word in quotation marks that describe the rule (Methods sec:c1luadmeth;
+Supplementary Note snote:c1luad); the LUAD plex-residualised 726-set result, descriptive
+under §L of POSTHOC_BATCH_AXES_PRESPEC_2026-10-02.md, and the UCEC operator-residualised
+variant, which the Methods call a further descriptive check, are now reported in Results
+as descriptive; the Introduction now says that the lung test was registered after metadata
+checks that included partial byte-range reads of the slide files (D3); the Supplementary
+Results now state GBM's plex reading 2; and Supplementary Note snote:measerr now says that
+CCRCC's bound of 0.08 is computed from the point estimate, not the upper end of its 95%
+interval. The Discussion's two new sentences on the confirmatory result name the sets with
+their sizes, as its existing sentence ("what transfers is the set-level ordering of the
+genes selected by the uncorrected discovery analysis (uterus, 2,566 genes, ...; lung,
+2,310 genes, ...)") did. Two further readings are adopted without being stated in the
+rules. §5.7 makes D3's wording verbatim; we read that as applying to the Methods statement
+of the registration, which carries it, not to the shorter mentions in the Introduction
+(qualifier added on 20 November), Results and Code availability (both unchanged since 10
+October), which carry its byte-range qualifier and its download clause but not its full
+wording; read as covering every mention of the registration, those three and the shorter
+references elsewhere (for example Data availability) depart from it. §5.7 item 2 restricts
+"replicat*" to a cohort with p1 < 0.05, "always as 'set-level', and with the §5.2
+clauses"; we read it as governing only the confirmatory cohorts, requiring "set-level" for
+any use for them outside the fixed clauses, not the §5.2 clauses beside every such use.
+The guarded Methods paragraph headed "Replication" (the journal's reporting item) applies
+the word to the two confirmatory tests without the §5.2 clauses and to the five discovery
+organs, and, as on 10 October, the paper calls the external cohorts replication attempts;
+read literally, item 2 is departed from there.
+
+Changes in the paper's favour: "gene-specific replication did not exceed the base rate in
+any cohort", not literally true (KIRC 56.5% against 47.0%; LUAD and PDAC also numerically
+above), becomes "not significantly more often predictable than other tested proteins in
+any cohort", and the Supplementary replication legend and the Discussion likewise now say
+"significantly", while the Abstract's protected sentence keeps "no gene-specific
+replication above base rate" and the Results heading reads "stays at base rate"; the
+pooled p is corrected from 0.35 to 0.34 (stored value 0.3447). The plex reading of four
+cohorts (reading 1) now also appears in the Introduction and in a Results summary, each
+beside GBM's reading 2, and "no significant component in four cohorts", earlier only in
+the Supplementary Note, is now in Results. Separately, headings and free text that cover
+the CPTAC-2 whole-proteome cohort, including the Limitations, say "outside CPTAC-3", not
+"outside CPTAC"; the protected Abstract sentence, the guarded Results sentence and the
+Discussion sentence that ends in the guarded whole-proteome clause ("across consortium and
+platform boundaries") still treat that cohort as crossing a consortium boundary.
+
+The new main Fig. 6 shows, beside the registered and pre-specified rows, post hoc and
+descriptive results that their pre-specifications (or, for the UCEC operator-residualised
+variant, the hashed script) report in Results text or the Supplementary Information: the
+UCEC post hoc re-reads (within operator, completeness-stratified, within TMT plex) and,
+marked as descriptive and not read, the residualised variants of the operator and plex
+re-reads; the LUAD within-plex re-read and, marked likewise, its plex-residualised 726-set
+variant and the completeness-stratified descriptive item of the registered rule; the BRCA
+diagnostic- and frozen-section set-level AUCs; and the measurement-error alignment of all
+five cohorts, with the CCRCC (0.69) and UCEC (0.17, also used for LUAD, GBM and PDAC)
+reliabilities labelled on the panel. Its legend names the confirmatory bootstrap interval
+as the §5.2 clause and Entry 11's UCEC sentence do ("95% patient-bootstrap interval"; the
+§5.4 sentence says "conditional interval", the Introduction and Discussion "conditional
+95% interval", and the lung Results sentence keeps "not a calibrated interval") and states
+that the uterine interval contains its null mean. The legend states the favourable CCRCC
+measurement-error reading (at most 0.08 of the signal can be linear dilution, from the
+point estimate) with the three limits that §0 of that pre-specification attaches to every
+sentence reporting a favourable reading, in paraphrase rather than as the fixed qualifier
+Q, and without the first half of the fixed R3 clause ("part of the signal was aligned with
+the measured transcript") or its condition ("at any reliability at or above the
+replicate-based bound"). The panel's own label for that reading ("excluded up to a bound
+(at most 0.08)") carries only the linear limit. Read literally, §0 ("repeated in every
+sentence that reports a favourable reading"; "The fixed qualifier Q of section 8.5 carries
+this into every favourable sentence") is departed from by the legend sentence, which
+paraphrases Q, and by the panel label.
+
+The Abstract was rewritten after every result was known. It carries every reading the
+pre-specifications assign to the Abstract, favourable or not; apart from the restated
+headline claim, the only result it adds is the unfavourable no-net-accuracy clause.
+
+**Timestamp.** This entry carries the timestamp of the first public GitHub release that
+contains it, planned as `c1-luad-addenda-entry12-2026-11-20` (named by the day this entry
+was written). Entry 11 was pushed on 2026-10-10 with the annotated tag
+`c1-luad-addenda-entry11-2026-10-10`, but no GitHub release was made for it, so Entry 11
+was not "timestamped as in D3", as §7.4 requires (quoted in this file's header), until
+this release (a deviation). The header's statement that this file differs from its
+2026-10-02 release "in three places, all of them additions" was incomplete when written:
+the version first released as `c1-luad-posthoc-prespec-2026-10-02` also rewrote the
+header's timestamp paragraph and replaced Entry 1's "To do" sentence, and Entries 10 to 12
+were added later; `git diff c1-luad-addenda-2026-10-02` against this release's tag,
+restricted to this file, shows every change. The Abstract in main.tex is replaced only
+after this release, and the manuscript's provenance table then gains a row for this entry.
+
+**The two Abstracts.** The new Abstract, the exact bytes of its TeX source (13 lines, each
+ending in a line feed, LF not CRLF), whose sha256 is given above:
+
+```tex
+\noindent Here, we show that histology carries a set-level signal of which proteins depart
+from their own transcript. In five cancers from one consortium, 815, 726, 201, 680 and 682
+proteins are significant after acquisition-batch correction. At these cohort sizes,
+morphology adds no net accuracy over transcriptome-wide baselines in four cohorts, but
+retains a median 40\% of its noise-adjusted advantage; part may be expression missed by
+single transcript measurement, not excluded post hoc for much of the signal outside kidney
+cancer. In later same-consortium uterine (138 patients) and
+lung (112) cohorts, uncorrected discovery sets (2{,}566; 2{,}310 genes) outranked background
+(area under curve $0.597$, 95\% bootstrap interval $0.48$--$0.65$, one-sided $P=0.004$;
+$0.644$, $0.55$--$0.65$, $P=0.001$), lung also under an operator-stratified null
+($P=0.001$), as did its batch-corrected set (726; $0.654$, $P=0.001$). Elsewhere, four
+protein-array cohorts showed no gene-specific replication above base rate, a
+whole-proteome cohort none.
+```
+
+The Entry 11 Abstract, the body of the abstract environment of main.tex as on 10 October
+2026:
+
+```tex
+\noindent Most tumours have histology, few proteomics; whether morphology reports protein
+beyond each gene's transcript is unknown. Here, we show that foundation-model histology
+embeddings do so in five cancers from one consortium: after acquisition-batch correction
+815, 726, 201, 680 and 682 proteins remain significant, enriched for splicing, translation
+and secretion. A median 40\% of the advantage survives a transcriptome-wide baseline; part
+may be expression missed by single transcript measurement, not excluded post hoc for much
+of the signal outside kidney cancer. In later same-consortium uterine (138 patients) and
+lung (112) cohorts, uncorrected discovery sets (2{,}566; 2{,}310 genes) outranked background
+(area under curve $0.597$, 95\% bootstrap interval $0.48$--$0.65$, one-sided $P=0.004$;
+$0.644$, $0.55$--$0.65$, $P=0.001$), lung also under an operator-stratified null
+($P=0.001$), as did its batch-corrected set (726; $0.654$, $P=0.001$). Elsewhere, four
+protein-array cohorts showed no gene-specific replication above base rate, a
+whole-proteome cohort none.
+```
