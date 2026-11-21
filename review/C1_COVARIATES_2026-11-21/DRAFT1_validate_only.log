@@ -1,0 +1,20 @@
+[00:36:26] V2 ucec unrestricted: AUC 0.5974425565 null 0.4981945451 SD 0.0362962998 p 0.003996 rho 0.2935675639; n 2536/7610; worst diff 0.0e+00 -> VALIDATED
+[00:36:27] V2 ucec within-operator: AUC 0.5974425565 null 0.5059362959 SD 0.0316486918 p 0.003996 rho 0.2935675639; n 2536/7610; worst diff 0.0e+00 -> VALIDATED
+[00:36:28] V2 ucec residualised: AUC 0.5671994242 null 0.4886994100 SD 0.0306175406 p 0.005994 rho 0.2568963226; n 2536/7610; worst diff 0.0e+00 -> VALIDATED
+[00:38:37]   V1 ucec: 2000/10512 genes, 129 s
+[00:40:02]   V1 ucec: 4000/10512 genes, 214 s
+[00:41:31]   V1 ucec: 6000/10512 genes, 304 s
+[00:43:50]   V1 ucec: 8000/10512 genes, 443 s
+[00:46:09]   V1 ucec: 10000/10512 genes, 581 s
+[00:46:25]   V1 ucec: block 20 cols over a 1-col baseline; selected 2566/10512; BH rejections before the sign filter 3263; genes at the permutation floor 1748 (k* = 211); batched-vs-reference worst 0.00e+00; 598 s
+[00:46:25] V1 ucec: max abs differences {'increment': 9.769962616701378e-15, 'r2_rna': 4.440892098500626e-16, 'pval': 0.0, 'fdr': 0.0, 'n': 0}; selection set identical: True; selected 2566 -> VALIDATED
+[00:46:28] V2 luad unrestricted: AUC 0.6439668501 null 0.5244456890 SD 0.0186903095 p 0.000999 rho 0.3977785480; n 2287/8119; worst diff 0.0e+00 -> VALIDATED
+[00:49:03]   V1 luad: 2000/10724 genes, 156 s
+[00:50:47]   V1 luad: 4000/10724 genes, 259 s
+[00:52:32]   V1 luad: 6000/10724 genes, 364 s
+[00:54:17]   V1 luad: 8000/10724 genes, 470 s
+[00:56:01]   V1 luad: 10000/10724 genes, 573 s
+[00:56:29]   V1 luad: block 20 cols over a 1-col baseline; selected 2310/10724; BH rejections before the sign filter 3086; genes at the permutation floor 1354 (k* = 215); batched-vs-reference worst 0.00e+00; 601 s
+[00:56:29] V1 luad: max abs differences {'increment': 2.1316282072803006e-14, 'r2_rna': 4.440892098500626e-16, 'pval': 0.0, 'fdr': 0.0, 'n': 0}; selection set identical: True; selected 2310 -> VALIDATED
+[00:56:29] VALIDATED
+exit 0

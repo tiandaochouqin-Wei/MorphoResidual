@@ -1,0 +1,49 @@
+== install_check 2026-11-20T21:59:13Z host=mn02.hpc.hzau user=fjhui
+== package folder: /public/home/fjhui/ZW/c1_cov_upload
+
+== 1. transport check (hashes of the package files against SHA256SUMS)
+c1_covariates_cluster.py: OK
+lsf_c1_cov_ucec.sh: OK
+lsf_c1_cov_luad.sh: OK
+lsf_c1_cov_discovery.sh: OK
+c1_cov_discovery_patients_ucec.txt: OK
+c1_cov_discovery_patients_luad.txt: OK
+inputs_ucec.npz: OK
+inputs_luad.npz: OK
+composition_controls.py: OK
+
+== 2. scripts and wrappers -> /public/home/fjhui/ZW/scripts
+already in place, identical: /public/home/fjhui/ZW/scripts/c1_covariates_cluster.py
+already in place, identical: /public/home/fjhui/ZW/scripts/lsf_c1_cov_ucec.sh
+already in place, identical: /public/home/fjhui/ZW/scripts/lsf_c1_cov_luad.sh
+already in place, identical: /public/home/fjhui/ZW/scripts/lsf_c1_cov_discovery.sh
+
+== 3. patient lists and inputs files -> /public/home/fjhui/ZW/c1_covariates/inputs
+already in place, identical: /public/home/fjhui/ZW/c1_covariates/inputs/c1_cov_discovery_patients_ucec.txt
+already in place, identical: /public/home/fjhui/ZW/c1_covariates/inputs/c1_cov_discovery_patients_luad.txt
+already in place, identical: /public/home/fjhui/ZW/c1_covariates/inputs/inputs_ucec.npz
+already in place, identical: /public/home/fjhui/ZW/c1_covariates/inputs/inputs_luad.npz
+
+== 4. composition_controls.py (needed by the cluster script; expected sha256 46b4a1d8...)
+present and identical to the repository copy
+
+== 5. frozen modules and saved matrices: sha256 against the expected full values
+OK        /public/home/fjhui/ZW/scripts/residual_analysis.py
+OK        /public/home/fjhui/ZW/scripts/split_replication_power.py
+OK        /public/home/fjhui/ZW/scripts/c1_run_test.py
+OK        /public/home/fjhui/ZW/scripts/c1_run_test_luad.py
+OK        /public/home/fjhui/ZW/scripts/composition_controls.py
+OK        /public/home/fjhui/ZW/ucec_c1/results/c1_ucec_d4_stratified.npz
+OK        /public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_primary.npz
+
+other files the wrappers use (existence only):
+exists    /public/home/fjhui/ZW/scripts/morpho_env.sh
+exists    /public/home/fjhui/ZW/scripts/transcriptome_baseline.py
+exists    /public/home/fjhui/ZW/scripts/pinned/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md
+exists    /public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt
+
+saved matrices wherever they are (in case a path above says MISSING):
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_d4_stratified.npz
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_primary.npz
+
+== RESULT: ALL CHECKS PASSED

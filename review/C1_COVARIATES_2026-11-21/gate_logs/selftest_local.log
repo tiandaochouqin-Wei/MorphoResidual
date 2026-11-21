@@ -1,0 +1,830 @@
+sha256 1ea40fa50759366d09f61360d6d2f80dce9703d6d95f6a8ce43ff0f0ae61e779 c1_covariates_local.py
+selftest (synthetic only) in C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7
+[03:30:30]   selftest serial: block 7 cols over a 4-col baseline; selected 0/30; BH rejections before the sign filter 0; genes at the permutation floor 9 (k* = 24); batched-vs-reference worst 0.00e+00; 0 s
+[03:30:33]   selftest pool: block 7 cols over a 4-col baseline; selected 0/30; BH rejections before the sign filter 0; genes at the permutation floor 9 (k* = 24); batched-vs-reference worst 0.00e+00; 3 s
+  kernel, BH, assemble: OK (batched vs reference worst 0.0e+00)
+  cancorr (copied from transcriptome_baseline.py) equals the direct computation; Gaussian reference block RandomState(42).randn(n, K): OK
+  ranking, T_M, operator indicators, partitions, sets round trip (closed analysis), set summaries: OK
+[03:30:33] Stage H manifest verified: 2 files
+  score table, CLOSED_PARTS.txt and PINNED_HOSTS.txt (strict, shared rules), manifest, Stage H matrix and covariates-record parsers: OK
+  PS 6.1 classes and types (36 combinations, closures included), case and M4 counts: OK
+  change D, e and p_abs over 119 placebos, m_R from 25 columns: OK
+[03:30:34] Stage LX start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX.partial
+[03:30:34] Stage LX FAILED:
+Traceback (most recent call last):
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py", line 1670, in run_stage
+    res = body(partial)
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py", line 2526, in boom
+    raise RuntimeError("simulated crash")
+RuntimeError: simulated crash
+
+[03:30:34] previous interrupted attempt kept as C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX_failed1; Stage LX runs again
+[03:30:34] Stage LX start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX.partial
+[03:30:34] Stage LX FAILED:
+Traceback (most recent call last):
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py", line 1670, in run_stage
+    res = body(partial)
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py", line 2526, in boom
+    raise RuntimeError("simulated crash")
+RuntimeError: simulated crash
+
+[03:30:34] previous interrupted attempt kept as C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX_failed2; Stage LX runs again
+[03:30:34] Stage LX start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX.partial
+[03:30:34] Stage LX FAILED:
+Traceback (most recent call last):
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py", line 1670, in run_stage
+    res = body(partial)
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py", line 2526, in boom
+    raise RuntimeError("simulated crash")
+RuntimeError: simulated crash
+
+[03:30:34] previous interrupted attempt kept as C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX_failed3; Stage LX runs again
+[03:30:34] Stage LX start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX.partial
+[03:30:34] Stage LX FAILED:
+Traceback (most recent call last):
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py", line 1670, in run_stage
+    res = body(partial)
+  File "D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py", line 2526, in boom
+    raise RuntimeError("simulated crash")
+RuntimeError: simulated crash
+
+[03:30:34] previous interrupted attempt kept as C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX_failed4; Stage LX runs again
+[03:30:34] Stage LX start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX.partial
+[03:30:34] Stage LX complete in 0.0 min; outputs ['x.txt']
+[03:30:34] Stage LX folder renamed to C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\rs\server_export\results\c1_covariates\LX
+  run safety (.partial, _failed1.._failed4, unlimited reruns, completed never rerun, tee): OK
+  SIDECAR_FILES.txt names all 33 files the real stages require: OK
+  make_sidecar.py: SIDECAR_FILES.txt covers the required list; a missing PINNED_HOSTS.txt or sitepack table is refused: OK
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  listed        review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  listed        review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  listed        server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  0 further files listed in the sidecar (not required by the stages)
+  CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+check-sidecar: SIDECAR OK (32 required files, 32 listed, 0 problems)
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  listed        review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  listed        review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  listed        server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  0 further files listed in the sidecar (not required by the stages)
+  CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+  PROBLEM: review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh is not listed in the sidecar (not frozen)
+check-sidecar: SIDECAR FAILED (32 required files, 31 listed, 1 problems)
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  listed        review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  listed        server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  NOT LISTED    server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_luad.tsv
+  0 further files listed in the sidecar (not required by the stages)
+  PROBLEM: review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt is not listed in the sidecar (not frozen)
+  PROBLEM: review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt is not listed in the sidecar (not frozen)
+  PROBLEM: server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_luad.tsv is not listed in the sidecar (not frozen)
+check-sidecar: SIDECAR FAILED (33 required files, 31 listed, 3 problems)
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  listed        review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  listed        review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  NOT LISTED    server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  0 further files listed in the sidecar (not required by the stages)
+  CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+  PROBLEM: server_export/scripts/transcriptome_baseline.py is not listed in the sidecar (not frozen)
+check-sidecar: SIDECAR FAILED (32 required files, 31 listed, 1 problems)
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  listed        review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  HASH MISMATCH review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  listed        server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  0 further files listed in the sidecar (not required by the stages)
+  CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+  PROBLEM: review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md changed since freezing (sidecar hash does not match)
+check-sidecar: SIDECAR FAILED (32 required files, 32 listed, 1 problems)
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  listed        review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  listed        review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  listed        server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  0 further files listed in the sidecar (not required by the stages)
+  CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+  PROBLEM: server_export/scripts/residual_analysis_sitepack.py is listed with 41df752d..., not the pinned 70416820...
+check-sidecar: SIDECAR FAILED (32 required files, 32 listed, 1 problems)
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  listed        review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  listed        review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  listed        server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  NOT LISTED    server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_luad.tsv
+  0 further files listed in the sidecar (not required by the stages)
+  PROBLEM: REFUSED: unknown arm in C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\review\C1_COVARIATES_2026-11-21\CLOSED_PARTS.txt: 'arm ucec A_X'
+  PROBLEM: server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_luad.tsv is not listed in the sidecar (not frozen)
+check-sidecar: SIDECAR FAILED (33 required files, 32 listed, 2 problems)
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  listed        review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  listed        review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  listed        server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  0 further files listed in the sidecar (not required by the stages)
+  CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+  PROBLEM: REFUSED: C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\review\C1_COVARIATES_2026-11-21\PINNED_HOSTS.txt has two pinned lines for ucec
+check-sidecar: SIDECAR FAILED (32 required files, 32 listed, 1 problems)
+  listed        review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  listed        review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  listed        review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  listed        review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  listed        review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  listed        review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  listed        review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  listed        server_export/scripts/residual_analysis.py
+  listed        split_replication_power.py
+  listed        server_export/scripts/c1_run_test.py
+  listed        server_export/scripts/c1_run_test_luad.py
+  listed        server_export/scripts/composition_controls.py
+  listed        server_export/scripts/transcriptome_baseline.py
+  listed        server_export/scripts/residual_analysis_sitepack.py
+  listed        review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  listed        inputs_ucec.npz
+  listed        conf_ucec.npz
+  listed        pub_ucec.json
+  listed        compctl_ucec.csv
+  listed        txperm_ucec.csv
+  listed        sitepack_ucec.csv
+  listed        server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  listed        inputs_luad.npz
+  listed        conf_luad.npz
+  listed        pub_luad.json
+  listed        compctl_luad.csv
+  listed        txperm_luad.csv
+  listed        sitepack_luad.csv
+  0 further files listed in the sidecar (not required by the stages)
+  CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+  PROBLEM: malformed sidecar line 'nothex *x'
+check-sidecar: SIDECAR FAILED (32 required files, 32 listed, 1 problems)
+  NOT LISTED    review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+  NOT LISTED    review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+  NOT LISTED    review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+  NOT LISTED    server_export/scripts/residual_analysis.py
+  NOT LISTED    split_replication_power.py
+  NOT LISTED    server_export/scripts/c1_run_test.py
+  NOT LISTED    server_export/scripts/c1_run_test_luad.py
+  NOT LISTED    server_export/scripts/composition_controls.py
+  NOT LISTED    server_export/scripts/transcriptome_baseline.py
+  NOT LISTED    server_export/scripts/residual_analysis_sitepack.py
+  NOT LISTED    review/MEAS_ERROR_2026-10-08/theta_kernel.py
+  NOT LISTED    inputs_ucec.npz
+  NOT LISTED    conf_ucec.npz
+  NOT LISTED    pub_ucec.json
+  NOT LISTED    compctl_ucec.csv
+  NOT LISTED    txperm_ucec.csv
+  NOT LISTED    sitepack_ucec.csv
+  NOT LISTED    server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+  NOT LISTED    inputs_luad.npz
+  NOT LISTED    conf_luad.npz
+  NOT LISTED    pub_luad.json
+  NOT LISTED    compctl_luad.csv
+  NOT LISTED    txperm_luad.csv
+  NOT LISTED    sitepack_luad.csv
+  NOT LISTED    server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_luad.tsv
+  0 further files listed in the sidecar (not required by the stages)
+  PROBLEM: sidecar C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\review\POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 not found -- the pre-specification is not frozen
+check-sidecar: SIDECAR FAILED (33 required files, 0 listed, 1 problems)
+  --check-sidecar on a temporary tree (unlisted, changed, pinned, CLOSED_PARTS, PINNED_HOSTS, malformed, missing): OK
+REFUSED: --validate-only: the sidecar C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\review\POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 exists; after freezing this mode would rewrite frozen files
+REFUSED: --gate-v3: the sidecar C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\review\POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 exists; after freezing this mode would rewrite frozen files
+  --validate-only and --gate-v3 refuse when the sidecar exists and write nothing: OK
+[03:30:36] V3 ucec: 70 of 70 published composition-control genes compared (70 published-set genes covered of 70), worst abs difference 0.00e+00 -> VALIDATED
+[03:30:36] V1b ucec: 70 genes; max abs diff r2_rna_pcs20 0.000e+00 (tol 1e-09; 99.9th pct 0.000e+00), incr_over_pcs20 0.000e+00 (tol 1e-09; 99.9th pct 0.000e+00); genes over 1e-9 (R2 / increment): 0 / 0; n mismatches 0; published-set genes missing from the csv 0; batched-vs-reference 0.00e+00 -> VALIDATED
+[03:30:36] V2 ucec unrestricted: AUC 0.9009171012 null 0.4988438603 SD 0.0544581073 p 0.010000 rho 0.3108102582; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V2 ucec within-operator: AUC 0.8550620392 null 0.4953709002 SD 0.0457427463 p 0.010000 rho 0.2425192231; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V2 ucec residualised: AUC 0.8874303183 null 0.5065726497 SD 0.0467266779 p 0.010000 rho 0.1396168719; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V1b luad: 70 genes; max abs diff r2_rna_pcs20 0.000e+00 (tol 1e-09; 99.9th pct 0.000e+00), incr_over_pcs20 0.000e+00 (tol 1e-09; 99.9th pct 0.000e+00); genes over 1e-9 (R2 / increment): 0 / 0; n mismatches 0; published-set genes missing from the csv 0; batched-vs-reference 0.00e+00 -> VALIDATED
+[03:30:36] V2 luad unrestricted: AUC 0.8516453875 null 0.4977485700 SD 0.0462397542 p 0.010000 rho 0.2850846704; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:36] ucec: c1_cov_discovery_scores_ucec.tsv OK (1 comment lines)
+[03:30:36] ucec: c1_cov_ucec_A_C3.npz OK (150 x 100)
+[03:30:36] ucec: c1_cov_ucec_V_C3.npz OK (150 x 100)
+[03:30:36] ucec: c1_cov_confirmatory_covariates_ucec.npz OK (keys ['C3', 'R20', 'c3_testable', 'cases', 'markers', 'markers_json', 'pcs'])
+[03:30:36] luad: c1_cov_discovery_scores_luad.tsv absent
+[03:30:36] luad: c1_cov_luad_A_R20.npz OK (150 x 100)
+[03:30:36] luad: c1_cov_luad_V_R20.npz OK (150 x 100)
+[03:30:36] luad: c1_cov_luad_A_R20cap_001.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_002.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_003.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_004.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_005.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_006.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_007.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_008.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_009.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_010.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_011.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_012.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_013.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_014.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_015.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_016.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_017.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_018.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_019.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_020.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_021.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_022.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_023.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_024.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_025.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_026.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_027.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_028.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_029.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_030.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_031.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_032.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_033.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_034.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_035.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_036.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_037.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_038.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_039.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_040.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_041.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_042.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_043.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_044.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_045.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_046.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_047.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_048.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_049.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_050.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_051.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_052.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_053.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_054.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_055.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_056.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_057.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_058.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_059.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_060.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_061.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_062.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_063.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_064.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_065.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_066.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_067.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_068.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_069.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_070.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_071.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_072.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_073.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_074.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_075.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_076.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_077.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_078.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_079.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_080.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_081.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_082.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_083.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_084.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_085.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_086.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_087.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_088.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_089.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_090.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_091.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_092.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_093.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_094.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_095.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_096.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_097.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_098.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_099.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_100.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_101.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_102.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_103.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_104.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_105.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_106.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_107.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_108.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_109.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_110.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_111.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_112.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_113.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_114.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_115.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_116.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_117.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_118.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_119.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_confirmatory_covariates_luad.npz OK (keys ['C3', 'R20', 'c3_testable', 'cases', 'markers', 'markers_json', 'pcs'])
+[03:30:36] manifest: 125 files; own sha256 9f3d21a83f638f8b6eb5251f29bacc06eccf268ae8914f5c631fa6ed83a6961e
+[03:30:36] check-stage-h: ALL PRESENT FILES PASS
+[03:30:36] CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:36] ucec: c1_cov_discovery_scores_ucec.tsv OK (1 comment lines)
+[03:30:36] ucec: c1_cov_ucec_A_C3.npz FAILED: M has shape (150, 100), expected (150, 6)
+[03:30:36] ucec: c1_cov_ucec_V_C3.npz FAILED: M has shape (150, 100), expected (150, 6)
+[03:30:36] ucec: c1_cov_confirmatory_covariates_ucec.npz OK (keys ['C3', 'R20', 'c3_testable', 'cases', 'markers', 'markers_json', 'pcs'])
+[03:30:36] luad: c1_cov_discovery_scores_luad.tsv absent
+[03:30:36] luad: c1_cov_luad_A_R20.npz FAILED: M has shape (150, 100), expected (150, 6)
+[03:30:36] luad: c1_cov_luad_V_R20.npz FAILED: M has shape (150, 100), expected (150, 6)
+[03:30:36] luad: c1_cov_luad_A_R20cap_001.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_002.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_003.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_004.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_005.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_006.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_007.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_008.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_009.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_010.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_011.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_012.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_013.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_014.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_015.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_016.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_017.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_018.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_019.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_020.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_021.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_022.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_023.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_024.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_025.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_026.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_027.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_028.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_029.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_030.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_031.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_032.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_033.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_034.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_035.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_036.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_037.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_038.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_039.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_040.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_041.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_042.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_043.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_044.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_045.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_046.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_047.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_048.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_049.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_050.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_051.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_052.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_053.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_054.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_055.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_056.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_057.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_058.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_059.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_060.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_061.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_062.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_063.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_064.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_065.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_066.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_067.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_068.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_069.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_070.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_071.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_072.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_073.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_074.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_075.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_076.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_077.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_078.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_079.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_080.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_081.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_082.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_083.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_084.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_085.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_086.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_087.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_088.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_089.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_090.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_091.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_092.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_093.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_094.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_095.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_096.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_097.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_098.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_099.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_100.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_101.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_102.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_103.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_104.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_105.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_106.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_107.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_108.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_109.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_110.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_111.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_112.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_113.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_114.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_115.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_116.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_117.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_118.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_luad_A_R20cap_119.npz OK (150 x 26)
+[03:30:36] luad: c1_cov_confirmatory_covariates_luad.npz OK (keys ['C3', 'R20', 'c3_testable', 'cases', 'markers', 'markers_json', 'pcs'])
+[03:30:36] manifest: 125 files; own sha256 9f3d21a83f638f8b6eb5251f29bacc06eccf268ae8914f5c631fa6ed83a6961e
+[03:30:36] check-stage-h: FAILED
+[03:30:36] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:36] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:36] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:36] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:36] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:36] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:36] Stage H manifest verified: 125 files
+[03:30:36] V3 ucec: 70 of 70 published composition-control genes compared (70 published-set genes covered of 70), worst abs difference 3.63e-02 -> FAILED
+[03:30:36] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:36] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:36] Stage H manifest verified: 125 files
+[03:30:36] OP ucec: 12 indicators cover 36 of 40 cases (1 unlabelled); levels and counts [['L00', 3], ['L01', 3], ['L02', 3], ['L03', 3], ['L04', 3], ['L05', 3], ['L06', 3], ['L07', 3], ['L08', 3], ['L09', 3], ['L10', 3], ['L11', 3]]
+[03:30:36] S_BC ucec: 60 genes (frozen 60); 58 in the confirmatory universe (expected n/a; not fatal); rho from incremental_r2_batchresid
+[03:30:36] V2 ucec unrestricted: AUC 0.9009171012 null 0.4988438603 SD 0.0544581073 p 0.010000 rho 0.3108102582; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V2 ucec within-operator: AUC 0.8550620392 null 0.4953709002 SD 0.0457427463 p 0.010000 rho 0.2425192231; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V2 ucec residualised: AUC 0.8874303183 null 0.5065726497 SD 0.0467266779 p 0.010000 rho 0.1396168719; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V3 ucec: 70 of 70 published composition-control genes compared (70 published-set genes covered of 70), worst abs difference 3.63e-02 -> FAILED
+[03:30:36] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:36] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:36] Stage H manifest verified: 125 files
+[03:30:36] OP ucec: 12 indicators cover 36 of 40 cases (1 unlabelled); levels and counts [['L00', 3], ['L01', 3], ['L02', 3], ['L03', 3], ['L04', 3], ['L05', 3], ['L06', 3], ['L07', 3], ['L08', 3], ['L09', 3], ['L10', 3], ['L11', 3]]
+[03:30:36] S_BC ucec: 60 genes (frozen 60); 58 in the confirmatory universe (expected n/a; not fatal); rho from incremental_r2_batchresid
+[03:30:36] V2 ucec unrestricted: AUC 0.9009171012 null 0.4988438603 SD 0.0544581073 p 0.010000 rho 0.3108102582; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V2 ucec within-operator: AUC 0.8550620392 null 0.4953709002 SD 0.0457427463 p 0.010000 rho 0.2425192231; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V2 ucec residualised: AUC 0.8874303183 null 0.5065726497 SD 0.0467266779 p 0.010000 rho 0.1396168719; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] V3 ucec: 70 of 70 published composition-control genes compared (70 published-set genes covered of 70), worst abs difference 0.00e+00 -> VALIDATED
+[03:30:36] OP luad: 12 indicators cover 36 of 40 cases (1 unlabelled); levels and counts [['L00', 3], ['L01', 3], ['L02', 3], ['L03', 3], ['L04', 3], ['L05', 3], ['L06', 3], ['L07', 3], ['L08', 3], ['L09', 3], ['L10', 3], ['L11', 3]]
+[03:30:36] S_BC luad: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); no rho: 0 universe genes absent from the table, 1 without a finite incremental_r2_batchresid
+[03:30:36] V2 luad unrestricted: AUC 0.8516453875 null 0.4977485700 SD 0.0462397542 p 0.010000 rho 0.2850846704; n 67/83; worst diff 0.0e+00 -> VALIDATED
+[03:30:36] luad: discovery analyses C3 and M|C3 are closed; no score table is read
+[03:30:36] pre-flight L1 passed
+[03:30:36] previous interrupted attempt kept as C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\server_export\results\c1_covariates\L1_failed1; Stage L1 runs again
+[03:30:36] Stage L1 start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\server_export\results\c1_covariates\L1.partial
+[03:30:37]   ucec C3: block 3 cols over a 1-col baseline; selected 82/160; BH rejections before the sign filter 82; genes at the permutation floor 82 (k* = 32); batched-vs-reference worst 0.00e+00; 0 s
+[03:30:37]   ucec R20: block 20 cols over a 1-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 1 (k* = 32); batched-vs-reference worst 0.00e+00; 1 s
+[03:30:38]   ucec OP: block 12 cols over a 1-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 0 (k* = 32); batched-vs-reference worst 0.00e+00; 0 s
+[03:30:39]   ucec M|C3: block 20 cols over a 4-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 5 (k* = 32); batched-vs-reference worst 0.00e+00; 1 s
+[03:30:40]   ucec M|R20: block 20 cols over a 21-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 3 (k* = 32); batched-vs-reference worst 0.00e+00; 2 s
+[03:30:40]   luad C3: closed (CLOSED_PARTS.txt); no sets
+[03:30:41]   luad R20: block 20 cols over a 1-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 0 (k* = 32); batched-vs-reference worst 0.00e+00; 1 s
+[03:30:41]   luad OP: block 12 cols over a 1-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 1 (k* = 32); batched-vs-reference worst 0.00e+00; 0 s
+[03:30:41]   luad M|C3: closed (CLOSED_PARTS.txt); no sets
+[03:30:43]   luad M|R20: block 20 cols over a 21-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 0 (k* = 32); batched-vs-reference worst 0.00e+00; 2 s
+[03:30:43] Stage L1 complete in 0.1 min; outputs ['cells_L1.csv', 'sets_luad.csv', 'sets_ucec.csv']
+[03:30:43] Stage L1 folder renamed to C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\server_export\results\c1_covariates\L1
+[03:30:43] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:43] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:43] Stage H manifest verified: 125 files
+[03:30:43] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:43] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:43] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:43] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:43] Stage H manifest verified: 125 files
+[03:30:43] Stage L1 outputs verified against result_L1.json (3 files)
+[03:30:43] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:43] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:43] Stage H manifest verified: 125 files
+[03:30:43] Stage L1 outputs verified against result_L1.json (3 files)
+[03:30:43] pre-flight ucec: 3 Stage H files verified (manifest hash, format, one case list); closed arms ['A_R20', 'A_R20cap', 'V_R20']; manifest entries not read: 0
+[03:30:44] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:44] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:44] Stage H manifest verified: 125 files
+[03:30:44] Stage L1 outputs verified against result_L1.json (3 files)
+[03:30:44] pre-flight ucec: 3 Stage H files verified (manifest hash, format, one case list); closed arms ['A_R20', 'A_R20cap', 'V_R20']; manifest entries not read: 0
+[03:30:44] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:44] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:44] Stage H manifest verified: 125 files
+[03:30:44] Stage L1 outputs verified against result_L1.json (3 files)
+[03:30:44] pre-flight ucec: 3 Stage H files verified (manifest hash, format, one case list); closed arms ['A_R20', 'A_R20cap', 'V_R20']; manifest entries not read: 0
+[03:30:44] pre-flight ucec: 3 Stage H files verified (manifest hash, format, one case list); closed arms ['A_R20', 'A_R20cap', 'V_R20']; manifest entries not read: 0
+[03:30:44] pre-flight luad: 122 Stage H files verified (manifest hash, format, one case list); closed arms ['A_C3', 'V_C3']; manifest entries not read: 0
+[03:30:44] pre-flight ucec: 3 Stage H files verified (manifest hash, format, one case list); closed arms ['A_R20', 'A_R20cap', 'V_R20']; manifest entries not read: 0
+[03:30:44] pre-flight ucec: 3 Stage H files verified (manifest hash, format, one case list); closed arms ['A_R20', 'A_R20cap', 'V_R20']; manifest entries not read: 0
+[03:30:44] sidecar verified: 32 files; 32 required files listed; CLOSED_PARTS.txt: ['arm ucec A_R20', 'arm ucec A_R20cap', 'arm ucec V_R20', 'arm luad A_C3', 'arm luad V_C3', 'analysis luad C3', 'analysis luad M|C3']
+[03:30:44] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:44] Stage H manifest verified: 125 files
+[03:30:44] Stage L1 outputs verified against result_L1.json (3 files)
+[03:30:44] pre-flight ucec: 3 Stage H files verified (manifest hash, format, one case list); closed arms ['A_R20', 'A_R20cap', 'V_R20']; manifest entries not read: 0
+[03:30:44] pre-flight luad: 122 Stage H files verified (manifest hash, format, one case list); closed arms ['A_C3', 'V_C3']; manifest entries not read: 0
+[03:30:44] pre-flight L2 passed
+[03:30:44] previous interrupted attempt kept as C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\server_export\results\c1_covariates\L2_failed2; Stage L2 runs again
+[03:30:44] Stage L2 start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\server_export\results\c1_covariates\L2.partial
+[03:30:44] S_BC ucec: 60 genes (frozen 60); 58 in the confirmatory universe (expected n/a; not fatal); rho from incremental_r2_batchresid
+[03:30:44] S_BC luad: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); no rho: 0 universe genes absent from the table, 1 without a finite incremental_r2_batchresid
+[03:30:44] ucec: C3 class H (p 0.01); R20 class closed (p_R None, e None, p_abs None); type NC:R; flagged True
+[03:30:44] luad: C3 class closed (p None); R20 class H (p_R 0.01, e 20, p_abs 0.175); type NC:C; flagged True
+[03:30:44] case 2; M4 forward 0 of 5, matched 0 of 2
+[03:30:44] Stage L2 complete in 0.0 min; outputs ['cells_L2.csv', 'classes.json']
+[03:30:44] Stage L2 folder renamed to C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_1\server_export\results\c1_covariates\L2
+  end-to-end 1 (closures; types NC:R and NC:C; case 2; S_BC cells; refusals create nothing; reruns): OK
+[03:30:47] V3 ucec: 70 of 70 published composition-control genes compared (70 published-set genes covered of 70), worst abs difference 0.00e+00 -> VALIDATED
+[03:30:47] V3 luad: 70 of 70 published composition-control genes compared (70 published-set genes covered of 70), worst abs difference 0.00e+00 -> VALIDATED
+[03:30:47] sidecar verified: 33 files; 33 required files listed; CLOSED_PARTS.txt: nothing closed
+[03:30:47] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:47] Stage H manifest verified: 248 files
+[03:30:47] OP ucec: 12 indicators cover 36 of 40 cases (1 unlabelled); levels and counts [['L00', 3], ['L01', 3], ['L02', 3], ['L03', 3], ['L04', 3], ['L05', 3], ['L06', 3], ['L07', 3], ['L08', 3], ['L09', 3], ['L10', 3], ['L11', 3]]
+[03:30:47] S_BC ucec: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); rho from incremental_r2_batchresid
+[03:30:47] V2 ucec unrestricted: AUC 0.8950921365 null 0.4944869236 SD 0.0451190953 p 0.010000 rho 0.2797119872; n 63/87; worst diff 0.0e+00 -> VALIDATED
+[03:30:47] V2 ucec within-operator: AUC 0.9124247400 null 0.4969472134 SD 0.0462318765 p 0.010000 rho 0.4001511178; n 63/87; worst diff 0.0e+00 -> VALIDATED
+[03:30:47] V2 ucec residualised: AUC 0.8465608466 null 0.4984989468 SD 0.0482891312 p 0.010000 rho 0.2855326903; n 63/87; worst diff 0.0e+00 -> VALIDATED
+[03:30:47] V3 ucec: 70 of 70 published composition-control genes compared (70 published-set genes covered of 70), worst abs difference 0.00e+00 -> VALIDATED
+[03:30:47] OP luad: 12 indicators cover 36 of 40 cases (1 unlabelled); levels and counts [['L00', 3], ['L01', 3], ['L02', 3], ['L03', 3], ['L04', 3], ['L05', 3], ['L06', 3], ['L07', 3], ['L08', 3], ['L09', 3], ['L10', 3], ['L11', 3]]
+[03:30:47] S_BC luad: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); no rho: 0 universe genes absent from the table, 1 without a finite incremental_r2_batchresid
+[03:30:47] V2 luad unrestricted: AUC 0.8961038961 null 0.4877727491 SD 0.0433804953 p 0.010000 rho 0.2797937686; n 66/84; worst diff 0.0e+00 -> VALIDATED
+[03:30:47] V3 luad: 70 of 70 published composition-control genes compared (70 published-set genes covered of 70), worst abs difference 0.00e+00 -> VALIDATED
+[03:30:47] pre-flight L1 passed
+[03:30:47] Stage L1 start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_2\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_2\server_export\results\c1_covariates\L1.partial
+[03:30:47]   ucec C3: block 3 cols over a 1-col baseline; selected 81/160; BH rejections before the sign filter 81; genes at the permutation floor 81 (k* = 32); batched-vs-reference worst 0.00e+00; 0 s
+[03:30:48]   ucec R20: block 20 cols over a 1-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 29 (k* = 32); batched-vs-reference worst 0.00e+00; 1 s
+[03:30:48]   ucec OP: block 12 cols over a 1-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 4 (k* = 32); batched-vs-reference worst 0.00e+00; 0 s
+[03:30:49]   ucec M|C3: block 20 cols over a 4-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 1 (k* = 32); batched-vs-reference worst 0.00e+00; 1 s
+[03:30:51]   ucec M|R20: block 20 cols over a 21-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 0 (k* = 32); batched-vs-reference worst 0.00e+00; 2 s
+[03:30:51]   luad C3: block 3 cols over a 1-col baseline; selected 81/160; BH rejections before the sign filter 81; genes at the permutation floor 81 (k* = 32); batched-vs-reference worst 0.00e+00; 0 s
+[03:30:52]   luad R20: block 20 cols over a 1-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 3 (k* = 32); batched-vs-reference worst 0.00e+00; 1 s
+[03:30:52]   luad OP: block 12 cols over a 1-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 1 (k* = 32); batched-vs-reference worst 0.00e+00; 0 s
+[03:30:53]   luad M|C3: block 20 cols over a 4-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 2 (k* = 32); batched-vs-reference worst 0.00e+00; 1 s
+[03:30:55]   luad M|R20: block 20 cols over a 21-col baseline; selected 0/160; BH rejections before the sign filter 0; genes at the permutation floor 3 (k* = 32); batched-vs-reference worst 0.00e+00; 2 s
+[03:30:55] Stage L1 complete in 0.1 min; outputs ['cells_L1.csv', 'sets_luad.csv', 'sets_ucec.csv']
+[03:30:55] Stage L1 folder renamed to C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_2\server_export\results\c1_covariates\L1
+[03:30:55] sidecar verified: 33 files; 33 required files listed; CLOSED_PARTS.txt: nothing closed
+[03:30:55] PINNED_HOSTS.txt: {'ucec': 'host_ucec', 'luad': 'host_luad'}
+[03:30:55] Stage H manifest verified: 248 files
+[03:30:55] Stage L1 outputs verified against result_L1.json (3 files)
+[03:30:55] pre-flight ucec: 124 Stage H files verified (manifest hash, format, one case list); closed arms none; manifest entries not read: 0
+[03:30:55] pre-flight luad: 124 Stage H files verified (manifest hash, format, one case list); closed arms none; manifest entries not read: 0
+[03:30:55] pre-flight L2 passed
+[03:30:55] Stage L2 start; script C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_2\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_2\server_export\results\c1_covariates\L2.partial
+[03:30:55] S_BC ucec: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); rho from incremental_r2_batchresid
+[03:30:55] S_BC luad: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); no rho: 0 universe genes absent from the table, 1 without a finite incremental_r2_batchresid
+[03:30:56] ucec: C3 class N (p 1.0); R20 class U (p_R 1.0, e 119, p_abs 1.0); type C; flagged True
+[03:30:56] luad: C3 class H (p 0.01); R20 class A (p_R 1.0, e 0, p_abs 0.008333333333333333); type R; flagged True
+[03:30:56] case 2; M4 forward 0 of 6, matched 0 of 4
+[03:30:56] Stage L2 complete in 0.0 min; outputs ['cells_L2.csv', 'classes.json']
+[03:30:56] Stage L2 folder renamed to C:\Users\<user>\AppData\Local\Temp\c1cov_selftest_a7sbrdg7\synthetic_root_2\server_export\results\c1_covariates\L2
+[03:30:56] S_BC ucec: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); rho from incremental_r2_batchresid
+[03:30:56] S_BC luad: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); no rho: 0 universe genes absent from the table, 1 without a finite incremental_r2_batchresid
+[03:30:56] S_BC ucec: 60 genes (frozen 60); 56 in the confirmatory universe (expected n/a; not fatal); no rho: 1 universe genes absent from the table, 0 without a finite incremental_r2_batchresid
+[03:30:56] OP ucec: 12 indicators cover 36 of 40 cases (1 unlabelled); levels and counts [['L00', 3], ['L01', 3], ['L02', 3], ['L03', 3], ['L04', 3], ['L05', 3], ['L06', 3], ['L07', 3], ['L08', 3], ['L09', 3], ['L10', 3], ['L11', 3]]
+  end-to-end 2 (nothing closed; types C (class U) and R (class A); case 2), S_BC loader, operator-indicator counts: OK
+SELFTEST PASSED in 27 s

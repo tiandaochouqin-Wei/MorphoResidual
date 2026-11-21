@@ -1,0 +1,56 @@
+{
+ "cohorts": {
+  "luad": {
+   "n_genes": 2310,
+   "n_rows": 2310,
+   "n_skipped": 0,
+   "ok": true,
+   "published_set_covered": 2310,
+   "score_file_comments": [
+    "# c1_covariates_cluster.py export-scores (H0), cohort luad, 105 patients",
+    "# host s002; lsf_job 76712906; written 2026-11-20T23:40:35Z",
+    "# script_sha256 da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc",
+    "# composition_controls_sha256 46b4a1d8a6973bb71b162697a04754e0e1c555eeaf3ff83dfc5c143087abdfa6",
+    "# markers stroma 24/24 present (zero-SD 0): COL1A1,COL1A2,COL3A1,COL5A1,COL5A2,COL6A3,FN1,SPARC,FAP,PDGFRA,PDGFRB,ACTA2,TAGLN,DCN,LUM,POSTN,THBS2,FBN1,MMP2,TIMP1,VIM,COL4A1,COL4A2,SERPINH1",
+    "# markers immune 25/25 present (zero-SD 0): PTPRC,CD3D,CD3E,CD3G,CD8A,CD4,CD2,CD5,CD68,CD163,MS4A1,CD19,NKG7,GZMB,GZMA,PRF1,FOXP3,IL2RA,CD14,ITGAM,LYZ,HLA-DRA,CD74,IRF8,CCL5",
+    "# markers proliferation 24/24 present (zero-SD 0): MKI67,PCNA,TOP2A,CCNB1,CCNB2,CDK1,BUB1,BUB1B,AURKA,AURKB,FOXM1,TYMS,RRM2,CENPA,PLK1,CCNA2,CDC20,KIF11,TPX2,UBE2C,BIRC5,CENPF,MCM2,MCM6"
+   ],
+   "score_file_sha256": "95c986a0e302e16fd3321dcd39958710ffa1ce0fc76cbba18a8d0c568fdfea58",
+   "worst_abs_diff": 4.440892098500626e-16
+  },
+  "ucec": {
+   "n_genes": 2566,
+   "n_rows": 2566,
+   "n_skipped": 0,
+   "ok": true,
+   "published_set_covered": 2566,
+   "score_file_comments": [
+    "# c1_covariates_cluster.py export-scores (H0), cohort ucec, 100 patients",
+    "# host s006; lsf_job 76713698; written 2026-11-21T00:46:38Z",
+    "# script_sha256 da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc",
+    "# composition_controls_sha256 46b4a1d8a6973bb71b162697a04754e0e1c555eeaf3ff83dfc5c143087abdfa6",
+    "# markers stroma 24/24 present (zero-SD 0): COL1A1,COL1A2,COL3A1,COL5A1,COL5A2,COL6A3,FN1,SPARC,FAP,PDGFRA,PDGFRB,ACTA2,TAGLN,DCN,LUM,POSTN,THBS2,FBN1,MMP2,TIMP1,VIM,COL4A1,COL4A2,SERPINH1",
+    "# markers immune 25/25 present (zero-SD 0): PTPRC,CD3D,CD3E,CD3G,CD8A,CD4,CD2,CD5,CD68,CD163,MS4A1,CD19,NKG7,GZMB,GZMA,PRF1,FOXP3,IL2RA,CD14,ITGAM,LYZ,HLA-DRA,CD74,IRF8,CCL5",
+    "# markers proliferation 24/24 present (zero-SD 0): MKI67,PCNA,TOP2A,CCNB1,CCNB2,CDK1,BUB1,BUB1B,AURKA,AURKB,FOXM1,TYMS,RRM2,CENPA,PLK1,CCNA2,CDC20,KIF11,TPX2,UBE2C,BIRC5,CENPF,MCM2,MCM6"
+   ],
+   "score_file_sha256": "865a8a35984c93ea6d6e3b8056b49ed45bff5432f60bb6052e01b1f3e62a7b2a",
+   "worst_abs_diff": 6.661338147750939e-16
+  }
+ },
+ "env": {
+  "cpu_count": 28,
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.13",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.0",
+  "threads": {
+   "MKL_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1",
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1"
+  }
+ },
+ "ok": true,
+ "script_sha256": "1ea40fa50759366d09f61360d6d2f80dce9703d6d95f6a8ce43ff0f0ae61e779"
+}

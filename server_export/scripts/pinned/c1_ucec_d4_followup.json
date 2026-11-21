@@ -1,0 +1,110 @@
+{
+  "npz": "pinned/c1_ucec_d4_stratified.npz",
+  "sha256_npz": "ef75f1c06d4fc33843a79e9a8d1bb4f4224acd201d30784badb97cf3be13384a",
+  "n_genes": 10146,
+  "arms": {
+    "unrestricted": {
+      "auc": {
+        "obs": 0.5974425564900907,
+        "null_mean": 0.49819454514647427,
+        "null_sd": 0.03629629979626921,
+        "p_one_sided": 0.003996003996003996,
+        "exceedances": 3
+      },
+      "rho": {
+        "obs": 0.2935675639399924,
+        "null_mean": 0.15859933961079156,
+        "null_sd": 0.05362232121634413,
+        "p_one_sided": 0.004995004995004995,
+        "exceedances": 4
+      }
+    },
+    "within-operator": {
+      "auc": {
+        "obs": 0.5974425564900907,
+        "null_mean": 0.505936295945481,
+        "null_sd": 0.03164869176098481,
+        "p_one_sided": 0.003996003996003996,
+        "exceedances": 3
+      },
+      "rho": {
+        "obs": 0.2935675639399924,
+        "null_mean": 0.1670515817618115,
+        "null_sd": 0.0463130059776533,
+        "p_one_sided": 0.003996003996003996,
+        "exceedances": 3
+      }
+    },
+    "residualised": {
+      "auc": {
+        "obs": 0.5671994242176781,
+        "null_mean": 0.48869940996820554,
+        "null_sd": 0.030617540627664825,
+        "p_one_sided": 0.005994005994005994,
+        "exceedances": 5
+      },
+      "rho": {
+        "obs": 0.2568963225558808,
+        "null_mean": 0.14311248771648719,
+        "null_sd": 0.04615069238641195,
+        "p_one_sided": 0.007992007992007992,
+        "exceedances": 7
+      }
+    }
+  },
+  "transitions": {
+    "restriction (unrestricted -> within-operator)": {
+      "auc": {
+        "D_obs": 0.0,
+        "D_null_mean": -0.007741750799006786,
+        "D_null_sd": 0.04965884866283064,
+        "D_null_ci95": [
+          -0.09779617787694259,
+          0.08870829827099497
+        ],
+        "z": 0.15589871709614245,
+        "p_two_sided": 0.8631368631368631,
+        "frac_of_drop_reproduced_by_null": null
+      },
+      "rho": {
+        "D_obs": 0.0,
+        "D_null_mean": -0.008452242151019963,
+        "D_null_sd": 0.07311428707767365,
+        "D_null_ci95": [
+          -0.1482446911971868,
+          0.13732691807511277
+        ],
+        "z": 0.11560315348545551,
+        "p_two_sided": 0.9040959040959041,
+        "frac_of_drop_reproduced_by_null": null
+      }
+    },
+    "residualisation (within-operator -> residualised)": {
+      "auc": {
+        "D_obs": 0.0302431322724126,
+        "D_null_mean": 0.01723688597727546,
+        "D_null_sd": 0.02275338967883734,
+        "D_null_ci95": [
+          -0.02833503204317743,
+          0.05991994775884301
+        ],
+        "z": 0.5716179645634996,
+        "p_two_sided": 0.5454545454545454,
+        "frac_of_drop_reproduced_by_null": 0.569943808135202
+      },
+      "rho": {
+        "D_obs": 0.0366712413841116,
+        "D_null_mean": 0.023939094045324353,
+        "D_null_sd": 0.03420733892179206,
+        "D_null_ci95": [
+          -0.04839662414528398,
+          0.08652293204669939
+        ],
+        "z": 0.3722051390169998,
+        "p_two_sided": 0.7112887112887113,
+        "frac_of_drop_reproduced_by_null": 0.6528029360821243
+      }
+    }
+  },
+  "reproduces_published": true
+}

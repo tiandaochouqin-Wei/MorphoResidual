@@ -1,0 +1,9 @@
+==============================================================================
+C1 COVARIATES (POST HOC) DISCOVERY TREE -- cohort=luad mode=export-scores host=s002 start=2026-11-20T22:28:33Z
+  this script sha256 = da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc
+==============================================================================
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+  hash OK: frozen module c1_run_test_luad = 1d5ee05d57f8... (/public/home/fjhui/ZW/scripts/c1_run_test_luad.py)
+  hash OK: frozen module composition_controls = 46b4a1d8a697... (/public/home/fjhui/ZW/scripts/composition_controls.py)

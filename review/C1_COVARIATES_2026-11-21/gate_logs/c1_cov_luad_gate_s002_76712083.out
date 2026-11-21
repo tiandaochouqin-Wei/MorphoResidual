@@ -1,0 +1,213 @@
+Sender: LSF System <lsfadmin@s002>
+Subject: Job 76712083: <bash lsf_c1_cov_luad.sh --mode gate --rule /public/home/fjhui/ZW/scripts/pinned/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md --rule-sha256 a68dfbec65e0186bb629eaae1f81c8e117549e224b39483d67513c9d1270d022 --case-ids /public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt --protein /public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv --protein-sha256 65c0dacae5ffe22648cb2bf602bc0a2f02c029bd797a135d9dd284beb6145bf2 --rna-manifest-sha256 b3f58f5d2b5d319abb63a2177151694e46c59c253a685729223855b7ac856dfc --discovery-results /public/home/fjhui/ZW/scripts/pinned/luad/residual_results_tumoronly.csv --discovery-sitepack /public/home/fjhui/ZW/results/luad__sitepack_operator.csv --discovery-slide-map /public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad.tsv --discovery-xwalk /public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_luad.tsv --discovery-rna-manifest /public/home/fjhui/ZW/scripts/pinned/manifest_rna_tumor_luad.tsv --batch-labels /public/home/fjhui/ZW/scripts/pinned/c1_luad_batch_labels.tsv --saved-matrix /public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_primary.npz> in cluster <hzauhpc> Exited
+
+Job <bash lsf_c1_cov_luad.sh --mode gate --rule /public/home/fjhui/ZW/scripts/pinned/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md --rule-sha256 a68dfbec65e0186bb629eaae1f81c8e117549e224b39483d67513c9d1270d022 --case-ids /public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt --protein /public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv --protein-sha256 65c0dacae5ffe22648cb2bf602bc0a2f02c029bd797a135d9dd284beb6145bf2 --rna-manifest-sha256 b3f58f5d2b5d319abb63a2177151694e46c59c253a685729223855b7ac856dfc --discovery-results /public/home/fjhui/ZW/scripts/pinned/luad/residual_results_tumoronly.csv --discovery-sitepack /public/home/fjhui/ZW/results/luad__sitepack_operator.csv --discovery-slide-map /public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad.tsv --discovery-xwalk /public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_luad.tsv --discovery-rna-manifest /public/home/fjhui/ZW/scripts/pinned/manifest_rna_tumor_luad.tsv --batch-labels /public/home/fjhui/ZW/scripts/pinned/c1_luad_batch_labels.tsv --saved-matrix /public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_primary.npz> was submitted from host <mn02> by user <fjhui> in cluster <hzauhpc> at Sat Nov 21 06:29:08 2026
+Job was executed on host(s) <4*s002>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Sat Nov 21 06:29:08 2026
+</public/home/fjhui> was used as the home directory.
+</public/home/fjhui/ZW/scripts> was used as the working directory.
+Started at Sat Nov 21 06:29:08 2026
+Terminated at Sat Nov 21 06:29:13 2026
+Results reported at Sat Nov 21 06:29:13 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash lsf_c1_cov_luad.sh --mode gate --rule /public/home/fjhui/ZW/scripts/pinned/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md --rule-sha256 a68dfbec65e0186bb629eaae1f81c8e117549e224b39483d67513c9d1270d022 --case-ids /public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt --protein /public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv --protein-sha256 65c0dacae5ffe22648cb2bf602bc0a2f02c029bd797a135d9dd284beb6145bf2 --rna-manifest-sha256 b3f58f5d2b5d319abb63a2177151694e46c59c253a685729223855b7ac856dfc --discovery-results /public/home/fjhui/ZW/scripts/pinned/luad/residual_results_tumoronly.csv --discovery-sitepack /public/home/fjhui/ZW/results/luad__sitepack_operator.csv --discovery-slide-map /public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad.tsv --discovery-xwalk /public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_luad.tsv --discovery-rna-manifest /public/home/fjhui/ZW/scripts/pinned/manifest_rna_tumor_luad.tsv --batch-labels /public/home/fjhui/ZW/scripts/pinned/c1_luad_batch_labels.tsv --saved-matrix /public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_primary.npz
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2.67 sec.
+    Max Memory :                                 42 MB
+    Average Memory :                             42.00 MB
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               9958.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   4 sec.
+    Turnaround time :                            5 sec.
+
+The output (if any) follows:
+
+environment OK: MORPHO_ROOT and MORPHO_OUT both confirmed under the luad_c1 tree.
+=== job start: host=s002 date=Sat Nov 21 06:29:09 CST 2026 cores=1 workers=4 args=--mode gate --rule /public/home/fjhui/ZW/scripts/pinned/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md --rule-sha256 a68dfbec65e0186bb629eaae1f81c8e117549e224b39483d67513c9d1270d022 --case-ids /public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt --protein /public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv --protein-sha256 65c0dacae5ffe22648cb2bf602bc0a2f02c029bd797a135d9dd284beb6145bf2 --rna-manifest-sha256 b3f58f5d2b5d319abb63a2177151694e46c59c253a685729223855b7ac856dfc --discovery-results /public/home/fjhui/ZW/scripts/pinned/luad/residual_results_tumoronly.csv --discovery-sitepack /public/home/fjhui/ZW/results/luad__sitepack_operator.csv --discovery-slide-map /public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad.tsv --discovery-xwalk /public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_luad.tsv --discovery-rna-manifest /public/home/fjhui/ZW/scripts/pinned/manifest_rna_tumor_luad.tsv --batch-labels /public/home/fjhui/ZW/scripts/pinned/c1_luad_batch_labels.tsv --saved-matrix /public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_primary.npz ===
+/public/home/fjhui/miniconda3/lib/python3.9/site-packages/scipy/__init__.py:132: UserWarning: A NumPy version >=1.21.6 and <1.28.0 is required for this version of SciPy (detected version 2.0.2)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.0.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2665, in <module>
+    sys.exit(main())
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2652, in main
+    return mode_confirmatory(args, log)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1404, in mode_confirmatory
+    rec = base_record(args, args.mode)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1297, in base_record
+    versions=versions())
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1304, in versions
+    v[m] = __import__(m).__version__
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils._estimator_html_repr import _HTMLDocumentationLinkMixin, estimator_html_repr
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/__init__.py", line 15, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/_param_validation.py", line 14, in <module>
+    from scipy.sparse import csr_matrix, issparse
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/scipy/sparse/__init__.py", line 274, in <module>
+    from ._csr import *
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/scipy/sparse/_csr.py", line 11, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.0.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2665, in <module>
+    sys.exit(main())
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2652, in main
+    return mode_confirmatory(args, log)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1404, in mode_confirmatory
+    rec = base_record(args, args.mode)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1297, in base_record
+    versions=versions())
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1304, in versions
+    v[m] = __import__(m).__version__
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/pandas/__init__.py", line 26, in <module>
+    from pandas.compat import (
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/pandas/compat/__init__.py", line 27, in <module>
+    from pandas.compat.pyarrow import (
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/pandas/compat/pyarrow.py", line 8, in <module>
+    import pyarrow as pa
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/pyarrow/__init__.py", line 65, in <module>
+    import pyarrow.lib as _lib
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.0.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2665, in <module>
+    sys.exit(main())
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2652, in main
+    return mode_confirmatory(args, log)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1404, in mode_confirmatory
+    rec = base_record(args, args.mode)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1297, in base_record
+    versions=versions())
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1304, in versions
+    v[m] = __import__(m).__version__
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/pandas/__init__.py", line 49, in <module>
+    from pandas.core.api import (
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/pandas/core/api.py", line 9, in <module>
+    from pandas.core.dtypes.dtypes import (
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/pandas/core/dtypes/dtypes.py", line 24, in <module>
+    from pandas._libs import (
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/pyarrow/__init__.py", line 65, in <module>
+    import pyarrow.lib as _lib
+AttributeError: _ARRAY_API not found
+==============================================================================
+C1 COVARIATES (POST HOC, review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md) -- cohort=luad mode=gate host=s002 lsf_job=76712083 start=2026-11-20T22:29:09Z
+  this script sha256 = da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc
+==============================================================================
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+  hash OK: frozen module c1_run_test_luad = 1d5ee05d57f8... (/public/home/fjhui/ZW/scripts/c1_run_test_luad.py)
+  hash OK: frozen module composition_controls = 46b4a1d8a697... (/public/home/fjhui/ZW/scripts/composition_controls.py)
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.0.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2665, in <module>
+    sys.exit(main())
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2652, in main
+    return mode_confirmatory(args, log)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1413, in mode_confirmatory
+    mods, code_hashes, origins = import_frozen(env, log)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1059, in import_frozen
+    mods[name] = importlib.import_module(name)
+  File "/public/home/fjhui/miniconda3/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/public/home/fjhui/ZW/scripts/residual_analysis.py", line 36, in <module>
+    from sklearn.decomposition import PCA
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils._estimator_html_repr import _HTMLDocumentationLinkMixin, estimator_html_repr
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/__init__.py", line 15, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/_param_validation.py", line 14, in <module>
+    from scipy.sparse import csr_matrix, issparse
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/scipy/sparse/__init__.py", line 274, in <module>
+    from ._csr import *
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/scipy/sparse/_csr.py", line 11, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+Traceback (most recent call last):
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2665, in <module>
+    sys.exit(main())
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 2652, in main
+    return mode_confirmatory(args, log)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1413, in mode_confirmatory
+    mods, code_hashes, origins = import_frozen(env, log)
+  File "/public/home/fjhui/ZW/scripts/c1_covariates_cluster.py", line 1059, in import_frozen
+    mods[name] = importlib.import_module(name)
+  File "/public/home/fjhui/miniconda3/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/public/home/fjhui/ZW/scripts/residual_analysis.py", line 36, in <module>
+    from sklearn.decomposition import PCA
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils._estimator_html_repr import _HTMLDocumentationLinkMixin, estimator_html_repr
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/__init__.py", line 15, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "/public/home/fjhui/.local/lib/python3.9/site-packages/sklearn/utils/_param_validation.py", line 14, in <module>
+    from scipy.sparse import csr_matrix, issparse
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/scipy/sparse/__init__.py", line 274, in <module>
+    from ._csr import *
+  File "/public/home/fjhui/miniconda3/lib/python3.9/site-packages/scipy/sparse/_csr.py", line 11, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+ImportError: numpy.core.multiarray failed to import
+=== job end: host=s002 rc=1 date=Sat Nov 21 06:29:12 CST 2026 ===

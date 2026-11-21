@@ -1,0 +1,69 @@
+Sender: LSF System <lsfadmin@s006>
+Subject: Job 76713697: <bash lsf_c1_cov_discovery.sh ucec --mode gate-r20 --patients /public/home/fjhui/ZW/c1_covariates/inputs/c1_cov_discovery_patients_ucec.txt --inputs-npz /public/home/fjhui/ZW/c1_covariates/inputs/inputs_ucec.npz> in cluster <hzauhpc> Done
+
+Job <bash lsf_c1_cov_discovery.sh ucec --mode gate-r20 --patients /public/home/fjhui/ZW/c1_covariates/inputs/c1_cov_discovery_patients_ucec.txt --inputs-npz /public/home/fjhui/ZW/c1_covariates/inputs/inputs_ucec.npz> was submitted from host <mn02> by user <fjhui> in cluster <hzauhpc> at Sat Nov 21 08:42:46 2026
+Job was executed on host(s) <s006>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Sat Nov 21 08:45:32 2026
+</public/home/fjhui> was used as the home directory.
+</public/home/fjhui/ZW/scripts> was used as the working directory.
+Started at Sat Nov 21 08:45:32 2026
+Terminated at Sat Nov 21 08:46:29 2026
+Results reported at Sat Nov 21 08:46:29 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash lsf_c1_cov_discovery.sh ucec --mode gate-r20 --patients /public/home/fjhui/ZW/c1_covariates/inputs/c1_cov_discovery_patients_ucec.txt --inputs-npz /public/home/fjhui/ZW/c1_covariates/inputs/inputs_ucec.npz
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   44.05 sec.
+    Max Memory :                                 1112 MB
+    Average Memory :                             687.20 MB
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               8888.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                6
+    Run time :                                   57 sec.
+    Turnaround time :                            223 sec.
+
+The output (if any) follows:
+
+=== c1_cov discovery: cohort=ucec host=s006 date=Sat Nov 21 08:45:32 CST 2026 args=--mode gate-r20 --patients /public/home/fjhui/ZW/c1_covariates/inputs/c1_cov_discovery_patients_ucec.txt --inputs-npz /public/home/fjhui/ZW/c1_covariates/inputs/inputs_ucec.npz ===
+  cohort        : ucec
+  root          : /public/home/fjhui/ZW/ucec
+  rna manifest  : /public/home/fjhui/ZW/scripts/pinned/manifest_rna_tumor_ucec.tsv
+  aliquot xwalk : /public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_ucec.tsv
+  slide map     : /public/home/fjhui/ZW/scripts/pinned/slide_type_map_ucec.tsv
+  protein       : /public/home/fjhui/ZW/ucec/omics/protein/CPTAC3_Uterine_Corpus_Endometrial_Carcinoma_Proteome.tmt10.tsv
+  wsi emb       : /public/home/fjhui/ZW/ucec/WSI/emb
+  out           : /public/home/fjhui/ZW/c1_covariates/discovery/ucec
+  workers       : 1
+  numpy archive : 92f2aeb5603a18ed35b2242db5fa07f6ac43a96104e48a2b0ffa76f3663ef8ba
+  numpy         : 1.26.4
+  python        :3.9.23 1.26.4 1.6.1 2.3.2
+==============================================================================
+C1 COVARIATES (POST HOC) DISCOVERY TREE -- cohort=ucec mode=gate-r20 host=s006 start=2026-11-21T00:45:37Z
+  this script sha256 = da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc
+==============================================================================
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+  hash OK: frozen module c1_run_test_luad = 1d5ee05d57f8... (/public/home/fjhui/ZW/scripts/c1_run_test_luad.py)
+  hash OK: frozen module composition_controls = 46b4a1d8a697... (/public/home/fjhui/ZW/scripts/composition_controls.py)
+RNA matrix (tumor-only): 100 patients x 59427 genes
+  host s006; R20 (100, 20) vs rna_pcs20 (100, 20); max |diff| after sign alignment 0.000e+00; signs [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+H-V2 PASSED
+=== job end: host=s006 rc=0 date=Sat Nov 21 08:46:29 CST 2026 ===
+total 131
+drwxr-xr-x 2 fjhui SXJin 4096 Nov 21 08:46 .
+drwxr-xr-x 4 fjhui SXJin 4096 Nov 21 06:43 ..
+-rw-r--r-- 1 fjhui SXJin  931 Nov 21 06:44 c1_cov_ucec_exportscores_s006_20261120T224359Z-21452-290772.log
+-rw-r--r-- 1 fjhui SXJin  931 Nov 21 08:45 c1_cov_ucec_exportscores_s006_20261121T004537Z-59074-204808.log
+-rw-r--r-- 1 fjhui SXJin  926 Nov 21 06:44 c1_cov_ucec_gater20_s006_20261120T224359Z-21451-290316.log
+-rw-r--r-- 1 fjhui SXJin 4071 Nov 21 08:46 c1_cov_ucec_gate_r20_s006_20261121T004537Z-59075-204802.json
+-rw-r--r-- 1 fjhui SXJin 1099 Nov 21 08:46 c1_cov_ucec_gater20_s006_20261121T004537Z-59075-204802.log

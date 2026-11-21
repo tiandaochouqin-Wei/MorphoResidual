@@ -1,0 +1,24 @@
+# PINNED_HOSTS.txt -- the cluster host on which each cohort's production runs (Stage H) are made
+# (review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md, PS 9 "Scripts" and gate H-V1).
+# Listed in the sidecar and frozen with it; read by c1_covariates_cluster.py in the production modes arm and
+# placebo (the manifest mode checks it if it is given). A production run refuses to start unless the host it
+# runs on equals the host this file gives for its cohort, and unless that host has an accepted H-V1 gate record.
+#
+# Format. UTF-8, LF line endings, no BOM.
+#   - A line that starts with '#' in column 0 is a comment.
+#   - An empty line is ignored. (A line of spaces or tabs is not empty and is fatal.)
+#   - Every other line is exactly three tokens separated by single spaces, with no leading or trailing
+#     whitespace:
+#       pinned <cohort> <host>   cohort: ucec | luad;  host: the short host name as the cluster prints it
+#                                (the part of the host name before the first '.', for example s006)
+#     At most one line per cohort. A cohort with no line has no pinned host, so none of its production runs
+#     can start. Anything else is fatal.
+#
+# Before the gates have run this file holds comments only. After the gates, and before the sidecar is
+# written, the lines are added from the H-V1 gate record (PS 9: the first host of the cohort's list that
+# passes strictly; else the host with the smallest largest deviation, under the fallback conditions); a
+# cohort whose every H-V1 host failed has no line and every one of its Stage H arms is closed in
+# CLOSED_PARTS.txt. After freezing nothing is added, dropped or changed.
+
+pinned ucec s001
+pinned luad s002

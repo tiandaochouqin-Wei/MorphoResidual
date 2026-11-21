@@ -1,0 +1,20 @@
+==============================================================================
+C1 COVARIATES (POST HOC) DISCOVERY TREE -- cohort=ucec mode=export-scores host=s006 start=2026-11-21T00:45:37Z
+  this script sha256 = da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc
+==============================================================================
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+  hash OK: frozen module c1_run_test_luad = 1d5ee05d57f8... (/public/home/fjhui/ZW/scripts/c1_run_test_luad.py)
+  hash OK: frozen module composition_controls = 46b4a1d8a697... (/public/home/fjhui/ZW/scripts/composition_controls.py)
+  markers stroma       : 24/24 present, 0 zero-SD, family passes
+      SD (ddof 1) : COL1A1=1.1298 COL1A2=1.11799 COL3A1=1.22895 COL5A1=1.05351 COL5A2=0.86233 COL6A3=1.07773 FN1=1.22673 SPARC=0.875217 FAP=1.05652 PDGFRA=1.13264 PDGFRB=0.859591 ACTA2=1.76265 TAGLN=1.63151 DCN=1.41626 LUM=1.13593 POSTN=1.43044 THBS2=1.17607 FBN1=0.964064 MMP2=1.20053 TIMP1=0.706722 VIM=1.04321 COL4A1=0.756809 COL4A2=0.748883 SERPINH1=0.677285
+      missing     : -
+  markers immune       : 25/25 present, 0 zero-SD, family passes
+      SD (ddof 1) : PTPRC=0.898692 CD3D=1.09756 CD3E=0.965747 CD3G=0.825607 CD8A=0.939517 CD4=0.753774 CD2=1.06571 CD5=0.831502 CD68=0.339443 CD163=1.01726 MS4A1=1.01914 CD19=0.700677 NKG7=1.13496 GZMB=1.25069 GZMA=1.19143 PRF1=1.01904 FOXP3=0.554216 IL2RA=0.83744 CD14=0.825999 ITGAM=0.724538 LYZ=1.38898 HLA-DRA=0.854455 CD74=0.774538 IRF8=0.780432 CCL5=1.14933
+      missing     : -
+  markers proliferation: 24/24 present, 0 zero-SD, family passes
+      SD (ddof 1) : MKI67=1.01028 PCNA=0.648432 TOP2A=1.1848 CCNB1=0.921789 CCNB2=0.733224 CDK1=0.879422 BUB1=0.989931 BUB1B=0.996933 AURKA=1.01527 AURKB=1.01005 FOXM1=0.903409 TYMS=0.598984 RRM2=1.05343 CENPA=0.994361 PLK1=0.763428 CCNA2=0.874781 CDC20=1.21646 KIF11=0.858877 TPX2=1.14137 UBE2C=1.23368 BIRC5=1.09165 CENPF=1.09007 MCM2=0.901579 MCM6=0.677961
+      missing     : -
+  wrote /public/home/fjhui/ZW/c1_covariates/discovery/ucec/c1_cov_discovery_scores_ucec.tsv (sha256 865a8a35984c93ea6d6e3b8056b49ed45bff5432f60bb6052e01b1f3e62a7b2a)
+EXPORT DONE

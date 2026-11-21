@@ -1,0 +1,32 @@
+
+QUEUE: smp
+  -- huge memory jobs
+
+PARAMETERS/STATISTICS
+PRIO NICE STATUS          MAX JL/U JL/P JL/H NJOBS  PEND   RUN SSUSP USUSP  RSV PJOBS 
+ 30    0  Open:Active       -  400    -    -  5186  4358   828     0     0    0   264
+Interval for a host to accept two jobs is 0 seconds
+
+DEFAULT LIMITS:
+ MEMLIMIT
+     12 G 
+
+MAXIMUM LIMITS:
+ HOSTLIMIT_PER_JOB       
+ 1
+
+ MEMLIMIT
+     20 G 
+
+SCHEDULING PARAMETERS
+           r15s   r1m  r15m   ut      pg    io   ls    it    tmp    swp    mem
+ loadSched   -     -     -     -       -     -    -     -     -      -   29.2G 
+ loadStop    -     -     -     -       -     -    -     -     -      -   19.5G 
+
+SCHEDULING POLICIES:  NO_INTERACTIVE
+
+USERS: all  
+HOSTS:  s001 s002 s003 s004 s006 
+RES_REQ:  rusage[mem=10000] span[hosts=1] affinity[core(1)]
+RERUNNABLE :  yes
+

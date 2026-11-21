@@ -1,0 +1,131 @@
+sha256 da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc c1_covariates_cluster.py
+-- 1. per-gene function (PS 4)
+  [PASS] per-gene function == independent sklearn implementation, A-type (E=C3, B=pcs) (max |diff| 4.44e-16)
+  [PASS] per-gene function == independent sklearn implementation, A-type (E=R20, B=pcs) (max |diff| 2.22e-15)
+  [PASS] per-gene function == independent sklearn implementation, V-type (E=none, B=C3) (max |diff| 3.33e-16)
+  [PASS] per-gene function == independent sklearn implementation, V-type (E=none, B=R20) (max |diff| 1.33e-15)
+  [PASS] gene with < 30 protein values is skipped 
+  [PASS] E empty, B = pcs: bit-identical to the published _gene_test structure 
+  [PASS] multiprocessing pool == serial (bit-identical) 
+  [PASS] per-gene function == tk.oof_ridge increments (D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\..\MEAS_ERROR_2026-10-08\theta_kernel.py) (max |diff| 0.00e+00)
+-- 2. usable filter, matrix assembly, compute_matrix
+  [PASS] usable filter = (>= 30 protein values) and finite discovery increment 
+  [PASS] count-based usable filter (blind) == increment-based filter 
+  [PASS] matrix checks accept the right gene order and reject a different one 
+  [PASS] arm matrix: G x (1 + B); placebo matrix: G x 26 = columns 0 and 1-25 of the same perms 
+  [PASS] compute_matrix refuses a gene list that differs from the saved matrix's 
+-- 3. R20 recipe and H-V2 comparison
+  [PASS] R20 recipe == SVD of the standardised matrix (up to column sign) (max |diff| 0.00e+00)
+  [PASS] R20 explained variance == SVD 
+  [PASS] zero-SD columns enter as zeros 
+  [PASS] sign-aligned comparison handles flipped columns 
+  [PASS] RNA column counts (all-zero, SD < 1e-8) 
+-- 4. C3 rule (PS 2)
+  [PASS] C3: three columns in order; zero-SD marker skipped; ddof 1 
+  [PASS] C3: the SD of every present marker is reported (pandas, ddof 1) 
+  [PASS] C3 untestable with fewer than 6 markers present in a family 
+  [PASS] C3 untestable when no present marker of a family has a non-zero SD (not a crash) 
+  [PASS] one marker with non-zero SD is enough (6+ present) 
+-- 5. placebo convention (PS 2, PS 4)
+  [PASS] placebo seeds = crc32(b'c1_cov|<cohort>|cap|%03d' % j), j = 1..119 
+  [PASS] seed bytes for j = 7 and j = 119 
+  [PASS] 119 distinct permutations of 0..137 (ucec) 
+  [PASS] 119 distinct permutations of 0..111 (luad) 
+  [PASS] placebo file names: 3-digit draw index 
+  [PASS] row i of the placebo is row q[i] of R20 
+  [PASS] placebo keeps the column covariance of R20 
+  [PASS] published permutations: first 25 = columns 1-25 of the 1,000 
+  [PASS] published permutation recipe (luad) 
+  [PASS] --draws parsing: 1-30, 91-119, 7-7 accepted 
+  [PASS] --draws parsing: 0-5, 100-120, 30-1, 1-1000, 'a-b' refused 
+  [PASS] placebo run stem: c1_cov_<cohort>_A_R20cap_<aaa>-<bbb> 
+-- 6. gate H-V1 verdicts (PS 9)
+  [PASS] hv1_auc == Mann-Whitney U / (n1 n0) on column 0 
+  [PASS] identical matrix: strict and fallback pass 
+  [PASS] deviation 3e-10: strict passes 
+  [PASS] deviation 4e-7, AUC unchanged: strict fails, fallback passes 
+  [PASS] deviation 4e-7 but |AUC - published| = 2e-6: neither passes 
+  [PASS] |AUC - published| = 9e-7 is within the fallback, 1.1e-6 is not 
+  [PASS] deviation 2e-6 (not below 1e-6), AUC equal: neither passes 
+  [PASS] different gene list: neither passes, deviation infinite 
+  [PASS] a non-finite recomputed value: neither passes 
+-- 7. production acceptance of H-V1 records (same host, script, inputs)
+  [PASS] a failed gate json is not accepted 
+  [PASS] a passed gate json of another script sha256 is not accepted 
+  [PASS] a passed gate json on other inputs is not accepted 
+  [PASS] a passed gate json of another host is not accepted 
+  [PASS] a passed gate json of the other cohort is not accepted 
+  [PASS] a fallback-passed gate json of this host, script and inputs is accepted 
+-- 8. CLOSED_PARTS.txt and PINNED_HOSTS.txt (PS 6.1, PS 9)
+  [PASS] the project's CLOSED_PARTS.txt parses ({"arms": [], "analyses": []})
+  [PASS] the project's PINNED_HOSTS.txt parses ({})
+  [PASS] comments only: nothing closed 
+  [PASS] tokens parse: arms and analyses 
+  [PASS] malformed, repeated, whitespace-padded or non-closable lines are refused (20 cases) 
+  [PASS] consistency: A_R20cap iff A_R20, and analysis C3 iff analysis M|C3, per cohort 
+  [PASS] closing A_R20 and A_R20cap (or C3 and M|C3) together is allowed, per cohort 
+  [PASS] a CRLF CLOSED_PARTS file is fatal 
+  [PASS] a BOM or a non-UTF-8 control file is fatal 
+  [PASS] a non-UTF-8 control file is fatal, not a traceback 
+  [PASS] arm_closed 
+  [PASS] PINNED_HOSTS: comments only pins nothing 
+  [PASS] PINNED_HOSTS: one line per cohort 
+  [PASS] PINNED_HOSTS: malformed, padded, repeated or tabbed lines are refused (14 cases) 
+  [PASS] PINNED_HOSTS: the running host must equal the host the file gives for the cohort 
+  [PASS] the sidecar check covers PINNED_HOSTS.txt and CLOSED_PARTS.txt (production) 
+  [PASS] sidecar check: a PINNED_HOSTS.txt with another hash is fatal 
+  [PASS] an exception is reported before any resubmission; environment failures are resubmitted unchanged and recorded; anything else is a script defect 
+  [PASS] a scheduler stop keeps the 'resubmit unchanged' message 
+  [PASS] production refuses a closed arm and closed placebos (before any import) 
+  [PASS] production refuses on a host other than the one PINNED_HOSTS.txt gives 
+  [PASS] production refuses a cohort that PINNED_HOSTS.txt does not pin 
+  [PASS] production refuses without --closed-parts 
+  [PASS] production modes need --pinned-hosts; there is no free --pinned-host 
+-- 9. files: exclusive writes, attempts without limit, covariates record
+  [PASS] npz round trip: unicode genes, float64 M, cases 
+  [PASS] an existing output is never overwritten 
+  [PASS] a non-finite matrix is never written 
+  [PASS] attempts are not limited: 1..6, each recorded 
+  [PASS] partial files of every interrupted attempt are kept under distinct names 
+  [PASS] the attempt record lists the previous attempts and the kept partials 
+  [PASS] a completed run is never repeated 
+  [PASS] a leftover partial without any attempt record is refused (stop and report) 
+  [PASS] a leftover .partial blocks a write 
+  [PASS] placebo ranges may not overlap; disjoint ranges and the same range are allowed 
+  [SKIP] run lock (no fcntl on this platform; the cluster is Linux)
+  [PASS] covariates record: keys cases, C3 (n x 3), R20 (n x 20), pcs (n x K), markers_json 
+  [PASS] covariates record: a second job with identical covariates passes 
+  [PASS] covariates record: different pcs are fatal 
+  [PASS] covariates record: no partial left behind 
+  [PASS] covariates record: C3 stored as n x 0 when C3 is closed 
+  [PASS] an interrupted covariates write is kept aside by the run's next attempt and the record is then written 
+-- 10. manifest (one file for both trees; hashes only)
+  [PASS] expected outputs per cohort: 4 arms + 119 placebos + covariates record 
+  [PASS] manifest: lines '<sha256> *<bare file name>' only, both trees, sorted 
+  [PASS] a leftover manifest partial blocks the write without --force-rewrite 
+  [PASS] --force-rewrite moves the leftover aside while no manifest exists 
+  [PASS] the manifest does not list itself or its leftovers 
+  [PASS] the manifest is never rewritten, with or without --force-rewrite 
+  [PASS] no manifest while a .partial exists 
+  [PASS] a file name in both trees is refused 
+  [PASS] a missing output (not closed) is refused 
+  [PASS] an output of a closed arm that exists is refused 
+  [PASS] closed placebos are neither expected nor listed 
+  [PASS] a cohort with every arm closed expects nothing (not even the covariates record) 
+-- 11. sidecar
+  [PASS] sidecar parsing ('*' and two-space forms, comments, case) 
+  [PASS] sidecar check: present entries match, others reported as not on the cluster 
+  [PASS] sidecar check: a mismatch is fatal 
+  [PASS] sidecar check: an unlisted required file is fatal 
+  [PASS] sidecar check: a listed required file missing on the cluster is fatal 
+  [PASS] a sidecar that lists a path twice is fatal 
+-- 12. score table, patients, listing
+  [PASS] score TSV: '#' lines, header, repr floats round-trip exactly, LF, no BOM 
+  [PASS] export-patients writes the inputs file's patients, one per line 
+  [PASS] result-folder listing (names, sizes, mtimes; missing roots recorded) 
+-- 13. constants and this file
+  [PASS] published AUCs (published quantities) and usable set sizes pinned 
+  [PASS] this script: UTF-8 without BOM, LF line endings 
+
+selftest: 113 checks, 0 failed, 6.1 s
+SELFTEST PASSED

@@ -1,0 +1,303 @@
+{
+ "cohorts": {
+  "luad": {
+   "OP": {
+    "levels": [
+     [
+      "72d8aaa9-39b8-4879-be04-3ce0e87dfea1",
+      14
+     ],
+     [
+      "1e065505-2237-4841-b740-cc85b1ec96b4",
+      12
+     ],
+     [
+      "3276f7b8-1e2c-40ef-bf4a-8dfb4098e690",
+      10
+     ],
+     [
+      "975375e8-786f-45d0-bfdd-9e70146a3eb8",
+      9
+     ],
+     [
+      "8296d10b-af51-4c6e-aaf4-35fbb135a1f8",
+      5
+     ],
+     [
+      "a71b7195-c3ab-4b38-a01c-dcd42cdda177",
+      5
+     ],
+     [
+      "4ff60a54-4c1e-4570-985a-32e6af9a2d0e",
+      4
+     ],
+     [
+      "fadb30a1-527c-4133-8b3c-f062f8aa1b11",
+      4
+     ],
+     [
+      "0e45da53-6874-4578-a6f0-8439ef172729",
+      3
+     ],
+     [
+      "5b4151db-6ba1-4d9e-b899-e878d8b192de",
+      3
+     ],
+     [
+      "70abd19d-ff94-4884-b621-3f18637afc97",
+      3
+     ],
+     [
+      "f70489eb-e21c-4fde-81bc-5c877d303530",
+      3
+     ]
+    ],
+    "n_cases": 105,
+    "n_covered": 75,
+    "n_indicators": 12,
+    "n_unlabelled": 1
+   },
+   "S_BC": {
+    "expected_in_universe": 721,
+    "n": 726,
+    "n_in_universe": 721,
+    "n_rows": 10724,
+    "rho_available": true,
+    "rho_note": "",
+    "sitepack_sha256": "aeef7232682c24d209024ba73efea8033cb7486779831bda1a1ba3c8bda45d9f"
+   },
+   "V1": {
+    "batched_vs_reference_worst": 0.0,
+    "max_abs_diff": {
+     "fdr": 0.0,
+     "increment": 2.1316282072803006e-14,
+     "n": 0,
+     "pval": 0.0,
+     "r2_rna": 4.440892098500626e-16
+    },
+    "n_selected": 2310,
+    "ok": true,
+    "selection_identical": true
+   },
+   "V1b": {
+    "batched_vs_reference_worst": 0.0,
+    "csv_genes_not_in_published_set": 0,
+    "genes_not_in_inputs": [],
+    "max_abs_diff_incr_over_pcs20": 3.97575226251945e-06,
+    "max_abs_diff_r2_rna_pcs20": 1.638689184346731e-13,
+    "n_compared": 2310,
+    "n_genes_not_in_inputs": 0,
+    "n_genes_over_1e9_inc": 2304,
+    "n_genes_over_1e9_r2": 0,
+    "n_genes_over_tol_inc": 0,
+    "n_mismatch": 0,
+    "n_rows": 2310,
+    "ok": true,
+    "p999_abs_diff_incr_over_pcs20": 2.875754839341993e-06,
+    "p999_abs_diff_r2_rna_pcs20": 8.618572522323155e-14,
+    "published_set_genes_not_in_csv": 0,
+    "tol_incr_over_pcs20": 1e-05,
+    "tol_r2_rna_pcs20": 1e-09
+   },
+   "V2": {
+    "arms": {
+     "unrestricted": {
+      "got": {
+       "auc": 0.6439668501223573,
+       "null_mean": 0.5244456890246434,
+       "null_sd": 0.018690309499334007,
+       "p": 0.000999000999000999,
+       "p_rho": 0.000999000999000999,
+       "rho": 0.39777854799422796
+      },
+      "n0": 8119,
+      "n1": 2287,
+      "ok": true,
+      "worst_abs_diff": 0.0
+     }
+    },
+    "mask_identical": true,
+    "ok": true
+   }
+  },
+  "ucec": {
+   "OP": {
+    "levels": [
+     [
+      "20530ab5-e591-4ac0-87d2-27543b0920e5",
+      10
+     ],
+     [
+      "ad6e64f4-cdc4-45ec-9fe4-7b351924b7af",
+      10
+     ],
+     [
+      "77bbcb55-436a-447a-bb6f-b129e71ab628",
+      8
+     ],
+     [
+      "8296d10b-af51-4c6e-aaf4-35fbb135a1f8",
+      8
+     ],
+     [
+      "304f3582-7480-4d2b-8ca6-e06eb6a4e911",
+      7
+     ],
+     [
+      "72d8aaa9-39b8-4879-be04-3ce0e87dfea1",
+      5
+     ],
+     [
+      "c0d2e700-f2dd-4e9f-a367-7c6005153e61",
+      5
+     ],
+     [
+      "70abd19d-ff94-4884-b621-3f18637afc97",
+      4
+     ],
+     [
+      "93ad5206-82e8-40d9-9c39-149b21481dff",
+      4
+     ],
+     [
+      "c3532756-92f2-4d9b-af65-956da8212c89",
+      4
+     ],
+     [
+      "f838b2c4-55f1-49f6-9cea-7ebc15dcda9c",
+      4
+     ],
+     [
+      "fc75e283-ac08-45cc-9b0d-c6385fd0de6c",
+      4
+     ]
+    ],
+    "n_cases": 100,
+    "n_covered": 73,
+    "n_indicators": 12,
+    "n_unlabelled": 1
+   },
+   "S_BC": {
+    "expected_in_universe": 198,
+    "n": 201,
+    "n_in_universe": 198,
+    "n_rows": 10512,
+    "rho_available": true,
+    "rho_note": "",
+    "sitepack_sha256": "805d747b9af63d5bb01ddc5f39a61940161d5163b356d92d7955ecc11c1d480f"
+   },
+   "V1": {
+    "batched_vs_reference_worst": 0.0,
+    "max_abs_diff": {
+     "fdr": 0.0,
+     "increment": 9.769962616701378e-15,
+     "n": 0,
+     "pval": 0.0,
+     "r2_rna": 4.440892098500626e-16
+    },
+    "n_selected": 2566,
+    "ok": true,
+    "selection_identical": true
+   },
+   "V1b": {
+    "batched_vs_reference_worst": 0.0,
+    "csv_genes_not_in_published_set": 0,
+    "genes_not_in_inputs": [],
+    "max_abs_diff_incr_over_pcs20": 1.5076828674409626e-13,
+    "max_abs_diff_r2_rna_pcs20": 1.616484723854228e-13,
+    "n_compared": 2566,
+    "n_genes_not_in_inputs": 0,
+    "n_genes_over_1e9_inc": 0,
+    "n_genes_over_1e9_r2": 0,
+    "n_genes_over_tol_inc": 0,
+    "n_mismatch": 0,
+    "n_rows": 2566,
+    "ok": true,
+    "p999_abs_diff_incr_over_pcs20": 1.037436803130742e-13,
+    "p999_abs_diff_r2_rna_pcs20": 1.3357759343080638e-13,
+    "published_set_genes_not_in_csv": 0,
+    "tol_incr_over_pcs20": 1e-09,
+    "tol_r2_rna_pcs20": 1e-09
+   },
+   "V2": {
+    "arms": {
+     "residualised": {
+      "got": {
+       "auc": 0.5671994242176781,
+       "null_mean": 0.48869940996820554,
+       "null_sd": 0.030617540627664825,
+       "p": 0.005994005994005994,
+       "p_rho": 0.007992007992007992,
+       "rho": 0.2568963225558808
+      },
+      "n0": 7610,
+      "n1": 2536,
+      "ok": true,
+      "worst_abs_diff": 0.0
+     },
+     "unrestricted": {
+      "got": {
+       "auc": 0.5974425564900907,
+       "null_mean": 0.49819454514647427,
+       "null_sd": 0.03629629979626921,
+       "p": 0.003996003996003996,
+       "p_rho": 0.004995004995004995,
+       "rho": 0.2935675639399924
+      },
+      "n0": 7610,
+      "n1": 2536,
+      "ok": true,
+      "worst_abs_diff": 0.0
+     },
+     "within-operator": {
+      "got": {
+       "auc": 0.5974425564900907,
+       "null_mean": 0.505936295945481,
+       "null_sd": 0.03164869176098481,
+       "p": 0.003996003996003996,
+       "p_rho": 0.003996003996003996,
+       "rho": 0.2935675639399924
+      },
+      "n0": 7610,
+      "n1": 2536,
+      "ok": true,
+      "worst_abs_diff": 0.0
+     }
+    },
+    "mask_identical": true,
+    "ok": true
+   }
+  }
+ },
+ "env": {
+  "cpu_count": 28,
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.13",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.0",
+  "threads": {
+   "MKL_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1",
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1"
+  }
+ },
+ "kernel_sha256": "6c95cd119d28e811e09967946e9f191c69f07f54f653991917e817ef99ec2734",
+ "minutes": 15.3,
+ "ok": true,
+ "script_sha256": "1ea40fa50759366d09f61360d6d2f80dce9703d6d95f6a8ce43ff0f0ae61e779",
+ "tolerances": {
+  "auc": 1e-12,
+  "increment": 1e-09,
+  "p_fdr": 1e-12,
+  "r2_rna": 1e-10,
+  "ref": 1e-09,
+  "v1b_incr_over_pcs20": {
+   "luad": 1e-05,
+   "ucec": 1e-09
+  },
+  "v1b_r2_rna_pcs20": 1e-09
+ },
+ "workers": 24
+}

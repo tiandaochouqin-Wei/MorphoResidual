@@ -1,0 +1,82 @@
+# SIDECAR_FILES.txt -- the files frozen by review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256
+# (PS 1, PS 9). One path per line, relative to MorphoResidual_paper/, forward slashes.
+# Lines starting with '#' are comments. Read by make_sidecar.py, which refuses if any listed file
+# is missing, and refuses if any path that c1_covariates_local.py requires (for the parsed
+# CLOSED_PARTS.txt) is not listed here. c1_covariates_local.py --selftest checks the same list;
+# c1_covariates_local.py --check-sidecar checks the written sidecar.
+
+# The pre-specification
+review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md
+
+# PS 1 discovery inputs
+review/MEAS_ERROR_2026-10-08/export/ucec/inputs_ucec.npz
+review/MEAS_ERROR_2026-10-08/export/luad/inputs_luad.npz
+
+# PS 1 discovery composition scores (written on the cluster at step H0; they exist after H0).
+# If C3 is untestable in a discovery cohort or V3 fails, the table is not used: remove its line
+# here and close the analyses C3 and M|C3 of that organ in CLOSED_PARTS.txt (PS 9).
+server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_ucec.tsv
+server_export/results/c1_covariates/stage_h/c1_cov_discovery_scores_luad.tsv
+
+# PS 1 confirmatory matrices
+server_export/scripts/pinned/c1_ucec_d4_stratified.npz
+server_export/scripts/pinned/luad_c1/c1_luad_primary_primary.npz
+
+# PS 1 published results, for validation
+server_export/scripts/pinned/c1_ucec_d4_followup.json
+server_export/scripts/pinned/luad_c1/c1_luad_primary_result_primary.json
+server_export/results/results__composition_controls_ucec.csv
+server_export/results/results__composition_controls_luad.csv
+server_export/results/scripts__transcriptome_baseline_ucec_perm.csv
+server_export/results/scripts__transcriptome_baseline_luad_perm.csv
+
+# PS 1 the batch-corrected sets (columns fdr_batchresid, incremental_r2_batchresid)
+server_export/results/ucec__sitepack_operator.csv
+server_export/results/luad__sitepack_operator.csv
+
+# PS 1 code the definitions come from
+server_export/scripts/residual_analysis.py
+split_replication_power.py
+server_export/scripts/c1_run_test.py
+server_export/scripts/c1_run_test_luad.py
+server_export/scripts/composition_controls.py
+server_export/scripts/transcriptome_baseline.py
+server_export/scripts/residual_analysis_sitepack.py
+review/MEAS_ERROR_2026-10-08/theta_kernel.py
+
+# PS 1 files of this analysis
+review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+review/C1_COVARIATES_2026-11-21/make_abstract_variants.py
+review/QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex
+review/C1_COVARIATES_2026-11-21/ABSTRACT_VARIANTS.md
+review/C1_COVARIATES_2026-11-21/CLOSED_PARTS.txt
+review/C1_COVARIATES_2026-11-21/PINNED_HOSTS.txt
+
+# PS 1 / PS 9 gate logs: review/C1_COVARIATES_2026-11-21/gate_logs/*
+# every file in gate_logs/ is added when the sidecar is written. The final self-test, validation and
+# gate logs are written there by the orchestrator (not listed individually here).
+
+# Freeze machinery and procedure
+review/C1_COVARIATES_2026-11-21/SIDECAR_FILES.txt
+review/C1_COVARIATES_2026-11-21/make_sidecar.py
+review/C1_COVARIATES_2026-11-21/SERVER_RUNBOOK.md
+
+# Kept beside the scripts (status paragraph: the first draft and the three sets of review findings)
+review/C1_COVARIATES_2026-11-21/AUDIT1_findings.txt
+review/C1_COVARIATES_2026-11-21/AUDIT2_findings.txt
+review/C1_COVARIATES_2026-11-21/AUDIT3_findings.txt
+review/C1_COVARIATES_2026-11-21/DRAFT1_POSTHOC_C1_SPECIFICITY_PRESPEC_pre-review.md
+review/C1_COVARIATES_2026-11-21/DRAFT1_c1_specificity_local_pre-review.py
+review/C1_COVARIATES_2026-11-21/DRAFT1_validate_only.log
+
+# Json records of the pre-freeze gates (written by --validate-only and --gate-v3, which refuse once the sidecar exists)
+server_export/results/c1_covariates/gate_v3.json
+server_export/results/c1_covariates/validate_only.json
+
+# Discovery patient lists exported from the inputs files (patient identifiers only); uploaded for H-V2 and H0
+review/C1_COVARIATES_2026-11-21/c1_cov_discovery_patients_ucec.txt
+review/C1_COVARIATES_2026-11-21/c1_cov_discovery_patients_luad.txt

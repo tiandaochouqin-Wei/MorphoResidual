@@ -1,0 +1,9 @@
+[09:23:46] CLOSED_PARTS.txt: nothing closed
+[09:23:46] ucec: c1_cov_discovery_scores_ucec.tsv OK (7 comment lines)
+[09:23:46] ucec: 123 of 123 expected matrices absent (c1_cov_ucec_A_C3.npz, c1_cov_ucec_A_R20.npz, c1_cov_ucec_V_C3.npz, c1_cov_ucec_V_R20.npz ...)
+[09:23:46] ucec: c1_cov_confirmatory_covariates_ucec.npz absent
+[09:23:46] luad: c1_cov_discovery_scores_luad.tsv OK (7 comment lines)
+[09:23:46] luad: 123 of 123 expected matrices absent (c1_cov_luad_A_C3.npz, c1_cov_luad_A_R20.npz, c1_cov_luad_V_C3.npz, c1_cov_luad_V_R20.npz ...)
+[09:23:46] luad: c1_cov_confirmatory_covariates_luad.npz absent
+[09:23:46] manifest absent
+[09:23:46] check-stage-h: ALL PRESENT FILES PASS

@@ -1,0 +1,615 @@
+
+==============================================================================================================
+REVIEWER: fact checker (v2 vs draft 1; numbers, hashes, paths, quotations, code-vs-text) | VERDICT: PASS_WITH_MINOR | {'minor': 10}
+RESOLVED: Draft-1 MAJOR 1 (Abstract room): v2 7.4 now fixes the cut list c1-c7 and the 141/143/149/151 counts; make_abstract_variants.py (run from a temp copy with the same relative layout, python -I, sha of ABSTRACT_FINAL.tex 6a1bfede... verified) reproduces ABSTRACT_VARIANTS.md byte-identically (sha256 6df729a6...). The 'four variants longer by 5 to 9 words' claim is correct (146/148/154/156 twice, 150/152/158/160 twice, against 141/143/149/151). || Draft-1 MAJOR 2 (blind wording): item 7 now says 'chosen by the scores, by the components or by operator indicators in place of histology'; item 6 lists S1, S2, the 726 set and others as operator-corrected morphology sets already read; 201/726 counts verified. || Draft-1 MAJOR 3 (empty S_M|R20): item 3 now states k* 211/215 and the expectation of empty sets. k* verified: ceil(10512/50.05)=211, ceil(10724/50.05)=215. || Draft-1 MINOR 5 (227/55 need sign filter): v2 says 'with a positive increment'; recomputed 227 (228 without the filter) and 55. || Draft-1 MINOR 6 (M2 names no set): v2 M2 says 'the same sets'. || Draft-1 MINOR 7 (unsupported 2026-10-08 precedent): v2 cites Entry 12 only; verified Entry 12 text and its reading of the policy. || Draft-1 MINOR 8 (C3/R20 definitions): v2 states pandas ddof 1, zero-SD skip and the <6 marker rule; verified against composition_controls.py and transcriptome_baseline.py. || Draft-1 MINOR 10 (path of split_replication_power.py): v2 says 'at the paper root'; hash 79530c07 verified there. || Draft-1 MINOR 11 (tag pattern): c1-covariates-posthoc-prespec-2026-11-21, ...-stageh-<date>, ...-results-<date> follow the <topic>-posthoc-<kind>-<date> pattern of the 20 existing tags; none collides. || Draft-1 MINOR 12 (which Limitations (iv)): v2 7.8 names both main text and the supplement paragraph; both exist (main.tex:843, supplement.tex:1845).
+
+[MINOR 1] WHERE: PS 0 Departure 8 ('The same plan asked for the choice between two framings ... written into this file')
+PROBLEM: The requirement that the fork rule be written into the B1 pre-specification is not in 1_plan_from_five_reviews.md (the plan cited in Departure 7). That plan's D1 says 'B1 first, then settle the positioning'. The requirement is in 2_plan_checked_against_rules_FINAL.md.
+EVIDENCE: 1_plan_from_five_reviews.md line 222 'D1 定位取决于 B1，先做 B1 再定稿'. 2_plan_checked_against_rules_FINAL.md line 199 'D1 需修正。分叉规则写进 B1 预设。B1 有利时只能进 Results；B1 不利时，可以按预先写定的限定语改摘要。' and line 226 'B1 预设里写明 D1 的分叉规则'.
+FIX: Write 'The checked plan (2_plan_checked_against_rules_FINAL.md, D1) asked ...' or say that the two plan files differ.
+
+[MINOR 2] WHERE: PS 0 Departure 6 (NC_ROADMAP T1-1 and section 6, R4)
+PROBLEM: The paraphrase merges reasons. NC_ROADMAP T1-1 and section 6 reject a 'full-gene ridge permutation FDR' because ridge permutation was computationally infeasible and might backfire, not because of a selection effect. The winner's-curse reason belongs to the 'symmetric' H&E-PC versus RNA-PC comparison on the pinned set. T1-1 item 1 itself approved a permutation table under the 20-PC transcriptome baseline, so 'rejected a whole-gene permutation FDR under a transcriptome-wide baseline' overstates.
+EVIDENCE: NC_ROADMAP.md line 77: 'pinned 集上的 H&E-PC vs RNA-PC "对称比较"根本不对称（winner's curse 保证形态赢）'; line 214 (R4 row): '全基因 ridge 置换 FDR ... ridge 置换计算不可行'; line 78-79 item 1 approves the permutation table. File date 2026-09-07 (the 'September 2026' label is correct).
+FIX: Reword to: the roadmap rejected a whole-gene ridge permutation FDR (infeasible) and a symmetric RNA-PC-versus-histology comparison on the pinned sets (winner's curse favours the block that made the selection).
+
+[MINOR 3] WHERE: PS 0 Departure 4 ('lists its permitted qualifiers and ends "Nothing else."')
+PROBLEM: The quoted policy does not end at 'Nothing else.'; it continues with 'If the Abstract is later shortened, a qualifier added under this policy is kept in substance.'
+EVIDENCE: POSTHOC_MEAS_ERROR_PRESPEC_2026-10-08.md lines 676-682 (same text in the BRCA_TS and UCEC_C1_PLEX files). 'Nothing else.' is quoted correctly otherwise. The three files named are the BRCA frozen-section, measurement-error and UCEC plex pre-specifications; the SETS file of the same date has a different Abstract clause.
+FIX: Write 'lists its permitted qualifiers and says "Nothing else."'.
+
+[MINOR 4] WHERE: PS 1 (code list)
+PROBLEM: residual_analysis_sitepack.py is listed without a hash prefix, unlike every other code file.
+EVIDENCE: sha256 of server_export/scripts/residual_analysis_sitepack.py starts d0cfeb01ef3d. All other prefixes match: e28b86fa, b64cdf3b, ef75f1c0, 2034e711, a54a0a56, 79530c07, fc578c70, 1d5ee05d, 46b4a1d8, 761df7d7, 6c95cd11.
+FIX: Add (`d0cfeb01...`). It will be in the sidecar anyway.
+
+[MINOR 5] WHERE: PS 6.3 thresholds 'about 0.60 (UCEC) and about 0.26 (LUAD)'
+PROBLEM: Correct as normal approximations; the empirical null gives slightly different values.
+EVIDENCE: From the published json: margin UCEC 0.09925, SD 0.03630, 1.645*SD/margin = 0.6016; LUAD margin 0.11952, SD 0.018690, ratio 0.2572. Margins print as 0.0992 and 0.1195; in M1 0.099 and 0.120 are the correct roundings; z = 2.735 and 2.891 so '2.73' and '2.89' are right. Using the 50th-largest published null AUC (the p < 0.05 boundary at B=1000) the fractions are 0.610 (UCEC) and 0.249 (LUAD).
+FIX: Optional: 'about 0.6 and about 0.25-0.26'. Not an error as written.
+
+[MINOR 6] WHERE: PS 0 item 3 ('S_M|R20 expected to be empty in both cohorts')
+PROBLEM: The floor counts 99 and 55 are over the published sets only (2,566; 2,310 genes). Genes outside S_M cannot be counted from any published file, so the expectation is an inference, not a published fact.
+EVIDENCE: scripts__transcriptome_baseline_ucec_perm.csv has 2,566 rows and luad 2,310 rows. Recomputed: floor p = 1/1001 for 99 (UCEC) and 55 (LUAD); FDR<0.05 gives 228 and 55, 227 and 55 with incr>0. The draft-1 validation log shows floors of 1,748 and 1,354 genes under M, not under R20.
+FIX: Add 'within the published sets' to the floor counts, or 'expected, not computed'.
+
+[MINOR 7] WHERE: PS 7.4 'Room' and Departure 3 ('none of them a result clause or a protected item')
+PROBLEM: Some cuts touch protected text. c1 'At these cohort sizes,' is the scope qualifier of Entry 12's no-net-accuracy clause. c7 'a' sits inside the protected retention clause. c4 'later' marks the confirmatory cohorts as later waves. c5 and c6 shorten the protected UCEC and LUAD reading (organ, n, set). Only the connective 'Elsewhere,' is clearly free of protected content.
+EVIDENCE: ABSTRACT_FINAL.tex (sha 6a1bfede...): 'At these cohort sizes, morphology adds no net accuracy ... in four cohorts, but retains a median 40% ...'; 'In later same-consortium uterine (138 patients) and lung (112) cohorts, uncorrected discovery sets (2,566; 2,310 genes)'. C1-LUAD rule 5.7 item 0 protects 'the transcriptome-baseline retention and its caveat; the UCEC reading (organ, n, ...)'.
+FIX: State that the cuts shorten wording inside protected clauses without removing any number, label or caveat of substance, or drop c1/c4/c7 from the claim 'none of them'.
+
+[MINOR 8] WHERE: PS 9 H-V1 ('Hosts are tried in the order of the published runs' hosts, read from their job logs')
+PROBLEM: The job logs of the published confirmatory runs (c1_test / c1_luad_primary .out) are not in the local project, so the host order cannot be read or checked locally.
+EVIDENCE: No c1_test*.out or c1_luad_primary*.out found. Local host lines exist only for the plex re-read (s002, s006) and measurement-error runs. lsf_c1_test.sh line 33 prints 'job start: host=...', so the logs exist on the cluster.
+FIX: Say the logs are read on the cluster, or bring them local before freezing.
+
+[MINOR 9] WHERE: PS 1 ('Scripts of this analysis')
+PROBLEM: c1_covariates_local.py, c1_covariates_cluster.py and lsf_c1_cov_*.sh do not exist yet. The folder holds only DRAFT1_c1_specificity_local_pre-review.py, so nothing can be checked against the section 2-4 code snippets yet.
+EVIDENCE: ls of C1_COVARIATES_2026-11-21: ABSTRACT_VARIANTS.md, AUDIT1_findings.txt, DRAFT1_* files, DRAFT1_validate_only.log, make_abstract_variants.py.
+FIX: None needed until the scripts are written. Re-check then.
+
+[MINOR 10] WHERE: PS 2 OP and PS 0 items 1-2 (carried from draft 1)
+PROBLEM: Two draft-1 minor suggestions are not taken up. (1) The OP rule's full-rank drop is not stated; it is inactive here, since 12 dummies of 27 and 33 labelled levels are used. (2) The favourable discovery-side prior (UCEC median increment +0.075 over its transcriptome-wide baseline, Entry 12) is not listed, although 93-104% is.
+EVIDENCE: residual_analysis_sitepack.py lines 304-306; C1_LUAD_ADDENDA.md Entry 12 (UCEC +0.075).
+FIX: Optional one-clause additions.
+
+NOTES: Method: read PS v2 completely, diffed it against DRAFT1, and checked each item against files. Nothing was computed on real data beyond three things: counts and medians over already-published tables; AUC and null columns of the saved published matrices (the V2 reproduction); and shapes, label counts and gene lists. No file was modified; the Abstract script was run in a temp copy.
+
+VERIFIED CORRECT, no action needed:
+- Published readings. UCEC AUC 0.59744, null 0.49819 +/- 0.03630, p 0.003996. LUAD AUC 0.64397, null 0.52445 +/- 0.018690, p1 = p_strat = p2 = 0.000999. z = 2.73 (unrestricted) and 2.89 (within operator, null 0.50594, SD 0.031649). Margins 0.0992 and 0.1195.
+- In-universe counts. Universe sizes 10,146 and 10,406. Selected/background 2,536/7,610 and 2,287/8,119. Set sizes 2,566 and 2,310 (recomputed from inputs: fdr<0.05 and incr>0). Cases 138 and 112; K = round(20n/100) = 28 and 22; discovery patients 100 and 105 (sorted); fit genes 10,512 and 10,724 (all pub_n >= 30).
+- Hash prefixes, all 11 given in PS 1. Every path in PS 1 exists, apart from the pending outputs. Matrix arm names are M_unrestricted, M_within_operator and M_within_operator_residualized.
+- Columns exist: r2_rna_pcs20, incr_over_pcs20, pval_over_pcs20, fdr_over_pcs20; stroma_gain, immune_gain, proliferation_gain, ALL_gain, incr_W_over_*; pub_r2_rna; incremental_r2_batchonly (no p-value; 'B.o. vs n.m.' column in SuppTable_posthoc).
+- Retention figures. Composition: 36% UCEC, 6% LUAD, 68% CCRCC, 34% PDAC, 3% GBM. Transcriptome: median 40%, UCEC 77% (highest, recomputed 0.766), LUAD 40% (0.400), PDAC 29%. Deconvolution link 93-104% in the other four cohorts.
+- Counts: 227 and 55 (with positive increment), floors 99 and 55, k* 211 and 215. Predictor counts 43 (1+20+22) and 49 (1+20+28); 0.8*112 is about 90 and 0.8*138 about 110.
+- Operator counts: UCEC 12 levels cover 73 of 100 (12th level 4 cases, 13th 3: no tie). LUAD 12 levels with >= 3 cases cover 75 of 105 (12th 3, 13th 2: no tie). One unlabelled case each.
+- Code snippets match the sources. R20 recipe (ddof 0, zero SD set to 1, PCA full; K_MAX = min(20, n-10), which is 20 here). comp_score (pandas ddof 1, zero SD to NaN and skipped, < 6 markers returns None, restricted to rna/protein/wsi common cases). prepare order (sorted(common); W.astype(float); K = SP.k_for). _gene_test (pcs[p][v], cv_r2, min_n 30). Permutation seeds crc32(b'c1_ucec|perm') and crc32(b'c1_luad|perm') with [rng.permutation(n) for _ in range(1000)] and no other draw. The UCEC stratified script uses the same seed for its unrestricted arm. Discovery permutation is RandomState(0), 1,000 sequential draws, p = (1+#)/1001, BH as bh_fdr. theta_kernel.oof_ridge is line-for-line cv_r2.
+- Quotations. C1-LUAD 5.7 items 0, 2, 3, 6 and the 'Abstract's LUAD wording is the §5.2 clauses' sentence match. 5.8 'No further CPTAC-3 confirmatory cohort is attempted before submission' matches. UCEC rule section 5 'No other framework ... is to be substituted after this file exists' matches. 'Nothing else.' exists in the three 2026-10-08 files. Entry 12 added an unfavourable clause and reads the policy as limiting edits (verified).
+- NC_ROADMAP T1-1 / R4 exist (see the departure 6 wording issue above). The plan's third part (c) is as described: freeze the discovery PCA basis and ridge weights.
+- Prior-exposure claims: the review's 'slightly below one half' is in plan section 6; S1/S2 (201/253) and the top-k and other-organ sets are in SETS prespec section 0. The local_theta use of rna_pcs20 is covered in item 4.
+- Anchors and labels. main.tex:674 ends '...so it bounds protein batch rather than isolating it.' (end of sec:c1ucecres). main.tex:1204 ends '...may combine two plexes removed.' (end of sec:c1ucecmeth). Intro line 113 'it also passed an acquisition-batch (operator)-stratified null.'; last Intro sentence lines 123-125; 'the signal held unevenly (\\S\\ref{sec:c1res}).' at 767; 'outranked background genes; the test ranked gene sets, not the protein of individual genes.' at 813-814 (wrapped lines). Limitations (iv) in both files. Labels sec:c1ucecmeth, sec:c1luadmeth, sec:stroma, sec:txomemeth, sec:c1res, sec:c1ucecres exist. snote:c1cov, tab:c1cov and tab:c1covsets are unused. Current title equals Entry 12's 'Histology signals which proteins depart from their own transcript in five human cancers'. 'A fifth post hoc analysis' follows 'A fourth' in the same section.
+- Wrapper and precedent files named in the task exist: lsf_c1_test.sh, lsf_c1_luad_test.sh, lsf_c1_luad_plex_reread.sh, c1_luad_plex_reread.py, c1_ucec_plex_reread.py, morpho_env.sh, measurement_error_checks.py, SERVER_RUN_2026-10-08.md.
+
+Verdict reasoning: no wrong number, hash, label or anchor was found. The findings are wording or attribution slips and pending-item notes; none is a blocker."
+
+==============================================================================================================
+REVIEWER: Compliance auditor (re-audit of version 2; read only) | VERDICT: PASS_WITH_MAJOR | {'major': 5, 'minor': 6}
+RESOLVED: B1 (Abstract word account / post-result cut): PARTLY. Fixed now: the four counts 141/143/149/151 (PS 7.4), an ordered cut list c1-c7, Entry 12's no-net-accuracy clause and 'from one consortium' kept, the departure recorded (PS 0 Dep. 3). Still open: the result+NC variants run over length and any cut to them is left to a post-result ADDENDA entry. Seven outcomes have no fixed text at all (see findings). || B2 (qualifier unnamed, appended to the 726 clause): RESOLVED for the C/R forms. The qualifier is now its own sentence before 'Elsewhere,' and names 'the uncorrected [uterine|lung] set' or 'neither uncorrected set'. M5 says the batch-corrected sets were not re-read. The NC forms are still ambiguous (see findings). || M3 (D1 fork left to the authors): MOSTLY RESOLVED. PS 7.5 fixes the title, the Abstract opener and the Discussion opener for Cases 0/1/2, and PS 0 Dep. 8 records that the journal is left open. Not fixed: the Introduction's thesis sentence, and the Case 2 Discussion opener when one cohort is a result and the other NC. || M4 (untestable/not completed classed as N): PARTLY. There are now separate NC:C/NC:R types, NC wording in QS and ABSTRACT_VARIANTS, and a no-submission-while-open rule (PS 6.1). But 'untestable' is still printed as 'was not completed'. || M5 (Stage H frozen after L1; no hash check at L2): MOSTLY RESOLVED. The cluster scripts and wrappers are in the single initial freeze (PS 1, 9). L2 checks the Stage H files against the manifest, the manifest hash and the L1 hashes (PS 9). H-V1/H-V2/V3 gates added. Open: the Stage H record is tag-only (see findings), and the confirmatory C3/R20 matrices have no external reference (unavoidable; blind-run counts only). || M6 (failure rule unexecutable): RESOLVED IN TEXT. PS 9: 'the scripts keep a failed attempt in its own folder or file and accept one rerun'. It cannot be verified because c1_covariates_local.py / c1_covariates_cluster.py / lsf_c1_cov_*.sh do not exist yet in the working folder. || M7 (no post-run defect rule): MOSTLY RESOLVED. PS 9 'Defects' mirrors LUAD 5.9: the frozen run is used, the corrected run is reported if it departs, both enter section 7, and a cohort is flagged if either run flags it. There is no rule for which [P]/type is used when the two runs give C vs R. || M8 (departures incomplete): MOSTLY RESOLVED. Items (a)-(g) of draft-1 are now Departures 1-7, with clauses quoted accurately (5.7 lead-in, item 0, item 3, item 6, UCEC s5 'No other framework ... is to be substituted after this file exists', 10-08 'Nothing else.', plan B1(c)). Dep. 3 and Dep. 5 overstate compliance, and a few new departures are unlisted (see findings). || M9 (NC_ROADMAP R4/T1-1 revived undisclosed): RESOLVED (Dep. 6, plus the bar on selector comparisons in PS 5 and 8). Minor gap in the reasons paraphrased. || M10 (manuscript places not updated): RESOLVED. QS after I02 (Intro) and after the Discussion's 2nd sentence and after main.tex:813-814; supplementary Limitations (iv); a 'fifth post hoc analysis' sentence in sec:c1ucecmeth; a Fig. 6a placebo row; the results record gets a GitHub Release. New gap: the Introduction thesis in Case 2 (see findings). || Minor 11 (F semantics in Limitations): RESOLVED via [P] by type C/R/NC. || Minor 12 (pronoun after D01): RESOLVED. The insertion is now after main.tex:767, before 'Three bounds apply.'. A new pronoun issue appears in the Case 2 opener (minor). || Minor 13 (wrong cross-ref, placement): RESOLVED. The paragraph points to sec:stroma and sec:txomemeth, with a sentence also in sec:c1ucecmeth. || Minor 14 ([n] undefined): RESOLVED. It is now [2{,}566|2{,}310]. || Minor 15 (go-ahead for push): PARTLY. Stated for the initial release only, not for the Stage H record or results-record pushes, and the go-ahead timestamp is not recorded.
+
+[MAJOR 1] WHERE: PS 7.4 'The texts' and 'Room' paragraphs; ABSTRACT_VARIANTS.md; make_abstract_variants.py states list
+PROBLEM: ABSTRACT_VARIANTS.md does not hold 'the complete Abstract for every outcome'. Seven of the 16 Case-2 type combinations are missing. PS 7.4's statements about lengths are therefore wrong.
+EVIDENCE: Case 2 has 4x4 = 16 combinations of {C,R,NC:C,NC:R}; the file lists 9 (2-CC, 2-RR, 2-CR, 2-RC, 2-NC+NC [NC:C,NC:C], 2-C+NC, 2-NC+C, 2-R+NC, 2-C+NCR). I ran the unchanged generator in a scratch copy (output byte-identical to ABSTRACT_VARIANTS.md; source sha 6a1bfede... verified) and computed the missing states. (NC:C,R) and (NC:R,C) give 150/152/158/160. (NC:R,R) and (R,NC:R) give 146/148/154/156. (NC:R,NC:R) gives 141/143/149/151. (NC:C,NC:R) and (NC:R,NC:C) give 142/144/150/152, which is one word over even though the qualifier is a single sentence. PS 7.4 says 'Every variant with at most one sentence then has the length of the Entry 12 Abstract' and 'Four variants in which one cohort is flagged by a result and the other by a test not completed are longer by 5 to 9 words'. There are eight such variants, and the mixed-NC pair is longer by 1.
+FIX: Add the seven states to make_abstract_variants.py and regenerate. Correct PS 7.4: 'eight variants ... 5 to 9 words' and 'two variants with both tests not completed under different covariates are longer by 1'. Either fix one further cut for those, or state that they are submitted at that length. Ideally also fix now the cut to be used if the journal requires <=150 typeset, so no post-result choice remains.
+
+[MAJOR 2] WHERE: PS 7.4 'Room, fixed now' (c3-c7) and PS 0 Departure 3
+PROBLEM: Cut c4 deletes 'later', the only word in the Abstract that tells the reader the uterine and lung cohorts are new patients. It also contradicts PS 7.4's own description of the qualifier, which 'follows the sentence on the two later cohorts'. Separately, the claim 'None is a result clause or an item protected by C1-LUAD rule 5.7, by Entry 11 or by Entry 12' is not accurate: c3-c7 delete words inside protected items or result clauses.
+EVIDENCE: Entry 11: '"Later, within CPTAC" is kept as "later same-consortium"'. After c4 the sentence reads 'In same-consortium uterine (138) and lung (112) cohorts, uncorrected discovery sets ... outranked background'. Discovery also contains same-consortium uterine and lung cohorts, so the result can be read as in-sample. c4 is applied in every variant except 2-CC, 2-RR and 2-NC+NC. Other cuts inside protected items or result clauses: c6 'patients' is in the UCEC reading (5.7 item 0 'organ, n, ...'). c5 'genes' is in the set naming (fixed_wording abstract_required_content[0] 'uncorrected 2,566-gene discovery set'; 5.7 item 6). c7 'a' is in the retention item (Entry 12 'What is kept': 'the retention (a median 40%)'). c3 'Elsewhere,' is in the protected external-null sentence. c1 'At these cohort sizes,' is the hedge of Entry 12's added clause, which Results state as 'At these cohort sizes morphology adds no net out-of-fold value'. No content item disappears, but Dep. 3 and PS 7.4 claim more than is true.
+FIX: Drop c4 (keep 'later'), and if a word is needed take it from non-result wording, or accept +1 and say so. Reword Dep. 3 and PS 7.4 to: 'no protected content item (organ, n, set, AUC, interval, p, counts, retention, caveat, external nulls) is removed; words inside result clauses are removed (c1, c3, c5, c6, c7), each listed'. Record in Dep. 3 that c1 removes the cohort-size hedge from Entry 12's clause, which strengthens an unfavourable statement.
+
+[MAJOR 3] WHERE: PS 7.4 NC bullet; ABSTRACT_VARIANTS 1-uNC/1-lNC/1-uNCR/1-lNCR, 2-NC+NC, 2-C+NC, 2-NC+C, 2-R+NC, 2-C+NCR; QS NC form (PS 7)
+PROBLEM: The not-completed qualifiers name no set and can be read as saying a registered or published confirmatory test was not completed. The same wording is used for 'untestable' cohorts, which were not 'not completed'.
+EVIDENCE: 'Post hoc, adjusted for composition scores, the uncorrected uterine set did not, and the lung test was not completed.' (2-C+NC). 'Post hoc, the test adjusted for composition scores was not completed for lung.' (1-lNC). 'Post hoc, the tests adjusted for composition scores were not completed.' (2-NC+NC). Each directly follows the sentence reporting the completed lung test. PS 0 Dep. 5 says every sentence of section 7 that states a result names the uncorrected set. PS 6.1 gives NC:C/NC:R to both 'not completed' and 'untestable' (marker rule, PS 2), but every NC form prints 'was not completed'. The headers in ABSTRACT_VARIANTS.md cannot tell NC:C from NC:R apart: 1-uNC and 1-uNCR are both '(uterus: not completed)'.
+FIX: Name the set in every NC form, e.g. 'the adjusted test of the uncorrected lung set was not completed' / '... could not be run' for untestable, and add the untestable variant to QS, 7.4 and 7.5. Recount. Label the variant headers with the type.
+
+[MAJOR 4] WHERE: PS 7.5 (the fork) and PS 0 Departure 8
+PROBLEM: The fork leaves things open after the results: the Introduction's thesis sentence, and the Case 2 Discussion opener when one cohort is flagged by a result and the other is NC. Departure 8's statement that the target journal is 'the one decision left' is therefore not accurate.
+EVIDENCE: main.tex:105-106 'Here, we show that histology carries a set-level signal of which proteins depart from their own transcript.' Entry 12 says the Abstract's thesis is this sentence 'verbatim'. In Case 2 the title becomes 'Testing whether ...' and the Abstract 'We test whether ...', but PS 7.5 does not touch the Introduction sentence, so it keeps asserting the claim. The PS 7.5 Case 2 Discussion opener ('in two later cohorts it was not shown to add to ... (post hoc)', with 'it could not be tested against' for an NC cohort) has no form for one result cohort plus one NC cohort. Other open items: the over-length cut (finding 1), and the [P]/type when frozen and corrected runs disagree C vs R (PS 9 Defects).
+FIX: Fix the Introduction sentence for Case 2 (e.g. the same 'We test whether ...' wording, or keep it with a stated reason). Give the mixed-case Discussion opener verbatim. List every remaining post-result choice in Dep. 8.
+
+[MAJOR 5] WHERE: PS 9 'Stage H record' (and 'Results record', 'Release')
+PROBLEM: The Stage H record, the third-party proof that the Stage H outputs existed before Stage L2, is only 'committed and tagged'. Entry 12 reads D3 as requiring a public GitHub Release; a tag alone did not count for Entry 11. The record also does not carry the Stage L1 hashes, which are read before Stage H runs. The author's go-ahead is required only for the first release.
+EVIDENCE: PS 9: 'The manifest, the job logs and a list of any arm closed as not completed are committed and tagged c1-covariates-posthoc-stageh-<date> before Stage L2.' Entry 12 'Timestamp': 'Entry 11 was pushed ... with the annotated tag ... but no GitHub release was made for it, so Entry 11 was not "timestamped as in D3"'. D3 step 4: 'Pushing requires the author's go-ahead.' Stage L1 outputs (forward, gene-property, partition cells) are produced and readable before Stage H, and their hashes sit only in result_L1.json.
+FIX: Make the Stage H record a pushed annotated tag plus a GitHub Release, after a written go-ahead recorded with its UTC time. Include sha256 of result_L1.json and the L1 outputs in it. State the go-ahead requirement for the Stage H and results releases too. Optionally record release times in a receipt line, as in D3 step 5.
+
+[MINOR 6] WHERE: PS 0 Scope ('every sentence of section 7 says "uncorrected"') and Departure 5
+PROBLEM: The claim that every result sentence names the uncorrected set is not literally true.
+EVIDENCE: 7.5 Case 2 Discussion opener ('in two later cohorts it was not shown to add to transcriptome-derived covariates'); 7.7 class-U sentence ('the [uterine|lung] test[s] [was|were] uninformative'); 7.8 Case 0 bracket '[both sets|the uterine set|the lung set]'; M5 'A set that still outranks'; the NC forms (finding 3).
+FIX: Add 'uncorrected' or the set size in those sentences, or narrow the claim in Scope and Dep. 5 to the sentences that report a cell's statistic.
+
+[MINOR 7] WHERE: PS 0 Departure 6
+PROBLEM: The paraphrase of NC_ROADMAP's reasons is incomplete. A related rejection is not mentioned.
+EVIDENCE: NC_ROADMAP.md:77 also gives, for the whole-gene version, the risk of handing reviewers 'morphology is just a noisy-transcriptome proxy' (形态只是噪声转录组代理). Section 6 R4 also gives 'ridge 置换计算不可行'. Neither appears in Dep. 6, and the first is the risk B1 now runs on purpose. Section 6 R11 rejected covariate scans as 'an empty-result table + a new multiple-testing family'; B1 adds 4 primary and 14 secondary uncorrected readings.
+FIX: Quote both R4/T1-1 reasons and say why they no longer apply (reviewers raised the question; it is now computable). Mention R11 and why B1's new family is acceptable (no correction is chosen as the stricter direction, PS 6.1).
+
+[MINOR 8] WHERE: PS 0 Departures (unlisted)
+PROBLEM: Three departures are not listed.
+EVIDENCE: (1) c2 and the Case 2 opener break Entry 12's identity between the Abstract thesis and the Introduction sentence. They also remove 'Here, we show' entirely, a further departure from the journal instruction that Entries 11 and 12 recorded. (2) FINAL plan 2_plan_checked_against_rules_FINAL.md:199 'B1 有利时只能进 Results', but PS 7.8 Case 0 adds a favourable sentence to main and supplementary Limitations (iv), and 7.9 adds Fig. 6a rows. (3) PS 7.5 title/Discussion changes have no requirement for an ADDENDA entry; only the Abstract edit does (PS 7.4 last line).
+FIX: Add the three items to PS 0 with reasons, and require the 7.5 changes to be recorded in the same dated ADDENDA entry as the Abstract variant.
+
+[MINOR 9] WHERE: ABSTRACT_VARIANTS grammar
+PROBLEM: Grammar: the c7 cut makes the protected retention clause ungrammatical, and the elliptical 'did not' can attach to the wrong verb.
+EVIDENCE: c7 gives 'but retains median 40% of its noise-adjusted advantage' (2-CR, 2-RC, all NC and mixed variants). 'the uncorrected lung set did not.' follows '..., lung also under an operator-stratified null (P=0.001), as did its batch-corrected set (726; ...).' The nearest antecedent is the operator-stratified clause. QS and M1 use 'was not shown to outrank background'.
+FIX: Replace c7 with a different cut. Write the qualifier verb out ('was not shown to outrank background'), and recount.
+
+[MINOR 10] WHERE: PS 7.5 Case 2 Discussion opener; PS 7.7 class-U bullet; PS 7.8 Case 0 bracket
+PROBLEM: Wording ambiguities that will need decisions after the results.
+EVIDENCE: (a) After the new opener ('... it was not shown to add to transcriptome-derived covariates (post hoc).') the existing next sentence begins 'It recurs across five organs within one consortium' (main.tex:763): the pronoun now attaches to the post hoc clause, and 'within one consortium' appears twice. (b) 7.7 has two QS insertion points (after main.tex:767 and after 813-814). The class-U sentence goes 'at the same place': which one, or both, is not said, and in Case 0 there is no QS to follow. (c) The 7.8 bracket says 'the same covariates alone' after 'these scores', but it fires for a V_R20 cell too.
+FIX: Change 'It recurs' to 'The signal recurs' in the fixed Case 2 text. Name one insertion point for the class-U sentence. Split the 7.8 bracket by covariate set ('these scores' / 'the 20 expression components').
+
+[MINOR 11] WHERE: PS 1 Inputs / sidecar
+PROBLEM: The generator's input is not listed among the frozen files.
+EVIDENCE: make_abstract_variants.py reads ../QUALITY_REVIEW_2026-11-20/abstract_v12/ABSTRACT_FINAL.tex (asserts sha 6a1bfede..., which equals Entry 12's published hash). PS 1 lists the script and its output but not this file.
+FIX: List ABSTRACT_FINAL.tex in PS 1 and the sidecar.
+
+NOTES: Read only; nothing computed on project data. The only thing I ran was make_abstract_variants.py, on a scratch copy (C:/Users/<user>/AppData/Local/Temp/claude/46c80a70a2c77e33/3c75a307-02d7-4196-8002-9f833e23eadc/scratchpad/av/C1). Its output is byte-identical to the file in the working folder, and the source sha 6a1bfede... is verified. PS and ABSTRACT_VARIANTS are ASCII with LF line endings. The scripts named in PS 1 (c1_covariates_local.py, c1_covariates_cluster.py, lsf_c1_cov_*.sh) do not exist yet, so script-level compliance (failure folders, hash checks) cannot be audited.
+
+COUNTS, recounted by hand. Entry 12 base: sentences 17+18+45+46+15 = 141 tokens; +2 ranges = 143; +2x4 P = 149; 151. Variant 1-uC: +12 (qualifier) -4 (c1) -4 (c2) -1 -1 -1 -1 (c3-c6) = 141/143/149/151, which matches. Variant 2-CR: +14 (qualifier), thesis 17->12 (-5), -4 (c1), -1 x5 (c3-c7) = 141/143/149/151, which matches. 2-C+NC: +19 -5 -9 = 146, which matches. All 17 listed variants match the generator.
+
+PROTECTED ITEMS, checked in each of the 17 variants:
+- Present in all 17: discovery counts 815/726/201/680/682; UCEC organ, n 138, set (uncorrected, 2,566), AUC 0.597, interval 0.48-0.65, one-sided P=0.004; LUAD in the same sentence with organ, 112, 2,310, 0.644, 0.55-0.65, P=0.001; [B] form 1 (P=0.001); [D] pass (726, 0.654, P=0.001); [C] absent; retention 40% with its caveat; measurement-error qualifier 'not excluded post hoc for much of the signal outside kidney cancer'; external nulls ending exactly 'a whole-proteome cohort none.'; Entry 12's no-net-accuracy clause; 'from one consortium'; C1 ahead of RPPA; no acronyms; 'replicat*' only in the external sentence.
+- Word-level losses: 'later' (all except 2-CC, 2-RR, 2-NC+NC); 'patients'/'genes' (all except 2-CC, 2-RR, 2-NC+NC); 'a' in 'a median' (2-CR, 2-RC, all NC and mixed); 'Elsewhere,' and 'At these cohort sizes,' (all 16 non-Case-0).
+- Cuts are exactly PS 7.4's c1-c7, in order, with c2 only in Case 1 and the Case 2 thesis replaced.
+
+ANCHORS, checked against the current main.tex and supplement.tex and the 87 spans of fixed_wording.json (all located by exact match):
+- 7.1: after main.tex:674-675 'it credits every between-plex association to chance, so it bounds protein batch rather / than isolating it.' This is the end of R23 (content-rule) and the end of sec:c1ucecres (676 begins sec:kircres). Outside every span.
+- 7.2a: after main.tex:1203-1204 'descriptive variants: the morphology components residualised on plex dummies, and the / two patients whose protein values may combine two plexes removed.' This is the end of M09 (content-rule) and of sec:c1ucecmeth. Outside the span. 'A fifth' correctly extends M09's first/second/third/fourth.
+- 7.2b: appended to sec:c1luadmeth, whose last sentence is main.tex:1295 'Post-signature events, ... (Supplementary Note~\ref{snote:c1luad}).', after M13 (1277-1292). Not a span. No anchor is quoted in PS, but the place is unambiguous.
+- 7.6: list at main.tex:122-125 '...a post hoc test for transcript measurement error and the nulls / outside CPTAC-3 are all reported.' Not a span. QS after main.tex:113 'downloaded, and it also passed an acquisition-batch (operator)-stratified null.' This is the end of I02 (content-rule); outside it.
+- 7.7: main.tex:767 'and across acquisition-batch axes the signal held unevenly (\S\ref{sec:c1res}). Three' is outside D02 (770-773) and D01 (774-780). main.tex:813-814 'discovery analysis (2{,}566 and 2{,}310) outranked background genes; the test ranked gene sets, / not the protein of individual genes.' is not a span.
+- 7.8: main.tex:843-844 '(iv) \emph{Composition.} Only transcriptomic scores control composition, so retained / fractions are upper bounds; only PDAC has pathologist-read composition (\S\ref{sec:stroma}).' Not a span. supplement.tex:1845-1851 '\paragraph{(iv) Composition.} ... Deconvolution-based decomposition is future work.' Not a span (xr-hyper makes \ref{sec:c1ucecres} resolvable).
+- None of these anchors falls inside a verbatim or guarded span. The Abstract edit is inside A01 (guarded) and is licensed only through the dated ADDENDA entry that PS 7.4 requires.
+
+7.5:
+- The title (main.tex:21-22) and the Discussion opener (main.tex:762-763 'Histology carries a set-level signal of which proteins depart from their own / transcript.') are in no fixed span and no rule fixes them. Entry 12 lists the Discussion opener only as a broad-reading item-6 departure.
+- The Case 2 title has 15 words, within NC_ROADMAP's <=15 words, no abbreviations.
+- Case 2 keeps the UCEC rule s5 precedence of C1 over RPPA. The guarded Results heading (R12, 5.7 item 5) is untouched.
+
+DEPARTURES, quoted clauses checked:
+- Accurate: Dep. 1 (UCEC s5 'No other framework ... is to be substituted after this file exists'); Dep. 3 (the 5.7 lead-in, the item 0 quotes and the item 3 quote); Dep. 4 ('Nothing else.', POSTHOC_MEAS_ERROR:680, and Entry 12's reading); Dep. 5 ('Every claim names the set'); Dep. 6 (T1-1:84, s6 R4:214); Dep. 7 (plan B1(c), 1_plan:145).
+- Overstated: Dep. 3's 'none of them a result clause or a protected item'; Dep. 5 / Scope's 'every sentence'; Dep. 8's 'the one decision left'.
+
+D3, as Entry 12 reads it:
+- The initial release (annotated tag plus GitHub Release, after a written go-ahead, with withheld derived data listed in the commit) satisfies it and matches the 10-08 precedent.
+- The results record is now a Release.
+- The Stage H record (tag only) does not satisfy it.
+
+LEFT TO BE DECIDED AFTER RESULTS (as the text stands):
+1. Target journal (declared).
+2. Any cut to the eight result+NC Case 2 variants (146-160 words) and to the two mixed-NC variants (+1), if the journal enforces 150.
+3. Abstract and QS wording for the seven missing Case 2 states (only the generator's function defines them).
+4. The Introduction thesis sentence in Case 2.
+5. The Case 2 Discussion opener for a result+NC mix.
+6. The [P]/type when frozen and corrected runs give C vs R, and the two-run wording in section 7.
+7. Separate wording for 'untestable' versus 'not completed'.
+8. Which QS place takes the class-U sentence in 7.7.
+9. Which free text is shortened if the main text exceeds the length (PS 7.1 last line).
+10. Supplementary Note prose 'in substance' (descriptive only).
+
+==============================================================================================================
+BUILD REPORT
+FILES: D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py | D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh | D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh | D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh | D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/SERVER_RUNBOOK.md | D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/c1_covariates_cluster_selftest.log
+TEST: python c1_covariates_cluster.py --mode selftest (in review/C1_COVARIATES_2026-11-21, Python 3.13, output to c1_covariates_cluster_selftest.log) => SELFTEST PASSED: 43 checks, 0 failed. The per-gene function matches an independent sklearn KFold+StandardScaler+Ridge implementation to <=2.2e-15 for all four arm types. With E empty and B = pcs it is bit-identical to the published _gene_test structure. It equals tk.oof_ridge increments exactly (theta_kernel 6c95cd11 found and used). The pool and serial runs are bit-identical. Also checked: the R20 recipe against an SVD (up to sign), the C3 marker rule, placebo seeds and row convention, exclusive writes and .partial handling, attempts and the one-rerun limit, manifest format, and TSV and patient-file round trips. One earlier run piped to `tail` failed with a Windows spawn PermissionError (WinError 5) in the pool check; rerunning with the output written to a file passed. This is a local Windows/pipe artefact, not code.
+TEST: python harness.py (scratchpad e2e; fake frozen modules + synthetic UCEC-shaped data; drives main() for blind, gate pass/fail, arm x4, placebo 1-3, manifest, export-patients, gate-r20, export-scores) => E2E ALL OK. H-V1 PASSED at diff 0 and FAILED with exit 3 on a perturbed saved matrix. Production refused without a sidecar or on the wrong pinned host, and refused a repeat run of a completed arm (exit 4). A_C3 column 3, placebo draw 2 column 0 and V_R20 column 1000 were recomputed independently and matched to <1e-12. The manifest and its refusal to overwrite worked. H-V2 passed with all-flipped column signs. The score TSV equals comp_score exactly.
+TEST: python harness_luad.py (LUAD branch: required flags, rule/protein/rna-manifest hashes, assert_hash, blind, gate, V_C3 arm) => LUAD E2E OK. A missing --saved-matrix and a wrong --protein-sha256 are both fatal.
+TEST: bash -n on the three wrappers + whitelist probes (bad mode, repeated flag, --flag=value, --workers, bad --arm, value with a space, bad cohort) => Syntax OK and every bad input is FATAL. One probe with a valid --mode reached `mkdir -p $MORPHO_OUT` and left an empty folder tree at D:\Git\public\home\fjhui\ZW\ucec_c1\results\posthoc\c1_covariates (no files). My attempt to remove it was blocked by a safety check; the author can delete it.
+
+[PRESPEC ISSUE] WHERE: PS 1 (hashes of the code files) and the task's 'its sha256 must equal the value in PS 1'
+PROBLEM: PS 1 prints only 8-hex prefixes (a54a0a56..., ef75f1c0..., etc.), so a full-hash assertion cannot be taken from PS 1 literally.
+DID: I hard-coded the full sha256 of the repository copies. At import time the script asserts that each full value starts with its PS 1 prefix. I cross-checked them against the published result JSONs and the 10-08 plex logs (c1_run_test_luad 1d5ee05d..., saved matrices ef75f1c0.../2034e711..., inputs e28b86fa.../b64cdf3b...). The cluster copies must be byte-identical; runbook step 1f checks this.
+SUGGESTED: PS 1: give full sha256 values, or state 'prefixes; the full values are in the sidecar and the scripts assert the full values'.
+
+[PRESPEC ISSUE] WHERE: PS 9 'Every stage refuses to start unless every sidecar hash matches'
+PROBLEM: On the cluster most sidecar entries (local inputs, local scripts, ABSTRACT_VARIANTS.md, gate logs) do not exist, so a literal check of every entry is impossible there.
+DID: Production modes (arm, placebo) take --sidecar, --sidecar-sha256 and --prespec. They verify the sidecar's own hash, then require and check every entry that exists on the cluster: the prespec, this script, the running wrapper, the five frozen modules and the cohort's saved matrix. Entries for files that are not on the cluster are logged as 'local-only, not checked'. Pre-freeze modes (blind, gate, gate-r20, export-scores) cannot check a sidecar because none exists yet.
+SUGGESTED: PS 9: 'On the cluster, a production stage refuses unless the sidecar has the sha256 given on its command line and every sidecar entry present on the cluster (pre-specification, cluster script, wrappers, frozen modules, saved matrix) matches.'
+
+[PRESPEC ISSUE] WHERE: PS 9 H-V1 host order ('the order of the published runs' hosts, read from their job logs')
+PROBLEM: For UCEC, the saved matrix was written by the D4 re-read (c1_ucec_stratified_reread.py), not by the published c1_run_test run, and neither host is recorded locally. The only local evidence is that s006 reproduced the D4 matrix to 4.93e-14 (plex re-read, job 75740140). For LUAD only s002 is known (job 75682618; also the plex re-read).
+DID: Runbook 2a greps the hosts from c1_ucec_d4_strat.out, c1_test.out and c1_luad_primary.out. UCEC order: D4 host, then the c1_test host, then s006. LUAD order: the primary-run host (s002). Production refuses unless this host has a passed H-V1 json in the output folder and --pinned-host equals the hostname.
+SUGGESTED: PS 9 H-V1: 'UCEC: the host of the D4 job that wrote c1_ucec_d4_stratified.npz, then the host of the published c1_run_test run, then s006; LUAD: the host of the primary run (s002).'
+
+[PRESPEC ISSUE] WHERE: PS 4 Files / PS 9 Stage H ('c1_cov_stage_h_manifest.sha256, the sha256 of every output written on the cluster')
+PROBLEM: The two cohorts' outputs must live in two trees (ucec_c1 and luad_c1, required by the environment guards), yet PS names one manifest. Two per-tree manifests with the same name would collide in the flat local stage_h/ folder.
+DID: --mode manifest writes one manifest, run once through the UCEC wrapper, covering both cohorts' c1_cov_* folders (lines '<sha256> *<bare filename>'). It refuses on a duplicate file name across the folders and while any .partial exists. It includes every c1_cov_* file: npz files, attempt and run JSONs, logs, failed partials, and the blind/gate records written there earlier.
+SUGGESTED: PS 9: 'One manifest covers the output folders of both confirmatory trees; file names are unique across them.'
+
+[PRESPEC ISSUE] WHERE: PS 6.1 / PS 2 (C3 untestable) vs PS 9 manifest
+PROBLEM: PS gives the manifest only 'not_completed' lines, but a C3 arm refused by the marker rule is 'untestable', not 'not completed'. The concurrently written c1_covariates_local.py already parses 'untestable <filename>' lines as an extension.
+DID: Added --untestable to the manifest mode (lines 'untestable <filename>'). C3 arms exit 4 with a JSON record when any family has fewer than 6 markers.
+SUGGESTED: PS 9 Stage H record: 'the manifest also lists, as "untestable <file>", any C3 arm refused by the marker rule of section 2.'
+
+[PRESPEC ISSUE] WHERE: PS 9 Failures ('a run that fails before writing its result ... repeated once')
+PROBLEM: It is not specified when a run starts to count, for example whether a FATAL hash mismatch at pre-flight is a run.
+DID: An attempt is counted (an .attemptk.json marker written with exclusive create) only after pre-flight, the published prepare() and the covariate build have succeeded, immediately before the per-gene computation. A pre-flight FATAL does not consume an attempt, following the 10-08 measurement-error precedent. A second attempt is detected automatically: the same command is resubmitted unchanged and attempt-1 partials are kept as .partial.attempt1.failed. A third attempt is refused. A placebo rerun skips draws that already exist.
+SUGGESTED: PS 9: 'A run counts from the start of its per-gene computation; a stop at the pre-flight checks is not a run.'
+
+[PRESPEC ISSUE] WHERE: PS 2 C3 ('a marker with zero standard deviation is skipped')
+PROBLEM: comp_score skips zero-SD markers through a NaN-skipping mean. If every marker of a family had zero SD, the score would be NaN, and PS calls such a family neither untestable nor anything else.
+DID: I treat it as a fatal non-finite value (PS 4: 'a non-finite value is a fatal error'), not as untestable. The blind run reports the number of zero-SD markers per family, so this would be visible before the freeze.
+SUGGESTED: PS 2: 'a family whose every present marker has zero SD makes C3 untestable' (or 'is fatal'), stated explicitly.
+
+[PRESPEC ISSUE] WHERE: PS 9 H0 (discovery scores) when a discovery family has fewer than 6 markers
+PROBLEM: PS does not say what H0 writes if C3 is untestable in discovery.
+DID: export-scores writes no TSV in that case. It writes a JSON record and exits with code 4.
+SUGGESTED: PS 9 H0: 'if C3 is untestable in a discovery cohort, no score table is written and S_C3, T_C3 and T_M|C3 are untestable there.'
+
+[PRESPEC ISSUE] WHERE: PS 9 gate record / Release (gate logs are frozen) - location
+PROBLEM: PS does not name a local folder for the gate logs, the blind listing or the LSF .out files.
+DID: Runbook 2j brings them back to review/C1_COVARIATES_2026-11-21/gate_logs/ and copies the two discovery score TSVs to server_export/results/c1_covariates/stage_h/ (the path PS 1 gives).
+SUGGESTED: PS 9: 'Gate logs: review/C1_COVARIATES_2026-11-21/gate_logs/.'
+
+[PRESPEC ISSUE] WHERE: PS 4 'c1_cov_confirmatory_covariates_<cohort>.npz (for the record)'
+PROBLEM: PS does not say which job writes it or its keys.
+DID: The first production job of each cohort writes it with exclusive create. Every later job checks that its own C3 and R20 are bit-identical to the file and stops FATAL otherwise. Keys: cases, C3 (n x 3, or n x 0 if untestable), c3_testable, R20, r20_explained_variance_ratio, families, markers_json. The local checker (c1_covariates_local.py) expects C3 (n,3) and R20 (n,20) shapes.
+SUGGESTED: PS 4 Files: name the keys.
+
+[PRESPEC ISSUE] WHERE: PS 9 'Hosts' vs discovery H-V2/H0
+PROBLEM: PS fixes no host for gate-r20 or export-scores. In October the PCA results depended on the host at about 1e-5.
+DID: The runbook runs them on the hosts whose 2026-10-07 discovery exports were adopted (UCEC s006, LUAD s002), with one BLAS thread as in lsf_measurement_error.sh.
+SUGGESTED: PS 9 H-V2/H0: 'run on the host whose measurement-error export was adopted (UCEC s006, LUAD s002).'
+
+OPEN ITEMS:
+- The author must verify the cluster assumptions in SERVER_RUNBOOK.md section 0. The main ones: composition_controls.py on the cluster has sha256 46b4a1d8... (it has never been checked there), and the LUAD saved matrix is at /public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_primary.npz (path inferred, not verified).
+- The UCEC host order for H-V1 depends on hosts in c1_ucec_d4_strat.out and c1_test.out, which are not available locally (runbook 2a greps them).
+- No real-data mode was run locally, per the blindness rule. That includes export-patients on the real inputs npz: the author runs the two runbook 1a commands himself, and they read patient ids only.
+- The gates (blind, H-V1, H-V2, H0) must be run with exactly these script and wrapper versions (current sha256: c1_covariates_cluster.py ece3aadb..., lsf_c1_cov_ucec.sh c061f8e9..., lsf_c1_cov_luad.sh 695407bf..., lsf_c1_cov_discovery.sh 9d3770f4...). Any later edit invalidates the gate logs that go into the sidecar.
+- An empty folder tree created by my wrapper probe should be deleted by the author: D:\Git\public\home\fjhui\ZW\ucec_c1\results\posthoc\c1_covariates (no files). My rm was blocked by a safety check.
+- c1_covariates_local.py (written concurrently by another agent) reads the same interface: bare-name manifest lines, npz keys exactly genes/M/cases, TSV header patient/stroma/immune/proliferation with '#' lines, and the 'untestable' manifest lines. Its owner should confirm that it expects untestable C3 to be stored as C3 of shape (n,0) in the covariates record, or adjust.
+
+SUMMARY: I wrote the cluster side of PS 2, 4 and 9 in review/C1_COVARIATES_2026-11-21/. The selftest passes locally (43/43), and two end-to-end runs on synthetic data, one per cohort, also pass. Nothing was run on real project data.
+
+c1_covariates_cluster.py has these modes:
+- selftest: synthetic data, no project imports.
+- export-patients: a local helper that writes the patient list from an inputs npz.
+- blind: counts only, plus a listing of the cluster result folders for PS 0 item 7.
+- gate (H-V1): columns 0..5 compared with the saved matrix; prints host, max and 99.9th-percentile diff, and PASSED (exit 0) or FAILED (exit 3).
+- gate-r20 (H-V2): R20 compared with rna_pcs20 after aligning column signs, tolerance 1e-6.
+- export-scores (H0): writes the discovery score TSV with repr floats and '#' header lines.
+- arm (A_C3, A_R20, V_C3, V_R20): genes x 1001.
+- placebo (--draws a-b): one genes x 51 file per draw; draws already written are skipped.
+- manifest: one file covering both cohort folders, with optional not_completed and untestable lines.
+
+How it is built:
+- Cases, tested genes, R, P, W and K come from the published c1_run_test.prepare / c1_run_test_luad.prepare, called unchanged with the published flags. The LUAD rule, protein and RNA-manifest hashes are asserted, as in the plex re-read precedent.
+- All five frozen modules are hash-checked before import. composition_controls.comp_score and MARKERS are imported as they are. The R20 lines of transcriptome_baseline.py are re-implemented, and the code says so.
+- The published permutations are crc32(b"c1_<cohort>|perm") x 1000. Placebo seeds are crc32(b"c1_cov|<cohort>|cap|%02d" % j), and row i of placebo j is row q_j[i] of R20.
+- The pool is built like run_pool. The usable-gene filter is the published one and is asserted equal to the saved matrix's gene list. A non-finite value is fatal.
+- Outputs go to .partial files with exclusive create and are never overwritten. A run is recorded as attempt 1 or 2; one unchanged rerun is accepted and a third is refused. Each run writes a JSON log.
+- Production modes refuse unless the sidecar's hash matches the one given on the command line, every sidecar entry present on the cluster matches, the host equals --pinned-host, and that host has a passed H-V1 record.
+
+The three wrappers are cloned from the plex-reread precedents: the same environment exports, an argument whitelist, -n 8 for UCEC and -n 4 for LUAD. The discovery wrapper uses morpho_env.sh with one BLAS thread.
+
+SERVER_RUNBOOK.md, in Chinese, lists the path assumptions at the top and gives one copy-paste command per block, in this order: uploads, blind, H-V1 with the host order, H-V2, H0, copy-back, STOP, the production bsub commands, completion checks, manifest, copy-back with a sha256 check, and the failure rule.
+
+Where the PS is ambiguous, I made the choices recorded under prespec_issues: full hashes, the cluster-side sidecar check, host order, a single manifest, untestable lines, when an attempt counts, and output locations.
+
+==============================================================================================================
+REVIEWER: senior statistician + hostile-but-fair NC referee (re-audit of version 2 and ABSTRACT_VARIANTS.md) | VERDICT: PASS_WITH_MAJOR | {'major': 3, 'minor': 8}
+RESOLVED: [统计 B1] R20 的 A/U 规则依赖单次安慰剂：已解决。PS 5、6.1 改为 59 次带种子行重排的随机化秩检验，p_abs=(1+#{m_j<=m_R})/60；PS 2 写明行序（已发表检验的排序病例）；残差方差不匹配在 PS 5、7.3 披露。余留措辞问题见 finding 2。 || [统计 B2] F 把 C3=N 与 R20=A 并称 tissue covariates：已解决。PS 6.1 分型 C/R，[P] 分别是 transcriptomic composition scores 和 20 expression components；QS、7.4、7.7 按型给句。不含 NC 的 36 种（C3 类 x R20 类 x 两队列）组合我逐一走过，每种只得到一组句子。 || [统计 M3 / 审稿 M11] '无限制零分布最容易通过'：已解决。PS 0 'One null' 改为两个方向都不能推断，引 z=2.73 对 2.89；M5 写明 the null is unrestricted。 || [统计 M4 / 审稿 M10] matched 格因置换下限注定为空：已解决。PS 3 改读等大小 T 集，S 集只报不读；PS 0 第 3 项披露 99、55 对所需的 211、215。T 规则带来的新问题见 finding 3。 || [统计 M5] 没有区分'真实下降'与'刚过阈值'的量：实质解决。PS 5 加 D_b、p_D、f（只报不读）；M1 三个分支都并排印两个 margin；PS 6.3 写入 0.60 与 0.26。N-a/N-b 细分未采纳，可以接受。 || [统计 M6] 阶段与门的顺序留下事后自由度：已解决。PS 9 单次冻结，集群脚本一并入 sidecar；H0+V3 和 H-V2 都在冻结前。 || [统计 M8 / 审稿 M6] 反向、正向结果只进补充材料：已解决。M3 报两套协变量的四个 p 并去掉 also；M4 把正向与 matched 计数放进正文；M5 有对称界定句。 || [审稿 B1] 两阶段冻结：已解决。PS 状态段与 PS 9 规定一次冻结并公开发布后才跑 L1、H、L2；PS 0 Scope 把例外收窄为脚本缺陷更正和只含哈希的 Stage H 记录。余留的 L1 先于 Stage H 见 finding 4。 || [审稿 M3] R20 的 U 类没有任何可见后果：已解决。PS 7.7、7.8 在任何结局下为 U 队列加 'uninformative ... untested' 句；PS 8 写明子宫队列的局限；A_R10 回退臂未做，PS 8 给了理由。M2 的 U 尾句需改，见 finding 2。 || [审稿 M5] 句子不指名集合、726 集合歧义：已解决。QS 与摘要限定语都写 uncorrected [uterine|lung] set；M5 写 the batch-corrected sets were not re-read。 || [审稿 M7] M4 不对称、§6.1 与 §8 自相矛盾：已解决。M5 用对称表述；PS 6.3 写 Three covariates do not cost the power to see it，§8 不再给 C3 留功效退路；7.7 的 There the ordering does not distinguish ... 句说明了不利结果的含义。 || [审稿 M8] 标题、首句、期刊留到结果之后：已解决。PS 7.5 写定 Case 2 的标题、摘要首句和 Discussion 首句；7.6 在所有结局下给引言清单加一项；目标期刊是唯一留到事后的决定。 || [审稿 M9] 事先暴露不完整：基本解决。PS 0 第 1 至 8 项补了书面先验与利害、有利先验（93-104%）、测量误差分析的两个变体、逐基因组成增量、典型相关、搜索范围。小的遗漏见 finding 8。
+
+[MAJOR 1] WHERE: PS 6.1 'Not completed, untestable'；PS 6.4；PS 7 QS 第四条；PS 7.1 M1、M2；PS 7.4 末条与 'Room'；PS 7.5；PS 7.7；PS 9 'Failures' 与 H-V1；ABSTRACT_VARIANTS.md；make_abstract_variants.py 的 states 列表
+PROBLEM: 含 NC 的结局下，措辞分支不穷尽，类型规则还会把不利结果藏在 NC 后面。(a) 每队列类型为 {无, C, R, NC:C, NC:R}，被标记的状态共 24 个，ABSTRACT_VARIANTS.md 只有 17 个，PS 7.4 却称它 holds the complete Abstract for every outcome；'Four variants ... longer by 5 to 9 words' 实际是 8 个；'Every variant with at most one sentence then has the length of the Entry 12 Abstract' 对两个 NC:C+NC:R 状态不成立。M1 只有 H/N 三种形式，任一队列 C3 为 NC 时没有可用分支；QS 没有两队列都 NC 的形式；7.5 的 Discussion 首句没有'一个结果加一个 NC'的形式；7.7 的 There 句在 C+NC 时位置不明。(b) C3 未完成而 R20=A 的队列按字面得到 NC:C，摘要写 was not completed，A 类结果进不了摘要和 QS。(c) NC 的措辞比 did not 轻，而它能由作者可控的因素触发：两次 walltime 失败，或 H-V1 在 1e-9 上不过。PS 0 自己写明预期肺队列不利，这是一个道德风险出口。(d) 部分安慰剂文件缺失时 R20 类别在文本中没有定义。
+EVIDENCE: 我在内存中调用 make_abstract_variants.py 的 build() 和 qualifier()（python -B，未写文件）枚举 5x5-1=24 个状态。缺的 7 个及其字数：{u:R,l:NC:R} 146/148/154/156（超 5）；{u:NC:C,l:R} 150/152/158/160（超 9）；{u:NC:R,l:C}（超 9）；{u:NC:R,l:R}（超 5）；{u:NC:C,l:NC:R} 与 {u:NC:R,l:NC:C} 142/144/150/152（超 1）；{u:NC:R,l:NC:R} 141/143/149/151。PS 7.1：M1 (C3), exactly one of: both cohorts H / one H (X), one N (Y) / both N。PS 6.1：Type ... R if its C3 class is H and its R20 class is A；NC:C (the C3 reading)。新写的 c1_covariates_local.py 自检第 1614 行按字面实现为 C3 not completed 且 R20=A 得 type NC:C。PS 9：A run that fails before writing its result (a crash, the walltime, a node failure) ... repeated once ... If the rerun also fails, that arm or stage is reported as not completed；H-V1：if none passes, Stage H does not start for that cohort and its primary readings are closed as not completed。PS 0 第 1 项：expects the lung set not to outrank background。
+FIX: 首选：冻结后不允许主读法以 NC 收场，NC 只来自冻结前的门，适用分支在冻结时已知。无论是否采纳首选，(3) 至 (6) 都要补。
+(1) PS 6.1 该条整条替换为：
+>> - **Closed readings.** A primary reading can be closed without a result only before freezing, by the marker rule of section 2 or by a gate of section 9; the gate record names every closed reading. After freezing no primary reading is closed: a run stopped by the scheduler (wall-clock limit, node failure, queue) is resubmitted unchanged until it completes, the wall-clock limit being the only setting that may be raised; a run stopped by an exception is a script defect (section 9). The manuscript is not submitted until every primary arm and every placebo arm not closed before freezing is complete. A cohort with a closed reading has type **NC:C** (C3 closed) or **NC:R** (C3 class H, R20 closed). If C3 is closed and the R20 class is A, the type is **R**, and M1 states that the C3 test was not completed. The R20 class is H whenever p_R < 0.05; otherwise it needs all 59 placebo files.
+(2) PS 9 H-V1 末句替换为：
+>> If no host passes at 1e-9, the host with the smallest maximum deviation is pinned provided that deviation is below 1e-6 and the ranks of column 0 over the usable genes equal those of the saved matrix; only if that also fails is the cohort closed before freezing.
+PS 9 'Failures' 替换为：
+>> A run stopped before writing its result is kept with its log and resubmitted unchanged (section 6.1). A completed run is never repeated.
+(3) states 列表补 7 项并重新生成 ABSTRACT_VARIANTS.md：{u:R,l:NC:R}、{u:NC:C,l:R}、{u:NC:R,l:C}、{u:NC:R,l:R}、{u:NC:C,l:NC:R}、{u:NC:R,l:NC:C}、{u:NC:R,l:NC:R}。PS 7.4 两句替换为：
+>> Every variant with one flagged cohort, or with both cohorts flagged in the same way, has the length of the Entry 12 Abstract. The two variants in which both tests are closed under different covariate sets are longer by 1 word, and the eight in which one cohort is flagged by a result and the other by a closed test by 5 to 9 words, even after every cut; they are submitted at that length, ...
+(4) M1 增加两种形式：
+>> - one cohort closed (Z), the other H or N (X): Post hoc, in an analysis specified on [date] in a dated file released publicly before it ran (Supplementary Note~\ref{snote:c1cov}), we added transcriptomic stromal, immune and proliferation scores to the confirmatory baseline: in [X] the uncorrected discovery set ([2{,}566|2{,}310] genes) [still outranked background|was not shown to outrank background] (AUC [a] against [m] $\pm$ [s], one-sided $p=$[p], margin [d] against [$0.099$|$0.120$] without the scores); in [Z] the test was not completed.
+>> - both closed: Post hoc, an analysis specified on [date] in a dated file released publicly before it ran (Supplementary Note~\ref{snote:c1cov}) was to add transcriptomic stromal, immune and proliferation scores to the confirmatory baseline; the test was completed in neither cohort.
+(5) QS 增加两队列都 NC 的形式：
+>> Both of type NC, one [P]: Post hoc, the tests with [P] in the confirmatory baseline were not completed (\S\ref{sec:c1ucecres}). Different [P]: Post hoc, the tests with [P of uterus] (uterus) and [P of lung] (lung) in the confirmatory baseline were not completed (\S\ref{sec:c1ucecres}).
+(6) PS 7.5 括号改为：
+>> (with 'in two later cohorts it could not be tested against' if both cohorts are of type NC, and 'in two later cohorts it was not shown to add to, or could not be tested against,' if one is)
+PS 7.7 第一条加：
+>> With one cohort of type C or R and one of type NC the order is: the result sentence of QS, the 'There ...' sentence, the NC sentence of QS.
+
+[MAJOR 2] WHERE: PS 7.1 M2 及其 tail；PS 5 'The capacity randomisation' 末句；PS 7.3 第一条逐字句
+PROBLEM: (a) U 尾句 so the loss cannot be attributed to the components 是为单次安慰剂写的（那是我第一轮给的措辞），用在 59 次重排的秩上就过头了：59 个里有 2 至 5 个不高于 m_R 时，正文会写 below that of 56 of 59 placebo baselines ..., so the loss cannot be attributed to the components。A 尾句没有对应的推断从句，两个方向不对称，而 U 是 PS 8 自己预期的子宫结局。(b) H 类不印任何安慰剂信息。肺队列很可能出现 p_R<0.05 但 margin 低于全部安慰剂的情形，正文只留一个 p，读者看不到损失超出容量代价。(c) leans against finding a small p_abs 作为事实写进补充说明的逐字句，但没有验证。方向在一阶上成立，量级未知；另有一个只在观测列出现的不对称：真实成分与形态成分共线，改变形态块在第 0 列的代价，符号取决于集合零均值在 0.5 的哪一侧。(d) 这一倾斜和 59 次抽样的分辨率都偏向 U，而 U 不触发任何标题或摘要后果；文本没有说它对谁有利。
+EVIDENCE: PS 7.1：'; in [uterus|lung] the margin was below that of [g] of 59 placebo baselines of the same size' if A；同句加 ', so the loss cannot be attributed to the components' if U；'nothing if its R20 class is H'。PS 5：so this comparison leans against finding a small p_abs。分辨率：A 要求至多 1 个 m_j<=m_R，随机化 p 真值为 0.01/0.02/0.03/0.04 时判 A 的概率是 P(Bin(59,p)<=1)=0.88/0.67/0.47/0.31。合成数据玩具模拟（不读项目文件；3,000 基因、集合 750；n=112、K=22 时 z 约 5-7，n=138、K=28 时 z 约 2-4；59 次重排 x 50 列，p_R 用 300 次置换；每格 7-8 个数据集）：形态信号与 R20 无共享而 R20 仍预测蛋白时，H 13/15、U 2/15、A 0/15，m_R 在安慰剂中的秩大致均匀（中位 31/59），m_R 减安慰剂均值为 +0.002（强）和 -0.006（弱），看不出任何方向的倾斜；形态信号全部经由 R20 也含有的因子时，A 13/15，另 2 个（都在弱设定）是 U，各有 3-4 个安慰剂不高于 m_R；安慰剂 margin 的 SD 约 0.02，是置换零 SD 的 0.6-0.75 倍。
+FIX: (1) M2 整句替换为（[e]=#{j : m_j <= m_R}，三类都印）：
+>> With 20 expression components added instead, the same sets gave one-sided $p=$[p] (uterus; margin [d]) and [p] (lung; margin [d]); [e] of 59 (uterus) and [e] of 59 (lung) placebo baselines of the same size left a margin as small[tail].
+>> The tail is, for each cohort in the order uterus, lung: nothing if its R20 class is H; '; in [uterus|lung] the loss therefore exceeds what 20 extra predictors cost' if A; '; in [uterus|lung] the loss is therefore not separated from what 20 extra predictors cost' if U.
+(2) PS 5 末句替换为：
+>> Real components also lower the residual variance, which a placebo does not, so the margin under the real assignment is expected, if anything, to be the larger one; the size of this tilt is not estimated. Real components are also correlated with the morphology components in the observed column and not in the permuted ones, which changes the cost of the morphology block in column 0 in a direction that depends on the set's null mean. With 59 draws a real assignment whose randomisation p is 0.02 is classed A two times in three. The tilt and the resolution both favour class U, which changes no headline wording.
+(3) PS 7.3 第一条逐字句替换为：
+>> The capacity comparison ranks the margin under the real assignment of the 20 components among 59 random reassignments; it tests whether the assignment of the components to patients matters. Real components also lower the residual variance, which a reassignment does not, so the comparison is expected, if anything, to understate what the components take, and with 59 reassignments it can miss a moderate loss.
+
+[MAJOR 3] WHERE: PS 3（T_X、S_M 两条）；PS 5 cell 表；PS 7.1 M4；PS 7.3 tab:c1covsets
+PROBLEM: 等大小 T 集作为确定性规则可以接受，但有三处会让正向和 matched 格无法解释，而冻结后不能再加。(a) 没有'同一规则用于组织学'的参照：T 规则不做符号过滤，S_M 做了，所以 matched 格（T_M|C3 on A_C3）与主格（S_M on A_C3）之间同时差了规则和基线，matched 不显著时分不清原因。(b) 置换下限使选择原则悄悄切换：某分析的下限基因多于 n 时，T 集完全由原始增量大小决定（R20 作块时大概率如此，这是我的推断，未计算）；信号基因少时（OP、M|R20），T 集一直取到 p 约 0.2，大部分是噪声，AUC 被稀释。(c) 稀释使 outranked 更难出现。正向族里 outranked 对论文不利，所以这是偏向论文的方向，M4 的计数句看不出来。表里也没有切点 p 和负增量基因数。
+EVIDENCE: PS 3：ordered by p ascending, then by increment descending, then by gene symbol. No sign filter is applied。DRAFT1_validate_only.log：UCEC selected 2566/10512、BH rejections before the sign filter 3263、genes at the permutation floor 1748；LUAD 2310/10724、3086、1354。即已发表规则下 21% 和 25% 的 BH 拒绝基因被符号过滤去掉，过滤是实质性的。算术：m=10,512、n=2,566 时，无信号分析的 T 集取到 p 约 0.24；集合 AUC 减 0.5 与非零基因占比成正比，20% 的基因 AUC 为 0.60 时集合 AUC 只有 0.52，约为 LUAD 一个零 SD（0.019）、UCEC 0.6 个（0.036）。PS 6.2：An outcome that outranks is unfavourable to the paper in the reverse and forward families。PS 5 的 Partition 行只覆盖 C3、R20、OP，没有任何格把 T 规则用在组织学上。
+FIX: 都不增加集群计算。
+(1) PS 3 增加一条，并把 S_M 条的 'the only sets in the primary and reverse cells' 改为 'the only sets read in the primary and reverse cells'：
+>> - **A rule reference, reported and not read, T_M:** the same rule (n genes; p ascending, then increment descending, then gene symbol; no sign filter) applied to the published analysis M. It differs from S_M by the rule alone, and so separates what the rule does from what the block or the baseline does.
+(2) PS 3 的 T_X 条末尾加：
+>> When more than n genes of an analysis sit at the permutation floor, the set is the n floor genes with the largest increments, that is, it is ordered by increment alone. When few genes carry signal the set runs into large p-values and is mostly noise, which lowers its AUC. Both are reported for every set (section 7.3); neither is corrected.
+(3) PS 5 表加一行：
+>> | Rule reference | T_M on the published matrix, on A_C3 and on A_R20 | reported, not read |
+(4) PS 7.3 的 tab:c1covsets 改为：
+>> ... for every T set: its overlap with S_M and with T_M, the largest p in the set, the Benjamini-Hochberg q at that rank, the number of its genes at the permutation floor, whether the floor alone filled the set, and the number of its genes with a non-positive discovery increment; the S set's size, ...
+(5) M4 句末加固定指引：
+>> ... held covariates built in the same way (the p-value at which each set was cut, and the same rule applied to histology alone, are in Supplementary Table~\ref{tab:c1covsets}).
+可选：M4 再加一个固定从句报告未稀释的 S_X：
+>> Of the [t] sets of the same analyses defined by FDR $<0.05$ that could be tested, [k] outranked background.
+
+[MINOR 4] WHERE: PS 状态段；PS 9 的阶段顺序与 'Defects'
+PROBLEM: 单次冻结已堵住第一轮的漏洞，剩一个窗口：Stage L1 排在 Stage H 之前。L1 读出正向格和集合大小之后，集群脚本仍可按 'A defect found before a run' 用带日期的修正更改。修正是公开的，风险不大，但 L1 是本地小任务，没有理由先读。
+EVIDENCE: PS 9 的顺序是 Stage L1、Stage H、Stage H record、Stage L2；'A defect found before a run is corrected by a dated amendment that gives the new script hash and a new sidecar and is released before the run'。L2 只要求 L1 输出哈希匹配，不要求 L1 晚于 Stage H。
+FIX: PS 9 把 Stage L1 段移到 'Stage H record' 之后，首句改为：
+>> **Stage L1 (local; one run, after the Stage H record).** It refuses to start unless the Stage H manifest has the sha256 given on the command line.
+状态段括号改为 (H production, L1, L2)。'Defects' 首句后加：
+>> An amendment contains the diff of the script and states which stages had been run when the defect was found.
+
+[MINOR 5] WHERE: PS 5 'The change from the published matrix' 末两句；PS 8 第二条
+PROBLEM: 'exact under exchangeable slides' 字面没错，但会被读成 p_D 是个有效检验。它精确所依赖的零假设是切片对蛋白、mRNA 和协变量联合可交换，这个假设已被已发表检验拒绝，而且协变量与形态相关是已发表事实。对 A_R20 还应说明 D 不区分容量代价与成分所携带的信息。
+EVIDENCE: PS 5：This is exact under exchangeable slides and only approximate as a test that two arms carry equal signal。已发表读数 p=0.004 和 0.001 已拒绝该零假设；PS 0 第 3 项称典型相关已发表。玩具模拟里 20 个纯安慰剂预测量使 margin 下降约 10-20%。
+FIX: 替换为：
+>> The reference distribution is exact only under the hypothesis that slides are exchangeable with respect to protein, mRNA and the covariates jointly, which the published tests already reject. p_D therefore describes D_0 against permutation noise; it is not a test that the two arms carry equal signal, and for A_R20 it does not separate what the components carry from what 20 extra predictors cost. It supports no statement that a covariate explains an ordering.
+
+[MINOR 6] WHERE: PS 5 capacity 段；PS 7.1 M2 的 [d]；PS 2、4（59 x 50 的取法）
+PROBLEM: (a) M2 印的 margin [d] 用全部 1,000 列，秩比较用的 m_R 只用前 50 列，两者第三位小数可能不同，读者拿 [d] 对表中的 m_j 会对不上。(b) 59 x 50 对有效性足够（同样的 50 个置换，m_R 与 m_j 可比；判 A 的联合概率在'成分分配无关'假设下不超过 2/60）。但零均值用 50 列是富余的，59 次抽样在阈值附近分辨率粗，粗的方向偏向 U。
+EVIDENCE: PS 5：m_R is the same quantity from columns 0 and 1-50 of A_R20；PS 7 定义 [d] 为 the margin of the named cell。同等计算量的另一分法：119 个安慰剂 x 25 列是 3,094 次列拟合，59 x 51 是 3,009 次；A 要求至多 4 个 m_j<=m_R，随机化 p 为 0.02/0.03/0.04 时判 A 的概率约 0.91/0.71/0.48，现方案是 0.67/0.47/0.31。玩具模拟里安慰剂 margin 的 SD 约 0.02，25 列零均值的独立误差约 0.004，只使方差增加约 4%。
+FIX: (a) PS 5 加一句：
+>> m_R uses the first 50 permutation columns and can differ in the third decimal from the cell's margin [d], which uses all 1,000; Supplementary Table~\ref{tab:c1cov} prints both.
+(b) 可选，改则全文 59 同步改：
+>> j = 1..119, columns 0 and 1-25; seeds crc32(b"c1_cov|<cohort>|cap|%03d" % j); p_abs = (1 + #{j : m_j <= m_R}) / 120; class A if p_R >= 0.05 and p_abs < 0.05 (at most four placebo margins at or below m_R).
+不改的话，finding 2 的替换文本已含对分辨率的披露。
+
+[MINOR 7] WHERE: PS 6 首段；PS 7.4 Policy 末句与各限定语；PS 7.5；ABSTRACT_VARIANTS.md
+PROBLEM: (a) 摘要用 did not，正文用 was not shown to，PS 6 只定义了 outranked 和 not shown。did not 是把 p>=0.05 写成否定事实，也容易读成'调整后消失'，与 PS 8'不支持协变量解释排序'不一致。它偏向不利于论文，作为审稿人我接受，但要有定义。(b) If the Abstract is later shortened, the qualifier is kept in substance 给事后改写留了口子，目标期刊又是事后才定。(c) Case 1 删掉 Here, we show that 后首句成了无限定的直陈句，不利结局下反而更硬。删词由字数驱动，可以接受，应写明不是主张变化。
+EVIDENCE: PS 6：'Outranked' means p < 0.05; 'not shown' means p >= 0.05。变体 1-lC：Post hoc, adjusted for composition scores, the uncorrected lung set did not。PS 7.4：the qualifier is kept in substance；PS 7.5：The target journal is the authors' decision after the results。字数：改成 was not shown to 多 3 个词，Case 1 用上 c7 后为 143/145/151/153；2-CC、2-RR 多 2 个词，用 c4-c7 仍为 141。
+FIX: PS 6 首段加：
+>> In the Abstract only, 'did not' stands for 'was not shown to' (p >= 0.05); it claims neither that the set ranked below background nor that the covariates explain the ordering.
+PS 7.4 Policy 末句替换为：
+>> If the Abstract is later shortened, or the target journal sets another limit, the qualifier sentence is kept word for word; if a limit makes that impossible, a dated entry of `C1_LUAD_ADDENDA.md` records the change, and the sentence still says that the analysis was post hoc, which covariates entered and which uncorrected set was not shown to outrank background.
+PS 7.5 Case 1 句后加：
+>> The cut is made for length and is not a change of claim.
+可选：接受 Case 1 与 2-CR、2-RC 多 2 个词，直接写 'was not shown to'。
+
+[MINOR 8] WHERE: PS 状态段；PS 0 'Prior exposure' 第 1、8 项；PS 8 第五条
+PROBLEM: 披露已基本完整，还缺四点。(a) 第 1 项列了三个可能偏向论文的选择，漏了：容量比较的倾斜与分辨率偏向 U；等大小集合在正向族里的稀释；标题只在两队列都被标记时才改，而两队列判 N 的门槛相差很大（0.26 对 0.60），肺队列单独不利时标题和首句不变；冻结前关闭的读法用较轻的 not completed。(b) 只写了对肺队列的预期，没写子宫队列。按文件自己的数字，子宫判 N 也是现实结局，那就是 Case 2 和改标题。(c) 第一稿验证运行打印过已发表分析 M 的下限基因数和符号过滤前的拒绝数，T 规则是在知道这些数之后写的。(d) 状态段只记了第一轮评审。
+EVIDENCE: PS 0 第 1 项：it made three choices under that expectation；第 2 项：retained 36% in UCEC and 6% in LUAD；PS 6.3：below about 0.60 of its published value in UCEC and about 0.26 in LUAD。DRAFT1_validate_only.log 打印了 1748、1354 和 3263、3086。PS 8：class U is likely there, and the 20 components may be informative only if the reading is favourable；玩具模拟在子宫式强度下，完全吸收时 6/8 达到 A，这句可能偏悲观。
+FIX: 第 1 项末尾加：
+>> Four further features lean the same way: the capacity comparison is expected to tilt toward class U and has the resolution of 59 draws (section 5), and class U changes no headline wording; the sets read in the forward family have a fixed size and are diluted when the selecting analysis finds few genes, which makes 'outranked' less likely in a family where it is unfavourable (section 3); the title and the opening sentences change only if both cohorts are flagged, although class N requires a fall to about 0.26 of the published margin in the lung cohort and only to about 0.60 in the uterine cohort (section 6.3); and a reading closed before freezing is worded 'not completed', which is milder than 'did not'. For the uterine cohort [the session's expectation, or: no firm expectation was formed]; with 36% of the median increment retained in discovery, class N there, and with it Case 2 and the change of title, is a realistic outcome.
+第 8 项加：
+>> The validation run of the first draft printed, for the published analysis M, the number of genes at the permutation floor (1,748; 1,354) and of rejections before the sign filter (3,263; 3,086); the fixed-size rule of section 3 was written with these known.
+状态段加：
+>> Version 2 was reviewed again on [UTC date] by [n] readers before freezing; [what changed].
+PS 8 第五条可软化为：
+>> ... the uterine test has little room: class U is possible there even if the components take much of the margin.
+
+[MINOR 9] WHERE: PS 7.8 Case 0 的括号从句；PS 7.7 第三条；PS 9 'Defects' 末句
+PROBLEM: 三处小的不唯一或不准确。(a) Limitations 括号从句写 the same covariates alone，而前半句只说 these scores。只有 R20 反向格显著时这句为假；两队列由不同协变量触发时也不准。该从句只在 Case 0 出现，Case 1、2 下同样不利的反向结果不进 Limitations。(b) 7.7 的 U 句 inserted at the same place，前面有两个插入点。(c) Defects：if the two runs give different classes, both enter section 7，没说怎么进，型别不同时句子无法确定。
+EVIDENCE: PS 7.8：'[; the same covariates alone, without a slide, also ordered [both sets|the uterine set|the lung set] above background]. The bracketed clause is used if a reverse cell (C3 or R20) outranks in that cohort.' PS 7.7 第一、二条给了两个不同的插入位置。PS 9：both enter section 7 and a cohort is flagged if either run flags it。
+FIX: (a) PS 7.8 括号从句替换为，并规定 Case 1、2 下同样接在 QS 之后：
+>> [; without a slide, the scores alone ordered [both sets|the uterine set|the lung set] above background][; without a slide, the 20 expression components alone ordered [both sets|the uterine set|the lung set] above background]. The first clause is used if a reverse C3 cell outranks, the second if a reverse R20 cell outranks; each names the cohorts in which its own cell outranks.
+(b) PS 7.7 第三条的 'is inserted at the same place, after QS if QS is present' 替换为：
+>> is inserted after the sentence that ends '...not the protein of individual genes.', after QS if QS is present there
+(c) PS 9 Defects 末句替换为：
+>> if the two runs give different classes, section 7 is filled from the run made with the frozen code; the flag, type and case are those of whichever run is less favourable to the paper (type C before R before none); and this sentence is appended to M5: 'A script defect found after the run was corrected; the corrected run changed the [C3|R20] class in [uterus|lung] from [..] to [..] (Methods).'
+
+[MINOR 10] WHERE: PS 5 cell 表 'Gene property' 行；PS 3 的 T_G
+PROBLEM: 反向格（S_M on V_C3、V_R20）没有基因属性对照。R20 含自身转录本的去噪版本，V_R20 上 S_M 高于背景可能只是因为 S_M 富集了自身 mRNA 预测差的基因。T_G 目前只在已发表矩阵上读，V 臂上没有，反向结果就分不清是组织状态还是基因属性。
+EVIDENCE: PS 5：Gene property | T_G on the published matrix | reported, not read。PS 2：it also carries a de-noised copy of the gene's own transcript。PS 3：T_G 取 pub_r2_rna 最低的 n 个基因。
+FIX: 不增加集群计算，只在 L2 多读两格。PS 5 该行替换为：
+>> | Gene property | T_G on the published matrix, on V_C3 and on V_R20 | reported, not read |
+PS 3 的 T_G 条末句替换为：
+>> It asks whether genes poorly predicted by their own transcript rank above background whatever selects them, under histology and under the covariates alone.
+
+[MINOR 11] WHERE: PS 3 首段与分析表（M|R20）；PS 0 第 3 项；PS 7.3 tab:c1covsets
+PROBLEM: PS 3 称每个发现分析都用 the published sequence (RandomState(0), 1,000 sequential draws) 并且只改一处。但已发表的 R20 基线置换分析用的是另一条序列，而且只对已发表集合内的基因做。所以分析 M|R20 的 p 值和下限基因数不会复现 Supplementary Table txomeperm 的 99、55，V1b 也只核对 R2 和增量。不说明的话，新表与已发表表会显得矛盾。
+EVIDENCE: transcriptome_baseline.py：perm = [np.random.RandomState(i).permutation(n) for i in range(N_PERM)]；residual_analysis.py 第 81、288 行：RNG = np.random.RandomState(0)，perm_indices = [RNG.permutation(n) for _ in range(N_PERM)]。PS 9 V1b 只列 r2_rna_pcs20、incr_over_pcs20。
+FIX: PS 3 分析表后加：
+>> The published permutation analysis under the R20 baseline (`transcriptome_baseline.py`) drew its permutations as `RandomState(i).permutation(n)`, i = 0..999, and only for the genes of the published sets. Analysis M|R20 uses the sequence of the main analysis for every fit gene, so its p-values and floor counts are not those of the published table (99; 55); Supplementary Table~\ref{tab:c1covsets} says so.
+
+NOTES: 结论：PASS_WITH_MAJOR。第一轮我的 4 个 blocker 全部解决；19 条 blocker/major 中 16 条解决，3 条部分解决，没有未解决的。第 2 版没有新的 blocker，有 3 条 major 需在冻结前改，都只动文本、变体列表和本地读格，不增加集群计算。
+
+部分解决的 3 条（都归入 finding 1）：
+- [统计 M7 / 审稿 M4] not completed 的处理：文本已对称（NC:C、NC:R 都标记；L2 对缺失臂继续；用清单哈希核对）。但 NC 可由 walltime 或主机门触发，措辞比 did not 轻，且 NC 分支不穷尽。
+- [审稿 B2] 摘要删减留到结果之后：9 个纯结果结局已写死全文和四种口径字数，Entry 12 的子句已受保护。但 24 个被标记状态只列了 17 个，超长变体的删减仍留到事后。
+
+对八个问题的简答：
+1. 容量随机化。p_abs 是'成分分配给哪个病人无关'这一假设的精确蒙特卡洛随机化检验；'p_R>=0.05 且 p_abs<0.05'的联合概率在该假设下不超过 2/60，作为 A 类的依据有效且合理。59x50 对有效性足够；前 50 列与安慰剂用同一批置换，m_R 可比。所述偏差方向在一阶上是对的，但量级未验证，玩具模拟里看不出倾斜，应改成'预期如此'并写明它偏向 U（finding 2、6）。
+2. 等大小 T 集。作为预设的确定性规则可用。问题是缺同规则的组织学参照、下限基因超过 n 时退化为按增量排序、信号少时被稀释且稀释方向偏向论文（finding 3）。按基因符号的并列规则不会真正用到。
+3. D 统计量。可保留为只报不读；'exact'一句需限定（finding 5）。
+4. 标记、类型、Case。不含 NC 的 36 种组合穷尽且互斥。含 NC 时不穷尽，且 C3 未完成加 R20=A 会被写成 not completed（finding 1）。U 类的后果现在可以接受。
+5. 仍留到结果之后的选择：目标期刊（已声明）；超长摘要变体的删减；限定语'in substance'；正文超长时删哪些自由文本；Fig. 6a 图注；缺陷规则下两次运行类别不同时句子怎么写（finding 1、7、9）。
+6. 单次冻结。两阶段漏洞已堵。余留：L1 先于 Stage H（finding 4），NC 作为较轻措辞的出口（finding 1）。
+7. 公平性。M1、M3、M4、M5、QS 公平。M2 尾句不公平（finding 2）。摘要的 did not 偏向不利于论文，加定义即可。标题分叉只看两队列是否都被标记，与我第一轮的建议一致，但两队列功效不等，应在 PS 0 披露（finding 8）。
+8. PS 0。比第一稿坦率完整，没有发现不实之处，补四点即可（finding 8）。
+
+我做了什么：
+- 只读，没有写任何文件，没有在真实项目数据上运行任何东西。
+- 读了第 2 版全文、ABSTRACT_VARIANTS.md、make_abstract_variants.py、AUDIT1 两节、DRAFT1_validate_only.log，以及 c1_run_test.py、split_replication_power.py、residual_analysis.py 的 cv_r2、composition_controls.py、transcriptome_baseline.py 和 main.tex 的相关段落。
+- 用 python -B 在内存中调用 make_abstract_variants.py 的函数枚举 24 个状态。它只读摘要 TeX 文本，不读数据。
+- 跑了一个纯合成数据的玩具模拟（不读任何项目文件）检查容量随机化，结果写在 finding 2 的 evidence 里。它不是项目数据的生成过程，只能作方向性参考。
+- 审查期间工作目录里新出现了 c1_covariates_local.py、c1_covariates_cluster.py、lsf_c1_cov_*.sh、SERVER_RUNBOOK.md 和几个日志，是别的步骤写的。我只读了 c1_covariates_local.py 第 668-790 行，看类别规则按字面是怎么实现的，没有审这些脚本。
+
+未核实：
+- PS 0 第 3 项的 227、55 和 99、55，以及操作员标签计数（后者沿用第一轮的核对）。
+- 集群端的盲态声明。
+- 'R20 作块时下限基因多于 n'是推断，没有计算。
+- 新脚本是否逐条符合第 2 版文本。
+
+档位：本步是对抗性复审，Fable 合适。按这些意见改预设文本用 Opus（/model claude-opus-5）。补 states 列表、改脚本、重跑自检是机械活，用 Sonnet（/model sonnet）。
+
+==============================================================================================================
+BUILD REPORT
+FILES: D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/c1_covariates_local.py | D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/selftest.log | D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/validate_only.log | D:/claude/pajinsen/MorphoResidual_paper/server_export/results/c1_covariates/validate_only.json
+TEST: python -B c1_covariates_local.py --selftest > selftest.log 2>&1 (in review/C1_COVARIATES_2026-11-21) => SELFTEST PASSED in 81 s, exit 0. Every section passed: kernel/BH/assemble (batched vs reference worst 0.0, including baselines with 3 and 20 extra columns and an indicator block; the pool and in-process paths give identical results); ranking with ties, operator indicators (fatal on a tie), partitions on a known 60/60/60/120 split and the undefined case, sets round trip; score table (CRLF, '#' lines; a missing patient, an extra patient, a duplicate, NaN, a bad header and a short row all fail), manifest and Stage H format (good file, wrong hash, not_completed, unlisted, listed but absent, gene order, column count, duplicate entry, object array, wrong --manifest-sha); 15 constructed PS 6.1 cases plus the case and M4 counts; D and p_abs on constructed vectors and matrices; run safety (.partial, _failed1, one rerun, completed never rerun, tee); full synthetic end-to-end in %TEMP% (gate-v3, V1b, V2, check-stage-h, L1, L2 with expected classes ucec R / luad NC:C, case 2; tampered L1 output, wrong manifest sha and tampered Stage H file are refused; the one rerun works).
+TEST: python c1_covariates_local.py --validate-only --workers 24 > validate_only.log 2>&1 => exit 1 (VALIDATION FAILED, only on LUAD V1b). Last lines: '[02:02:43] V1 luad: max abs differences {increment: 2.13e-14, r2_rna: 4.44e-16, pval: 0.0, fdr: 0.0, n: 0}; selection set identical: True; selected 2310 -> VALIDATED' / '[02:02:43] V1 ok; V1b FAILED; V2 ok' / '[02:02:43] VALIDATION FAILED'. Per check: V2 passes for all 4 arms with worst diff 0.0. V1 passes for UCEC (increment 9.8e-15) and LUAD (2.1e-14); p and FDR match exactly and the selection sets (2566 / 2310) are identical. V1b UCEC passes: r2_rna_pcs20 1.6e-13, incr_over_pcs20 1.5e-13. V1b LUAD: r2_rna_pcs20 1.6e-13 (passes), incr_over_pcs20 max 3.98e-06 (99.9th pct 2.9e-06; 2304 of 2310 genes over 1e-9) -> FAILED. 25 minutes. JSON in server_export/results/c1_covariates/validate_only.json.
+TEST: python -c (compare two published columns: transcriptome_baseline_<cohort>_perm.csv incr_over_own_mrna / r2_rna_only against inputs pub_incremental_r2 / pub_r2_rna; no new statistic) => UCEC: identical (0.0). LUAD: r2_rna_only identical (4e-16), but the published incr_over_own_mrna differs from the published pub_incremental_r2 by up to 1.28e-06 (2295 genes > 1e-9). Diagnosis below.
+
+[PRESPEC ISSUE] WHERE: PS 9 V1b (LUAD)
+PROBLEM: V1b cannot pass for LUAD at 1e-9, and the cause is the reference file, not the code path. In the published LUAD transcriptome-baseline file, incr_over_own_mrna already differs from the published per-gene increment (pub_incremental_r2, which V1 reproduces to 2e-14) by up to 1.3e-6. The own-mRNA R2 columns agree to 4e-16. So the LUAD transcriptome_baseline run used morphology components that differ at float32 level: it ran PCA on float32 wsi.values on its own host. That is host-level float noise in the reference's morphology block. The baseline-plus-covariate code path itself is confirmed: r2_rna_pcs20 matches to 1.6e-13 in LUAD, and UCEC matches both columns to 1.5e-13. The AUDIT1 code reviewer's claim that the _perm file equals pub_incremental_r2 holds for UCEC only.
+DID: Kept the 1e-9 gate literally, so validate_only.json says ok=false (LUAD V1b). Reported max and 99.9th-percentile differences, and how many genes exceed 1e-9.
+SUGGESTED: V1b (local). ... reproduces, for every gene of the published sets, the published R2 of own mRNA plus the 20 components (1e-9) and the published increment of morphology over that baseline (1e-9 in UCEC; in LUAD the published transcriptome-baseline run used morphology components that differ from the published ones at float32 level, as its own incr_over_own_mrna differs from the published increment by up to 1.3e-6, so the LUAD increment is checked to 1e-5 and the difference is recorded).
+
+[PRESPEC ISSUE] WHERE: PS 5 vs task item 3 (FDR-defined cells on the other UCEC arms)
+PROBLEM: Task item 3 lists FDR-defined cells among those computed 'on every saved arm'. PS 5 puts each S_X 'on the matrix its T_X is read on' (the unrestricted matrix), and its list of cells also computed on the two other UCEC arms leaves out the FDR-defined family.
+DID: Followed PS 5: S_C3, S_R20 and S_OP are computed on the unrestricted published matrix only.
+SUGGESTED: No change needed if PS 5 is intended; otherwise add 'FDR-defined' to the list of cells also computed on the two other saved arms.
+
+[PRESPEC ISSUE] WHERE: PS 5 / 7.3 (rho for T_G and partition cells)
+PROBLEM: Rho is defined as the correlation with 'the selecting analysis's discovery increment'. T_G is selected by pub_r2_rna and has no increment, and partition parts have no single selector.
+DID: Rho is left empty for T_G and partition cells (columns blank).
+SUGGESTED: Spearman rho ... is reported for every cell whose set is chosen by a discovery increment; not for T_G or partition cells.
+
+[PRESPEC ISSUE] WHERE: PS 6.1 / PS 4 Files (how an untestable C3 reaches Stage L2)
+PROBLEM: PS 6.1 has 'untestable' by the marker rule, but the manifest format of the task has only '<sha256> *<file>' and 'not_completed <file>' lines. PS 4 does not say how the cluster tells Stage L2 that C3 is untestable. PS 7.3 also wants markers per family for each of the four computations, which only the cluster knows.
+DID: As an extension, the manifest parser also accepts 'untestable <filename>'; such a cell gets status 'untestable' and gives type NC:C. The leading '#' lines of the discovery score tables are kept verbatim in result_L1.json, so the cluster can record marker counts there.
+SUGGESTED: PS 4: 'A C3 arm made untestable by the marker rule is listed in the manifest as "untestable <filename>"; the markers used per family are written as leading "# markers <family> <n>" lines of each score table and in the Stage H record.'
+
+[PRESPEC ISSUE] WHERE: PS 9 Stage L2 / Failures (L1 is a prerequisite)
+PROBLEM: PS 9 has L2 refuse unless the Stage L1 outputs have their recorded hashes. The task also makes a failed V3 re-check fatal at the start of L1. A V3 or L1 failure (twice) would therefore leave every primary reading not completed (NC:C, flagged) through a purely technical fault. The AUDIT1 code reviewer and statistician raised this.
+DID: Followed PS 9 and the task literally: L2 refuses without a completed and hash-verified L1, and L1 is fatal if V3 fails. Refusals before a stage starts (sidecar, L1 hashes, manifest sha) do not use up the one permitted rerun.
+SUGGESTED: If decoupling is wanted: 'Stage L2 reads its primary, capacity and reverse cells whether or not Stage L1 completed; cells that need Stage L1 sets are then not completed.'
+
+[PRESPEC ISSUE] WHERE: PS 9 Failures / task item 5 (log hash)
+PROBLEM: The result json must record the sha256 of 'every output file of the stage', but <stage>.log is still being written when the json is written.
+DID: The log is excluded from the 'outputs' hashes. The results record can hash it after the stage.
+SUGGESTED: result_<stage>.json records the sha256 of every output except the stage log, which is hashed in the results record.
+
+[PRESPEC ISSUE] WHERE: PS 2 OP (full-rank drop)
+PROBLEM: Draft 1 copied sitepack's drop of the last level for full rank. PS 2 has no such drop.
+DID: Removed the drop and kept the binding counts (12/73 and 12/75) as fatal assertions. With these labels the drop never fired, so the result is unchanged.
+SUGGESTED: None.
+
+[PRESPEC ISSUE] WHERE: PS 4 Files / --check-stage-h
+PROBLEM: Column counts of placebo files in a smoke export are not specified, and neither are the exact keys of c1_cov_confirmatory_covariates_<cohort>.npz.
+DID: Added --expect-cap-cols (default 51) beside --expect-cols (default 1001; applies to the four main arms). For the covariates record, check-stage-h checks keys C3 (n x 3), R20 (n x 20) and cases (n), if the file is present. Extra keys in a matrix file count as a format problem.
+SUGGESTED: PS 4: 'c1_cov_confirmatory_covariates_<cohort>.npz holds exactly the keys C3, R20, cases.'
+
+[PRESPEC ISSUE] WHERE: PS 5 Capacity / L2 cells
+PROBLEM: PS 5 lists 'S_M on each A_R20cap_j' as a cell family, but the task's read rule does not include it.
+DID: Capacity cells are written as 59 rows per cohort with read=False. They enter the R20 class only through m_j and p_abs, which are on the A_R20 primary row and in classes.json.
+SUGGESTED: None.
+
+OPEN ITEMS:
+- LUAD V1b fails at 1e-9 (max 3.98e-6). The cause is in the published LUAD transcriptome-baseline reference: its own incr_over_own_mrna is 1.3e-6 off the published increment. The code is not at fault. The authors must amend the PS 9 V1b tolerance or record the gate as failed for LUAD, as PS 9 'Gate record' requires. validate_only.json currently has ok=false.
+- --gate-v3, --check-stage-h on real Stage H output, and stages L1 and L2 have not been run on real data, as instructed. The score TSVs and Stage H outputs do not exist yet.
+- A c1_covariates_cluster.py appeared in the working folder during this session. It was written by another process; I did not read, touch or cross-check it against this script's file interface.
+- The sidecar must list this script's final sha256. The script changed after the validate-only run only in nothing; the run used the current file.
+
+SUMMARY: I wrote c1_covariates_local.py. The self-test passes; --validate-only fails on one gate, LUAD V1b, and the cause is the published reference file, not the code.
+
+What --validate-only gave (25 min, exit 1):
+- **V1 passes in both cohorts.** Every fit gene's increment matches to 1e-14, own-mRNA R2 to 4e-16, and p and FDR exactly. The selection sets are identical (2566 / 2310).
+- **V2 passes on all four saved arms**, worst difference 0.0.
+- **V1b passes for UCEC**: both r2_rna_pcs20 and incr_over_pcs20 match to about 1.6e-13.
+- **V1b fails for LUAD on the increment only.** r2_rna_pcs20 matches to 1.6e-13. incr_over_pcs20 is off by up to 3.98e-6 (99.9th percentile 2.9e-6), and 2304 of 2310 genes exceed 1e-9.
+
+Why LUAD V1b fails: this is host-level float noise in the reference file, not a mismatch in my code. I compared two columns that are both already published, computing nothing new. In the LUAD transcriptome-baseline file, incr_over_own_mrna already differs from the published per-gene increment by up to 1.3e-6, while its own-mRNA R2 agrees to 4e-16. So the run that wrote that file used morphology components that differ slightly from the published ones (PCA on float32 embeddings on its own host). UCEC agrees exactly on the same comparison, and the code path with the 20 components in the baseline is confirmed by the 1.6e-13 R2 match in both cohorts. I kept the 1e-9 tolerance as written, so validate_only.json says ok=false. The pre-specification needs either an amended LUAD tolerance for V1b or a gate record that states the failure; suggested wording is in the issues list.
+
+What the script does:
+- **Kernel:** draft 1's validated numerical code is kept unchanged, except that a fatal error is now an exception instead of an immediate exit. There is also a single-process path, and the self-test checks it gives the same numbers as the process pool.
+- **Every listed defect is fixed**, from the code-reviewer and Stage H engineer sections and the script points of the other reviewers:
+  - **Stage folders and reruns:** a stage writes into `<stage>.partial` and renames it only after `result_<stage>.json` exists. A leftover partial becomes `<stage>_failed1`; a second leftover is refused, and a completed stage is never rerun. Everything printed goes to `<stage>.log`.
+  - **Result record:** each result json holds output hashes, script, sidecar, pre-specification and kernel hashes, package versions and thread settings.
+  - **New checks before freezing:** V1b, and the `--gate-v3` and `--check-stage-h` modes.
+  - **Stage L1:** re-checks V3 and V2 before anything else, then runs the five discovery analyses and builds the fixed-size T sets, the S sets and T_G. It writes `sets_<cohort>.csv` and `cells_L1.csv`, with a `read` column and non-unrestricted forward rows labelled "forward (descriptive)".
+  - **Stage L2:** checks the sidecar, the Stage L1 hashes and the manifest hash, then every Stage H file against the manifest. A file listed as not completed gives cells with that status; anything else missing is fatal. It computes all cells, the change D, m_j, m_R and p_abs. `classes.json` holds the classes, F, type, U and reverse flags, the case and the M4 counts with their names, all with unrounded p values.
+- **Self-test:** covers every item you listed, including a full Stage L1 + L2 run on fake cohorts in a temporary folder that cannot touch the real result folders.
+
+Choices I made where the pre-specification was ambiguous (full suggested wording is in the issues list):
+- **FDR-defined cells** are computed on the unrestricted matrix only, following PS 5. The task asked for every saved arm.
+- **No rho** for T_G or the partition cells, since neither has a selecting increment.
+- **Manifest:** it also accepts `untestable <file>` lines, so a C3 made untestable by the marker rule reaches Stage L2 as type NC:C.
+- **Stage L2 needs a completed Stage L1**, as PS 9 says. This means a technical failure of Stage L1 or of V3 would leave the primary readings not completed.
+- **The stage log is not hashed** in the result json, because it is still being written.
+- **Operator indicators:** draft 1's full-rank drop is gone (PS 2 has none); the result is unchanged for these labels.
+- **Placebo smoke files:** a separate `--expect-cap-cols` option (default 51).
+
+I did not run `--gate-v3`, `--check-stage-h` on real output, or any stage. A `c1_covariates_cluster.py` appeared in the folder during this session; I did not touch or check it against this script. The sidecar must record this script's final sha256.
+
+==============================================================================================================
+REVIEWER: Independent code reviewer: c1_covariates_local.py, c1_covariates_cluster.py, lsf_c1_cov_{ucec,luad,discovery}.sh and SERVER_RUNBOOK.md, checked against PS 2/3/4/5/6/9 and the published implementations | VERDICT: PASS_WITH_MAJOR | {'major': 3, 'minor': 8}
+RESOLVED: AUDIT1 engineer MAJOR 3 (nothing checked the new per-gene function): _gene_test_cov is now a line-by-line copy of split_replication_power._gene_test. It builds hstack([xr, E[v], B[v]]), uses B[p][v], and computes r2b once per gene. With E empty it is bit-identical to the published structure, and H-V1 runs this same function on the saved matrix. || AUDIT1 engineer MAJOR 2 (V3 only at L2): V3 now runs through --gate-v3 before freezing, and again at the start of Stage L1. || AUDIT1 engineer BLOCKER 1 / code-review MAJOR 3 (L2 could not be rerun): run_stage now moves a leftover .partial to _failed1 and allows exactly one rerun. The cluster side keeps attempt1/attempt2 records. || AUDIT1 code-review BLOCKER 1 (Stage H format and gene order unchecked): read_h_npz checks keys, unicode genes in the saved matrix's order, float64 M, shape, finiteness and the sorted case list. load_h checks each file against the manifest hash. || AUDIT1 code-review MAJOR 2 (no NC/untestable path): the manifest takes not_completed and untestable lines, and classify_cohort maps them to NC:C or NC:R. I checked all 15 constructed cases against PS 6.1. || Cases, genes, R, P, W and K come from the published prepare() functions, imported unchanged and hash-asserted, and match the published runs. This covers the LUAD frozen 113-case list, the independence check and assert_hash, sorted(common), W.astype(float), K = k_for(n, 20), perms = [RandomState(crc32(seed)).permutation(n) x 1000] with no other draw, and the usable filter (res not None and finite discovery increment). H-V1 compares the gene list, its order and columns 0..5 at 1e-9. || Both self-tests pass on Python 3.13. Cluster: 43 checks, 0 failed. Local: SELFTEST PASSED, 17 s.
+
+[MAJOR 1] WHERE: c1_covariates_local.py stage_l2 / load_h (lines 1288-1303) called inside run_stage (lines 1116-1162); do_stage (1404-1411)
+PROBLEM: PS 9 says Stage L2 'refuses to start unless every Stage H file it reads has the sha256 the manifest gives'. In the code, the per-file hash check, the format check and the 'not listed in the manifest' check all run inside run_stage, after L2.partial has been created. A transfer or interface slip (one corrupted npz, a placebo missing from the manifest, a wrong dtype) therefore uses up the single permitted rerun. A second slip makes L2 'not completed' for the whole analysis. The same applies to the V2/V3 re-checks inside stage_l1. The manifest cannot be fixed by regenerating it on the cluster either, because write_text_exclusive refuses to overwrite it.
+EVIDENCE: do_stage runs only check_sidecar, verify_l1 and verify_manifest (the manifest's own hash) before run_stage. load_h -> fatal('... does not have the sha256 the manifest gives') is raised at line 871 inside stage_l2, i.e. after os.makedirs(partial) at line 1134. The next run moves the partial to L2_failed1 (line 1132), and a third run is refused (line 1130). The AUDIT1 engineer BLOCKER 1 raised the same kind of interface slip.
+FIX: Add a pre-flight in do_stage, before run_stage, that runs the work of load_h/read_h_npz for all 4 + 59 files of each cohort: listing status, existence, hash, keys, dtypes, shape, gene order and one shared case list. Do the same for the score tables in L1 (load_scores + validate_v3 + validate_v2). A failed pre-flight is a refusal that does not create <stage>.partial.
+
+[MAJOR 2] WHERE: PS 7.3 ('gives the canonical correlations between the confirmatory morphology components and C3 and R20'); c1_covariates_cluster.py ensure_covariates_file (lines 869-892); c1_covariates_local.py (whole file)
+PROBLEM: Neither script computes the confirmatory canonical correlations, and no Stage H output holds the confirmatory morphology components. The record npz holds C3 and R20 only, and pcs exist only in cluster memory. After Stage H, the item PS 7.3 requires in the Supplementary Note cannot be produced without a new, unfrozen cluster computation.
+EVIDENCE: grep -i 'cancorr|canonical' finds nothing in either script or in the runbook. The payload of ensure_covariates_file is cases, C3, c3_testable, R20, r20_explained_variance_ratio, families and markers_json, with no pcs.
+FIX: Before freezing, either compute the canonical correlations of pcs with C3 and with R20 in the first production job and store them in c1_cov_confirmatory_covariates_<cohort>.npz (it is in the manifest), or store pcs there (K = 28/22 columns) and compute the correlations in L2 with a function covered by the self-tests (the published transcriptome_baseline._cancorr recipe).
+
+[MAJOR 3] WHERE: PS 9 'If a gate cannot be passed, the affected part is closed as not completed before freezing'; validate_only.json (LUAD V1b ok=false); c1_covariates_local.py stage_l1/stage_l2; c1_covariates_cluster.py mode_confirmatory (production checks)
+PROBLEM: Nothing in the code can close a part of the analysis because its gate failed. LUAD V1b fails as things stand (incr_over_pcs20 max diff 3.98e-6 against 1e-9; the builder traces this to host-level float noise in the reference file). Under the literal PS, LUAD M|R20 would then be closed (T_M|R20, S_M|R20 and the matched cell on A_R20). L1 and L2 would still compute that cell and count it in M4 as 'outranked' or 'not', not as 'not completed'. On the cluster, production enforces a passed H-V1 record but not a passed H-V2 record, so R20 arms and placebos would run even if H-V2 failed.
+EVIDENCE: stage_l1 always runs all five analyses (lines 1186-1190). stage_l2 builds matched_entries from the A_<X> statuses only (lines 1375-1377) and has no 'closed' input. mode_confirmatory checks hv1_passed_here only (lines 963-967). Nothing looks for a c1_cov_<cohort>_gate_r20_*.json with passed=true.
+FIX: Settle LUAD V1b before freezing: either a PS text change (the builder's suggested 1e-5 tolerance for the LUAD increment, with the difference recorded), or a frozen 'closed parts' list in the sidecar that L1/L2 read and turn into status 'not_completed' (counted in M4 as not tested). In production, refuse A_R20, V_R20 and placebo unless a passed H-V2 json for the organ has been transferred or is listed in the sidecar.
+
+[MINOR 4] WHERE: c1_covariates_local.py classify_cohort (lines 749-760) and stage_l2 (lines 1327-1354); PS 6.1
+PROBLEM: When p_R >= 0.05 and any one placebo is not completed, the R20 class becomes 'not_completed', the cohort is typed NC:R and flagged. That moves it into Case 1/2 and changes the Abstract and possibly the title. This happens even when the completed placebos already decide the class: two or more m_j <= m_R gives p_abs >= 3/60 whatever the missing draws are, so the class is U; zero m_j <= m_R with one missing draw gives p_abs <= 2/60, so the class is A. This is the literal reading of PS 6.1 (p_abs is defined only with 59 placebos), so it is reported as a PS ambiguity, not a code defect.
+EVIDENCE: The _selftest_classes row ((ok, lo, ok, hi, False, None) -> ('H', 'not_completed', False, 'NC:R', True, False)) fixes this behaviour. capacity_p is only called when caps_nc is empty.
+FIX: Ask the PS owner, before freezing, whether a class that is fixed whatever the missing draws are counts as completed. If so, add a bound rule (class from the minimum and maximum possible p_abs) and self-test it. If not, keep the code and state the literal rule in the gate record.
+
+[MINOR 5] WHERE: c1_covariates_local.py stage_l2 lines 1348-1350
+PROBLEM: L2 writes two FDR-defined cells per cohort that are not in the PS 5 table: S_C3 on V_C3 and S_R20 on V_R20. PS 5 puts each S_X 'on the matrix its T_X is read on'. T_C3 and T_R20 are read on the published matrix (forward family; L1 already writes S_C3 and S_R20 there), while T_C3 on V_C3 is 'reported, not read'. PS 0 and 7.3 say no cell is added and tab:c1cov has 'one row per cell of section 5'.
+EVIDENCE: for X, arm in (('M|C3','A_C3'), ('M|R20','A_R20'), ('C3','V_C3'), ('R20','V_R20')): rd('FDR-defined', ...).
+FIX: Keep only (M|C3, A_C3) and (M|R20, A_R20) in L2.
+
+[MINOR 6] WHERE: c1_covariates_cluster.py hv1_passed_here (738-748), mode_confirmatory (961-976), confirmatory_prepare UCEC branch (771-786)
+PROBLEM: Production accepts any passed H-V1 json for this host. It does not check that the json came from the same cluster script sha or from the same inputs. The UCEC protein CSV, RNA manifest and slide map are only recorded, never asserted, so a file changed between the gate and production would not be caught.
+EVIDENCE: hv1_passed_here reads only the 'passed' key. hashes['protein_recorded_not_asserted'] etc. are stored in rec but never compared.
+FIX: In production, require hv1['sha256_this_script'] == the running script's sha, hv1['sha256_saved_matrix'] == saved_sha, and hv1['sha256_inputs'] == prep['input_hashes'] for every key.
+
+[MINOR 7] WHERE: c1_covariates_local.py Ctx.required_files (192-198) vs c1_covariates_cluster.py verify_sidecar (694-735)
+PROBLEM: The cluster refuses production unless the frozen sidecar lists PRESPEC_REL, review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py, the running wrapper, the cohort's saved matrix under server_export/scripts/pinned/..., and the five frozen modules under their exact paths (split_replication_power.py at the paper root). The local sidecar check does not require any of these, and no script writes the sidecar. A missing or misspelt line would only show up on the cluster after the release, and fixing it needs a dated amendment.
+EVIDENCE: required = [PRESPEC_REL, SCRIPT_REL, WRAPPER_REL[cohort], saved_rel] + FROZEN_CODE_SIDECAR_REL values (cluster line 718). The local required_files lists only the local script, the kernel, inputs, matrices, published JSONs/CSVs and the score tables.
+FIX: Add every path the cluster requires (all three wrappers) to Ctx.required_files, so the local check fails before the release; or add a small --check-sidecar mode that checks the union.
+
+[MINOR 8] WHERE: c1_covariates_cluster.py ensure_covariates_file (869-892), build_manifest_text (338-339); c1_covariates_local.py check_stage_h (916-924)
+PROBLEM: If a job crashes while writing c1_cov_confirmatory_covariates_<cohort>.npz, its .partial is never cleaned up: begin_attempt only handles partials of the run's own final outputs. Later jobs then skip the write (Refused is caught), and build_manifest_text refuses any *.partial. The manifest can then never be written without deleting files by hand. Separately, when C3 is untestable the record holds C3 with shape (n, 0), but --check-stage-h requires (n, 3) and reports FAILED.
+EVIDENCE: except Refused: log('NOTE: covariates file not written by this job') (line 890); if f.endswith('.partial'): raise Refused (line 338); good = shp.get('C3') == (n, 3) (local line 922).
+FIX: Handle the covariates partial in begin_attempt as a final output, renaming it to .attempt1.failed. Make check_stage_h accept (n, 0) when c3_testable is False.
+
+[MINOR 9] WHERE: PS 7.3 ('markers used per composition family in each of the four computations'); c1_covariates_local.py stage_l2
+PROBLEM: The confirmatory marker counts reach only the cluster run jsons and markers_json inside the covariates npz. L2 does not read them, so tab:c1covsets would have to be filled by hand from files L2 never hash-checked against the manifest.
+EVIDENCE: There is no reference to markers_json or covariates_record_name in stage_l2. Only check_stage_h opens the record.
+FIX: In L2, load c1_cov_confirmatory_covariates_<cohort>.npz through the manifest hash and write markers_json and c3_testable into classes.json or result_L2.json.
+
+[MINOR 10] WHERE: SERVER_RUNBOOK.md sections 4 and 4c/4d; PS 9 order; lsf wrappers
+PROBLEM: (a) PS 9 lists Stage L1 (local, one run) before Stage H production, but section 4 of the runbook starts production right after the release with no 'L1 completed' step. (b) Each placebo job runs 59 x 51 fits per gene, about three 1,001-column arms; LUAD runs at -n 4. The smp queue walltime is not checked anywhere, and two walltime kills would close all 59 draws. (c) Section 2a assumes the job-log names c1_ucec_d4_strat.out, c1_test.out and c1_luad_primary.out still exist on the cluster; these names come from the scripts' docstrings, not from a listing. (d) The builder's wrapper probe left an empty folder tree at D:/Git/public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_covariates (confirmed empty).
+EVIDENCE: The runbook has no L1 step. Section 4c notes 'about three arms of compute' but sets no walltime and gives no -W. grep shows those .out names only in bsub examples inside the scripts.
+FIX: Add 'wait for the local Stage L1 to complete' before section 4, plus a check of the queue walltime (bqueues -l smp). If it is short, ask for a PS amendment allowing the placebos in several jobs (--draws already supports this, each range with its own attempt budget). In 2a, run ls first and record the actual file names. Delete the empty D:/Git/public tree by hand.
+
+[MINOR 11] WHERE: PS 9 V1b (LUAD), validate_only.json
+PROBLEM: I confirm the builder's report: the gate as worded cannot pass for LUAD (incr_over_pcs20 max 3.98e-06, 2,304 of 2,310 genes above 1e-9), while r2_rna_pcs20 matches to 1.6e-13. This fits the host-level noise the 10-08 server record shows for LUAD exports (CLOSE at 5.14e-5 on s006 against EXACT on s002). Under the review rules I did not rerun --validate-only.
+EVIDENCE: review/SERVER_RUN_2026-10-08.md table, LUAD rows on s006 and s002; the validate_only.log tail quoted in the build report.
+FIX: A PS text decision is needed before freezing (see the third major finding). Do not loosen the tolerance in the code without a PS change.
+
+NOTES: Verdict PASS_WITH_MAJOR: no blocker found; three major and eight minor findings.
+
+What I checked, and how:
+- I read the full PS v2, both scripts, the three wrappers and the runbook.
+- I compared the code against the published sources: split_replication_power._gene_test/run_pool, residual_analysis.cv_r2/_process_gene/bh_fdr, c1_run_test.prepare/build_gene_sets/assemble/run_test, c1_run_test_luad.prepare/assert_hash/run_family/run_primary/main, composition_controls.comp_score/MARKERS, the R20 lines of transcriptome_baseline.py, and the permutation draw of c1_ucec_stratified_reread.py, which uses the same seed with no other draw before it.
+
+Checks that came out clean:
+- Per-gene function (PS 4): correct line by line. Column order is [xr, E, B]; B[p][v] permutes over all n before restricting to v; r2b is computed once; the gene is skipped when v.sum() < 30; the pool is the same as published (imap_unordered, chunksize 64).
+- Placebo arms: E = R20[q_j] with crc32(b'c1_cov|<cohort>|cap|%02d'), B = pcs, perms[:50].
+- V arms: E is empty and the covariate block is permuted.
+- Cluster-to-local interface (file names, keys genes/M/cases, unicode/float64 dtypes, 1001 and 51 columns, manifest '<sha> *name' / not_completed / untestable, score-TSV header, comments and repr floats): consistent.
+- Local sets: T ranking by p, then increment descending, then symbol, over all fit genes, no sign filter, n = |S_M|. T_G sorted by pub_r2_rna ascending. S_X uses BH over all fit genes with increment > 0. k* and the floor count are correct.
+- Cells: background is the rest of the universe; MIN_SET is 50; the partition background is 'neither'; UCEC descriptive cells sit on the two other arms. D_b and p_D, f, m_R and m_j from columns 0..50, p_abs = (1 + #{m_j <= m_R})/60, and g are correct.
+- PS 6.1/6.4: H/N, H/A/U, F, the types C/R/NC:C/NC:R, the flag, the Case and M4 all match. The one exception is the partial-placebo ambiguity, reported as a minor finding.
+
+Blindness:
+- No gate or check mode prints a new statistic. Blind mode gives counts, marker lists and R20 explained variance. H-V1 and H-V2 reproduce published quantities. --check-stage-h does format checks only.
+- Production modes require a sidecar, its sha, the prespec, a pinned host and an H-V1 record. They cannot check that the release actually happened; the procedure has to guarantee that.
+
+Wrappers:
+- They unset MORPHO_* and the two hash-skip switches, so no hash check can be downgraded. They hard-code --cohort, and the Python env_guard checks basename(MORPHO_ROOT) and the location of MORPHO_OUT, so a run cannot write into the other cohort's tree.
+- The UCEC and LUAD wrappers do not set the BLAS thread variables, which matches the published lsf_c1_test.sh. H-V1 at 1e-9 on the pinned host covers this.
+
+Self-tests (allowed), run on Python 3.13:
+- Cluster: SELFTEST PASSED, 43 checks, 0 failed.
+- Local: SELFTEST PASSED, 17 s.
+- Logs: C:/Users/<user>/AppData/Local/Temp/claude/46c80a70a2c77e33/3c75a307-02d7-4196-8002-9f833e23eadc/scratchpad/cl_selftest.log and .../scratchpad/lo_selftest.log.
+
+Not run, per the review rules: --validate-only, --gate-v3, any stage, any cluster mode.
+
+Files reviewed:
+- D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/c1_covariates_local.py
+- D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/c1_covariates_cluster.py
+- D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/lsf_c1_cov_ucec.sh
+- D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/lsf_c1_cov_luad.sh
+- D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/lsf_c1_cov_discovery.sh
+- D:/claude/pajinsen/MorphoResidual_paper/review/C1_COVARIATES_2026-11-21/SERVER_RUNBOOK.md

@@ -1,0 +1,27 @@
+[03:31:12] OP ucec: 12 indicators cover 73 of 100 cases (1 unlabelled); levels and counts [['20530ab5-e591-4ac0-87d2-27543b0920e5', 10], ['ad6e64f4-cdc4-45ec-9fe4-7b351924b7af', 10], ['77bbcb55-436a-447a-bb6f-b129e71ab628', 8], ['8296d10b-af51-4c6e-aaf4-35fbb135a1f8', 8], ['304f3582-7480-4d2b-8ca6-e06eb6a4e911', 7], ['72d8aaa9-39b8-4879-be04-3ce0e87dfea1', 5], ['c0d2e700-f2dd-4e9f-a367-7c6005153e61', 5], ['70abd19d-ff94-4884-b621-3f18637afc97', 4], ['93ad5206-82e8-40d9-9c39-149b21481dff', 4], ['c3532756-92f2-4d9b-af65-956da8212c89', 4], ['f838b2c4-55f1-49f6-9cea-7ebc15dcda9c', 4], ['fc75e283-ac08-45cc-9b0d-c6385fd0de6c', 4]]
+[03:31:12] S_BC ucec: 201 genes (frozen 201); 198 in the confirmatory universe (expected 198; not fatal); rho from incremental_r2_batchresid
+[03:31:13] V2 ucec unrestricted: AUC 0.5974425565 null 0.4981945451 SD 0.0362962998 p 0.003996 rho 0.2935675639; n 2536/7610; worst diff 0.0e+00 -> VALIDATED
+[03:31:14] V2 ucec within-operator: AUC 0.5974425565 null 0.5059362959 SD 0.0316486918 p 0.003996 rho 0.2935675639; n 2536/7610; worst diff 0.0e+00 -> VALIDATED
+[03:31:15] V2 ucec residualised: AUC 0.5671994242 null 0.4886994100 SD 0.0306175406 p 0.005994 rho 0.2568963226; n 2536/7610; worst diff 0.0e+00 -> VALIDATED
+[03:31:18] V1b ucec: 2566 genes; max abs diff r2_rna_pcs20 1.616e-13 (tol 1e-09; 99.9th pct 1.336e-13), incr_over_pcs20 1.508e-13 (tol 1e-09; 99.9th pct 1.037e-13); genes over 1e-9 (R2 / increment): 0 / 0; n mismatches 0; published-set genes missing from the csv 0; batched-vs-reference 0.00e+00 -> VALIDATED
+[03:33:19]   V1 ucec: 2000/10512 genes, 121 s
+[03:34:34]   V1 ucec: 4000/10512 genes, 197 s
+[03:35:51]   V1 ucec: 6000/10512 genes, 273 s
+[03:37:08]   V1 ucec: 8000/10512 genes, 350 s
+[03:38:29]   V1 ucec: 10000/10512 genes, 432 s
+[03:38:40]   V1 ucec: block 20 cols over a 1-col baseline; selected 2566/10512; BH rejections before the sign filter 3263; genes at the permutation floor 1748 (k* = 211); batched-vs-reference worst 0.00e+00; 442 s
+[03:38:40] V1 ucec: max abs differences {'increment': 9.769962616701378e-15, 'r2_rna': 4.440892098500626e-16, 'pval': 0.0, 'fdr': 0.0, 'n': 0}; selection set identical: True; selected 2566 -> VALIDATED
+[03:38:40] OP luad: 12 indicators cover 75 of 105 cases (1 unlabelled); levels and counts [['72d8aaa9-39b8-4879-be04-3ce0e87dfea1', 14], ['1e065505-2237-4841-b740-cc85b1ec96b4', 12], ['3276f7b8-1e2c-40ef-bf4a-8dfb4098e690', 10], ['975375e8-786f-45d0-bfdd-9e70146a3eb8', 9], ['8296d10b-af51-4c6e-aaf4-35fbb135a1f8', 5], ['a71b7195-c3ab-4b38-a01c-dcd42cdda177', 5], ['4ff60a54-4c1e-4570-985a-32e6af9a2d0e', 4], ['fadb30a1-527c-4133-8b3c-f062f8aa1b11', 4], ['0e45da53-6874-4578-a6f0-8439ef172729', 3], ['5b4151db-6ba1-4d9e-b899-e878d8b192de', 3], ['70abd19d-ff94-4884-b621-3f18637afc97', 3], ['f70489eb-e21c-4fde-81bc-5c877d303530', 3]]
+[03:38:40] S_BC luad: 726 genes (frozen 726); 721 in the confirmatory universe (expected 721; not fatal); rho from incremental_r2_batchresid
+[03:38:41] V2 luad unrestricted: AUC 0.6439668501 null 0.5244456890 SD 0.0186903095 p 0.000999 rho 0.3977785480; n 2287/8119; worst diff 0.0e+00 -> VALIDATED
+[03:38:44] V1b luad: 2310 genes; max abs diff r2_rna_pcs20 1.639e-13 (tol 1e-09; 99.9th pct 8.619e-14), incr_over_pcs20 3.976e-06 (tol 1e-05; 99.9th pct 2.876e-06); genes over 1e-9 (R2 / increment): 0 / 2304; n mismatches 0; published-set genes missing from the csv 0; batched-vs-reference 0.00e+00 -> VALIDATED
+[03:40:48]   V1 luad: 2000/10724 genes, 124 s
+[03:42:06]   V1 luad: 4000/10724 genes, 202 s
+[03:43:25]   V1 luad: 6000/10724 genes, 281 s
+[03:44:45]   V1 luad: 8000/10724 genes, 361 s
+[03:46:06]   V1 luad: 10000/10724 genes, 442 s
+[03:46:28]   V1 luad: block 20 cols over a 1-col baseline; selected 2310/10724; BH rejections before the sign filter 3086; genes at the permutation floor 1354 (k* = 215); batched-vs-reference worst 0.00e+00; 464 s
+[03:46:28] V1 luad: max abs differences {'increment': 2.1316282072803006e-14, 'r2_rna': 4.440892098500626e-16, 'pval': 0.0, 'fdr': 0.0, 'n': 0}; selection set identical: True; selected 2310 -> VALIDATED
+[03:46:28] V1 ok; V1b ok; V2 ok
+[03:46:28] VALIDATED
+exit 0

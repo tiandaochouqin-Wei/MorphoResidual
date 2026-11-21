@@ -1,0 +1,76 @@
+Sender: LSF System <lsfadmin@s001>
+Subject: Job 76713696: <bash lsf_c1_cov_ucec.sh --mode gate> in cluster <hzauhpc> Done
+
+Job <bash lsf_c1_cov_ucec.sh --mode gate> was submitted from host <mn02> by user <fjhui> in cluster <hzauhpc> at Sat Nov 21 08:42:46 2026
+Job was executed on host(s) <8*s001>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Sat Nov 21 08:42:46 2026
+</public/home/fjhui> was used as the home directory.
+</public/home/fjhui/ZW/scripts> was used as the working directory.
+Started at Sat Nov 21 08:42:46 2026
+Terminated at Sat Nov 21 08:44:39 2026
+Results reported at Sat Nov 21 08:44:39 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash lsf_c1_cov_ucec.sh --mode gate
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   172.05 sec.
+    Max Memory :                                 1759 MB
+    Average Memory :                             1083.44 MB
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               8241.00 MB
+    Max Swap :                                   -
+    Max Processes :                              12
+    Max Threads :                                17
+    Run time :                                   119 sec.
+    Turnaround time :                            113 sec.
+
+The output (if any) follows:
+
+environment OK: MORPHO_ROOT and MORPHO_OUT both confirmed under the ucec_c1 tree.
+=== job start: host=s001 date=Sat Nov 21 08:42:46 CST 2026 cores=1 workers=8 args=--mode gate ===
+  numpy archive : 92f2aeb5603a18ed35b2242db5fa07f6ac43a96104e48a2b0ffa76f3663ef8ba
+  numpy         : 1.26.4
+==============================================================================
+C1 COVARIATES (POST HOC, review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md) -- cohort=ucec mode=gate host=s001 lsf_job=76713696 start=2026-11-21T00:42:48Z
+  this script sha256 = da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc
+==============================================================================
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+  hash OK: frozen module c1_run_test_luad = 1d5ee05d57f8... (/public/home/fjhui/ZW/scripts/c1_run_test_luad.py)
+  hash OK: frozen module composition_controls = 46b4a1d8a697... (/public/home/fjhui/ZW/scripts/composition_controls.py)
+  hash OK: saved matrix = ef75f1c06d4f... (/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_d4_stratified.npz; key M_unrestricted; 10146 genes)
+  MORPHO_ROOT         : /public/home/fjhui/ZW/ucec_c1
+  MORPHO_RNA_MANIFEST : /public/home/fjhui/ZW/ucec_c1/manifest_rna_tumor_ucec_c1.tsv
+  MORPHO_SLIDE_MAP    : /public/home/fjhui/ZW/scripts/pinned/slide_type_map_ucec_c1.tsv
+  MORPHO_WSI_EMB_DIR  : /public/home/fjhui/ZW/ucec_c1/WSI/emb
+  MORPHO_OUT          : /public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_covariates
+  hash OK: case_ids = d777fc88c1dd...
+  hash OK: discovery_results = 100d8f8581c7...
+RNA matrix (tumor-only): 138 patients x 59427 genes
+WSI slides: 169 tumor kept, 0 normal dropped, 0 unmatched dropped
+WSI matrix (tumor-only, mean-pooled): 138 patients x 1024 dims
+protein (PDC000439 quantDataMatrix, case-indexed): 138 cases x 10934 genes  <- /public/home/fjhui/ZW/ucec_c1/protein_ucec_c1.csv
+cases with all three modalities: 138
+case-set independence vs discovery: 0 overlapping cases (checked against 100 discovery cases)
+discovery selection set: 2566/10512 genes (24.4%) <- /public/home/fjhui/ZW/scripts/pinned/ucec/residual_results_tumoronly.csv
+usable universe (discovery-tested AND present in confirmatory RNA+protein): 10153 genes, of which 2536 selected / 7617 background
+capacity: K = round(20 * 138 / 100) = 28 PCs, PCA fit on the confirmatory cohort's own embeddings (1024 dims)
+  prepare(): n=138 K=28 genes tested=10153 (as published)
+
+=== H-V1: new per-gene function, E empty, B = published components, columns 0..5 ===
+  host                    : s001
+  usable genes            : 10146 (saved 10146); identical list and order: True
+  largest |diff| cols 0..5: 0.000e+00   99.9th percentile: 0.000e+00   by column: 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+  AUC of S_M (2536 / 7610)    : recomputed col 0 0.5974425564900907; published 0.5974425564900907; |diff| 0.000e+00; saved col 0 0.5974425564900907
+  strict  (genes identical, |diff| <= 1e-9)                  : PASSED
+  fallback (|diff| < 1e-6 and |AUC - published| <= 1e-6)      : PASSED
+H-V1 PASSED (strict)
+=== job end: host=s001 rc=0 date=Sat Nov 21 08:44:38 CST 2026 ===

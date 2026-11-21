@@ -1,0 +1,441 @@
+path	size	mtime_utc	name_flag
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_bootstrap.json	241	2026-09-16T14:19:59Z	
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_completeness.npz	76226481	2026-09-30T15:41:49Z	flag
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_completeness_result.json	1733	2026-09-30T15:41:49Z	flag
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_completeness_result_smoke.json	1638	2026-09-30T14:14:47Z	flag
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_completeness_smoke.npz	526577	2026-09-30T14:14:47Z	flag
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_d4_stratified.npz	228545427	2026-09-30T17:27:48Z	
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_d4_stratified_result.json	2898	2026-09-30T17:27:49Z	
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_d4_stratified_result_smoke.json	1148	2026-09-30T14:45:23Z	
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_gene_level.csv	722166	2026-09-16T12:43:41Z	
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_gene_level_smoke.csv	722166	2026-09-16T11:56:34Z	
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_result.json	849	2026-09-16T12:43:41Z	
+/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_result_smoke.json	841	2026-09-16T11:56:34Z	
+/public/home/fjhui/ZW/ucec_c1/results/posthoc	4096	2026-11-20T22:41:19Z	
+/public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_ucec_plex_reread.log	6199	2026-10-08T20:42:08Z	
+/public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_ucec_plex_reread.npz	304678758	2026-10-08T20:42:06Z	
+/public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_ucec_plex_reread_result.json	9256	2026-10-08T20:42:08Z	
+/public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_covariates	4096	2026-11-20T22:43:41Z	flag
+/public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_covariates/c1_cov_ucec_blind_s006_20261120T224333Z-21267-870832.log	977	2026-11-20T22:43:41Z	flag
+/public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_covariates/c1_cov_ucec_gate_s001_20261120T224125Z-782740-175538.log	976	2026-11-20T22:41:37Z	flag
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_bootstrap_result_bootstrap.json	547	2026-10-02T00:50:47Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_pergene_b1_pergene_b1.csv	1144605	2026-10-02T04:08:58Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_pergene_b2_pergene_b2.csv	1141098	2026-10-02T03:43:01Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_pergene_result_pergene_b1.json	620	2026-10-02T04:08:58Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_pergene_result_pergene_b2.json	618	2026-10-02T03:43:01Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_gene_level_primary.csv	942626	2026-10-01T20:55:23Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_primary.npz	78270849	2026-10-01T20:55:22Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_primary_result_primary.json	4498	2026-10-01T20:55:23Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_sensitivity_s2_result_sens_s2.json	915	2026-10-02T02:56:33Z	
+/public/home/fjhui/ZW/luad_c1/results/c1_luad_sensitivity_s_result_sens_s.json	794	2026-10-02T02:58:15Z	
+/public/home/fjhui/ZW/luad_c1/results/posthoc	4096	2026-11-20T22:29:01Z	
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_luad_plex_reread_plex.log	8939	2026-10-03T07:19:43Z	
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_luad_plex_reread_plex.npz	234677343	2026-10-03T07:19:41Z	
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_luad_plex_reread_result_plex.json	11896	2026-10-03T07:19:43Z	
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_covariates	4096	2026-11-20T23:41:02Z	flag
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_covariates/c1_cov_luad_blind_s002_20261120T222902Z-702794-115350.log	977	2026-11-20T22:29:03Z	flag
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_covariates/c1_cov_luad_blind_s002_20261120T233859Z-893042-081002.log	3151	2026-11-20T23:40:36Z	flag
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_covariates/c1_cov_luad_gate_hv1_s002_20261120T233859Z-893040-080923.json	6366	2026-11-20T23:41:02Z	flag
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_covariates/c1_cov_luad_gate_s002_20261120T222909Z-703009-629102.log	976	2026-11-20T22:29:10Z	flag
+/public/home/fjhui/ZW/luad_c1/results/posthoc/c1_covariates/c1_cov_luad_gate_s002_20261120T233859Z-893040-080923.log	3795	2026-11-20T23:41:02Z	flag
+/public/home/fjhui/ZW/results/ablation_ccrcc.csv	500	2026-09-04T15:27:16Z	
+/public/home/fjhui/ZW/results/ablation_gbm.csv	483	2026-09-10T23:49:51Z	
+/public/home/fjhui/ZW/results/ablation_luad.csv	492	2026-09-10T23:50:14Z	
+/public/home/fjhui/ZW/results/ablation_pdac.csv	495	2026-09-10T23:53:15Z	
+/public/home/fjhui/ZW/results/ablation_ucec.csv	491	2026-09-10T23:50:16Z	
+/public/home/fjhui/ZW/results/abmil.err	0	2026-09-04T17:24:21Z	
+/public/home/fjhui/ZW/results/abmil.out	2610	2026-09-04T17:24:21Z	
+/public/home/fjhui/ZW/results/abmil_attention_ccrcc.npz	25128	2026-09-04T17:24:08Z	
+/public/home/fjhui/ZW/results/abmil_ccrcc.csv	176	2026-09-04T17:24:08Z	
+/public/home/fjhui/ZW/results/abmil_pooling.py	6647	2026-09-04T15:31:18Z	
+/public/home/fjhui/ZW/results/batch_leak_results.csv	3296	2026-10-02T14:26:57Z	
+/public/home/fjhui/ZW/results/clinical_link_ccrcc.log	1699	2026-09-01T09:40:19Z	
+/public/home/fjhui/ZW/results/clinical_link_ccrcc_assoc.csv	917	2026-09-01T09:40:19Z	
+/public/home/fjhui/ZW/results/clinical_link_ccrcc_clinical.csv	4311	2026-09-01T09:40:19Z	
+/public/home/fjhui/ZW/results/clinical_link_ccrcc_cox.csv	370	2026-09-01T10:13:07Z	
+/public/home/fjhui/ZW/results/clinical_link_ccrcc_pathomics_corr.csv	1301	2026-09-02T17:45:24Z	
+/public/home/fjhui/ZW/results/clinical_link_ccrcc_scores.csv	13468	2026-09-01T09:40:19Z	
+/public/home/fjhui/ZW/results/clinical_link_gbm.log	1463	2026-09-01T09:51:32Z	
+/public/home/fjhui/ZW/results/clinical_link_gbm_assoc.csv	331	2026-09-07T15:38:06Z	
+/public/home/fjhui/ZW/results/clinical_link_gbm_clinical.csv	3682	2026-09-07T15:38:06Z	
+/public/home/fjhui/ZW/results/clinical_link_gbm_cox.csv	241	2026-09-07T15:38:09Z	
+/public/home/fjhui/ZW/results/clinical_link_gbm_pathomics_corr.csv	883	2026-09-02T17:45:39Z	
+/public/home/fjhui/ZW/results/clinical_link_gbm_scores.csv	9017	2026-09-07T15:38:06Z	
+/public/home/fjhui/ZW/results/clinical_link_luad.log	1488	2026-09-01T09:48:37Z	
+/public/home/fjhui/ZW/results/clinical_link_luad_assoc.csv	638	2026-09-07T15:36:11Z	
+/public/home/fjhui/ZW/results/clinical_link_luad_clinical.csv	4377	2026-09-07T15:36:11Z	
+/public/home/fjhui/ZW/results/clinical_link_luad_cox.csv	264	2026-09-07T15:36:19Z	
+/public/home/fjhui/ZW/results/clinical_link_luad_pathomics_corr.csv	889	2026-09-02T17:45:30Z	
+/public/home/fjhui/ZW/results/clinical_link_luad_scores.csv	9459	2026-09-07T15:36:11Z	
+/public/home/fjhui/ZW/results/clinical_link_pdac.log	1708	2026-09-01T09:50:40Z	
+/public/home/fjhui/ZW/results/clinical_link_pdac_assoc.csv	914	2026-09-07T15:39:01Z	
+/public/home/fjhui/ZW/results/clinical_link_pdac_clinical.csv	5947	2026-09-07T15:39:01Z	
+/public/home/fjhui/ZW/results/clinical_link_pdac_cox.csv	373	2026-09-07T15:39:04Z	
+/public/home/fjhui/ZW/results/clinical_link_pdac_pathomics_corr.csv	1307	2026-09-02T17:45:43Z	
+/public/home/fjhui/ZW/results/clinical_link_pdac_scores.csv	17826	2026-09-07T15:39:01Z	
+/public/home/fjhui/ZW/results/clinical_link_ucec.log	1486	2026-09-01T09:49:41Z	
+/public/home/fjhui/ZW/results/clinical_link_ucec_assoc.csv	636	2026-09-07T15:37:13Z	
+/public/home/fjhui/ZW/results/clinical_link_ucec_clinical.csv	4179	2026-09-07T15:37:13Z	
+/public/home/fjhui/ZW/results/clinical_link_ucec_cox.csv	260	2026-09-07T15:37:17Z	
+/public/home/fjhui/ZW/results/clinical_link_ucec_pathomics_corr.csv	896	2026-09-02T17:45:34Z	
+/public/home/fjhui/ZW/results/clinical_link_ucec_scores.csv	9015	2026-09-07T15:37:13Z	
+/public/home/fjhui/ZW/results/comp_ccrcc.err	151	2026-09-01T10:07:36Z	flag
+/public/home/fjhui/ZW/results/comp_ccrcc.out	4752	2026-09-01T10:24:11Z	flag
+/public/home/fjhui/ZW/results/comp_gbm.err	151	2026-09-01T10:07:38Z	flag
+/public/home/fjhui/ZW/results/comp_gbm.out	4715	2026-09-01T10:22:40Z	flag
+/public/home/fjhui/ZW/results/comp_luad.err	151	2026-09-01T10:07:36Z	flag
+/public/home/fjhui/ZW/results/comp_luad.out	4737	2026-09-01T10:23:02Z	flag
+/public/home/fjhui/ZW/results/comp_pdac.err	151	2026-09-01T10:07:38Z	flag
+/public/home/fjhui/ZW/results/comp_pdac.out	4738	2026-09-01T10:22:59Z	flag
+/public/home/fjhui/ZW/results/comp_ucec.err	151	2026-09-01T10:07:38Z	flag
+/public/home/fjhui/ZW/results/comp_ucec.out	4757	2026-09-01T10:23:08Z	flag
+/public/home/fjhui/ZW/results/composition_controls_ccrcc.csv	428430	2026-09-01T10:24:09Z	flag
+/public/home/fjhui/ZW/results/composition_controls_gbm.csv	136851	2026-09-01T10:22:35Z	flag
+/public/home/fjhui/ZW/results/composition_controls_luad.csv	451770	2026-09-01T10:23:01Z	flag
+/public/home/fjhui/ZW/results/composition_controls_pdac.csv	308255	2026-09-01T10:22:56Z	flag
+/public/home/fjhui/ZW/results/composition_controls_ucec.csv	498277	2026-09-01T10:23:07Z	flag
+/public/home/fjhui/ZW/results/confound_check_results.csv	1220741	2026-09-06T15:31:17Z	
+/public/home/fjhui/ZW/results/encoder_comparison.csv	931	2026-09-06T01:35:56Z	flag
+/public/home/fjhui/ZW/results/export_cohort_features.py	1345	2026-09-04T15:03:03Z	
+/public/home/fjhui/ZW/results/gbm_rppa_results.csv	38277	2026-09-10T14:57:28Z	
+/public/home/fjhui/ZW/results/loco_ccrcc.npz	429366	2026-09-04T15:22:03Z	
+/public/home/fjhui/ZW/results/loco_gbm.npz	411690	2026-09-04T15:24:01Z	
+/public/home/fjhui/ZW/results/loco_luad.npz	436578	2026-09-04T15:22:49Z	
+/public/home/fjhui/ZW/results/loco_pdac.npz	570670	2026-09-04T15:24:31Z	
+/public/home/fjhui/ZW/results/loco_ucec.npz	415838	2026-09-04T15:23:15Z	
+/public/home/fjhui/ZW/results/luad__sitepack_operator.csv	2907180	2026-09-01T09:51:42Z	flag
+/public/home/fjhui/ZW/results/luad_rppa_results.csv	40493	2026-09-10T01:27:12Z	
+/public/home/fjhui/ZW/results/mediation_results.csv	957223	2026-07-18T21:09:09Z	
+/public/home/fjhui/ZW/results/randproj_control_results.csv	148171	2026-08-31T21:34:06Z	
+/public/home/fjhui/ZW/results/randproj_control_results.csv.pre_5cancer.bak	123298	2026-08-31T21:32:27Z	
+/public/home/fjhui/ZW/results/replication_summary_gbm.csv	153	2026-09-10T14:57:28Z	
+/public/home/fjhui/ZW/results/replication_summary_luad.csv	194	2026-09-10T01:27:12Z	
+/public/home/fjhui/ZW/results/residual_results.csv	1077327	2026-07-17T17:00:10Z	
+/public/home/fjhui/ZW/results/residual_results_adjusted.csv	1058902	2026-07-18T03:41:50Z	
+/public/home/fjhui/ZW/results/residual_results_tumoronly.csv	1063468	2026-08-31T20:13:32Z	
+/public/home/fjhui/ZW/results/residual_results_tumoronly.csv.pre_pcafix.bak	1064302	2026-08-31T19:38:01Z	
+/public/home/fjhui/ZW/results/residual_results_wsibatch.csv	1059621	2026-07-18T17:13:00Z	
+/public/home/fjhui/ZW/results/sex_control_ccrcc.csv	170992	2026-09-28T15:36:01Z	
+/public/home/fjhui/ZW/results/sex_control_gbm.csv	82390	2026-09-28T15:35:07Z	
+/public/home/fjhui/ZW/results/sex_control_luad.csv	179838	2026-09-28T15:35:14Z	
+/public/home/fjhui/ZW/results/sex_control_pdac.csv	186923	2026-09-28T15:35:19Z	
+/public/home/fjhui/ZW/results/sitepack_medium.csv	2634163	2026-10-02T16:50:55Z	
+/public/home/fjhui/ZW/results/sitepack_operator.csv	2622330	2026-09-01T09:47:55Z	flag
+/public/home/fjhui/ZW/results/sitepack_operator.csv.pre_otherfix.bak	2421763	2026-08-31T17:44:05Z	flag
+/public/home/fjhui/ZW/results/sitepack_plex.csv	2587219	2026-10-02T16:51:00Z	
+/public/home/fjhui/ZW/results/sitepack_quarter.csv	2624714	2026-09-01T09:45:03Z	
+/public/home/fjhui/ZW/results/sitepack_quarter.csv.pre_otherfix.bak	2418392	2026-08-31T22:08:24Z	
+/public/home/fjhui/ZW/results/stroma_ccrcc.err	290	2026-09-01T08:28:52Z	flag
+/public/home/fjhui/ZW/results/stroma_ccrcc.out	6404	2026-09-01T08:46:08Z	flag
+/public/home/fjhui/ZW/results/stroma_control_ccrcc.csv	198197	2026-09-01T08:46:02Z	flag
+/public/home/fjhui/ZW/results/stroma_control_luad.csv	209334	2026-09-01T09:21:24Z	flag
+/public/home/fjhui/ZW/results/stroma_control_pdac.csv	142494	2026-09-01T09:21:16Z	flag
+/public/home/fjhui/ZW/results/stroma_luad.err	0	2026-09-01T09:14:00Z	flag
+/public/home/fjhui/ZW/results/stroma_luad.out	2913	2026-09-01T09:21:25Z	flag
+/public/home/fjhui/ZW/results/stroma_pdac.err	0	2026-09-01T08:54:51Z	flag
+/public/home/fjhui/ZW/results/stroma_pdac.out	2911	2026-09-01T09:21:22Z	flag
+/public/home/fjhui/ZW/results/vignette_data.csv	19159	2026-09-04T14:48:16Z	
+/public/home/fjhui/ZW/results/wsi_randdir_control.csv	43142	2026-09-09T20:57:15Z	
+/public/home/fjhui/ZW/results/wsi_scanner_by_case.tsv	46929	2026-09-09T15:43:29Z	
+/public/home/fjhui/ZW/results/wsi_scanner_map.tsv	322489	2026-09-09T15:43:27Z	
+/public/home/fjhui/ZW/results/wsi_spatial_data.npz	39686	2026-09-04T14:10:17Z	
+/public/home/fjhui/ZW/results/wsi_spatial_data_oof.npz	46478	2026-09-09T19:47:26Z	
+/public/home/fjhui/ZW/results/wsi_spatial_slide_scores_oof.csv	60768	2026-09-09T19:47:26Z	
+/public/home/fjhui/ZW/results/posthoc	8192	2026-10-02T18:04:25Z	
+/public/home/fjhui/ZW/results/tile_atlas	4096	2026-10-06T01:48:12Z	
+/public/home/fjhui/ZW/results/posthoc/D01	4096	2026-10-02T17:16:20Z	
+/public/home/fjhui/ZW/results/posthoc/D02	4096	2026-10-02T17:14:29Z	
+/public/home/fjhui/ZW/results/posthoc/D03	4096	2026-10-02T17:14:23Z	
+/public/home/fjhui/ZW/results/posthoc/D04	4096	2026-10-02T17:13:57Z	
+/public/home/fjhui/ZW/results/posthoc/D05	4096	2026-10-02T17:13:43Z	
+/public/home/fjhui/ZW/results/posthoc/D06	4096	2026-10-02T17:13:51Z	
+/public/home/fjhui/ZW/results/posthoc/D07	4096	2026-10-02T17:38:51Z	
+/public/home/fjhui/ZW/results/posthoc/D08	4096	2026-10-02T17:38:55Z	
+/public/home/fjhui/ZW/results/posthoc/D09	4096	2026-10-02T17:39:13Z	
+/public/home/fjhui/ZW/results/posthoc/D10	4096	2026-10-02T17:39:34Z	
+/public/home/fjhui/ZW/results/posthoc/D11	4096	2026-10-02T17:40:33Z	
+/public/home/fjhui/ZW/results/posthoc/D12	4096	2026-10-02T17:44:34Z	
+/public/home/fjhui/ZW/results/posthoc/D13	4096	2026-10-02T18:04:02Z	
+/public/home/fjhui/ZW/results/posthoc/D14	4096	2026-10-02T18:03:59Z	
+/public/home/fjhui/ZW/results/posthoc/D15	4096	2026-10-02T18:04:21Z	
+/public/home/fjhui/ZW/results/posthoc/D16	4096	2026-10-02T18:04:38Z	
+/public/home/fjhui/ZW/results/posthoc/D17	4096	2026-10-02T18:05:40Z	
+/public/home/fjhui/ZW/results/posthoc/D18	4096	2026-10-02T18:12:05Z	
+/public/home/fjhui/ZW/results/posthoc/D19	4096	2026-10-02T18:28:56Z	
+/public/home/fjhui/ZW/results/posthoc/F	4096	2026-10-02T18:29:04Z	
+/public/home/fjhui/ZW/results/posthoc/R	4096	2026-10-02T18:29:23Z	
+/public/home/fjhui/ZW/results/posthoc/_build_arms_scratch	4096	2026-10-02T15:52:59Z	
+/public/home/fjhui/ZW/results/posthoc/D01/residual_results_tumoronly.csv	1055668	2026-10-02T17:16:20Z	
+/public/home/fjhui/ZW/results/posthoc/D02/residual_results_tumoronly.csv	1050752	2026-10-02T17:14:29Z	
+/public/home/fjhui/ZW/results/posthoc/D03/residual_results_tumoronly.csv	1052964	2026-10-02T17:14:23Z	
+/public/home/fjhui/ZW/results/posthoc/D04/residual_results_tumoronly.csv	1054002	2026-10-02T17:13:57Z	
+/public/home/fjhui/ZW/results/posthoc/D05/residual_results_tumoronly.csv	1050816	2026-10-02T17:13:43Z	
+/public/home/fjhui/ZW/results/posthoc/D06/residual_results_tumoronly.csv	1053407	2026-10-02T17:13:51Z	
+/public/home/fjhui/ZW/results/posthoc/D07/residual_results_tumoronly.csv	1053083	2026-10-02T17:38:51Z	
+/public/home/fjhui/ZW/results/posthoc/D08/residual_results_tumoronly.csv	1055283	2026-10-02T17:38:55Z	
+/public/home/fjhui/ZW/results/posthoc/D09/residual_results_tumoronly.csv	1053696	2026-10-02T17:39:13Z	
+/public/home/fjhui/ZW/results/posthoc/D10/residual_results_tumoronly.csv	1052494	2026-10-02T17:39:34Z	
+/public/home/fjhui/ZW/results/posthoc/D11/residual_results_tumoronly.csv	1050134	2026-10-02T17:40:33Z	
+/public/home/fjhui/ZW/results/posthoc/D12/residual_results_tumoronly.csv	1052568	2026-10-02T17:44:34Z	
+/public/home/fjhui/ZW/results/posthoc/D13/residual_results_tumoronly.csv	1051063	2026-10-02T18:04:02Z	
+/public/home/fjhui/ZW/results/posthoc/D14/residual_results_tumoronly.csv	1053847	2026-10-02T18:03:59Z	
+/public/home/fjhui/ZW/results/posthoc/D15/residual_results_tumoronly.csv	1054367	2026-10-02T18:04:21Z	
+/public/home/fjhui/ZW/results/posthoc/D16/residual_results_tumoronly.csv	1051921	2026-10-02T18:04:38Z	
+/public/home/fjhui/ZW/results/posthoc/D17/residual_results_tumoronly.csv	1052812	2026-10-02T18:05:40Z	
+/public/home/fjhui/ZW/results/posthoc/D18/residual_results_tumoronly.csv	1054879	2026-10-02T18:12:05Z	
+/public/home/fjhui/ZW/results/posthoc/D19/residual_results_tumoronly.csv	1052122	2026-10-02T18:28:56Z	
+/public/home/fjhui/ZW/results/posthoc/F/residual_results_tumoronly.csv	1052618	2026-10-02T18:29:04Z	
+/public/home/fjhui/ZW/results/posthoc/R/residual_results_tumoronly.csv	1063468	2026-10-02T18:29:23Z	
+/public/home/fjhui/ZW/results/tile_atlas/smoke.npz	79159	2026-10-06T01:43:17Z	
+/public/home/fjhui/ZW/results/tile_atlas/tile_atlas_sample.npz	64393823	2026-10-06T01:48:16Z	
+/public/home/fjhui/ZW/ucec/results/batch_leak_results.csv	3248	2026-10-02T14:28:30Z	
+/public/home/fjhui/ZW/ucec/results/randproj_control_results.csv	172499	2026-09-01T07:51:28Z	
+/public/home/fjhui/ZW/ucec/results/residual_results_tumoronly.csv	1159876	2026-08-31T20:29:56Z	
+/public/home/fjhui/ZW/ucec/results/residual_results_tumoronly.csv.pre_pcafix.bak	1161585	2026-08-31T19:38:01Z	
+/public/home/fjhui/ZW/ucec/results/sitepack_medium.csv	2783779	2026-10-02T16:45:20Z	
+/public/home/fjhui/ZW/ucec/results/sitepack_operator.csv	2841721	2026-09-01T09:50:42Z	flag
+/public/home/fjhui/ZW/ucec/results/sitepack_operator.csv.pre_otherfix.bak	2624128	2026-08-31T17:46:23Z	flag
+/public/home/fjhui/ZW/ucec/results/sitepack_plex.csv	2815794	2026-10-02T16:54:24Z	
+/public/home/fjhui/ZW/ucec/results/sitepack_quarter.csv	2851181	2026-09-01T09:50:21Z	
+/public/home/fjhui/ZW/ucec/results/sitepack_quarter.csv.pre_otherfix.bak	2628898	2026-09-01T08:34:02Z	
+/public/home/fjhui/ZW/ucec/results/split_replication_power_ucec_grp_op_balanced_0.csv	370	2026-09-15T08:35:46Z	
+/public/home/fjhui/ZW/ucec/results/split_replication_power_ucec_grp_op_balanced_1.csv	369	2026-09-15T08:36:50Z	
+/public/home/fjhui/ZW/ucec/results/split_replication_power_ucec_grp_op_balanced_2.csv	372	2026-09-15T08:34:01Z	
+/public/home/fjhui/ZW/ucec/results/split_replication_power_ucec_grp_op_balanced_3.csv	371	2026-09-15T08:35:00Z	
+/public/home/fjhui/ZW/ucec/results/split_replication_power_ucec_grp_op_balanced_4.csv	371	2026-09-15T08:34:44Z	
+/public/home/fjhui/ZW/ucec/results/split_replication_power_ucec_grp_q_2016_vs_2017.csv	372	2026-09-15T08:54:26Z	
+/public/home/fjhui/ZW/ucec/results/split_replication_power_ucec_grp_q_early_vs_late.csv	376	2026-09-15T08:55:53Z	
+/public/home/fjhui/ZW/ucec/results/subsample_diag_discovery_?.csv	2441	2026-09-14T09:07:48Z	
+/public/home/fjhui/ZW/ucec/results/subsample_diag_discovery_ucec_BACKUP.csv	2441	2026-09-14T09:24:50Z	
+/public/home/fjhui/ZW/ucec/results/posthoc	4096	2026-10-02T21:15:02Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D01	4096	2026-10-02T20:17:16Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D02	4096	2026-10-02T20:19:27Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D03	4096	2026-10-02T20:18:27Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D04	4096	2026-10-02T20:21:07Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D05	4096	2026-10-02T20:36:11Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D06	4096	2026-10-02T20:38:53Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D07	4096	2026-10-02T20:43:44Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D08	4096	2026-10-02T20:44:45Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D09	4096	2026-10-02T20:46:06Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D10	4096	2026-10-02T20:47:42Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D11	4096	2026-10-02T21:02:19Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D12	4096	2026-10-02T21:04:55Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D13	4096	2026-10-02T21:10:13Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D14	4096	2026-10-02T21:11:24Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D15	4096	2026-10-02T21:12:50Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D16	4096	2026-10-02T21:14:54Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D17	4096	2026-10-02T21:28:24Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D18	4096	2026-10-02T21:31:17Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D19	4096	2026-10-02T21:31:48Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/F	4096	2026-10-02T21:37:20Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/Q	4096	2026-10-02T21:40:19Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/R	4096	2026-10-02T21:41:44Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/_build_arms_scratch	4096	2026-10-02T15:54:14Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D01/residual_results_tumoronly.csv	1138594	2026-10-02T20:17:16Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D02/residual_results_tumoronly.csv	1134285	2026-10-02T20:19:27Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D03/residual_results_tumoronly.csv	1137191	2026-10-02T20:18:27Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D04/residual_results_tumoronly.csv	1136884	2026-10-02T20:21:07Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D05/residual_results_tumoronly.csv	1137441	2026-10-02T20:36:11Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D06/residual_results_tumoronly.csv	1134310	2026-10-02T20:38:53Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D07/residual_results_tumoronly.csv	1136931	2026-10-02T20:43:45Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D08/residual_results_tumoronly.csv	1123109	2026-10-02T20:44:45Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D09/residual_results_tumoronly.csv	1133187	2026-10-02T20:46:06Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D10/residual_results_tumoronly.csv	1138601	2026-10-02T20:47:42Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D11/residual_results_tumoronly.csv	1133705	2026-10-02T21:02:19Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D12/residual_results_tumoronly.csv	1133692	2026-10-02T21:04:55Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D13/residual_results_tumoronly.csv	1136186	2026-10-02T21:10:13Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D14/residual_results_tumoronly.csv	1140764	2026-10-02T21:11:24Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D15/residual_results_tumoronly.csv	1133910	2026-10-02T21:12:50Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D16/residual_results_tumoronly.csv	1133054	2026-10-02T21:14:54Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D17/residual_results_tumoronly.csv	1134443	2026-10-02T21:28:24Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D18/residual_results_tumoronly.csv	1132961	2026-10-02T21:31:17Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/D19/residual_results_tumoronly.csv	1136972	2026-10-02T21:31:48Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/F/residual_results_tumoronly.csv	1136320	2026-10-02T21:37:20Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/Q/residual_results_tumoronly.csv	1148204	2026-10-02T21:40:20Z	
+/public/home/fjhui/ZW/ucec/results/posthoc/R/residual_results_tumoronly.csv	1160033	2026-10-02T21:41:44Z	
+/public/home/fjhui/ZW/luad/results/batch_leak_results.csv	3238	2026-10-02T14:27:55Z	
+/public/home/fjhui/ZW/luad/results/covariate_control_ccrcc.csv	721035	2026-09-28T16:00:03Z	
+/public/home/fjhui/ZW/luad/results/covariate_control_gbm.csv	306964	2026-09-28T15:58:27Z	
+/public/home/fjhui/ZW/luad/results/covariate_control_luad.csv	1013343	2026-09-28T15:59:35Z	
+/public/home/fjhui/ZW/luad/results/covariate_control_pdac.csv	693638	2026-09-28T15:59:15Z	
+/public/home/fjhui/ZW/luad/results/covariate_control_ucec.csv	291160	2026-09-28T15:58:25Z	
+/public/home/fjhui/ZW/luad/results/protein_route_check.json	6231	2026-09-30T13:43:02Z	
+/public/home/fjhui/ZW/luad/results/protein_route_check_pergene.csv	679070	2026-09-30T13:43:02Z	
+/public/home/fjhui/ZW/luad/results/randproj_control_results.csv	156640	2026-08-31T21:33:45Z	
+/public/home/fjhui/ZW/luad/results/residual_results_tumoronly.csv	1181679	2026-08-31T20:09:23Z	
+/public/home/fjhui/ZW/luad/results/residual_results_tumoronly.csv.pre_pcafix.bak	1181986	2026-08-31T19:38:01Z	
+/public/home/fjhui/ZW/luad/results/sitepack_operator.csv	2907180	2026-09-01T09:51:42Z	flag
+/public/home/fjhui/ZW/luad/results/sitepack_operator.csv.pre_otherfix.bak	2676303	2026-08-31T17:49:29Z	flag
+/public/home/fjhui/ZW/luad/results/sitepack_plex.csv	2861796	2026-10-02T16:54:08Z	
+/public/home/fjhui/ZW/luad/results/sitepack_quarter.csv	2904589	2026-09-01T09:51:07Z	
+/public/home/fjhui/ZW/luad/results/sitepack_quarter.csv.pre_otherfix.bak	2678433	2026-08-31T22:14:47Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p1_random.csv	2213	2026-09-30T06:02:50Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p1b_random34.csv	2190	2026-09-30T04:45:00Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p2_op_balanced_0.csv	371	2026-09-30T03:35:42Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p2_op_balanced_1.csv	372	2026-09-30T03:47:36Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p2_op_balanced_2.csv	373	2026-09-30T03:43:45Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p2_op_balanced_3.csv	373	2026-09-30T03:51:48Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p2_op_balanced_4.csv	371	2026-09-30T04:00:10Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p2_q_2017Q3_vs_rest.csv	374	2026-09-30T03:35:06Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p2_q_early_vs_late.csv	375	2026-09-30T03:23:59Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_p2_stream_c3n_vs_c3l.csv	371	2026-09-30T03:59:04Z	
+/public/home/fjhui/ZW/luad/results/split_replication_power_luad_smoke.csv	357	2026-09-29T14:55:46Z	
+/public/home/fjhui/ZW/luad/results/posthoc	4096	2026-10-02T19:47:09Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D01	4096	2026-10-02T18:32:08Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D02	4096	2026-10-02T18:33:13Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D03	4096	2026-10-02T18:43:20Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D04	4096	2026-10-02T18:54:53Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D05	4096	2026-10-02T18:56:15Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D06	4096	2026-10-02T18:56:42Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D07	4096	2026-10-02T18:59:43Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D08	4096	2026-10-02T19:01:46Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D09	4096	2026-10-02T19:13:53Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D10	4096	2026-10-02T19:21:07Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D11	4096	2026-10-02T19:23:39Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D12	4096	2026-10-02T19:24:18Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D13	4096	2026-10-02T19:27:20Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D14	4096	2026-10-02T19:27:02Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D15	4096	2026-10-02T19:41:45Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D16	4096	2026-10-02T19:47:02Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D17	4096	2026-10-02T19:50:59Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D18	4096	2026-10-02T19:51:53Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D19	4096	2026-10-02T19:52:26Z	
+/public/home/fjhui/ZW/luad/results/posthoc/F	4096	2026-10-02T19:54:56Z	
+/public/home/fjhui/ZW/luad/results/posthoc/Q	4096	2026-10-02T20:09:48Z	
+/public/home/fjhui/ZW/luad/results/posthoc/R	4096	2026-10-02T20:12:20Z	
+/public/home/fjhui/ZW/luad/results/posthoc/_build_arms_scratch	4096	2026-10-02T15:53:40Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D01/residual_results_tumoronly.csv	1169965	2026-10-02T18:32:08Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D02/residual_results_tumoronly.csv	1170867	2026-10-02T18:33:13Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D03/residual_results_tumoronly.csv	1170577	2026-10-02T18:43:20Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D04/residual_results_tumoronly.csv	1138600	2026-10-02T18:54:53Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D05/residual_results_tumoronly.csv	1170352	2026-10-02T18:56:15Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D06/residual_results_tumoronly.csv	1164697	2026-10-02T18:56:42Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D07/residual_results_tumoronly.csv	1170287	2026-10-02T18:59:43Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D08/residual_results_tumoronly.csv	1133358	2026-10-02T19:01:46Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D09/residual_results_tumoronly.csv	1169133	2026-10-02T19:13:53Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D10/residual_results_tumoronly.csv	1166598	2026-10-02T19:21:07Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D11/residual_results_tumoronly.csv	1168585	2026-10-02T19:23:39Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D12/residual_results_tumoronly.csv	1161143	2026-10-02T19:24:18Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D13/residual_results_tumoronly.csv	1169133	2026-10-02T19:27:20Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D14/residual_results_tumoronly.csv	1148288	2026-10-02T19:27:02Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D15/residual_results_tumoronly.csv	1164240	2026-10-02T19:41:45Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D16/residual_results_tumoronly.csv	1170389	2026-10-02T19:47:02Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D17/residual_results_tumoronly.csv	1169355	2026-10-02T19:50:59Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D18/residual_results_tumoronly.csv	1169216	2026-10-02T19:51:53Z	
+/public/home/fjhui/ZW/luad/results/posthoc/D19/residual_results_tumoronly.csv	1169093	2026-10-02T19:52:26Z	
+/public/home/fjhui/ZW/luad/results/posthoc/F/residual_results_tumoronly.csv	1170897	2026-10-02T19:54:56Z	
+/public/home/fjhui/ZW/luad/results/posthoc/Q/residual_results_tumoronly.csv	1178347	2026-10-02T20:09:48Z	
+/public/home/fjhui/ZW/luad/results/posthoc/R/residual_results_tumoronly.csv	1181679	2026-10-02T20:12:20Z	
+/public/home/fjhui/ZW/meas_error/ccrcc	4096	2026-10-07T23:30:45Z	
+/public/home/fjhui/ZW/meas_error/gbm	4096	2026-10-07T23:28:04Z	
+/public/home/fjhui/ZW/meas_error/gbm_s002	4096	2026-10-07T23:39:53Z	
+/public/home/fjhui/ZW/meas_error/gbm_s006	4096	2026-10-07T23:37:39Z	
+/public/home/fjhui/ZW/meas_error/luad	4096	2026-10-07T23:28:08Z	
+/public/home/fjhui/ZW/meas_error/luad_s002	4096	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/luad_s004	4096	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/pdac	4096	2026-10-07T23:28:14Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec	4096	2026-10-07T23:09:00Z	
+/public/home/fjhui/ZW/meas_error/ucec	4096	2026-10-07T23:28:34Z	
+/public/home/fjhui/ZW/meas_error/ccrcc/export_sha256_ccrcc.txt	621	2026-10-07T23:30:45Z	
+/public/home/fjhui/ZW/meas_error/ccrcc/gene_table_ccrcc.csv	3197602	2026-10-07T23:30:45Z	
+/public/home/fjhui/ZW/meas_error/ccrcc/inputs_ccrcc.npz	22616520	2026-10-07T23:30:23Z	
+/public/home/fjhui/ZW/meas_error/ccrcc/patient_table_ccrcc.csv	8458	2026-10-07T23:30:19Z	
+/public/home/fjhui/ZW/meas_error/ccrcc/replicate_files_ccrcc.npz	12776465	2026-10-07T23:30:28Z	
+/public/home/fjhui/ZW/meas_error/ccrcc/replicate_icc_ccrcc.csv	506161	2026-10-07T23:30:21Z	
+/public/home/fjhui/ZW/meas_error/ccrcc/repro_check_ccrcc.json	238	2026-10-07T23:30:44Z	
+/public/home/fjhui/ZW/meas_error/ccrcc/run_manifest_ccrcc.json	1701	2026-10-07T23:30:45Z	
+/public/home/fjhui/ZW/meas_error/gbm/export_sha256_gbm.txt	429	2026-10-07T23:28:04Z	
+/public/home/fjhui/ZW/meas_error/gbm/gene_table_gbm.csv	3288108	2026-10-07T23:28:04Z	
+/public/home/fjhui/ZW/meas_error/gbm/inputs_gbm.npz	23413199	2026-10-07T23:27:46Z	
+/public/home/fjhui/ZW/meas_error/gbm/patient_table_gbm.csv	7221	2026-10-07T23:27:44Z	
+/public/home/fjhui/ZW/meas_error/gbm/repro_check_gbm.json	341	2026-10-07T23:28:04Z	
+/public/home/fjhui/ZW/meas_error/gbm/run_manifest_gbm.json	1783	2026-10-07T23:28:04Z	
+/public/home/fjhui/ZW/meas_error/gbm_s002/export_sha256_gbm.txt	429	2026-10-07T23:39:54Z	
+/public/home/fjhui/ZW/meas_error/gbm_s002/gene_table_gbm.csv	3288108	2026-10-07T23:39:53Z	
+/public/home/fjhui/ZW/meas_error/gbm_s002/inputs_gbm.npz	23413199	2026-10-07T23:39:35Z	
+/public/home/fjhui/ZW/meas_error/gbm_s002/patient_table_gbm.csv	7221	2026-10-07T23:39:33Z	
+/public/home/fjhui/ZW/meas_error/gbm_s002/repro_check_gbm.json	341	2026-10-07T23:39:53Z	
+/public/home/fjhui/ZW/meas_error/gbm_s002/run_manifest_gbm.json	1788	2026-10-07T23:39:53Z	
+/public/home/fjhui/ZW/meas_error/gbm_s006/export_sha256_gbm.txt	429	2026-10-07T23:37:39Z	
+/public/home/fjhui/ZW/meas_error/gbm_s006/gene_table_gbm.csv	3288125	2026-10-07T23:37:39Z	
+/public/home/fjhui/ZW/meas_error/gbm_s006/inputs_gbm.npz	23413271	2026-10-07T23:37:09Z	
+/public/home/fjhui/ZW/meas_error/gbm_s006/patient_table_gbm.csv	7221	2026-10-07T23:37:06Z	
+/public/home/fjhui/ZW/meas_error/gbm_s006/repro_check_gbm.json	240	2026-10-07T23:37:39Z	
+/public/home/fjhui/ZW/meas_error/gbm_s006/run_manifest_gbm.json	1687	2026-10-07T23:37:39Z	
+/public/home/fjhui/ZW/meas_error/luad/export_sha256_luad.txt	434	2026-10-07T23:28:08Z	
+/public/home/fjhui/ZW/meas_error/luad/gene_table_luad.csv	3299016	2026-10-07T23:28:08Z	
+/public/home/fjhui/ZW/meas_error/luad/inputs_luad.npz	24441475	2026-10-07T23:27:38Z	
+/public/home/fjhui/ZW/meas_error/luad/patient_table_luad.csv	7706	2026-10-07T23:27:35Z	
+/public/home/fjhui/ZW/meas_error/luad/repro_check_luad.json	338	2026-10-07T23:28:07Z	
+/public/home/fjhui/ZW/meas_error/luad/run_manifest_luad.json	1799	2026-10-07T23:28:08Z	
+/public/home/fjhui/ZW/meas_error/luad_s002/export_sha256_luad.txt	434	2026-10-07T23:37:38Z	
+/public/home/fjhui/ZW/meas_error/luad_s002/gene_table_luad.csv	3298954	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/luad_s002/inputs_luad.npz	24441417	2026-10-07T23:37:19Z	
+/public/home/fjhui/ZW/meas_error/luad_s002/patient_table_luad.csv	7706	2026-10-07T23:37:17Z	
+/public/home/fjhui/ZW/meas_error/luad_s002/repro_check_luad.json	240	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/luad_s002/run_manifest_luad.json	1706	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/luad_s004/export_sha256_luad.txt	434	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/luad_s004/gene_table_luad.csv	3298954	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/luad_s004/inputs_luad.npz	24441417	2026-10-07T23:37:19Z	
+/public/home/fjhui/ZW/meas_error/luad_s004/patient_table_luad.csv	7706	2026-10-07T23:37:16Z	
+/public/home/fjhui/ZW/meas_error/luad_s004/repro_check_luad.json	240	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/luad_s004/run_manifest_luad.json	1706	2026-10-07T23:37:37Z	
+/public/home/fjhui/ZW/meas_error/pdac/export_sha256_pdac.txt	434	2026-10-07T23:28:14Z	
+/public/home/fjhui/ZW/meas_error/pdac/gene_table_pdac.csv	3070364	2026-10-07T23:28:14Z	
+/public/home/fjhui/ZW/meas_error/pdac/inputs_pdac.npz	29178846	2026-10-07T23:27:56Z	
+/public/home/fjhui/ZW/meas_error/pdac/patient_table_pdac.csv	9988	2026-10-07T23:27:53Z	
+/public/home/fjhui/ZW/meas_error/pdac/repro_check_pdac.json	238	2026-10-07T23:28:13Z	
+/public/home/fjhui/ZW/meas_error/pdac/run_manifest_pdac.json	1697	2026-10-07T23:28:14Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec/export_sha256_ucec.txt	614	2026-10-07T23:09:00Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec/gene_table_ucec.csv	13087	2026-10-07T23:09:00Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec/inputs_ucec.npz	502131	2026-10-07T23:08:58Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec/patient_table_ucec.csv	7354	2026-10-07T23:08:56Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec/replicate_files_ucec.npz	59952	2026-10-07T23:09:00Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec/replicate_icc_ucec.csv	550731	2026-10-07T23:08:58Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec/repro_check_ucec.json	334	2026-10-07T23:09:00Z	
+/public/home/fjhui/ZW/meas_error/smoke_ucec/run_manifest_ucec.json	1796	2026-10-07T23:09:00Z	
+/public/home/fjhui/ZW/meas_error/ucec/export_sha256_ucec.txt	614	2026-10-07T23:28:34Z	
+/public/home/fjhui/ZW/meas_error/ucec/gene_table_ucec.csv	3352453	2026-10-07T23:28:34Z	
+/public/home/fjhui/ZW/meas_error/ucec/inputs_ucec.npz	23405080	2026-10-07T23:27:57Z	
+/public/home/fjhui/ZW/meas_error/ucec/patient_table_ucec.csv	7354	2026-10-07T23:27:52Z	
+/public/home/fjhui/ZW/meas_error/ucec/replicate_files_ucec.npz	13949274	2026-10-07T23:28:02Z	
+/public/home/fjhui/ZW/meas_error/ucec/replicate_icc_ucec.csv	550732	2026-10-07T23:27:54Z	
+/public/home/fjhui/ZW/meas_error/ucec/repro_check_ucec.json	240	2026-10-07T23:28:33Z	
+/public/home/fjhui/ZW/meas_error/ucec/run_manifest_ucec.json	1698	2026-10-07T23:28:34Z	
+/public/home/fjhui/ZW/c1_covariates/numpy_1.26.4_tree.tar.gz	20553256	2026-11-20T23:29:23Z	
+/public/home/fjhui/ZW/c1_covariates/resubmit_luad_checks.sh	2154	2026-11-20T23:32:27Z	
+/public/home/fjhui/ZW/c1_covariates/discovery	4096	2026-11-20T22:43:58Z	
+/public/home/fjhui/ZW/c1_covariates/frozen	4096	2026-11-20T21:43:34Z	
+/public/home/fjhui/ZW/c1_covariates/gate_logs	4096	2026-11-20T23:41:03Z	
+/public/home/fjhui/ZW/c1_covariates/inputs	4096	2026-11-20T21:43:35Z	
+/public/home/fjhui/ZW/c1_covariates/stage_h_joblogs	4096	2026-11-20T21:43:34Z	
+/public/home/fjhui/ZW/c1_covariates/discovery/luad	4096	2026-11-20T23:40:35Z	
+/public/home/fjhui/ZW/c1_covariates/discovery/ucec	4096	2026-11-20T22:43:59Z	
+/public/home/fjhui/ZW/c1_covariates/discovery/luad/c1_cov_discovery_scores_luad.tsv	8145	2026-11-20T23:40:35Z	flag
+/public/home/fjhui/ZW/c1_covariates/discovery/luad/c1_cov_luad_export_scores_20261120T233918Z-893943-298770.json	9334	2026-11-20T23:40:35Z	flag
+/public/home/fjhui/ZW/c1_covariates/discovery/luad/c1_cov_luad_exportscores_s002_20261120T222833Z-701231-875048.log	931	2026-11-20T22:28:40Z	flag
+/public/home/fjhui/ZW/c1_covariates/discovery/luad/c1_cov_luad_exportscores_s002_20261120T233918Z-893943-298770.log	2465	2026-11-20T23:40:35Z	flag
+/public/home/fjhui/ZW/c1_covariates/discovery/luad/c1_cov_luad_gate_r20_s002_20261120T233918Z-893944-298423.json	4072	2026-11-20T23:40:05Z	flag
+/public/home/fjhui/ZW/c1_covariates/discovery/luad/c1_cov_luad_gater20_s002_20261120T222833Z-701230-875054.log	926	2026-11-20T22:28:40Z	flag
+/public/home/fjhui/ZW/c1_covariates/discovery/luad/c1_cov_luad_gater20_s002_20261120T233918Z-893944-298423.log	1099	2026-11-20T23:40:05Z	flag
+/public/home/fjhui/ZW/c1_covariates/discovery/ucec/c1_cov_ucec_exportscores_s006_20261120T224359Z-21452-290772.log	931	2026-11-20T22:44:00Z	flag
+/public/home/fjhui/ZW/c1_covariates/discovery/ucec/c1_cov_ucec_gater20_s006_20261120T224359Z-21451-290316.log	926	2026-11-20T22:44:00Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/bqueues_smp.log	815	2026-11-20T22:14:04Z	
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_disc_luad_export_scores_76712080.out	18381	2026-11-20T22:28:58Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_disc_luad_export_scores_76712906.out	6576	2026-11-20T23:40:36Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_disc_luad_gate_r20_76712078.out	18357	2026-11-20T22:28:57Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_disc_luad_gate_r20_76712905.out	4816	2026-11-20T23:40:08Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_disc_ucec_export_scores_76712079.out	18397	2026-11-20T22:44:08Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_disc_ucec_gate_r20_76712077.out	18372	2026-11-20T22:44:08Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_luad_blind_76712082.out	17852	2026-11-20T22:29:07Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_luad_gate_s002_76712083.out	17847	2026-11-20T22:29:13Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_luad_gate_s002_76712908.out	10005	2026-11-20T23:41:03Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_ucec_blind_76712075.out	13657	2026-11-20T22:43:57Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/c1_cov_ucec_gate_s001_76712076.out	13652	2026-11-20T22:41:55Z	flag
+/public/home/fjhui/ZW/c1_covariates/gate_logs/install_check.log	2531	2026-11-20T21:59:15Z	
+/public/home/fjhui/ZW/c1_covariates/gate_logs/old_job_logs_find.log	483	2026-11-20T22:14:11Z	
+/public/home/fjhui/ZW/c1_covariates/gate_logs/old_job_logs_hosts.log	1731	2026-11-20T22:20:08Z	
+/public/home/fjhui/ZW/c1_covariates/inputs/c1_cov_discovery_patients_luad.txt	1050	2026-11-20T21:43:35Z	flag
+/public/home/fjhui/ZW/c1_covariates/inputs/c1_cov_discovery_patients_ucec.txt	1000	2026-11-20T21:43:35Z	flag
+/public/home/fjhui/ZW/c1_covariates/inputs/inputs_luad.npz	24441417	2026-11-20T21:43:35Z	
+/public/home/fjhui/ZW/c1_covariates/inputs/inputs_ucec.npz	23405080	2026-11-20T21:43:35Z	

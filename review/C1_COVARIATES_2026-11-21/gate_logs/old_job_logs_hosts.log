@@ -1,0 +1,9 @@
+c1_test.out:Job was executed on host(s) <8*s003>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Wed Sep 16 20:05:22 2026
+c1_test.out:Started at Wed Sep 16 20:05:22 2026
+c1_test.out:=== job start: host=s003 date=Wed Sep 16 20:05:23 CST 2026 cores=1 args=test --perms 1000 ===
+c1_ucec_d4_strat.out:Job was executed on host(s) <4*s001>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Wed Sep 30 22:53:55 2026
+c1_ucec_d4_strat.out:Started at Wed Sep 30 22:53:55 2026
+c1_ucec_d4_strat.out:=== job start: host=s001 date=Wed Sep 30 22:53:56 CST 2026 cores=1 args=--perms 1000 ===
+c1_luad_primary.out:Job was executed on host(s) <4*s002>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Fri Oct  2 00:13:46 2026
+c1_luad_primary.out:Started at Fri Oct  2 00:13:46 2026
+c1_luad_primary.out:=== job start: host=s002 date=Fri Oct  2 00:13:47 CST 2026 cores=1 mode=primary args=primary --perms 1000 --tag primary --rule /public/home/fjhui/ZW/scripts/pinned/C1_LUAD_FROZEN_RULE_DRAFT_2026-09-27.md --rule-sha256 a68dfbec65e0186bb629eaae1f81c8e117549e224b39483d67513c9d1270d022 --case-ids /public/home/fjhui/ZW/scripts/pinned/c1_case_ids_luad.txt --protein /public/home/fjhui/ZW/luad_c1/protein_luad_c1.csv --discovery-results /public/home/fjhui/ZW/scripts/pinned/luad/residual_results_tumoronly.csv --discovery-sitepack /public/home/fjhui/ZW/results/luad__sitepack_operator.csv --discovery-slide-map /public/home/fjhui/ZW/scripts/pinned/slide_type_map_luad.tsv --discovery-xwalk /public/home/fjhui/ZW/scripts/pinned/aliquot_to_case_tumor_luad.tsv --discovery-rna-manifest /public/home/fjhui/ZW/scripts/pinned/manifest_rna_tumor_luad.tsv --batch-labels /public/home/fjhui/ZW/scripts/pinned/c1_luad_batch_labels.tsv ===

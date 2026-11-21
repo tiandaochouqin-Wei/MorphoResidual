@@ -1,0 +1,24 @@
+# CLOSED_PARTS.txt -- the parts of the analysis closed before freezing
+# (review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md, PS 6.1 "Closed readings" and PS 9 "Closed parts").
+# Listed in the sidecar and frozen with it; read by c1_covariates_local.py (Stage L1, Stage L2) and by
+# c1_covariates_cluster.py (production modes arm, placebo and manifest). Both parse it identically and strictly.
+#
+# Format. UTF-8, LF line endings, no BOM.
+#   - A line that starts with '#' in column 0 is a comment.
+#   - An empty line is ignored. (A line of spaces or tabs is not empty and is fatal.)
+#   - Every other line is exactly three tokens separated by single spaces, with no leading or trailing
+#     whitespace, and is one of:
+#       arm <cohort> <arm>       cohort: ucec | luad;  arm: A_C3 | A_R20 | A_R20cap | V_C3 | V_R20
+#                                (A_R20cap closes all 119 placebo arms A_R20cap_001 .. A_R20cap_119)
+#       analysis <cohort> <X>    X: C3 | M|C3   (the second token is the literal "M|C3")
+#     No other discovery analysis can be closed. A repeated line is fatal. Anything else is fatal.
+#   - Consistency (PS 9 "Closed parts"), fatal if broken, per cohort:
+#       'arm <cohort> A_R20cap' is listed if and only if 'arm <cohort> A_R20' is;
+#       'analysis <cohort> C3' is listed if and only if 'analysis <cohort> M|C3' is.
+#
+# A closed arm is not run and its cells have the status "closed"; a closed analysis gives no sets and every
+# cell that reads its sets has the status "closed"; a closed primary reading gives the types of PS 6.1.
+# A line is added only before freezing, by the marker rule of PS 2 or by a gate of PS 9, and the gate record
+# names the gate that closed it. After freezing nothing is added, dropped or changed.
+#
+# A file with comment lines only (as now) means that nothing is closed.
