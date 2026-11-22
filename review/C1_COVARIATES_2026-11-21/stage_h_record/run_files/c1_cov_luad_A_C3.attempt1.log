@@ -1,0 +1,6 @@
+attempt 1 of c1_cov_luad_A_C3 (no limit on attempts; previous attempts' partial files kept: none)
+  covariates identical to c1_cov_confirmatory_covariates_luad.npz
+
+=== arm A_C3: E=C3 (3 cols), B=pcs (22 cols), 10417 genes x (1 + 1000) on 4 workers ===
+  wrote c1_cov_luad_A_C3.npz (10406 genes x 1001) in 68.9 min
+DONE: c1_cov_luad_A_C3 completed (attempt 1), 1 file(s) written, 71.0 min

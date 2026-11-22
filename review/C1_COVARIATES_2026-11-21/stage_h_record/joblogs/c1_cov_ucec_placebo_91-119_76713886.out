@@ -1,0 +1,114 @@
+Sender: LSF System <lsfadmin@s001>
+Subject: Job 76713886: <bash lsf_c1_cov_ucec.sh --mode placebo --draws 91-119 --sidecar /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 --sidecar-sha256 e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07 --prespec /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md --closed-parts /public/home/fjhui/ZW/c1_covariates/frozen/CLOSED_PARTS.txt --pinned-hosts /public/home/fjhui/ZW/c1_covariates/frozen/PINNED_HOSTS.txt> in cluster <hzauhpc> Done
+
+Job <bash lsf_c1_cov_ucec.sh --mode placebo --draws 91-119 --sidecar /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 --sidecar-sha256 e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07 --prespec /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md --closed-parts /public/home/fjhui/ZW/c1_covariates/frozen/CLOSED_PARTS.txt --pinned-hosts /public/home/fjhui/ZW/c1_covariates/frozen/PINNED_HOSTS.txt> was submitted from host <mn02> by user <fjhui> in cluster <hzauhpc> at Sat Nov 21 10:01:33 2026
+Job was executed on host(s) <8*s001>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Sat Nov 21 14:31:41 2026
+</public/home/fjhui> was used as the home directory.
+</public/home/fjhui/ZW/scripts> was used as the working directory.
+Started at Sat Nov 21 14:31:41 2026
+Terminated at Sat Nov 21 15:02:52 2026
+Results reported at Sat Nov 21 15:02:52 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash lsf_c1_cov_ucec.sh --mode placebo --draws 91-119 --sidecar /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 --sidecar-sha256 e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07 --prespec /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md --closed-parts /public/home/fjhui/ZW/c1_covariates/frozen/CLOSED_PARTS.txt --pinned-hosts /public/home/fjhui/ZW/c1_covariates/frozen/PINNED_HOSTS.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   13374.34 sec.
+    Max Memory :                                 2079 MB
+    Average Memory :                             1437.26 MB
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               7921.00 MB
+    Max Swap :                                   -
+    Max Processes :                              12
+    Max Threads :                                17
+    Run time :                                   1872 sec.
+    Turnaround time :                            18079 sec.
+
+The output (if any) follows:
+
+environment OK: MORPHO_ROOT and MORPHO_OUT both confirmed under the ucec_c1 tree.
+=== job start: host=s001 date=Sat Nov 21 14:31:43 CST 2026 cores=1 workers=8 args=--mode placebo --draws 91-119 --sidecar /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 --sidecar-sha256 e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07 --prespec /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md --closed-parts /public/home/fjhui/ZW/c1_covariates/frozen/CLOSED_PARTS.txt --pinned-hosts /public/home/fjhui/ZW/c1_covariates/frozen/PINNED_HOSTS.txt ===
+  numpy archive : 92f2aeb5603a18ed35b2242db5fa07f6ac43a96104e48a2b0ffa76f3663ef8ba
+  numpy         : 1.26.4
+==============================================================================
+C1 COVARIATES (POST HOC, review/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md) -- cohort=ucec mode=placebo host=s001 lsf_job=76713886 start=2026-11-21T06:31:45Z
+  this script sha256 = da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc
+==============================================================================
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+  hash OK: frozen module c1_run_test_luad = 1d5ee05d57f8... (/public/home/fjhui/ZW/scripts/c1_run_test_luad.py)
+  hash OK: frozen module composition_controls = 46b4a1d8a697... (/public/home/fjhui/ZW/scripts/composition_controls.py)
+  sidecar e5391d15d707... verified: 13 entries match on this cluster, 87 entries are not on the cluster (not checked here)
+  CLOSED_PARTS: {"arms": [], "analyses": []}
+  PINNED_HOSTS: {"ucec": "s001", "luad": "s002"} (this host: s001)
+  hash OK: saved matrix = ef75f1c06d4f... (/public/home/fjhui/ZW/ucec_c1/results/c1_ucec_d4_stratified.npz; key M_unrestricted; 10146 genes)
+  MORPHO_ROOT         : /public/home/fjhui/ZW/ucec_c1
+  MORPHO_RNA_MANIFEST : /public/home/fjhui/ZW/ucec_c1/manifest_rna_tumor_ucec_c1.tsv
+  MORPHO_SLIDE_MAP    : /public/home/fjhui/ZW/scripts/pinned/slide_type_map_ucec_c1.tsv
+  MORPHO_WSI_EMB_DIR  : /public/home/fjhui/ZW/ucec_c1/WSI/emb
+  MORPHO_OUT          : /public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_covariates
+  hash OK: case_ids = d777fc88c1dd...
+  hash OK: discovery_results = 100d8f8581c7...
+RNA matrix (tumor-only): 138 patients x 59427 genes
+WSI slides: 169 tumor kept, 0 normal dropped, 0 unmatched dropped
+WSI matrix (tumor-only, mean-pooled): 138 patients x 1024 dims
+protein (PDC000439 quantDataMatrix, case-indexed): 138 cases x 10934 genes  <- /public/home/fjhui/ZW/ucec_c1/protein_ucec_c1.csv
+cases with all three modalities: 138
+case-set independence vs discovery: 0 overlapping cases (checked against 100 discovery cases)
+discovery selection set: 2566/10512 genes (24.4%) <- /public/home/fjhui/ZW/scripts/pinned/ucec/residual_results_tumoronly.csv
+usable universe (discovery-tested AND present in confirmatory RNA+protein): 10153 genes, of which 2536 selected / 7617 background
+capacity: K = round(20 * 138 / 100) = 28 PCs, PCA fit on the confirmatory cohort's own embeddings (1024 dims)
+  prepare(): n=138 K=28 genes tested=10153 (as published)
+  H-V1 record accepted for this host: c1_cov_ucec_gate_hv1_s001_20261121T004248Z-75343-658802.json (strict True, fallback True, max |diff| 0.0)
+RNA matrix (tumor-only): 138 patients x 59427 genes
+  markers stroma       : 24/24 present, 0 zero-SD, family passes
+      SD (ddof 1) : COL1A1=0.983803 COL1A2=0.940449 COL3A1=1.06337 COL5A1=0.898145 COL5A2=0.818517 COL6A3=0.937087 FN1=1.15499 SPARC=0.715119 FAP=1.0263 PDGFRA=1.10417 PDGFRB=0.766301 ACTA2=1.48582 TAGLN=1.3222 DCN=1.32011 LUM=1.09545 POSTN=1.48224 THBS2=1.16893 FBN1=0.873111 MMP2=1.25759 TIMP1=0.815649 VIM=1.01235 COL4A1=0.646568 COL4A2=0.67879 SERPINH1=0.678473
+      missing     : -
+  markers immune       : 25/25 present, 0 zero-SD, family passes
+      SD (ddof 1) : PTPRC=0.936833 CD3D=1.10121 CD3E=1.00833 CD3G=0.806331 CD8A=0.980643 CD4=0.728988 CD2=1.09431 CD5=0.692211 CD68=0.459435 CD163=0.932787 MS4A1=0.916817 CD19=0.709757 NKG7=1.14145 GZMB=1.16993 GZMA=1.20887 PRF1=0.98255 FOXP3=0.629399 IL2RA=0.785484 CD14=0.834572 ITGAM=0.712412 LYZ=1.3174 HLA-DRA=0.919678 CD74=0.874482 IRF8=0.757551 CCL5=1.18267
+      missing     : -
+  markers proliferation: 24/24 present, 0 zero-SD, family passes
+      SD (ddof 1) : MKI67=0.955981 PCNA=0.634506 TOP2A=0.955427 CCNB1=0.869023 CCNB2=0.676487 CDK1=0.826694 BUB1=0.871361 BUB1B=0.88199 AURKA=0.87407 AURKB=0.910939 FOXM1=0.85887 TYMS=0.589235 RRM2=0.969207 CENPA=0.916099 PLK1=0.742465 CCNA2=0.856156 CDC20=0.992701 KIF11=0.863377 TPX2=1.02364 UBE2C=1.06599 BIRC5=0.944069 CENPF=0.966299 MCM2=0.745179 MCM6=0.683017
+      missing     : -
+  C3 testable; R20 (138, 20), variance explained by 20 components 0.5844; RNA columns 59427 (all-zero 2396, SD<1e-8 2396)
+attempt 1 of c1_cov_ucec_A_R20cap_091-119 (no limit on attempts; previous attempts' partial files kept: none)
+  covariates identical to c1_cov_confirmatory_covariates_ucec.npz
+  draw 091: wrote c1_cov_ucec_A_R20cap_091.npz in 1.1 min (seed crc32 818948035)
+  draw 092: wrote c1_cov_ucec_A_R20cap_092.npz in 1.0 min (seed crc32 2849601145)
+  draw 093: wrote c1_cov_ucec_A_R20cap_093.npz in 1.0 min (seed crc32 3739109103)
+  draw 094: wrote c1_cov_ucec_A_R20cap_094.npz in 1.0 min (seed crc32 1085985612)
+  draw 095: wrote c1_cov_ucec_A_R20cap_095.npz in 1.0 min (seed crc32 935191514)
+  draw 096: wrote c1_cov_ucec_A_R20cap_096.npz in 1.0 min (seed crc32 2931077728)
+  draw 097: wrote c1_cov_ucec_A_R20cap_097.npz in 1.0 min (seed crc32 3652420342)
+  draw 098: wrote c1_cov_ucec_A_R20cap_098.npz in 1.1 min (seed crc32 1225564007)
+  draw 099: wrote c1_cov_ucec_A_R20cap_099.npz in 1.0 min (seed crc32 1040953329)
+  draw 100: wrote c1_cov_ucec_A_R20cap_100.npz in 1.0 min (seed crc32 2547500587)
+  draw 101: wrote c1_cov_ucec_A_R20cap_101.npz in 1.0 min (seed crc32 3771791037)
+  draw 102: wrote c1_cov_ucec_A_R20cap_102.npz in 1.0 min (seed crc32 2044307207)
+  draw 103: wrote c1_cov_ucec_A_R20cap_103.npz in 1.0 min (seed crc32 249468817)
+  draw 104: wrote c1_cov_ucec_A_R20cap_104.npz in 1.0 min (seed crc32 2428109362)
+  draw 105: wrote c1_cov_ucec_A_R20cap_105.npz in 1.0 min (seed crc32 3887936164)
+  draw 106: wrote c1_cov_ucec_A_R20cap_106.npz in 1.0 min (seed crc32 2125751070)
+  draw 107: wrote c1_cov_ucec_A_R20cap_107.npz in 1.0 min (seed crc32 162747272)
+  draw 108: wrote c1_cov_ucec_A_R20cap_108.npz in 1.0 min (seed crc32 2567720473)
+  draw 109: wrote c1_cov_ucec_A_R20cap_109.npz in 1.0 min (seed crc32 3993730703)
+  draw 110: wrote c1_cov_ucec_A_R20cap_110.npz in 1.0 min (seed crc32 2395797354)
+  draw 111: wrote c1_cov_ucec_A_R20cap_111.npz in 1.0 min (seed crc32 4190881788)
+  draw 112: wrote c1_cov_ucec_A_R20cap_112.npz in 1.0 min (seed crc32 1623365190)
+  draw 113: wrote c1_cov_ucec_A_R20cap_113.npz in 1.0 min (seed crc32 398829264)
+  draw 114: wrote c1_cov_ucec_A_R20cap_114.npz in 1.0 min (seed crc32 2309043059)
+  draw 115: wrote c1_cov_ucec_A_R20cap_115.npz in 1.0 min (seed crc32 4272292837)
+  draw 116: wrote c1_cov_ucec_A_R20cap_116.npz in 1.0 min (seed crc32 1739543135)
+  draw 117: wrote c1_cov_ucec_A_R20cap_117.npz in 1.0 min (seed crc32 279470793)
+  draw 118: wrote c1_cov_ucec_A_R20cap_118.npz in 1.0 min (seed crc32 2149023576)
+  draw 119: wrote c1_cov_ucec_A_R20cap_119.npz in 1.0 min (seed crc32 4145041358)
+DONE: c1_cov_ucec_A_R20cap_091-119 completed (attempt 1), 29 file(s) written, 31.0 min
+=== job end: host=s001 rc=0 date=Sat Nov 21 15:02:51 CST 2026 ===

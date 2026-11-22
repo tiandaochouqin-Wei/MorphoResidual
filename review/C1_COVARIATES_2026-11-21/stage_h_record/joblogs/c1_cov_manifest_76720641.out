@@ -1,0 +1,51 @@
+Sender: LSF System <lsfadmin@s004>
+Subject: Job 76720641: <bash lsf_c1_cov_ucec.sh --mode manifest --sidecar /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 --sidecar-sha256 e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07 --prespec /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md --closed-parts /public/home/fjhui/ZW/c1_covariates/frozen/CLOSED_PARTS.txt --pinned-hosts /public/home/fjhui/ZW/c1_covariates/frozen/PINNED_HOSTS.txt> in cluster <hzauhpc> Done
+
+Job <bash lsf_c1_cov_ucec.sh --mode manifest --sidecar /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 --sidecar-sha256 e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07 --prespec /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md --closed-parts /public/home/fjhui/ZW/c1_covariates/frozen/CLOSED_PARTS.txt --pinned-hosts /public/home/fjhui/ZW/c1_covariates/frozen/PINNED_HOSTS.txt> was submitted from host <mn02> by user <fjhui> in cluster <hzauhpc> at Sun Nov 22 02:28:13 2026
+Job was executed on host(s) <s004>, in queue <smp>, as user <fjhui> in cluster <hzauhpc> at Sun Nov 22 02:28:14 2026
+</public/home/fjhui> was used as the home directory.
+</public/home/fjhui/ZW/scripts> was used as the working directory.
+Started at Sun Nov 22 02:28:14 2026
+Terminated at Sun Nov 22 02:29:13 2026
+Results reported at Sun Nov 22 02:29:13 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash lsf_c1_cov_ucec.sh --mode manifest --sidecar /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 --sidecar-sha256 e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07 --prespec /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md --closed-parts /public/home/fjhui/ZW/c1_covariates/frozen/CLOSED_PARTS.txt --pinned-hosts /public/home/fjhui/ZW/c1_covariates/frozen/PINNED_HOSTS.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9.45 sec.
+    Max Memory :                                 292 MB
+    Average Memory :                             220.91 MB
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               9708.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                6
+    Run time :                                   59 sec.
+    Turnaround time :                            60 sec.
+
+The output (if any) follows:
+
+environment OK: MORPHO_ROOT and MORPHO_OUT both confirmed under the ucec_c1 tree.
+=== job start: host=s004 date=Sun Nov 22 02:28:15 CST 2026 cores=1 workers=1 args=--mode manifest --sidecar /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md.sha256 --sidecar-sha256 e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07 --prespec /public/home/fjhui/ZW/c1_covariates/frozen/POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md --closed-parts /public/home/fjhui/ZW/c1_covariates/frozen/CLOSED_PARTS.txt --pinned-hosts /public/home/fjhui/ZW/c1_covariates/frozen/PINNED_HOSTS.txt ===
+  numpy archive : 92f2aeb5603a18ed35b2242db5fa07f6ac43a96104e48a2b0ffa76f3663ef8ba
+  numpy         : 1.26.4
+C1 COVARIATES manifest -- host=s004 start=2026-11-21T18:28:18Z
+  hash OK: frozen module residual_analysis = a54a0a56494d... (/public/home/fjhui/ZW/scripts/residual_analysis.py)
+  hash OK: frozen module split_replication_power = 79530c075c0f... (/public/home/fjhui/ZW/scripts/split_replication_power.py)
+  hash OK: frozen module c1_run_test = fc578c705e80... (/public/home/fjhui/ZW/scripts/c1_run_test.py)
+  hash OK: frozen module c1_run_test_luad = 1d5ee05d57f8... (/public/home/fjhui/ZW/scripts/c1_run_test_luad.py)
+  hash OK: frozen module composition_controls = 46b4a1d8a697... (/public/home/fjhui/ZW/scripts/composition_controls.py)
+  sidecar e5391d15d707... verified: 13 entries match on this cluster, 87 entries are not on the cluster (not checked here)
+  CLOSED_PARTS: {"arms": [], "analyses": []}
+manifest: 310 files -> /public/home/fjhui/ZW/ucec_c1/results/posthoc/c1_covariates/c1_cov_stage_h_manifest.sha256
+manifest sha256 = ca39784874776c7fe0e8faf3c315b1ff8fcb642a9ea06992b9f53813db8c3e13
+(record this value: Stage L1 and Stage L2 are given it on the command line, PS 9)
+=== job end: host=s004 rc=0 date=Sun Nov 22 02:29:13 CST 2026 ===

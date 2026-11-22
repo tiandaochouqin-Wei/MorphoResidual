@@ -1,0 +1,6 @@
+attempt 1 of c1_cov_ucec_A_R20 (no limit on attempts; previous attempts' partial files kept: none)
+  covariates identical to c1_cov_confirmatory_covariates_ucec.npz
+
+=== arm A_R20: E=R20 (20 cols), B=pcs (28 cols), 10153 genes x (1 + 1000) on 8 workers ===
+  wrote c1_cov_ucec_A_R20.npz (10146 genes x 1001) in 38.6 min
+DONE: c1_cov_ucec_A_R20 completed (attempt 1), 1 file(s) written, 40.7 min

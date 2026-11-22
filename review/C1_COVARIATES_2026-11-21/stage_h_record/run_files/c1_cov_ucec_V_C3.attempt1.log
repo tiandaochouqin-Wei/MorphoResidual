@@ -1,0 +1,6 @@
+attempt 1 of c1_cov_ucec_V_C3 (no limit on attempts; previous attempts' partial files kept: none)
+  covariates identical to c1_cov_confirmatory_covariates_ucec.npz
+
+=== arm V_C3: E=none (0 cols), B=C3 (3 cols), 10153 genes x (1 + 1000) on 8 workers ===
+  wrote c1_cov_ucec_V_C3.npz (10146 genes x 1001) in 25.0 min
+DONE: c1_cov_ucec_V_C3 completed (attempt 1), 1 file(s) written, 27.1 min
