@@ -716,3 +716,103 @@ $0.644$, $0.55$--$0.65$, $P=0.001$), lung also under an operator-stratified null
 protein-array cohorts showed no gene-specific replication above base rate, a
 whole-proteome cohort none.
 ```
+
+## Entry 13 (2026-11-23, after every result): the Abstract after the C1 covariate re-reads (Case 1: the uterine set)
+
+**What this records.** `POSTHOC_C1_COVARIATES_PRESPEC_2026-11-21.md` section 7.4 requires that the Abstract edit be
+recorded here, quoting the variant used, and released publicly (tag and GitHub Release) before the manuscript is edited.
+The results record (`review/C1_COVARIATES_2026-11-21/results_record/`; tag `c1-covariates-posthoc-results-2026-11-23`,
+commit 6baa139; Release published 2026-11-23T02:54:41Z) holds the readings the frozen script wrote: uterus, C3 class N and
+R20 class U, type C; lung, C3 class H and R20 class H, no type; **Case 1** (one cohort flagged). Section 0 ("Prior exposure
+and expectations", item 1) of the pre-specification, frozen before any stage ran, recorded that the drafting session
+regarded class N in the uterine cohort as more likely than not, expected the lung set not to outrank background once the
+composition scores entered the baseline, and regarded Case 2 as the most likely outcome; the C3 readings are class N in the
+uterine cohort and class H in the lung cohort. This entry changes no reading, computes no statistic and adopts no
+manuscript wording that section 7 does not fix; the wording of the entry itself is left to the authors (section 0,
+departure 8).
+
+**What the pre-specification fixes for this case, applied as written.**
+- *Abstract* (section 7.4, Case 1, cohort of type C): the sentence "Post hoc, adjusted for composition scores, the uncorrected uterine set did not." is inserted before "Elsewhere,". The
+  unrounded values behind the classes are in `review/C1_COVARIATES_2026-11-21/results_record/L2/classes.json`. In the
+  Abstract, "did not" stands for "was not shown to" (one-sided p >= 0.05) and claims neither that the set ranked below
+  background nor that the covariates explain the ordering (section 6); the sentence is fixed verbatim for the
+  Supplementary Note `snote:c1cov` in section 7.3, which is written after this entry.
+- *Room* (section 7.4): the Entry 12 Abstract has 141 / 143 / 149 / 151 words under the four conventions of Entries 11 and
+  12 (tokens; number ranges split; typeset, "P = x" as three words; both). The cuts the section fixes are applied in its
+  order until the Abstract is no longer than that under each convention, and no further: c1 "At these cohort sizes,",
+  c2 "Here, we show that" (Case 1 only), c3 "Elsewhere,", c5 "genes" after "2{,}310", c6 "patients" after "138". All five
+  cuts were applied, in that order, and the target was not reached: the result has 142 / 144 / 150 / 152 words,
+  one more than the Entry 12 Abstract under every convention, as section 7.4 states for the four Case 1 variants. A variant
+  is submitted at its stated length; if the journal requires a cut, it is made by a later dated entry that removes no
+  protected content item and no word of the qualifier.
+- *Protected content.* None of the protected content items (section 0, departure 3) is removed. "later", "from one
+  consortium" and the words of Entry 12's clause "morphology adds no net accuracy over transcriptome-wide baselines in four
+  cohorts" are kept (cut c1 removes the hedge in front of that clause; see below). The counts, retention-and-measurement-error,
+  confirmatory and external-cohort sentences are those of Entry 12 character for character, except for the cuts above, the
+  capital letters that cuts c1, c2 and c3 force and the inserted qualifier.
+- *Title and opening sentences* (section 7.5, Cases 0 and 1): unchanged. The title ("Histology signals which proteins
+  depart from their own transcript in five human cancers"), the opening sentence of the Introduction's summary and the
+  Discussion's opening sentence stay as in Entry 12. In the Abstract the opening sentence loses "Here, we show that" (cut
+  c2); section 7.5 states that the cut is made for length and is not a change of claim. Section 7.5 fixes new title and opening
+  sentences for Case 2 only; this is Case 1, so none of them is used.
+- *Which case applies.* The case rests on the lung cohort's R20 reading, which is class H at one-sided p = 0.029
+  (uncorrected; margin 0.033 against 0.120 without covariates; 0 of 119 placebo margins at or below m_R). Under the
+  section 6.1 table, a p of 0.05 or more there, with the recorded placebo count, would have made it class A and the cohort
+  type R; the case would then have been Case 2, and section 7.5 would have changed the title and the opening sentences. The
+  uterine readings (C3 p = 0.161; R20 p = 0.199) are not near 0.05. This paragraph states what the fixed rules did with
+  the readings and changes none.
+- *Policy* (sections 6.2 and 7.4): no favourable post hoc result enters the Abstract and no secondary cell changes it. The
+  lung readings (C3 class H, R20 class H) are favourable and are not in it, nor is the one matched cell that outranked
+  background (lung, T_M|C3; section 6.2 reads an outranking matched cell as favourable; the other three of the four matched
+  cells did not outrank). The reverse and forward cells that outranked background, which section 6.2 reads as unfavourable
+  to the paper (reverse: three of four; forward: four of six), are not in it either. Because only the uterine set and only
+  the composition scores are named, the Abstract does not show how the lung set read, or that the uterine reading with 20
+  expression components is class U (unresolved). The lung readings are to be stated in Results (section 7.1) and shown in
+  Fig. 6a (section 7.9), and the class-U reading in Results, the Discussion and Limitations (iv) (sections 7.1, 7.7 and
+  7.8); the inference a reader may draw from the omission is recorded here, not prevented. The Abstract's clause on the
+  lung batch-corrected set (726; 0.654, P = 0.001) is unchanged and carries no qualifier whatever the result: the
+  batch-corrected sets are reported on the new arms and not read (section 0, Scope), so the new sentence says nothing about
+  them, and a reader may take that clause as unaffected by the covariates.
+
+**Departures from earlier rules.** This entry records no deviation from sections 7.4 and 7.5. The departures from earlier
+rules that this Abstract involves were stated, with their reasons, before any stage ran, in section 0 (departures 3, 4, 5
+and 9) of the pre-specification, and this entry adds none. Their effects here: cut c1 leaves the no-net-accuracy clause
+without "At these cohort sizes," (an unfavourable statement made more general than in Results; section 0, departure 3); cut
+c2 leaves the Abstract without the phrase "Here, we show", which the journal's instruction recorded in Entries 11 and 12
+asks the final sentence to begin with (those entries had already recorded a deviation from that instruction), and the
+Abstract's opening sentence is no longer identical to a sentence of the Introduction (section 0, departure 9); cuts c5 and
+c6 remove the unit labels "genes" and "patients" and cut c3 removes "Elsewhere," (section 0, departure 3). The Abstract has
+150 words as typeset, which is the limit recorded in Entry 11 ("150 words or fewer"); it has 142 as tokens, 144 with
+number ranges split and 152 with both, so under the strictest convention it is above that limit, as the Entry 12 Abstract
+was (141 / 143 / 149 / 151).
+
+**What this does not change.** The confirmatory sentence still reports the two uncorrected discovery sets as registered and
+published (UCEC AUC 0.597, p = 0.004; LUAD 0.644, p = 0.001). The new sentence reports an outcome unfavourable to the
+paper's reading of those two results, which a reader would otherwise take to show an ordering that histology adds to what the
+transcriptome records (section 7.4); it follows them, as section 7.4 requires. The R20 reading in the uterine cohort is class
+U, which section 6.3 fixes as follows: the set is not shown to outrank background with the 20 components in the baseline, the
+comparison does not say whether the components or the 20 extra predictors are the reason, the question is unresolved in that
+cohort, and it is not answered in the paper's favour. The Abstract does not state it; sections 7.7 and 7.8 fix class-U
+sentences for the Discussion and Limitations (iv), which are written into the manuscript only after this entry is released.
+
+**Timestamp.** This entry carries the timestamp of the first public GitHub release that contains it, planned as the annotated
+tag `c1-luad-addenda-entry13-2026-11-23` (named by the day this entry was written) with a GitHub Release, as section 7.4 requires
+and as Entry 12 did. `main.tex` and `supplement.tex` are not edited before that release is published; the Abstract in
+`main.tex` is then replaced by the text below, and the manuscript's provenance table gains a row for this entry. The sidecar
+`C1_LUAD_ADDENDA.md.sha256` holds the sha256 of this file as released.
+
+**Order.** This entry was written after the results record (commit 6baa139) and before any edit of the manuscript:
+`main.tex` has sha256 `d8dd0c0881bd584033a1ce784fb7834511e1751f03642d18f65dbb4108f7809c` (the Entry 12 Abstract in place) and `supplement.tex` has sha256 `704de98c61d2f1dd90c1af8836c452de60b7700c8e8d3e8ec660c33e32c1fc1b`, the value
+Entry 12 recorded. The choice of variant is mechanical: `ABSTRACT_VARIANTS.md` (sha256 `d54dcf2c26b86af6024f14442d9c55144030eab605a949a421d795ba89d8defd`, listed in the sidecar of
+the pre-specification, commit fb15ed4, 2026-11-21) fixed every variant before any stage ran, and the case and the type come
+from `classes.json`. The "Order of reading" section of the results record states what was read before Stage L2 had
+finished.
+
+**The Abstract** (variant 1-u[C]-l[-] of `ABSTRACT_VARIANTS.md`, generated by `make_abstract_variants.py` from the Entry 12
+Abstract, TeX sha256 `6a1bfede2f9a56dd811cf46b345ecd2989f7ffb5697b1578e574fa8fec298ddc`). The block below is whitespace-normalised and has no leading `\noindent`, as the
+generator writes it; the text, followed by one line feed, has sha256 `97c82bfd5f01aacb49ed7bb89a7e4425a0deb9ad575c26eda97153ff54dda50e`, and the manuscript's Abstract will equal
+it after the same normalisation. Counts 142 / 144 / 150 / 152:
+
+```tex
+Histology carries a set-level signal of which proteins depart from their own transcript. In five cancers from one consortium, 815, 726, 201, 680 and 682 proteins are significant after acquisition-batch correction. Morphology adds no net accuracy over transcriptome-wide baselines in four cohorts, but retains a median 40\% of its noise-adjusted advantage; part may be expression missed by single transcript measurement, not excluded post hoc for much of the signal outside kidney cancer. In later same-consortium uterine (138) and lung (112) cohorts, uncorrected discovery sets (2{,}566; 2{,}310) outranked background (area under curve $0.597$, 95\% bootstrap interval $0.48$--$0.65$, one-sided $P=0.004$; $0.644$, $0.55$--$0.65$, $P=0.001$), lung also under an operator-stratified null ($P=0.001$), as did its batch-corrected set (726; $0.654$, $P=0.001$). Post hoc, adjusted for composition scores, the uncorrected uterine set did not. Four protein-array cohorts showed no gene-specific replication above base rate, a whole-proteome cohort none.
+```
