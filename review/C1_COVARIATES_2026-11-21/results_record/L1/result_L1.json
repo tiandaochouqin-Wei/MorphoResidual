@@ -1,0 +1,654 @@
+{
+ "attempts_before_this": [],
+ "closed_parts": [],
+ "closed_parts_sha256": "a58a83d471589045162b344707d52ce627f293db0b6ebe394af8db8f53927fee",
+ "cohorts": {
+  "luad": {
+   "S_BC": {
+    "expected_in_universe": 721,
+    "n": 726,
+    "n_in_universe": 721,
+    "n_rows": 10724,
+    "rho_available": true,
+    "rho_note": "",
+    "sitepack_sha256": "aeef7232682c24d209024ba73efea8033cb7486779831bda1a1ba3c8bda45d9f"
+   },
+   "closed_analyses": [],
+   "n_cases": 105,
+   "n_fit": 10724,
+   "n_set": 2310,
+   "note_M_R20": "analysis M|R20 uses the permutation sequence of the main analysis (RandomState(0), 1,000 sequential draws) for every fit gene, so its p-values and floor counts are not those of the published transcriptome-baseline table (PS 3)",
+   "operator_indicators": {
+    "levels": [
+     [
+      "72d8aaa9-39b8-4879-be04-3ce0e87dfea1",
+      14
+     ],
+     [
+      "1e065505-2237-4841-b740-cc85b1ec96b4",
+      12
+     ],
+     [
+      "3276f7b8-1e2c-40ef-bf4a-8dfb4098e690",
+      10
+     ],
+     [
+      "975375e8-786f-45d0-bfdd-9e70146a3eb8",
+      9
+     ],
+     [
+      "8296d10b-af51-4c6e-aaf4-35fbb135a1f8",
+      5
+     ],
+     [
+      "a71b7195-c3ab-4b38-a01c-dcd42cdda177",
+      5
+     ],
+     [
+      "4ff60a54-4c1e-4570-985a-32e6af9a2d0e",
+      4
+     ],
+     [
+      "fadb30a1-527c-4133-8b3c-f062f8aa1b11",
+      4
+     ],
+     [
+      "0e45da53-6874-4578-a6f0-8439ef172729",
+      3
+     ],
+     [
+      "5b4151db-6ba1-4d9e-b899-e878d8b192de",
+      3
+     ],
+     [
+      "70abd19d-ff94-4884-b621-3f18637afc97",
+      3
+     ],
+     [
+      "f70489eb-e21c-4fde-81bc-5c877d303530",
+      3
+     ]
+    ],
+    "n_cases": 105,
+    "n_covered": 75,
+    "n_indicators": 12,
+    "n_unlabelled": 1
+   },
+   "operator_levels": [
+    "72d8aaa9-39b8-4879-be04-3ce0e87dfea1",
+    "1e065505-2237-4841-b740-cc85b1ec96b4",
+    "3276f7b8-1e2c-40ef-bf4a-8dfb4098e690",
+    "975375e8-786f-45d0-bfdd-9e70146a3eb8",
+    "8296d10b-af51-4c6e-aaf4-35fbb135a1f8",
+    "a71b7195-c3ab-4b38-a01c-dcd42cdda177",
+    "4ff60a54-4c1e-4570-985a-32e6af9a2d0e",
+    "fadb30a1-527c-4133-8b3c-f062f8aa1b11",
+    "0e45da53-6874-4578-a6f0-8439ef172729",
+    "5b4151db-6ba1-4d9e-b899-e878d8b192de",
+    "70abd19d-ff94-4884-b621-3f18637afc97",
+    "f70489eb-e21c-4fde-81bc-5c877d303530"
+   ],
+   "score_file_comments": [
+    "# c1_covariates_cluster.py export-scores (H0), cohort luad, 105 patients",
+    "# host s002; lsf_job 76712906; written 2026-11-20T23:40:35Z",
+    "# script_sha256 da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc",
+    "# composition_controls_sha256 46b4a1d8a6973bb71b162697a04754e0e1c555eeaf3ff83dfc5c143087abdfa6",
+    "# markers stroma 24/24 present (zero-SD 0): COL1A1,COL1A2,COL3A1,COL5A1,COL5A2,COL6A3,FN1,SPARC,FAP,PDGFRA,PDGFRB,ACTA2,TAGLN,DCN,LUM,POSTN,THBS2,FBN1,MMP2,TIMP1,VIM,COL4A1,COL4A2,SERPINH1",
+    "# markers immune 25/25 present (zero-SD 0): PTPRC,CD3D,CD3E,CD3G,CD8A,CD4,CD2,CD5,CD68,CD163,MS4A1,CD19,NKG7,GZMB,GZMA,PRF1,FOXP3,IL2RA,CD14,ITGAM,LYZ,HLA-DRA,CD74,IRF8,CCL5",
+    "# markers proliferation 24/24 present (zero-SD 0): MKI67,PCNA,TOP2A,CCNB1,CCNB2,CDK1,BUB1,BUB1B,AURKA,AURKB,FOXM1,TYMS,RRM2,CENPA,PLK1,CCNA2,CDC20,KIF11,TPX2,UBE2C,BIRC5,CENPF,MCM2,MCM6"
+   ],
+   "score_file_sha256": "95c986a0e302e16fd3321dcd39958710ffa1ce0fc76cbba18a8d0c568fdfea58",
+   "sets": {
+    "S_C3": {
+     "kstar": 215,
+     "n": 4117,
+     "n_bh_before_sign_filter": 4117,
+     "n_floor": 2269,
+     "n_in_universe": 4057,
+     "note": "",
+     "overlap_S_M": 1478,
+     "status": "ok"
+    },
+    "S_M": {
+     "kstar": 215,
+     "n": 2310,
+     "n_bh_before_sign_filter": 3086,
+     "n_floor": 1354,
+     "n_in_universe": 2287,
+     "note": "",
+     "overlap_S_M": 2310,
+     "status": "ok"
+    },
+    "S_M|C3": {
+     "kstar": 215,
+     "n": 1368,
+     "n_bh_before_sign_filter": 1553,
+     "n_floor": 693,
+     "n_in_universe": 1353,
+     "note": "",
+     "overlap_S_M": 1170,
+     "status": "ok"
+    },
+    "S_M|R20": {
+     "kstar": 215,
+     "n": 0,
+     "n_bh_before_sign_filter": 0,
+     "n_floor": 78,
+     "n_in_universe": 0,
+     "note": "empty at B = 1,000, limited by the permutation floor",
+     "overlap_S_M": 0,
+     "status": "ok"
+    },
+    "S_OP": {
+     "kstar": 215,
+     "n": 0,
+     "n_bh_before_sign_filter": 0,
+     "n_floor": 142,
+     "n_in_universe": 0,
+     "note": "empty at B = 1,000, limited by the permutation floor",
+     "overlap_S_M": 0,
+     "status": "ok"
+    },
+    "S_R20": {
+     "kstar": 215,
+     "n": 1023,
+     "n_bh_before_sign_filter": 2390,
+     "n_floor": 1229,
+     "n_in_universe": 1013,
+     "note": "",
+     "overlap_S_M": 494,
+     "status": "ok"
+    },
+    "T_C3": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.00806723397084843,
+     "floor_alone_filled_set": false,
+     "k_block": 3,
+     "largest_p": 0.001998001998001998,
+     "last_gene": "PSMD11",
+     "n": 2310,
+     "n_floor_analysis": 2269,
+     "n_floor_in_set": 2269,
+     "n_in_universe": 2283,
+     "n_nonpositive_increment": 0,
+     "overlap_S_M": 1050,
+     "overlap_T_M": 1049,
+     "q_base": 1,
+     "status": "ok"
+    },
+    "T_G": {
+     "n": 2310,
+     "n_in_universe": 2128,
+     "note": "T_G is chosen by published own-mRNA R2, not by a p-value: the p-based columns do not apply",
+     "overlap_S_M": 432,
+     "overlap_T_M": 438,
+     "status": "ok"
+    },
+    "T_M": {
+     "bh_q_at_rank": 0.02696296991599005,
+     "floor_alone_filled_set": false,
+     "largest_p": 0.005994005994005994,
+     "last_gene": "SPECC1",
+     "n": 2310,
+     "n_floor_analysis": 1354,
+     "n_floor_in_set": 1354,
+     "n_in_universe": 2287,
+     "n_nonpositive_increment": 105,
+     "overlap_S_M": 2205,
+     "overlap_T_M": 2310,
+     "status": "ok"
+    },
+    "T_M|C3": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.09565434565434566,
+     "floor_alone_filled_set": false,
+     "k_block": 20,
+     "largest_p": 0.02097902097902098,
+     "last_gene": "SORBS3",
+     "n": 2310,
+     "n_floor_analysis": 693,
+     "n_floor_in_set": 693,
+     "n_in_universe": 2278,
+     "n_nonpositive_increment": 873,
+     "overlap_S_M": 1636,
+     "overlap_T_M": 1644,
+     "q_base": 4,
+     "status": "ok"
+    },
+    "T_M|R20": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.6398720733191723,
+     "floor_alone_filled_set": false,
+     "k_block": 20,
+     "largest_p": 0.13886113886113885,
+     "last_gene": "SLC25A5",
+     "n": 2310,
+     "n_floor_analysis": 78,
+     "n_floor_in_set": 78,
+     "n_in_universe": 2253,
+     "n_nonpositive_increment": 1030,
+     "overlap_S_M": 884,
+     "overlap_T_M": 885,
+     "q_base": 21,
+     "status": "ok"
+    },
+    "T_OP": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.3700617172119763,
+     "floor_alone_filled_set": false,
+     "k_block": 12,
+     "largest_p": 0.07992007992007992,
+     "last_gene": "RPS15",
+     "n": 2310,
+     "n_floor_analysis": 142,
+     "n_floor_in_set": 142,
+     "n_in_universe": 2262,
+     "n_nonpositive_increment": 1065,
+     "overlap_S_M": 853,
+     "overlap_T_M": 855,
+     "q_base": 1,
+     "status": "ok"
+    },
+    "T_R20": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.046257714651497035,
+     "floor_alone_filled_set": false,
+     "k_block": 20,
+     "largest_p": 0.00999000999000999,
+     "last_gene": "ATXN10",
+     "n": 2310,
+     "n_floor_analysis": 1229,
+     "n_floor_in_set": 1229,
+     "n_in_universe": 2285,
+     "n_nonpositive_increment": 1287,
+     "overlap_S_M": 947,
+     "overlap_T_M": 945,
+     "q_base": 1,
+     "status": "ok"
+    }
+   },
+   "v2": {
+    "arms": {
+     "unrestricted": {
+      "got": {
+       "auc": 0.6439668501223573,
+       "null_mean": 0.5244456890246434,
+       "null_sd": 0.018690309499334007,
+       "p": 0.000999000999000999,
+       "p_rho": 0.000999000999000999,
+       "rho": 0.39777854799422796
+      },
+      "n0": 8119,
+      "n1": 2287,
+      "ok": true,
+      "worst_abs_diff": 0.0
+     }
+    },
+    "mask_identical": true,
+    "ok": true
+   },
+   "v3": {
+    "n_genes": 2310,
+    "n_rows": 2310,
+    "n_skipped": 0,
+    "ok": true,
+    "published_set_covered": 2310,
+    "worst_abs_diff": 4.440892098500626e-16
+   }
+  },
+  "ucec": {
+   "S_BC": {
+    "expected_in_universe": 198,
+    "n": 201,
+    "n_in_universe": 198,
+    "n_rows": 10512,
+    "rho_available": true,
+    "rho_note": "",
+    "sitepack_sha256": "805d747b9af63d5bb01ddc5f39a61940161d5163b356d92d7955ecc11c1d480f"
+   },
+   "closed_analyses": [],
+   "n_cases": 100,
+   "n_fit": 10512,
+   "n_set": 2566,
+   "note_M_R20": "analysis M|R20 uses the permutation sequence of the main analysis (RandomState(0), 1,000 sequential draws) for every fit gene, so its p-values and floor counts are not those of the published transcriptome-baseline table (PS 3)",
+   "operator_indicators": {
+    "levels": [
+     [
+      "20530ab5-e591-4ac0-87d2-27543b0920e5",
+      10
+     ],
+     [
+      "ad6e64f4-cdc4-45ec-9fe4-7b351924b7af",
+      10
+     ],
+     [
+      "77bbcb55-436a-447a-bb6f-b129e71ab628",
+      8
+     ],
+     [
+      "8296d10b-af51-4c6e-aaf4-35fbb135a1f8",
+      8
+     ],
+     [
+      "304f3582-7480-4d2b-8ca6-e06eb6a4e911",
+      7
+     ],
+     [
+      "72d8aaa9-39b8-4879-be04-3ce0e87dfea1",
+      5
+     ],
+     [
+      "c0d2e700-f2dd-4e9f-a367-7c6005153e61",
+      5
+     ],
+     [
+      "70abd19d-ff94-4884-b621-3f18637afc97",
+      4
+     ],
+     [
+      "93ad5206-82e8-40d9-9c39-149b21481dff",
+      4
+     ],
+     [
+      "c3532756-92f2-4d9b-af65-956da8212c89",
+      4
+     ],
+     [
+      "f838b2c4-55f1-49f6-9cea-7ebc15dcda9c",
+      4
+     ],
+     [
+      "fc75e283-ac08-45cc-9b0d-c6385fd0de6c",
+      4
+     ]
+    ],
+    "n_cases": 100,
+    "n_covered": 73,
+    "n_indicators": 12,
+    "n_unlabelled": 1
+   },
+   "operator_levels": [
+    "20530ab5-e591-4ac0-87d2-27543b0920e5",
+    "ad6e64f4-cdc4-45ec-9fe4-7b351924b7af",
+    "77bbcb55-436a-447a-bb6f-b129e71ab628",
+    "8296d10b-af51-4c6e-aaf4-35fbb135a1f8",
+    "304f3582-7480-4d2b-8ca6-e06eb6a4e911",
+    "72d8aaa9-39b8-4879-be04-3ce0e87dfea1",
+    "c0d2e700-f2dd-4e9f-a367-7c6005153e61",
+    "70abd19d-ff94-4884-b621-3f18637afc97",
+    "93ad5206-82e8-40d9-9c39-149b21481dff",
+    "c3532756-92f2-4d9b-af65-956da8212c89",
+    "f838b2c4-55f1-49f6-9cea-7ebc15dcda9c",
+    "fc75e283-ac08-45cc-9b0d-c6385fd0de6c"
+   ],
+   "score_file_comments": [
+    "# c1_covariates_cluster.py export-scores (H0), cohort ucec, 100 patients",
+    "# host s006; lsf_job 76713698; written 2026-11-21T00:46:38Z",
+    "# script_sha256 da89be848e8dc6b64e8e9fb92fd6bc1a387b94aa3667374e6f1a8284331501dc",
+    "# composition_controls_sha256 46b4a1d8a6973bb71b162697a04754e0e1c555eeaf3ff83dfc5c143087abdfa6",
+    "# markers stroma 24/24 present (zero-SD 0): COL1A1,COL1A2,COL3A1,COL5A1,COL5A2,COL6A3,FN1,SPARC,FAP,PDGFRA,PDGFRB,ACTA2,TAGLN,DCN,LUM,POSTN,THBS2,FBN1,MMP2,TIMP1,VIM,COL4A1,COL4A2,SERPINH1",
+    "# markers immune 25/25 present (zero-SD 0): PTPRC,CD3D,CD3E,CD3G,CD8A,CD4,CD2,CD5,CD68,CD163,MS4A1,CD19,NKG7,GZMB,GZMA,PRF1,FOXP3,IL2RA,CD14,ITGAM,LYZ,HLA-DRA,CD74,IRF8,CCL5",
+    "# markers proliferation 24/24 present (zero-SD 0): MKI67,PCNA,TOP2A,CCNB1,CCNB2,CDK1,BUB1,BUB1B,AURKA,AURKB,FOXM1,TYMS,RRM2,CENPA,PLK1,CCNA2,CDC20,KIF11,TPX2,UBE2C,BIRC5,CENPF,MCM2,MCM6"
+   ],
+   "score_file_sha256": "865a8a35984c93ea6d6e3b8056b49ed45bff5432f60bb6052e01b1f3e62a7b2a",
+   "sets": {
+    "S_C3": {
+     "kstar": 211,
+     "n": 4572,
+     "n_bh_before_sign_filter": 4572,
+     "n_floor": 2357,
+     "n_in_universe": 4497,
+     "note": "",
+     "overlap_S_M": 1694,
+     "status": "ok"
+    },
+    "S_M": {
+     "kstar": 211,
+     "n": 2566,
+     "n_bh_before_sign_filter": 3263,
+     "n_floor": 1748,
+     "n_in_universe": 2536,
+     "note": "",
+     "overlap_S_M": 2566,
+     "status": "ok"
+    },
+    "S_M|C3": {
+     "kstar": 211,
+     "n": 1834,
+     "n_bh_before_sign_filter": 2156,
+     "n_floor": 1120,
+     "n_in_universe": 1811,
+     "note": "",
+     "overlap_S_M": 1694,
+     "status": "ok"
+    },
+    "S_M|R20": {
+     "kstar": 211,
+     "n": 0,
+     "n_bh_before_sign_filter": 0,
+     "n_floor": 111,
+     "n_in_universe": 0,
+     "note": "empty at B = 1,000, limited by the permutation floor",
+     "overlap_S_M": 0,
+     "status": "ok"
+    },
+    "S_OP": {
+     "kstar": 211,
+     "n": 1127,
+     "n_bh_before_sign_filter": 1127,
+     "n_floor": 621,
+     "n_in_universe": 1119,
+     "note": "",
+     "overlap_S_M": 847,
+     "status": "ok"
+    },
+    "S_R20": {
+     "kstar": 211,
+     "n": 293,
+     "n_bh_before_sign_filter": 930,
+     "n_floor": 541,
+     "n_in_universe": 286,
+     "note": "",
+     "overlap_S_M": 159,
+     "status": "ok"
+    },
+    "T_C3": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.007474376157650179,
+     "floor_alone_filled_set": false,
+     "k_block": 3,
+     "largest_p": 0.001998001998001998,
+     "last_gene": "RAB8B",
+     "n": 2566,
+     "n_floor_analysis": 2357,
+     "n_floor_in_set": 2357,
+     "n_in_universe": 2541,
+     "n_nonpositive_increment": 0,
+     "overlap_S_M": 1095,
+     "overlap_T_M": 1094,
+     "q_base": 1,
+     "status": "ok"
+    },
+    "T_G": {
+     "n": 2566,
+     "n_in_universe": 2356,
+     "note": "T_G is chosen by published own-mRNA R2, not by a p-value: the p-based columns do not apply",
+     "overlap_S_M": 738,
+     "overlap_T_M": 738,
+     "status": "ok"
+    },
+    "T_M": {
+     "bh_q_at_rank": 0.023885136849503795,
+     "floor_alone_filled_set": false,
+     "largest_p": 0.005994005994005994,
+     "last_gene": "LYSMD2",
+     "n": 2566,
+     "n_floor_analysis": 1748,
+     "n_floor_in_set": 1748,
+     "n_in_universe": 2539,
+     "n_nonpositive_increment": 91,
+     "overlap_S_M": 2475,
+     "overlap_T_M": 2566,
+     "status": "ok"
+    },
+    "T_M|C3": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.0770975546864264,
+     "floor_alone_filled_set": false,
+     "k_block": 20,
+     "largest_p": 0.01898101898101898,
+     "last_gene": "CUL1",
+     "n": 2566,
+     "n_floor_analysis": 1120,
+     "n_floor_in_set": 1120,
+     "n_in_universe": 2527,
+     "n_nonpositive_increment": 708,
+     "overlap_S_M": 2084,
+     "overlap_T_M": 2100,
+     "q_base": 4,
+     "status": "ok"
+    },
+    "T_M|R20": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.4950063571021888,
+     "floor_alone_filled_set": false,
+     "k_block": 20,
+     "largest_p": 0.12087912087912088,
+     "last_gene": "GPN2",
+     "n": 2566,
+     "n_floor_analysis": 111,
+     "n_floor_in_set": 111,
+     "n_in_universe": 2501,
+     "n_nonpositive_increment": 261,
+     "overlap_S_M": 1130,
+     "overlap_T_M": 1127,
+     "q_base": 21,
+     "status": "ok"
+    },
+    "T_OP": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.20454808144718548,
+     "floor_alone_filled_set": false,
+     "k_block": 12,
+     "largest_p": 0.04995004995004995,
+     "last_gene": "BUB3",
+     "n": 2566,
+     "n_floor_analysis": 621,
+     "n_floor_in_set": 621,
+     "n_in_universe": 2520,
+     "n_nonpositive_increment": 501,
+     "overlap_S_M": 1381,
+     "overlap_T_M": 1383,
+     "q_base": 1,
+     "status": "ok"
+    },
+    "T_R20": {
+     "batched_vs_reference_worst": 0.0,
+     "bh_q_at_rank": 0.24015054712729134,
+     "floor_alone_filled_set": false,
+     "k_block": 20,
+     "largest_p": 0.058941058941058944,
+     "last_gene": "PUM2",
+     "n": 2566,
+     "n_floor_analysis": 541,
+     "n_floor_in_set": 541,
+     "n_in_universe": 2517,
+     "n_nonpositive_increment": 2270,
+     "overlap_S_M": 992,
+     "overlap_T_M": 1001,
+     "q_base": 1,
+     "status": "ok"
+    }
+   },
+   "v2": {
+    "arms": {
+     "residualised": {
+      "got": {
+       "auc": 0.5671994242176781,
+       "null_mean": 0.48869940996820554,
+       "null_sd": 0.030617540627664825,
+       "p": 0.005994005994005994,
+       "p_rho": 0.007992007992007992,
+       "rho": 0.2568963225558808
+      },
+      "n0": 7610,
+      "n1": 2536,
+      "ok": true,
+      "worst_abs_diff": 0.0
+     },
+     "unrestricted": {
+      "got": {
+       "auc": 0.5974425564900907,
+       "null_mean": 0.49819454514647427,
+       "null_sd": 0.03629629979626921,
+       "p": 0.003996003996003996,
+       "p_rho": 0.004995004995004995,
+       "rho": 0.2935675639399924
+      },
+      "n0": 7610,
+      "n1": 2536,
+      "ok": true,
+      "worst_abs_diff": 0.0
+     },
+     "within-operator": {
+      "got": {
+       "auc": 0.5974425564900907,
+       "null_mean": 0.505936295945481,
+       "null_sd": 0.03164869176098481,
+       "p": 0.003996003996003996,
+       "p_rho": 0.003996003996003996,
+       "rho": 0.2935675639399924
+      },
+      "n0": 7610,
+      "n1": 2536,
+      "ok": true,
+      "worst_abs_diff": 0.0
+     }
+    },
+    "mask_identical": true,
+    "ok": true
+   },
+   "v3": {
+    "n_genes": 2566,
+    "n_rows": 2566,
+    "n_skipped": 0,
+    "ok": true,
+    "published_set_covered": 2566,
+    "worst_abs_diff": 6.661338147750939e-16
+   }
+  }
+ },
+ "env": {
+  "cpu_count": 28,
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.13",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.0",
+  "threads": {
+   "MKL_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1",
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1"
+  }
+ },
+ "finished_utc": "2026-11-22T06:48:37Z",
+ "kernel_sha256": "6c95cd119d28e811e09967946e9f191c69f07f54f653991917e817ef99ec2734",
+ "manifest_sha256": "ca39784874776c7fe0e8faf3c315b1ff8fcb642a9ea06992b9f53813db8c3e13",
+ "minutes": 126.71,
+ "n_cells": 68,
+ "outputs": {
+  "cells_L1.csv": "6d5512860da369f387b83ffdede1d023df39c60dc6cfb981acf837a57954fa08",
+  "sets_luad.csv": "90dcf0a4341e3a54c16b1d59ae5de963fecbe69fb93d632fb17562e65c1b161b",
+  "sets_ucec.csv": "73e4f6e92575611298bf1ce7c1cab010902eea507a6d5de16b537258e280971b"
+ },
+ "pinned_hosts": {
+  "luad": "s002",
+  "ucec": "s001"
+ },
+ "prespec_sha256": "dcc0e033bff1fcb9f77abce06a9de9f343aa22ede907373eefd038fab0415986",
+ "script_sha256": "1ea40fa50759366d09f61360d6d2f80dce9703d6d95f6a8ce43ff0f0ae61e779",
+ "sidecar_sha256": "e5391d15d70781b80d0e9aa1257cfa04a9bb725500c2924ae60e474a2ea9cf07",
+ "stage": "L1",
+ "workers": 24
+}

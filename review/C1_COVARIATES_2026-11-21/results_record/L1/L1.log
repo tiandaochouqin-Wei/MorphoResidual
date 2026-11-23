@@ -1,0 +1,62 @@
+[12:41:54] Stage L1 start; script D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output D:\claude\pajinsen\MorphoResidual_paper\server_export\results\c1_covariates\L1.partial
+[12:43:05]   ucec C3: 2000/10512 genes, 71 s
+[12:43:20]   ucec C3: 4000/10512 genes, 86 s
+[12:43:34]   ucec C3: 6000/10512 genes, 100 s
+[12:43:49]   ucec C3: 8000/10512 genes, 115 s
+[12:44:03]   ucec C3: 10000/10512 genes, 129 s
+[12:44:05]   ucec C3: block 3 cols over a 1-col baseline; selected 4572/10512; BH rejections before the sign filter 4572; genes at the permutation floor 2357 (k* = 211); batched-vs-reference worst 0.00e+00; 131 s
+[12:46:39]   ucec R20: 2000/10512 genes, 154 s
+[12:48:13]   ucec R20: 4000/10512 genes, 248 s
+[12:49:44]   ucec R20: 6000/10512 genes, 339 s
+[12:51:11]   ucec R20: 8000/10512 genes, 426 s
+[12:52:40]   ucec R20: 10000/10512 genes, 515 s
+[12:52:56]   ucec R20: block 20 cols over a 1-col baseline; selected 293/10512; BH rejections before the sign filter 930; genes at the permutation floor 541 (k* = 211); batched-vs-reference worst 0.00e+00; 530 s
+[12:54:38]   ucec OP: 2000/10512 genes, 102 s
+[12:55:36]   ucec OP: 4000/10512 genes, 161 s
+[12:56:30]   ucec OP: 6000/10512 genes, 215 s
+[12:57:23]   ucec OP: 8000/10512 genes, 267 s
+[12:58:15]   ucec OP: 10000/10512 genes, 320 s
+[12:58:25]   ucec OP: block 12 cols over a 1-col baseline; selected 1127/10512; BH rejections before the sign filter 1127; genes at the permutation floor 621 (k* = 211); batched-vs-reference worst 0.00e+00; 329 s
+[13:00:46]   ucec M|C3: 2000/10512 genes, 141 s
+[13:02:20]   ucec M|C3: 4000/10512 genes, 235 s
+[13:03:56]   ucec M|C3: 6000/10512 genes, 331 s
+[13:05:33]   ucec M|C3: 8000/10512 genes, 428 s
+[13:07:07]   ucec M|C3: 10000/10512 genes, 522 s
+[13:07:23]   ucec M|C3: block 20 cols over a 4-col baseline; selected 1834/10512; BH rejections before the sign filter 2156; genes at the permutation floor 1120 (k* = 211); batched-vs-reference worst 0.00e+00; 538 s
+[13:11:48]   ucec M|R20: 2000/10512 genes, 265 s
+[13:14:34]   ucec M|R20: 4000/10512 genes, 431 s
+[13:17:26]   ucec M|R20: 6000/10512 genes, 603 s
+[13:20:18]   ucec M|R20: 8000/10512 genes, 775 s
+[13:23:14]   ucec M|R20: 10000/10512 genes, 951 s
+[13:23:43]   ucec M|R20: block 20 cols over a 21-col baseline; selected 0/10512; BH rejections before the sign filter 0; genes at the permutation floor 111 (k* = 211); batched-vs-reference worst 0.00e+00; 981 s
+[13:25:48]   luad C3: 2000/10724 genes, 63 s
+[13:26:04]   luad C3: 4000/10724 genes, 79 s
+[13:26:20]   luad C3: 6000/10724 genes, 94 s
+[13:26:35]   luad C3: 8000/10724 genes, 109 s
+[13:26:49]   luad C3: 10000/10724 genes, 124 s
+[13:26:53]   luad C3: block 3 cols over a 1-col baseline; selected 4117/10724; BH rejections before the sign filter 4117; genes at the permutation floor 2269 (k* = 215); batched-vs-reference worst 0.00e+00; 128 s
+[13:29:22]   luad R20: 2000/10724 genes, 148 s
+[13:31:57]   luad R20: 4000/10724 genes, 304 s
+[13:34:41]   luad R20: 6000/10724 genes, 468 s
+[13:37:23]   luad R20: 8000/10724 genes, 629 s
+[13:40:07]   luad R20: 10000/10724 genes, 794 s
+[13:40:52]   luad R20: block 20 cols over a 1-col baseline; selected 1023/10724; BH rejections before the sign filter 2390; genes at the permutation floor 1229 (k* = 215); batched-vs-reference worst 0.00e+00; 839 s
+[13:43:31]   luad OP: 2000/10724 genes, 159 s
+[13:45:11]   luad OP: 4000/10724 genes, 259 s
+[13:46:45]   luad OP: 6000/10724 genes, 353 s
+[13:48:35]   luad OP: 8000/10724 genes, 463 s
+[13:50:29]   luad OP: 10000/10724 genes, 577 s
+[13:50:56]   luad OP: block 12 cols over a 1-col baseline; selected 0/10724; BH rejections before the sign filter 0; genes at the permutation floor 142 (k* = 215); batched-vs-reference worst 0.00e+00; 604 s
+[13:56:09]   luad M|C3: 2000/10724 genes, 313 s
+[13:59:52]   luad M|C3: 4000/10724 genes, 536 s
+[14:03:13]   luad M|C3: 6000/10724 genes, 737 s
+[14:06:50]   luad M|C3: 8000/10724 genes, 953 s
+[14:10:51]   luad M|C3: 10000/10724 genes, 1195 s
+[14:12:04]   luad M|C3: block 20 cols over a 4-col baseline; selected 1368/10724; BH rejections before the sign filter 1553; genes at the permutation floor 693 (k* = 215); batched-vs-reference worst 0.00e+00; 1268 s
+[14:20:35]   luad M|R20: 2000/10724 genes, 511 s
+[14:27:18]   luad M|R20: 4000/10724 genes, 914 s
+[14:34:05]   luad M|R20: 6000/10724 genes, 1321 s
+[14:40:46]   luad M|R20: 8000/10724 genes, 1722 s
+[14:46:54]   luad M|R20: 10000/10724 genes, 2090 s
+[14:47:56]   luad M|R20: block 20 cols over a 21-col baseline; selected 0/10724; BH rejections before the sign filter 0; genes at the permutation floor 78 (k* = 215); batched-vs-reference worst 0.00e+00; 2152 s
+[14:48:37] Stage L1 complete in 126.7 min; outputs ['cells_L1.csv', 'sets_luad.csv', 'sets_ucec.csv']

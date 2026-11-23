@@ -1,0 +1,15 @@
+[14:49:12] sidecar verified: 100 files; 33 required files listed; CLOSED_PARTS.txt: nothing closed
+[14:49:12] PINNED_HOSTS.txt: {'ucec': 's001', 'luad': 's002'}
+[14:49:12] Stage H manifest verified: 310 files
+[14:49:12] Stage L1 outputs verified against result_L1.json (3 files)
+[14:50:08] pre-flight ucec: 124 Stage H files verified (manifest hash, format, one case list); closed arms none; manifest entries not read: 31
+[14:50:41] pre-flight luad: 124 Stage H files verified (manifest hash, format, one case list); closed arms none; manifest entries not read: 31
+[14:50:41] pre-flight L2 passed
+[14:50:41] Stage L2 start; script D:\claude\pajinsen\MorphoResidual_paper\review\C1_COVARIATES_2026-11-21\c1_covariates_local.py; output D:\claude\pajinsen\MorphoResidual_paper\server_export\results\c1_covariates\L2.partial
+[14:50:44] S_BC ucec: 201 genes (frozen 201); 198 in the confirmatory universe (expected 198; not fatal); rho from incremental_r2_batchresid
+[14:51:38] S_BC luad: 726 genes (frozen 726); 721 in the confirmatory universe (expected 721; not fatal); rho from incremental_r2_batchresid
+[14:52:20] ucec: C3 class N (p 0.16083916083916083); R20 class U (p_R 0.19880119880119881, e 46, p_abs 0.39166666666666666); type C; flagged True
+[14:52:20] luad: C3 class H (p 0.000999000999000999); R20 class H (p_R 0.028971028971028972, e 0, p_abs 0.008333333333333333); type none; flagged False
+[14:52:20] case 1; M4 forward 4 of 6, matched 1 of 4
+[14:52:20] Stage L2 complete in 1.6 min; outputs ['cells_L2.csv', 'classes.json']
+[14:52:20] Stage L2 folder renamed to D:\claude\pajinsen\MorphoResidual_paper\server_export\results\c1_covariates\L2
